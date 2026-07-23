@@ -11,7 +11,7 @@
 ## 从 GitHub 部署
 
 ```powershell
-git clone https://github.com/<你的 GitHub 用户名>/AI-Finance-Practice-Prototype.git
+git clone https://github.com/404LiHua/AI-Finance-Practice-Prototype.git
 cd AI-Finance-Practice-Prototype
 powershell -ExecutionPolicy Bypass -File .\portable_scripts\setup_all_windows.ps1
 ```
