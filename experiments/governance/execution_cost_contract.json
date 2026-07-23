@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "contract_type": "QRG_EXECUTION_COST",
+  "implementation_costs_applicable": true,
+  "bid_ask_rule": "BUY_AT_ASK_SELL_AT_BID",
+  "spread_included": true,
+  "commission_policy": "A_SHARE_CONSERVATIVE_V1_BUY_COMMISSION_3BP_MIN5CNY_SELL_COMMISSION_3BP_MIN5CNY_PLUS_STAMP_DUTY_10BP",
+  "slippage_policy": "CONSERVATIVE",
+  "costs_non_negative": true
+}

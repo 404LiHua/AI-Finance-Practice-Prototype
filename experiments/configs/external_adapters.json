@@ -1,0 +1,50 @@
+{
+  "experiment_name": "stage_b_30stocks_baselines",
+  "data_root": "data/processed/weekly_30stocks_stage_a_v1",
+  "output_root": "outputs/experiments",
+  "target": "target_return",
+  "seeds": [20260723, 20260724, 20260725],
+  "models": ["frets", "timegnn"],
+  "frets": {
+    "sequence_length": 8,
+    "channel_independence": "0",
+    "batch_size": 64,
+    "epochs": 80,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "timegnn": {
+    "sequence_length": 8,
+    "hidden_dim": 32,
+    "block_size": 2,
+    "aggregate": "last",
+    "keep_self_loops": false,
+    "enforce_consecutive": false,
+    "batch_size": 64,
+    "epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "upstream": {
+    "frets": {
+      "root": "D:/项目/源文件/deploy/FreTS-main",
+      "python": "D:/项目/源文件/deploy/.venv-frets/Scripts/python.exe",
+      "entrypoint": "run_longExp.py",
+      "model_file": "models/FreTS.py"
+    },
+    "timegnn": {
+      "root": "D:/项目/源文件/deploy/Time-GNN-main",
+      "python": "D:/项目/源文件/deploy/.venv-timegnn/Scripts/python.exe",
+      "entrypoint": "TimeGNN_train.py",
+      "model_file": "models/TimeGNN.py"
+    }
+  }
+}

@@ -7,9 +7,11 @@ __pycache__/
 # Virtual environments and generated runtimes
 .venv/
 .venv-baostock/
+.venv-baselines/
 venv/
 env/
 runtime/
+.quant-research/
 
 # Model outputs and temporary data
 outputs/

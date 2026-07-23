@@ -1,0 +1,12 @@
+{
+  "manifest_version": "1.0",
+  "split_id": "future_weekly_screening_20230609_20240607_v1",
+  "status": "RESERVED_NOT_ACQUIRED_NOT_READ",
+  "instrument_scope_sha256": "365070139d912ccff146484fa6e215ed1efe3012d45c084fe84334138025e227",
+  "frequency": "weekly",
+  "start": "2023-06-09T08:00:00Z",
+  "end": "2024-06-07T08:00:00Z",
+  "market_rows_present": 0,
+  "market_rows_read": 0,
+  "access_authorized": false
+}

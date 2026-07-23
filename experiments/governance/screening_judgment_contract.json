@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "contract_type": "QRG_SCREENING_JUDGMENT",
+  "decision_rule_id": "weekly_return_model_screening_rule_v1",
+  "allowed_verdicts": [
+    "PASS",
+    "REDIRECT",
+    "NO_GO"
+  ],
+  "train_evidence_class": "SELECTION_EXPOSED_NON_INDEPENDENT",
+  "leverage_is_alpha": false,
+  "selection_result_is_independent_evidence": false,
+  "post_screening_repair_allowed": false,
+  "deployment_approval": false
+}

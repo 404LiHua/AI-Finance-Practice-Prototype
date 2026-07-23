@@ -1,0 +1,37 @@
+{
+  "manifest_version": "1.0",
+  "split_id": "stage_a_all_accessed_selection_exposed_v1",
+  "evidence_class": "SELECTION_EXPOSED_NON_INDEPENDENT",
+  "instrument_count": 30,
+  "frequency": "weekly",
+  "start": "2022-06-10T08:00:00Z",
+  "end": "2023-06-02T08:00:00Z",
+  "reason": "All original train, validation and test results were inspected before QRG adoption; the full accessed interval is therefore governed as TRAIN.",
+  "artifacts": [
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/panel.csv.gz",
+      "bytes": 302966,
+      "sha256": "743a34bc38b26090ee3f5d9084e40ff24b49940dbf1364a82dad6bfb3eb69b34"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/train.csv.gz",
+      "bytes": 143700,
+      "sha256": "2ec5080ad16788b1d97d269a1bfbecccc7afe55e6742d1aca78fb31013e5bc4f"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/validation.csv.gz",
+      "bytes": 32309,
+      "sha256": "1a033c1abe68df552d6a7eda661fc7024bb16211756cd2e7cbc7f48295fee3ed"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/test.csv.gz",
+      "bytes": 51317,
+      "sha256": "adec898cda5bddd8db7ed90f4ff29d839032ef4a23cf68f17e767e157229827c"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/selected_stocks.txt",
+      "bytes": 330,
+      "sha256": "365070139d912ccff146484fa6e215ed1efe3012d45c084fe84334138025e227"
+    }
+  ]
+}

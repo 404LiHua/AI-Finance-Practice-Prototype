@@ -1,4 +1,4 @@
-﻿# AI金融时序预测与风险解释原型系统
+# AI金融时序预测与风险解释原型系统
 
 这是用于“AI金融与新质生产力”暑期社会实践的可直接展示原型包。
 
@@ -38,6 +38,29 @@ powershell -ExecutionPolicy Bypass -File .\data_pipeline\setup_stage_a.ps1
 
 详细说明见 `data_pipeline/README.md`，公开验收结果见 `reports/STAGE_A_30_STOCKS_REPORT.md`。受许可约束的原始 CSMAR 数据、本地处理数据和模型权重不会提交到 Git。
 
+## 阶段 B：统一基线框架
+
+仓库已建立统一配置、随机种子、训练、评估和日志框架，并在相同的 30 股票切分上实现
+Naive、移动平均、ARIMA(1,0,0)、LSTM、单层 Minimalist Transformer、FreTS 与 Time-GNN。
+FreTS/Time-GNN 通过独立适配器使用相同样本和评估器。默认运行三个随机种子，统一输出 MSE、MAE、
+RMSE、零值安全 MAPE、方向 Accuracy/F1、逐股票指标、预测文件、环境信息和模型权重。
+
+```powershell
+D:\项目\源文件\deploy\.venv-timegnn\Scripts\python.exe .\experiments\run_all_baselines.py
+```
+
+详细用法见 `experiments/README.md`，正式验收见 `reports/STAGE_B_ACCEPTANCE_REPORT.md`，
+完整实验结果见 `reports/STAGE_B_BASELINES_INITIAL_REPORT.md` 与
+`reports/BOUNDED_ABLATIONS_TRAIN_RESULT.md`。
+
+## 阶段 C：动态图频核心模型
+
+阶段 C 将在现有统一训练框架上实现自研动态图频融合模型，包括可学习边概率、
+Gumbel-Softmax/Top-k 稀疏图、频域图消息传递、时域—频域融合、稳定性正则和邻接矩阵可视化。
+首轮继续固定 30 只股票，先完成模块单测、小样本过拟合检查和三随机种子实验，再决定是否扩大股票池。
+
+实施安排见 `plans/STAGE_C_IMPLEMENTATION_PLAN.md`。
+
 ## 仓库内容
 
 - `dashboard.html`：离线金融预测与风险解释展示页面。
@@ -47,7 +70,9 @@ powershell -ExecutionPolicy Bypass -File .\data_pipeline\setup_stage_a.ps1
 - `portable_scripts/`：跨终端部署脚本。
 - `source_zips/`：FreTS、Time-GNN、SEP 的开源源码归档，仅用于本项目学习、复现和部署。
 - `data_pipeline/`：阶段 A 数据获取、清洗、文本处理、切分、训练与验收代码。
+- `experiments/`：阶段 B 统一基线配置、训练、评估、日志和随机种子框架。
 - `reports/`：不包含受限原始数据的阶段验收汇总。
+- `plans/`：后续阶段的任务拆解、验收标准和时间安排。
 
 ## 项目定位
 
