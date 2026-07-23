@@ -1,0 +1,48 @@
+{
+  "stock_count": 30,
+  "date_range": {
+    "start": "2022-06-03",
+    "end": "2023-06-02"
+  },
+  "quality": {
+    "rows": 1498,
+    "duplicate_stock_date": 0,
+    "bad_dates": 0,
+    "missing_numeric_cells": 0,
+    "invalid_ohlc_rows": 0,
+    "nonpositive_price_rows": 0,
+    "previous_close_continuity_mismatch_rows": 2,
+    "reported_return_mismatch_rows": 0
+  },
+  "coverage": {
+    "baostock": 1.0,
+    "csmar": 1.0
+  },
+  "samples": {
+    "train": 688,
+    "test": 210,
+    "validation": 120
+  },
+  "event_count": 18,
+  "text_features": {
+    "fit_scope": "train split non-empty text only",
+    "training_text_rows": 15,
+    "all_text_rows": 17,
+    "tfidf_vocabulary_size": 512,
+    "svd_components": 8,
+    "svd_explained_variance_ratio_sum": 0.8901379108211919,
+    "clusters": 4
+  },
+  "baseline": {
+    "validation": {
+      "mae": 0.039396290609263564,
+      "rmse": 0.055819535007492566,
+      "direction_accuracy": 0.4
+    },
+    "test": {
+      "mae": 0.03594848883762263,
+      "rmse": 0.05297616080176745,
+      "direction_accuracy": 0.5285714285714286
+    }
+  }
+}

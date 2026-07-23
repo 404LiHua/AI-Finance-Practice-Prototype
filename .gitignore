@@ -6,6 +6,7 @@ __pycache__/
 
 # Virtual environments and generated runtimes
 .venv/
+.venv-baostock/
 venv/
 env/
 runtime/
@@ -31,3 +32,6 @@ logs/
 Thumbs.db
 desktop.ini
 
+# Reproducible data pipeline outputs
+data/processed/
+data/external/
