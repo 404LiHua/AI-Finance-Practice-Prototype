@@ -1,0 +1,16 @@
+{
+  "model": "frets_return_l4",
+  "adapter": "unified Stage B split/sequence/evaluator",
+  "parameter_count": 197761,
+  "feature_columns": [
+    "return_1w"
+  ],
+  "sequence_length": 4,
+  "source_file": "D:\\项目\\源文件\\deploy\\FreTS-main\\models\\FreTS.py",
+  "source_sha256": "69358713ec370ec62d71641f56ae8201c175a256e157130c32650827dbf29415",
+  "upstream_entrypoint": null,
+  "sample_counts": {
+    "train": 928,
+    "validation": 150
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "experiment_id": "stage_d_d2_bounded_baselines_v1",
+  "status": "PREREGISTERED_LOCKED",
+  "protocol_id": "stage_d_rolling_origin_v1",
+  "protocol_path": "stage_d/protocols/rolling_origin_v1.json",
+  "protocol_sha256": "5dcd3c7e28b5577472743c171bd98ba17a514920e8088c405c4ecca68f102cb6",
+  "custody_config_path": "stage_d/configs/data_custody.json",
+  "data_root": "data/processed/weekly_30stocks_stage_a_v1",
+  "output_root": "outputs/stage_d/d2_bounded_baselines_v1",
+  "evidence_class": "STAGE_D_SELECTION_EXPOSED_ROLLING_DEVELOPMENT",
+  "stock_count": 30,
+  "lookback_weeks": 12,
+  "seeds": [20260723, 20260724, 20260725],
+  "base_models": [
+    "naive",
+    "frets_return_l4",
+    "minimalist_price_only_l8",
+    "temporal_only_control",
+    "fixed_temporal_graph_control"
+  ],
+  "shrinkage": {
+    "formula": "alpha * learned_prediction + (1 - alpha) * naive_prediction",
+    "naive_prediction": 0.0,
+    "alphas": [0.25, 0.5, 0.75],
+    "base_models": [
+      "frets_return_l4",
+      "minimalist_price_only_l8",
+      "temporal_only_control",
+      "fixed_temporal_graph_control"
+    ],
+    "post_result_candidate_additions_allowed": false
+  },
+  "frets": {
+    "root": "D:/项目/源文件/deploy/FreTS-main",
+    "model_file": "models/FreTS.py",
+    "sequence_length": 4,
+    "feature_set": "return_only",
+    "channel_independence": "0",
+    "batch_size": 64,
+    "epochs": 80,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "minimalist_transformer": {
+    "sequence_length": 8,
+    "feature_set": "price_only",
+    "d_model": 32,
+    "nhead": 4,
+    "num_layers": 1,
+    "dim_feedforward": 64,
+    "dropout": 0.1,
+    "batch_size": 64,
+    "epochs": 80,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "graph_base_config_path": "stage_c/configs/graph_frequency_v1.json",
+  "graph_overrides": {
+    "temporal_only_control": {
+      "graph_mode": "identity",
+      "use_frequency": false,
+      "use_time_graph": false,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 2
+    },
+    "fixed_temporal_graph_control": {
+      "graph_mode": "temporal_neighbor",
+      "use_frequency": true,
+      "use_time_graph": false,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 2
+    }
+  },
+  "forbidden_inputs": [
+    "C-4 row-level data",
+    "future D-SCREENING data",
+    "original static train/validation/test split labels"
+  ],
+  "fold_definition_mutation_allowed": false
+}

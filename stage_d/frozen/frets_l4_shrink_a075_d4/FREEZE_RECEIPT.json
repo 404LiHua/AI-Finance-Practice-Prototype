@@ -1,0 +1,11 @@
+{
+  "freeze_id": "stage_d_frets_l4_shrink_a075_d4_20260724",
+  "status": "LOCKED_BEFORE_D_SCREENING",
+  "frozen_on": "2026-07-24",
+  "candidate": "frets_return_l4__fixed_shrink_a075",
+  "manifest_root_sha256": "e3303c3b4818e547476b0bded9860c6fd0334cf1db4f5b4e5677249955d208f6",
+  "artifact_count": 31,
+  "future_d_screening_status": "RESERVED_NOT_ACQUIRED_NOT_READ_UNAUTHORIZED",
+  "verification_command": "python -m stage_d.freeze_stage_d_candidate --verify",
+  "independent_recalc_command": "python -m stage_d.run_d4_independent_recalc"
+}

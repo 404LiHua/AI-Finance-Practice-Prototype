@@ -1,0 +1,24 @@
+{
+  "policy_id": "stage_d_c4_seal_v1",
+  "repo_root_relative_forbidden_paths": [
+    "data/screening",
+    "outputs/screening/stage_c_recommended_v2_c4_20230609_20240607"
+  ],
+  "forbidden_name_fragments": [
+    "screening_predictions",
+    "stage_c_recommended_v2_c4_20230609_20240607"
+  ],
+  "sealed_interval": {
+    "start": "2023-06-09",
+    "end": "2024-06-07"
+  },
+  "development_date_ceiling": "2023-06-02",
+  "future_d_screening_reserved": {
+    "start": "2024-06-14",
+    "end": "2025-06-13",
+    "status": "RESERVED_NOT_ACQUIRED_NOT_READ",
+    "access_authorized": false
+  },
+  "allowed_c4_information": "aggregate public conclusion only; no row-level data, predictions, stock rankings, or grouped errors",
+  "violation_action": "raise DataCustodyViolation before opening or processing the path"
+}

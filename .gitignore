@@ -16,6 +16,8 @@ runtime/
 # Model outputs and temporary data
 outputs/
 checkpoints/
+!stage_d/frozen/**/checkpoints/
+!stage_d/frozen/**/checkpoints/**
 logs/
 *.log
 *.tmp

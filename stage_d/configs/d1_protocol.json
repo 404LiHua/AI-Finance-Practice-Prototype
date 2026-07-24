@@ -1,0 +1,28 @@
+{
+  "protocol_id": "stage_d_rolling_origin_v1",
+  "data_root": "data/processed/weekly_30stocks_stage_a_v1",
+  "output_root": "outputs/stage_d/d1_rolling_origin_v1",
+  "development_end": "2023-06-02",
+  "lookback_weeks": 12,
+  "minimum_stock_count": 30,
+  "rolling_origin": {
+    "fold_count": 3,
+    "minimum_train_weeks": 24,
+    "validation_weeks": 6,
+    "step_weeks": 6,
+    "purge_weeks": 1,
+    "anchor": "latest_development_week"
+  },
+  "required_metric_columns": [
+    "model",
+    "fold_id",
+    "seed",
+    "samples",
+    "mae",
+    "rmse",
+    "direction_accuracy",
+    "direction_f1"
+  ],
+  "primary_baseline": "naive",
+  "evidence_class": "STAGE_D_SELECTION_EXPOSED_ROLLING_DEVELOPMENT"
+}

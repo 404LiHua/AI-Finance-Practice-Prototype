@@ -1,0 +1,44 @@
+{
+  "version": "v0.4.0-stage-d",
+  "stage": "D",
+  "outcome": "PASS",
+  "candidate": "frets_return_l4__fixed_shrink_a075",
+  "baseline": "naive",
+  "screening_interval": {
+    "start": "2024-06-14",
+    "end": "2025-06-13"
+  },
+  "stock_count": 30,
+  "sample_count": 1560,
+  "candidate_metrics": {
+    "mae": 0.04276178972977746,
+    "rmse": 0.06489423280182523,
+    "direction_accuracy": 0.5371794871794872,
+    "direction_f1": 0.4893917963224894
+  },
+  "naive_metrics": {
+    "mae": 0.042977143329234524,
+    "rmse": 0.06502468603821465,
+    "direction_accuracy": 0.5256410256410257,
+    "direction_f1": 0.0
+  },
+  "mae_improvement_vs_naive_pct": 0.5010886782476498,
+  "rmse_improvement_vs_naive_pct": 0.20062109383006025,
+  "stocks_beating_naive": 19,
+  "three_seed_mae_cv": 0.016419897072406563,
+  "worst_five_stock_error_share": 0.24325209472317022,
+  "return_group_mae_ratios": {
+    "negative_tail": 0.9145277655754807,
+    "positive_tail": 1.0237045198057082,
+    "near_zero": 1.421235099381744
+  },
+  "pass_conditions": 11,
+  "pass_conditions_met": 11,
+  "failure_conditions_triggered": 0,
+  "execution_count": 1,
+  "authorization_consumed": true,
+  "freeze_root_sha256": "e3303c3b4818e547476b0bded9860c6fd0334cf1db4f5b4e5677249955d208f6",
+  "screening_decision_sha256": "8a6457853a04d5c395baabc8e9ea8205499cbbd0988fc878bc6b2789d8e32edc",
+  "source_sha256": "a2ee4ff497e152f140002c5f7c4f6376f041e6d639c89287239e07891ce17bc9",
+  "note": "Aggregate public evidence only. Raw data and row-level predictions remain sealed and are excluded from GitHub."
+}
