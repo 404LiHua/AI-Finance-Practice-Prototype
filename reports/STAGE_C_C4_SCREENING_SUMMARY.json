@@ -1,0 +1,37 @@
+{
+  "stage": "C-4",
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "split_id": "future_weekly_screening_20230609_20240607_v1",
+  "verdict": "FAIL",
+  "scope": {
+    "provider": "BaoStock",
+    "price_adjustment": "forward-adjusted",
+    "stock_count": 30,
+    "samples": 1500,
+    "screening_start": "2023-06-09",
+    "screening_end": "2024-06-07"
+  },
+  "candidate": {
+    "model": "fixed_control_ensemble_v2",
+    "mae_mean": 0.04221176564202372,
+    "rmse_mean": 0.06308557547275,
+    "direction_accuracy_mean": 0.5188888888888888,
+    "direction_f1_mean": 0.47004792719980854,
+    "three_seed_mae_cv": 0.011409953008909264,
+    "high_absolute_return_mae_ratio": 1.9854069245032073,
+    "worst_five_stock_error_share": 0.2630770108682224
+  },
+  "best_core_baseline": {
+    "model": "naive",
+    "mae_mean": 0.03987879621708757,
+    "rmse_mean": 0.060618396971149534
+  },
+  "triggered_failure_conditions": [
+    "candidate_mae_worse_than_naive"
+  ],
+  "selection_or_tuning_performed": false,
+  "post_screening_repair_allowed": false,
+  "freeze_manifest_root_sha256": "4e0af90936d06f0a16999e86d5c7ff1e70466502175b6c0d52f789a028041c47",
+  "screening_source_set_sha256": "6969a86601e6781808fce2db3aaead127fb0a5196f35904e628ed1f45378a1e9",
+  "screening_evidence_set_sha256": "8cdc8037da06e2c01ac12fe996150df765750aac09c473c379a442c77d4ad075"
+}

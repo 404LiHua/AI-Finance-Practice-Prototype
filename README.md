@@ -53,13 +53,26 @@ D:\项目\源文件\deploy\.venv-timegnn\Scripts\python.exe .\experiments\run_al
 完整实验结果见 `reports/STAGE_B_BASELINES_INITIAL_REPORT.md` 与
 `reports/BOUNDED_ABLATIONS_TRAIN_RESULT.md`。
 
-## 阶段 C：动态图频核心模型
+## 阶段 C：图频模型、冻结与独立 SCREENING
 
-阶段 C 将在现有统一训练框架上实现自研动态图频融合模型，包括可学习边概率、
-Gumbel-Softmax/Top-k 稀疏图、频域图消息传递、时域—频域融合、稳定性正则和邻接矩阵可视化。
-首轮继续固定 30 只股票，先完成模块单测、小样本过拟合检查和三随机种子实验，再决定是否扩大股票池。
+阶段 C 已完成动态图学习、频域传播、结构消融、稳定化、固定控制组集成、独立加载推理、工程诊断、候选冻结和一次性独立 SCREENING。
+开发期推荐模型固定为：
 
-实施安排见 `plans/STAGE_C_IMPLEMENTATION_PLAN.md`。
+```text
+fixed_control_ensemble_v2
+= 0.5 × temporal_only_control
++ 0.5 × fixed_temporal_graph_control
+```
+
+该模型在开发期 validation 上取得最低平均 MAE，但在 2023-06-09 至 2024-06-07 的 30 股票独立 SCREENING 中，MAE 为 0.042212，高于 Naive 的 0.039879，按预冻结规则判定为 `FAIL`。因此阶段 C 的准确结论是“工程实现完成，独立性能验收未通过”，不得把开发期结果解释为已验证的泛化优势。
+
+完整结论见 `reports/STAGE_C_FINAL_REPORT.md` 和 `reports/STAGE_C_C4_INDEPENDENT_SCREENING_REPORT.md`。
+
+## 阶段 D：新候选与新独立证据
+
+阶段 D 将封存阶段 C 的 1,500 条 SCREENING 样本，不基于逐样本误差继续调参；在 2023-06-02 及以前的数据上使用滚动起点验证研究稳健的新候选，在候选与规则再次冻结后，才申请读取另一段从未使用的未来数据。
+
+实施安排见 `plans/STAGE_D_IMPLEMENTATION_PLAN.md`。
 
 ## 仓库内容
 

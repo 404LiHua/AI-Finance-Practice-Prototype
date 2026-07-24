@@ -1,0 +1,1052 @@
+{
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "algorithm": "SHA-256",
+  "repo_relative_paths": true,
+  "artifact_count": 174,
+  "entries": [
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/metadata.json",
+      "role": "development_data_contract",
+      "bytes": 20154,
+      "sha256": "97eaf2dfb451951d042cd98408e563d2c025e6e7671609478066f07fb2330fb9"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/selected_stocks.txt",
+      "role": "stock_universe",
+      "bytes": 330,
+      "sha256": "365070139d912ccff146484fa6e215ed1efe3012d45c084fe84334138025e227"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/train.csv.gz",
+      "role": "development_train_split",
+      "bytes": 143700,
+      "sha256": "2ec5080ad16788b1d97d269a1bfbecccc7afe55e6742d1aca78fb31013e5bc4f"
+    },
+    {
+      "path": "data/processed/weekly_30stocks_stage_a_v1/validation.csv.gz",
+      "role": "development_validation_split",
+      "bytes": 32309,
+      "sha256": "1a033c1abe68df552d6a7eda661fc7024bb16211756cd2e7cbc7f48295fee3ed"
+    },
+    {
+      "path": "experiments/bounded_ablations.py",
+      "role": "baseline_model_code",
+      "bytes": 2660,
+      "sha256": "b53dcfe44c8641d8b0d37e69a5d223d657bfee48d08878790fa45de5f7deab9b"
+    },
+    {
+      "path": "experiments/configs/bounded_ablations.json",
+      "role": "baseline_config",
+      "bytes": 1988,
+      "sha256": "c1c8d94ab3d9205317055761f188067389b5a977c04547cab4bd82b754be684c"
+    },
+    {
+      "path": "experiments/configs/stage_b_baselines.json",
+      "role": "baseline_config",
+      "bytes": 1863,
+      "sha256": "614638b56a4012fdc26fe10eb7c1d0935fed9772a154b6e29d7ec554b7f948fa"
+    },
+    {
+      "path": "experiments/core.py",
+      "role": "unified_evaluator_code",
+      "bytes": 7474,
+      "sha256": "f9a090ac1a7ab3b9d6b72bb278a147b57b01a39d1a95c2f2152a3258b0548d0d"
+    },
+    {
+      "path": "experiments/models.py",
+      "role": "baseline_model_code",
+      "bytes": 18242,
+      "sha256": "89cdc442ae037c7d0bb1275429fc50fc91df9c1a2b6e9dd30762a43b5dbdd17a"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/environment.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 553,
+      "sha256": "fab57b6b71fdf681842b9dadd1053a1a4cf3a199a652c0ff7079d83a9a62968c"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/metrics.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 12983,
+      "sha256": "f3d0caa481ccbdacbf1b2f37cd97470bd54d3c4ec1baf19f43405e5bb49018a8"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/model.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 51,
+      "sha256": "5ce5d2159b81b381a94e658d192513afbd70eb8d595fabb33a28180e8864c11e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/predictions.csv",
+      "role": "frozen_baseline_naive",
+      "bytes": 38036,
+      "sha256": "a1b206b9dc1312c35da9bcc70cc222f65fb4b2f5cb80529c8a154ad85dcc013e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/resolved_config.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 2353,
+      "sha256": "1e01babebdea0c90599ed247baad03dd2aa092642b3cca1e89b0e5417d243e48"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260723/seeds.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/environment.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 553,
+      "sha256": "fd622890df7f122ac737fa3c3e753f481cf580092db848e531b47807e5b9a5a5"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/metrics.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 12983,
+      "sha256": "99085ea444b7204bb03fafebc34883f29768bb632162d0ed6892fe2854535838"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/model.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 51,
+      "sha256": "5ce5d2159b81b381a94e658d192513afbd70eb8d595fabb33a28180e8864c11e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/predictions.csv",
+      "role": "frozen_baseline_naive",
+      "bytes": 38036,
+      "sha256": "a1b206b9dc1312c35da9bcc70cc222f65fb4b2f5cb80529c8a154ad85dcc013e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/resolved_config.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 2353,
+      "sha256": "56655d5b45df27e7bce7417443d53350e7b7e4fabd0571c24a58e3f97a8e74b4"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260724/seeds.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/environment.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 553,
+      "sha256": "22e145026fa8804e07375f24db02a5478e56f6b38654542212bf65d11afb18d1"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/metrics.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 12983,
+      "sha256": "a96eecb03ece65361cee03bdb57c83c2caa246ea538b54663a705b50b55ae68d"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/model.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 51,
+      "sha256": "5ce5d2159b81b381a94e658d192513afbd70eb8d595fabb33a28180e8864c11e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/predictions.csv",
+      "role": "frozen_baseline_naive",
+      "bytes": 38036,
+      "sha256": "a1b206b9dc1312c35da9bcc70cc222f65fb4b2f5cb80529c8a154ad85dcc013e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/resolved_config.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 2353,
+      "sha256": "fbf31006a9120dbdf17962b0af7471114707840abb2c7b03b2856e9d4255ebe5"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_baselines/naive_seed20260725/seeds.json",
+      "role": "frozen_baseline_naive",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/environment.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 553,
+      "sha256": "d2c3c579649f3770f90b2a001cc3c9449dc4ae7690b52ffdf58fac084e1d9969"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/metrics.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 13274,
+      "sha256": "5cb6ba578c4ad96f906e9a3269151878201598c37544c653fdafd6ed2d6cf094"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/model.pt",
+      "role": "frozen_baseline_frets",
+      "bytes": 795990,
+      "sha256": "61518d031569ecfc6629a842ff0bda871fcfa2a2b4a224b21b53fb76cb792b3d"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/model_metadata.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 495,
+      "sha256": "f2486da6c375539734bafbbbff7250ff535f5a47c5614bd6747c1dda8c082cfc"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/predictions.csv",
+      "role": "frozen_baseline_frets",
+      "bytes": 47371,
+      "sha256": "a6348b4243f153220c9a18ee82e4e715c28bbfc005e7148648ffe7eef1a0764e"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/resolved_config.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 3508,
+      "sha256": "2841fbcfb6e3829bcf5d807344fa95f87baea9d6839209adbfb3ce0c96c16998"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/seeds.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260723/training_history.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 2683,
+      "sha256": "081f6a14a1a77a9f9cd0a73dba11cebf0c25c780a5af82b5aa4036d593d3769c"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/environment.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 553,
+      "sha256": "649902b534e15b248282ea92a81711cd8f5c512a4adac9af4e62a418bc9bec2b"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/metrics.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 13235,
+      "sha256": "2d7dbda71bc3821ccc31779db9a3b43acdbafb31a524672bc945ea7fc20f3b58"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/model.pt",
+      "role": "frozen_baseline_frets",
+      "bytes": 795990,
+      "sha256": "553be85b93af72f24150fa2007231664de73c03be672aa915bc399fd350843f4"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/model_metadata.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 495,
+      "sha256": "f2486da6c375539734bafbbbff7250ff535f5a47c5614bd6747c1dda8c082cfc"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/predictions.csv",
+      "role": "frozen_baseline_frets",
+      "bytes": 47412,
+      "sha256": "b7bc889af022cf26e6a03522f52908ed45eee146d28f0d51776507004693627a"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/resolved_config.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 3508,
+      "sha256": "5a215aa4f26e9476086d96c422175a86dbdb2d77be8d7d81dfedcf603d3f77bb"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/seeds.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260724/training_history.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 3020,
+      "sha256": "97424e406f950eda4c4b68fa207c5b4743b4fee6bc168cc5a0c8df1703dbb2ed"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/environment.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 553,
+      "sha256": "71030f0711a80fd42d264c95087e33e5f6c9412dd7bba9464f30267fe3755182"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/metrics.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 13258,
+      "sha256": "be882565467465e07954b1b79c0026a263dd05de08460df80f76a2596bdf030c"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/model.pt",
+      "role": "frozen_baseline_frets",
+      "bytes": 795990,
+      "sha256": "4cce7e65d5afe5d5919fe67b71b3d2bbfec4f2bc7ef3052cba387508fe166403"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/model_metadata.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 495,
+      "sha256": "f2486da6c375539734bafbbbff7250ff535f5a47c5614bd6747c1dda8c082cfc"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/predictions.csv",
+      "role": "frozen_baseline_frets",
+      "bytes": 47367,
+      "sha256": "f40035813d1dc7294084d0a6d5cfad27025a9fa4525cab9b399f9c1fe57b10eb"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/resolved_config.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 3508,
+      "sha256": "38fe570b5b1d5e7a8013713c8f1fb499b4f95a7a0b66caf3de7fbb56337b79dd"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/seeds.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/frets_return_l4_seed20260725/training_history.json",
+      "role": "frozen_baseline_frets",
+      "bytes": 6043,
+      "sha256": "1331a34296a4cddc270b1101b3b5411e87e3dfb4d8e00e6d48384ce5a200cbda"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/environment.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 553,
+      "sha256": "e3f34438678682023066320a8eea9a350732087f24c5b003da64151f3b37233c"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/metrics.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 12942,
+      "sha256": "2af032b4fb1abb55d85044a9f0777621d2f439e54c7b63718b54ec58ec125bdb"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/model.pt",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 44728,
+      "sha256": "2b7b356660f5303e330f3e93030bfc25323c5fed5763669a0ab7bb94be48c1db"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/model_metadata.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 170,
+      "sha256": "fd0843645f306d668571d5b8b8fb1e865f4ef8b8c416feed3044b19b4d16279f"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/predictions.csv",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 47344,
+      "sha256": "fd2e3ccce4e54bbf987ef065e27a87d60c4a361a8c3aaf8316cc1d09247f4985"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/resolved_config.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 3233,
+      "sha256": "6990a7734c58df2713163a8494ac0cbe06f6cc0230ffe64b5490c1095506e712"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/seeds.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260723/training_history.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 8479,
+      "sha256": "20a6bfb611644791277586ae54470771edc953acd89a448abb382f3f97dbbdd8"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/environment.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 553,
+      "sha256": "787059c59849a5fb6cbc7b58ef94853bb1d09869395b0416dd9f5a706ddf5a32"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/metrics.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 12957,
+      "sha256": "a53aa7bcf8f6941677917ea15aead4f5dcbd3a4d077f389c9d6e77156a7a7c67"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/model.pt",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 44728,
+      "sha256": "3887e19442c60bd7a6dd2f7606564452d546159939636dd5160b56ae40a263b5"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/model_metadata.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 170,
+      "sha256": "fd0843645f306d668571d5b8b8fb1e865f4ef8b8c416feed3044b19b4d16279f"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/predictions.csv",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 47277,
+      "sha256": "8620d56bb097888f040feee3a96cbb65372a3829d7ea8ef74b07f733e624fbf5"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/resolved_config.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 3233,
+      "sha256": "b952f35fad85eac1e2218cd91fd11805da877c3af7659d421f21f6211b81e1db"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/seeds.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260724/training_history.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 4172,
+      "sha256": "60d4a610e5853af531a62df5ba89562ffa1b349dafc8451dbde2ae46129c159d"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/environment.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 553,
+      "sha256": "6e46ddc42fe830ddacc3b91f29ea46c303cb2a2db627625f55ec11b7a9dd0ee7"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/metrics.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 12953,
+      "sha256": "76d36ef7744488b681df3faf54e32d296e6a6706de8d43ba6ee2ed16a63e5509"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/model.pt",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 44728,
+      "sha256": "b2bd6693748a54ab47baf321d6552aefdb7f5d9df724d9784c2df5795243716a"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/model_metadata.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 170,
+      "sha256": "fd0843645f306d668571d5b8b8fb1e865f4ef8b8c416feed3044b19b4d16279f"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/predictions.csv",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 47250,
+      "sha256": "903fd57a65cd24c8402ed8aa571350256a9898b3625398b184e68a5c6eae79b5"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/resolved_config.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 3233,
+      "sha256": "cde3dd19599628c95c92fb31671be1ca2a9c22bc454b75306e0710cb5225cca9"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/seeds.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_b_30stocks_bounded_ablations/minimalist_price_only_l8_seed20260725/training_history.json",
+      "role": "frozen_baseline_minimalist_transformer",
+      "bytes": 5679,
+      "sha256": "a19828c741d1155370eb5d22d1eded7ccc0bd9cb7ca83044d147c6f0807e6352"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "39b44f20d9a587bff7be0f46dc62857d088c0906d80618f2e94498a63919951a"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6980,
+      "sha256": "d3a62342463114086138c2ca4f0eceed4532b6874df9cdc1c121f908fc22f7dc"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/model.pt",
+      "role": "candidate_component",
+      "bytes": 65232,
+      "sha256": "ab4e84c88d8f0db1d69a15e96f98dd512f3a9a419ab42bfd94719e377884663c"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 533,
+      "sha256": "cf8a7d149ab98610b3b697323879aec31ef0f22861040e0662bd9376ae6499bc"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17832,
+      "sha256": "12cce87992f2feb248478100ee2995ae174f29f910fc8481721e8cb283537084"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1439,
+      "sha256": "f9aa8404bdd1b2934c0bd89ff676176b85ae8bd9bcffc3df56d706f1b1255910"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260723/training_history.json",
+      "role": "candidate_component",
+      "bytes": 4027,
+      "sha256": "203be723cd8cd7a08c7e06f95fb735ec00f6b4e69b91f76aff13374650a53b02"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "88d950310f30d53bf969d6ad881c2bac051b77d5766697bc15818e5c3b7522d5"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6981,
+      "sha256": "6d7d335800623b6f53a22412e8bdb368623ddd8a8e3c0930156341be81f72203"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/model.pt",
+      "role": "candidate_component",
+      "bytes": 65232,
+      "sha256": "f9c97ee8adb744fefefae779e51a5ee5bf766c3de92e772781384cb17fc53f01"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 533,
+      "sha256": "cf8a7d149ab98610b3b697323879aec31ef0f22861040e0662bd9376ae6499bc"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17812,
+      "sha256": "68a09069fc973afe9b3a6f0001082b67c97d1537a42b173921dc43675f149952"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1439,
+      "sha256": "de9f9bc80a81857ea2e4d9783df56f77ed5dda0361537e8e98dd1dfe827dcf4a"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260724/training_history.json",
+      "role": "candidate_component",
+      "bytes": 7355,
+      "sha256": "6340c3d96f6e784d02b5dcc4a3dec139e28dc8bbd79fc18dae749218f500c75d"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "3742894644434786c3970e8c81880dffc6766fc1d938d3e3dffa359b0ccd9af5"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6952,
+      "sha256": "92c8d23eaec7a72cafcbbf740cea539b43681a330eb3eb7bc3da725520c59e18"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/model.pt",
+      "role": "candidate_component",
+      "bytes": 65232,
+      "sha256": "32de38d5df8ace2ef278d746d6cc4cd88ff07937ce81263b3df5bc56d7990103"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 533,
+      "sha256": "cf8a7d149ab98610b3b697323879aec31ef0f22861040e0662bd9376ae6499bc"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17802,
+      "sha256": "a9de57c2a83b0f0b2aa6bca80cdb28ef28fbdefa4ba0ae156d20bfe46c279e89"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1439,
+      "sha256": "048bd8ab9ef15cc20493ddb35548d44da74d9e2af3167435b66f7bea4cd439b2"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/fixed_temporal_graph_control_seed20260725/training_history.json",
+      "role": "candidate_component",
+      "bytes": 5331,
+      "sha256": "642382ef8f80d5429c82b5fd7047fb83718fdbd4f1771d56b5f4451bb2fc7dcf"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "0a4f73f9cadc326afacecd143a816d6880423d004bd4e99818fb3b0f9d1ca1b9"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6918,
+      "sha256": "9717cbe9e44d94cd576d1c6494cd9cefceee3e015de57b8f2513485c9389521e"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/model.pt",
+      "role": "candidate_component",
+      "bytes": 46072,
+      "sha256": "f52c33e767297dfe51012ad9b8688afe0026440e16f6646cfdd5175a3473c441"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 524,
+      "sha256": "8fa69976a3f46c42886b74667d5d7569a419fc397b66d581ec2ebe6412c88df4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17807,
+      "sha256": "0afed35ce289308d2938f85ece13e006b39fdbdb68a0264d22f3d2f324e33df9"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1410,
+      "sha256": "b2f38b85a18864929ef6fd52446c51f990733805e3de2ecc2e7bbd94dd9322a8"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260723/training_history.json",
+      "role": "candidate_component",
+      "bytes": 7353,
+      "sha256": "4a91bcd3170ba82ddac0b6af8727b4a37bbbc62d9283d78a14ddb0e830653da4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "95f2e5b66a88660e4617c210dc8b8c3a71718ea97c92af19534faddfa83b026b"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6932,
+      "sha256": "b1f8133ba7ccc139a38f8e754be1eba0b5f0d97bd5fffc52d4dea82bc75e48a4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/model.pt",
+      "role": "candidate_component",
+      "bytes": 46072,
+      "sha256": "8c797dc7bebea64cc4892c7d3303c616ec00fcc006a0be7b0cb0a7fd0338b957"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 524,
+      "sha256": "8fa69976a3f46c42886b74667d5d7569a419fc397b66d581ec2ebe6412c88df4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17778,
+      "sha256": "01c65ea3d589d2f503d366737e7e47f54cf0cf55a1f7579e43627f554376042c"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1410,
+      "sha256": "3bcf250be45cd28aee66c49c37929d6379632c223aafadc6f1a31e6f8b419fa1"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260724/training_history.json",
+      "role": "candidate_component",
+      "bytes": 3671,
+      "sha256": "bf7dddf7683a7c386e99f0df49c3b8c89fcd2fa2648de901b6a6186deb41cb25"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/environment.json",
+      "role": "candidate_component",
+      "bytes": 553,
+      "sha256": "0f47dd3b701437c252441ca95318a07d8d4a72f1df1e3880d352124a3514be35"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/metrics.json",
+      "role": "candidate_component",
+      "bytes": 6930,
+      "sha256": "428e97315a0ec272cd562e6cba158787254712b1b7faf3f80fe320dea9fbca3e"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/model.pt",
+      "role": "candidate_component",
+      "bytes": 46072,
+      "sha256": "9ed0fd9b511c984db85172402edb24af48ed3b6e8ef7ce8ac566c3596277c715"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/model_metadata.json",
+      "role": "candidate_component",
+      "bytes": 524,
+      "sha256": "8fa69976a3f46c42886b74667d5d7569a419fc397b66d581ec2ebe6412c88df4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/predictions.csv",
+      "role": "candidate_component",
+      "bytes": 17815,
+      "sha256": "341379532d50828dd296dcf7e6261c06f300c2eccdcf18540af5b622d83f5e86"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/resolved_config.json",
+      "role": "candidate_component",
+      "bytes": 1410,
+      "sha256": "8580c59898f67b2e4a246445928b58782c3a114202086f31742b512b6cf133b4"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/seeds.json",
+      "role": "candidate_component",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_graph_stabilization/temporal_only_control_seed20260725/training_history.json",
+      "role": "candidate_component",
+      "bytes": 6423,
+      "sha256": "38f2e1bf85003ceff8650293886014ec221412d3049938a20bb6532ac993cde3"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260723/metrics.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 6037,
+      "sha256": "9adbdaaa42d3ca96b17a65672244d900fd663ae90a71c4eb7d355b719b7adbb3"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260723/model_manifest.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 826,
+      "sha256": "369e0ff1b185662f3b1835284f07d88a4a863a590d1c3d1ae87ec1b1cd559317"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260723/predictions.csv",
+      "role": "candidate_seed_artifact",
+      "bytes": 22464,
+      "sha256": "0f6b16dc8fab658079adfab8a62e17e4268b6c3a01ded3232fb2ea0402d915a6"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260724/metrics.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 6028,
+      "sha256": "8de59746f5ca9a0f47d5a8d4ddcf7d75fe4d2eccc043c490a4ec27df5650e7b9"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260724/model_manifest.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 826,
+      "sha256": "ab516d0f33af305859e7498d849626d8ec04b7bbe4fd789293557e0b35e0ad18"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260724/predictions.csv",
+      "role": "candidate_seed_artifact",
+      "bytes": 22391,
+      "sha256": "98720f01bdafd1d85ed19c7962c5db9a0d5f0dc73fa6ca65686e5c5a701082aa"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260725/metrics.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 6047,
+      "sha256": "4cc4f7eea2eed17a943df8360cc9c98ff014770d9f722bbfb9dd9716c479fc8b"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260725/model_manifest.json",
+      "role": "candidate_seed_artifact",
+      "bytes": 826,
+      "sha256": "d7cba2d66495f4fb350051d0472df3943889065f434afc36cd6935641dc9b507"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed20260725/predictions.csv",
+      "role": "candidate_seed_artifact",
+      "bytes": 22417,
+      "sha256": "d06b3372fbd602aa14a19d5132e59fe207bd85175643297b9d29bf4e829e8646"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/recommended_v2_decision.json",
+      "role": "candidate_decision",
+      "bytes": 405,
+      "sha256": "80dcbffd4b11d48876bc9acb9f7f734a1a31cc6842c388575f10bee64e718707"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/recommended_v2_results.csv",
+      "role": "candidate_development_result",
+      "bytes": 458,
+      "sha256": "e6ab4b32b982b34be0f270aea2309aa72b19e247d950724131ddfc8e15e12a8f"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/recommended_v2_summary.csv",
+      "role": "candidate_development_result",
+      "bytes": 325,
+      "sha256": "5c4b4bfa42a96813fbc6c562f27c5d71899f2dd21153a87160a2f04595f4060d"
+    },
+    {
+      "path": "outputs/experiments/stage_c_30stocks_recommended_v2/recommended_v2_unified_comparison.csv",
+      "role": "frozen_comparison",
+      "bytes": 998,
+      "sha256": "b6300066d3cf56f8039e4c9aabc620c1f60ddb67ddb842473d856aaad3334dce"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/environment.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 553,
+      "sha256": "44e84c4605eff5ef194726352f174068ef6959149df81548415639afe8bb2ee9"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/metrics.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 6910,
+      "sha256": "d2d4b989594e854f17da459bb4f11f66ee65d024746dc948c5d16d6178f265b1"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/model.pt",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 73478,
+      "sha256": "0cdfb350da636bd713c07da85a1fd828e4ef3f397c395572c5eb64d6030e721d"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/model_metadata.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 317,
+      "sha256": "b58932f8af177b9156b1bcf80b54c049f061cce070cbcced9c6c01955afd2a03"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/predictions.csv",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 17822,
+      "sha256": "c583056d5bc844e860fc994bd38554b44ef597f13d71fc328096ca794a07caf0"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/resolved_config.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 978,
+      "sha256": "130eb12aadfb61068c25c6d1759720e48775873d6e2aef84195444486f93d07e"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/seeds.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 70,
+      "sha256": "c0531d63a54ca36c124f1754215668f45fa8be6f6170a0529669ce253ff26408"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260723/training_history.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 4125,
+      "sha256": "8b3fcdc6131fab0554ba78fcdd60cb3aa074ea9ddb1db568b91102140b725a2d"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/environment.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 553,
+      "sha256": "70132c142f8c28801a794ca09b52c44274be805bca6acfbbd0ca32d6338714fe"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/metrics.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 6901,
+      "sha256": "ccca26f6f16fbacee20fac01a381907c975831531c598751a685a9e1dda6112e"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/model.pt",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 73478,
+      "sha256": "acf47d2e93c8753f1a22ccb8fe3e137441d2d06ad2a9835cf59577e7ff5a5ceb"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/model_metadata.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 317,
+      "sha256": "b58932f8af177b9156b1bcf80b54c049f061cce070cbcced9c6c01955afd2a03"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/predictions.csv",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 17770,
+      "sha256": "4d704f3270bfd4d39d82c6665514b27c863ec34d8e84396d8a7ebb3d6e0b2e30"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/resolved_config.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 978,
+      "sha256": "8ed4786892737eec810b5fde88425e30e8bf38ecc7fc3cf4cfc572ff57545f1f"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/seeds.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 70,
+      "sha256": "c9b64c61415bb924f023969c08c7d3beaf88a6276f8b1bbca5995189adda65c6"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260724/training_history.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 2851,
+      "sha256": "c419860ed728ed5d7de30166db5c7ab073c2ddf9f4abd26a588617224da98cfd"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/environment.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 553,
+      "sha256": "ea049bdbac31ffa20bd7625ddaf871472b123e3177c0faa6a1667aa6f44d5ac1"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/metrics.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 6893,
+      "sha256": "394495a44f15986a35196f63c5c82ccf9b24a8667d72823a42414eda6d4d8d91"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/model.pt",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 73478,
+      "sha256": "3e39e6e1c17cc72bf79179f27e666b45d3dcf1684fc80bc226d38e22c0ae84dd"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/model_metadata.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 317,
+      "sha256": "b58932f8af177b9156b1bcf80b54c049f061cce070cbcced9c6c01955afd2a03"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/predictions.csv",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 17768,
+      "sha256": "2449bc905ea193a13957ee014d90032db358b6a52858de708766670e5ea0027e"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/resolved_config.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 978,
+      "sha256": "979fd017f1be25d470f276e2e6bf0ca57df79620187d883dbabfe69a32274398"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/seeds.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 70,
+      "sha256": "8f890dc1198a0cbee90adf5e965cf40042b0d31c55e7ad3f14998b7ad68c44c7"
+    },
+    {
+      "path": "outputs/experiments/stage_c_graph_frequency_v1/graph_frequency_v1_seed20260725/training_history.json",
+      "role": "frozen_baseline_graph_frequency_v1",
+      "bytes": 4600,
+      "sha256": "d1aea8e4b9f2ee1d5fa5a7d3529cf40d23f3b07dd978112005a55d5285db2848"
+    },
+    {
+      "path": "stage_c/build_recommended_v2.py",
+      "role": "candidate_build_code",
+      "bytes": 6897,
+      "sha256": "f771231e7206833213f21b214df826f4a1cfb671fb66d20443af79a7f05ed068"
+    },
+    {
+      "path": "stage_c/configs/recommended_v2.json",
+      "role": "candidate_config",
+      "bytes": 1249,
+      "sha256": "7c50e75364510a79b17ad11b96c02a523103f42e8904a64609b244cd0f309ee6"
+    },
+    {
+      "path": "stage_c/configs/recommended_v2_freeze_c3.json",
+      "role": "freeze_policy",
+      "bytes": 6465,
+      "sha256": "a8c66321e9ce69dcb0879656d279ee82a8a4c6d803b2167c92edda7c8bb1b8f0"
+    },
+    {
+      "path": "stage_c/configs/stabilization_v1.json",
+      "role": "component_config",
+      "bytes": 1828,
+      "sha256": "8d95ad123a3a043f1ea6bef484974a8d665c9a93b22795376c48adcc9676da31"
+    },
+    {
+      "path": "stage_c/freeze_stage_c_candidate.py",
+      "role": "freeze_and_verification_code",
+      "bytes": 9248,
+      "sha256": "d83d912375e1b6238d685bbe4e20b80addbfd489e65f2af81692a1a167ae6328"
+    },
+    {
+      "path": "stage_c/inference.py",
+      "role": "inference_code",
+      "bytes": 9454,
+      "sha256": "f41ff69a8c0f84f5a1778b46ba03fa73988b733cc0089a2ce4993c6147980a8a"
+    },
+    {
+      "path": "stage_c/models/__init__.py",
+      "role": "candidate_model_code",
+      "bytes": 187,
+      "sha256": "43beb129ca391a1201f295f2b21e56dc3cb79516e2844835033a90c96100a971"
+    },
+    {
+      "path": "stage_c/models/fixed_ensemble.py",
+      "role": "candidate_model_code",
+      "bytes": 537,
+      "sha256": "76aa2c1e7af81129acfbe883db64ca6a046dbc4febd81a5cac75c30941c58cf1"
+    },
+    {
+      "path": "stage_c/models/frequency_graph.py",
+      "role": "candidate_model_code",
+      "bytes": 1223,
+      "sha256": "f894dc28482068f3dc5bcda9e698d7453ffa59ce43f8cc8e61a58068543dc2be"
+    },
+    {
+      "path": "stage_c/models/graph_frequency_model.py",
+      "role": "candidate_model_code",
+      "bytes": 5389,
+      "sha256": "5ffe297ab1c04dd85753e2d8be5e91775c2a2b42c97db010c9f7399f59c3f0fd"
+    },
+    {
+      "path": "stage_c/models/graph_learner.py",
+      "role": "candidate_model_code",
+      "bytes": 2584,
+      "sha256": "44427c7d69afb9a2c3cc4e3336a405b388a0801921e30c184e60d547611337b6"
+    },
+    {
+      "path": "stage_c/models/time_graph.py",
+      "role": "candidate_model_code",
+      "bytes": 715,
+      "sha256": "e3aaee77d72ba59f60f81e47537a0533c190b975b86e4ca1ea147c3b2ff88ce1"
+    },
+    {
+      "path": "stage_c/run_recommended_v2_inference.py",
+      "role": "inference_code",
+      "bytes": 4458,
+      "sha256": "6a9775a4795c9f4bbea7a2c2503b9f74a7cb0c5eddf9e41483fc92a70e86bf0a"
+    },
+    {
+      "path": "stage_c/tests/test_candidate_freeze.py",
+      "role": "freeze_verification_test",
+      "bytes": 1539,
+      "sha256": "76683cab33c30c8689be215cb8d53f0a09446e499d133c1fcda3bb626ff1fff5"
+    }
+  ]
+}

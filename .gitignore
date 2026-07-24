@@ -37,3 +37,4 @@ desktop.ini
 # Reproducible data pipeline outputs
 data/processed/
 data/external/
+data/screening/

@@ -1,12 +1,21 @@
 {
   "manifest_version": "1.0",
   "split_id": "future_weekly_screening_20230609_20240607_v1",
-  "status": "RESERVED_NOT_ACQUIRED_NOT_READ",
+  "status": "COMPLETED_ONE_SHOT_FAIL",
   "instrument_scope_sha256": "365070139d912ccff146484fa6e215ed1efe3012d45c084fe84334138025e227",
   "frequency": "weekly",
   "start": "2023-06-09T08:00:00Z",
   "end": "2024-06-07T08:00:00Z",
-  "market_rows_present": 0,
-  "market_rows_read": 0,
-  "access_authorized": false
+  "market_rows_present": 1500,
+  "market_rows_read": 1500,
+  "access_authorized": true,
+  "authorized_by": "user_explicit_instruction_2026-07-24",
+  "source_provider": "BaoStock",
+  "source_adjustment": "forward-adjusted",
+  "source_set_sha256": "6969a86601e6781808fce2db3aaead127fb0a5196f35904e628ed1f45378a1e9",
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "evaluated_at_utc": "2026-07-24T03:22:21.755366+00:00",
+  "verdict": "FAIL",
+  "post_screening_repair_allowed": false,
+  "evidence_set_sha256": "8cdc8037da06e2c01ac12fe996150df765750aac09c473c379a442c77d4ad075"
 }

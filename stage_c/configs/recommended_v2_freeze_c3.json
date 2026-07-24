@@ -1,0 +1,198 @@
+{
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "freeze_status": "LOCKED_BEFORE_SCREENING",
+  "frozen_on": "2026-07-24",
+  "evidence_class": "DEVELOPMENT_VALIDATION_SELECTION_EXPOSED",
+  "screening_data_status": "NOT_ACQUIRED_NOT_READ_NOT_USED",
+  "candidate": {
+    "model": "fixed_control_ensemble_v2",
+    "stock_count": 30,
+    "feature_scope": "price_only",
+    "seeds": [20260723, 20260724, 20260725],
+    "components": [
+      {
+        "model": "temporal_only_control",
+        "weight": 0.5
+      },
+      {
+        "model": "fixed_temporal_graph_control",
+        "weight": 0.5
+      }
+    ],
+    "ensemble_trainable_parameters": 0,
+    "sequence_length": 8,
+    "selection_split": "validation",
+    "test_status": "reserved_not_evaluated_or_used_for_selection",
+    "cross_sectional_stock_nodes": "deferred",
+    "prohibited_changes_after_freeze": [
+      "model structure",
+      "component set",
+      "component weights",
+      "feature columns or ordering",
+      "sequence length",
+      "training seeds",
+      "checkpoint selection",
+      "loss or optimizer settings",
+      "metric definitions",
+      "acceptance or failure thresholds"
+    ]
+  },
+  "frozen_baselines": [
+    {
+      "model": "naive",
+      "role": "zero_return_reference",
+      "seeds": [20260723, 20260724, 20260725]
+    },
+    {
+      "model": "frets_return_l4",
+      "role": "frequency_domain_baseline",
+      "sequence_length": 4,
+      "feature_scope": "return_only",
+      "seeds": [20260723, 20260724, 20260725]
+    },
+    {
+      "model": "minimalist_price_only_l8",
+      "role": "numeric_transformer_baseline",
+      "sequence_length": 8,
+      "feature_scope": "price_only",
+      "seeds": [20260723, 20260724, 20260725]
+    },
+    {
+      "model": "temporal_only_control",
+      "role": "stable_component_control",
+      "seeds": [20260723, 20260724, 20260725]
+    },
+    {
+      "model": "fixed_temporal_graph_control",
+      "role": "fixed_graph_component_control",
+      "seeds": [20260723, 20260724, 20260725]
+    },
+    {
+      "model": "graph_frequency_v1",
+      "role": "superseded_stage_c_reference",
+      "seeds": [20260723, 20260724, 20260725]
+    }
+  ],
+  "metric_priority": [
+    {
+      "priority": 1,
+      "metric": "aggregate_mae",
+      "purpose": "primary promotion metric"
+    },
+    {
+      "priority": 2,
+      "metric": "aggregate_rmse",
+      "purpose": "large-error safeguard"
+    },
+    {
+      "priority": 3,
+      "metric": "direction_accuracy_and_direction_f1",
+      "purpose": "secondary directional safeguard"
+    },
+    {
+      "priority": 4,
+      "metric": "three_seed_mae_cv",
+      "purpose": "seed-stability safeguard"
+    },
+    {
+      "priority": 5,
+      "metric": "tail_and_stock_error_concentration",
+      "purpose": "diagnostic risk safeguard"
+    }
+  ],
+  "development_reference_only": {
+    "candidate_mae_mean": 0.03510836060539316,
+    "candidate_mae_std": 0.0008684070750932624,
+    "candidate_rmse_mean": 0.052524205913486305,
+    "candidate_rmse_std": 0.0012236855702214998,
+    "candidate_direction_accuracy_mean": 0.6083333333333334,
+    "candidate_direction_f1_mean": 0.2907254758694973,
+    "note": "These validation figures are selection-exposed references and are not SCREENING thresholds."
+  },
+  "screening_decision_rules": {
+    "minimum_coverage": {
+      "stock_count": 30,
+      "minimum_eligible_samples_per_stock": 4,
+      "require_identical_rows_across_candidate_and_baselines": true
+    },
+    "pass_all_required": [
+      {
+        "rule": "candidate_mae_le_best_core_baseline",
+        "definition": "candidate mean MAE must be no greater than the best mean MAE among naive, frets_return_l4, and minimalist_price_only_l8"
+      },
+      {
+        "rule": "candidate_rmse_within_5pct_of_best_core_baseline",
+        "definition": "candidate mean RMSE must be no greater than 1.05 times the best mean RMSE among the three core baselines"
+      },
+      {
+        "rule": "direction_accuracy_floor",
+        "threshold": 0.5
+      },
+      {
+        "rule": "direction_f1_floor",
+        "threshold": 0.15
+      },
+      {
+        "rule": "three_seed_mae_cv_ceiling",
+        "threshold": 0.1
+      },
+      {
+        "rule": "high_absolute_return_mae_ratio_ceiling",
+        "threshold": 2.25,
+        "definition": "high-absolute-return group MAE divided by aggregate MAE"
+      },
+      {
+        "rule": "worst_five_stock_error_share_ceiling",
+        "threshold": 0.45
+      }
+    ],
+    "performance_failure_if_any": [
+      {
+        "rule": "candidate_mae_worse_than_naive",
+        "definition": "candidate mean MAE is greater than naive mean MAE"
+      },
+      {
+        "rule": "candidate_rmse_more_than_10pct_worse_than_best_core_baseline",
+        "multiplier": 1.1
+      },
+      {
+        "rule": "direction_accuracy_below_failure_floor",
+        "threshold": 0.45
+      },
+      {
+        "rule": "direction_f1_below_failure_floor",
+        "threshold": 0.1
+      },
+      {
+        "rule": "three_seed_mae_cv_above_failure_ceiling",
+        "threshold": 0.15
+      },
+      {
+        "rule": "high_absolute_return_mae_ratio_above_failure_ceiling",
+        "threshold": 2.5
+      },
+      {
+        "rule": "worst_five_stock_error_share_above_failure_ceiling",
+        "threshold": 0.5
+      }
+    ],
+    "inconclusive_zone": "If no failure condition is triggered but one or more pass conditions are missed, record INCONCLUSIVE and do not promote or retune on the same SCREENING data."
+  },
+  "integrity_hard_failures": [
+    "missing frozen artifact",
+    "SHA-256 or byte-size mismatch",
+    "candidate or baseline cannot load or produce finite predictions",
+    "candidate and baselines are evaluated on different rows",
+    "stock scope, feature order, sequence length, seed, component, or weight differs from this freeze",
+    "training, refitting, early stopping, weight search, seed selection, or threshold revision occurs after SCREENING data are read",
+    "test or future SCREENING data are used before explicit authorization",
+    "metric implementation differs from the frozen unified evaluator"
+  ],
+  "screening_execution_policy": {
+    "authorization_required_before_data_access": true,
+    "single_use": true,
+    "no_post_screening_tuning": true,
+    "allowed_outcomes": ["PASS", "FAIL", "INCONCLUSIVE", "INVALID_INTEGRITY_FAILURE"],
+    "on_invalid": "Stop, preserve evidence, and do not reuse the affected SCREENING extract for development."
+  }
+}

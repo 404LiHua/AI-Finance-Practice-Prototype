@@ -1,0 +1,48 @@
+{
+  "experiment_name": "stage_c_30stocks_bounded_ablations",
+  "seeds": [20260723, 20260724, 20260725],
+  "variants": {
+    "full_graph_frequency_k2": {
+      "description": "完整动态图频域门控模型",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "top_k": 2
+    },
+    "no_dynamic_identity": {
+      "description": "移除动态图，使用单位图",
+      "graph_mode": "identity",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "top_k": 2
+    },
+    "fixed_temporal_neighbor": {
+      "description": "使用固定的自环加前一周时间邻接图",
+      "graph_mode": "temporal_neighbor",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "top_k": 2
+    },
+    "no_frequency_temporal_only": {
+      "description": "移除频域图传播与融合，仅保留时域分支",
+      "graph_mode": "identity",
+      "use_frequency": false,
+      "fusion_mode": "gated",
+      "top_k": 2
+    },
+    "learned_graph_k4": {
+      "description": "动态图 Top-k 从 2 改为 4",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "top_k": 4
+    },
+    "no_gate_mean_fusion": {
+      "description": "移除可学习门控，时域与频域等权平均",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "mean",
+      "top_k": 2
+    }
+  }
+}
