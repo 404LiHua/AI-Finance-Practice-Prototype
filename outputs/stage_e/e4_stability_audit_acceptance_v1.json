@@ -1,0 +1,24 @@
+{
+  "stage": "E-4S.1",
+  "generated_at_utc": "2026-07-25T06:34:15.370661+00:00",
+  "passed": true,
+  "checks": {
+    "training_prohibited_by_config": true,
+    "no_training_executed": true,
+    "expected_three_seeds_present": true,
+    "all_four_structures_audited": true,
+    "sample_keys_equal_across_seeds": true,
+    "learned_metrics_independently_reproduced": true,
+    "predictions_not_constant": true,
+    "pairwise_metrics_finite": true,
+    "training_protocol_v2_frozen": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "future_or_sealed_data_not_read": true,
+    "screening_not_accessed": true,
+    "unique_audit_conclusion_present": true
+  },
+  "conclusion": "TRAINING_CONVERGENCE_AND_CHECKPOINT_SELECTION_INSTABILITY",
+  "training_protocol_v2_sha256": "dcaf3b6899296939b06859b43eb0e26b40b5f0556fd8d89867231b5bb4b125ef",
+  "results_sha256": "91d199725e94870ec363b01c654093319c7c85dbb54e408456759ad797dcdf08"
+}

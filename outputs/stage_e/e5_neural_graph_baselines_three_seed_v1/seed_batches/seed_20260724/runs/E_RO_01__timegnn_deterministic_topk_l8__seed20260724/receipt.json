@@ -1,0 +1,22 @@
+{
+  "model_id": "timegnn_deterministic_topk_l8",
+  "family": "timegnn_stable",
+  "fold_id": "E_RO_01",
+  "seed": 20260724,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "node_semantics": "temporal_positions_within_each_stock",
+  "deterministic_graph_sampling": true,
+  "real_stock_node_graph": false,
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": null,
+  "independent_load_max_abs_difference": 1.395744853027736e-09,
+  "checkpoint_sha256": "862b005a9224407cb28629a0c3591eabf69cd14d1d1a046412607d0f96f2fb41",
+  "resolved_config_sha256": "8d346bd072f9b24a7cce9fed1c4e363fca9d12825b1ec0ba4412c164dbc5610e",
+  "duration_seconds": 23.04887880000024,
+  "training_seconds": 23.036942500002624,
+  "inference_seconds": 0.0014325999982247595,
+  "epochs_completed": 12,
+  "best_validation_loss": 0.13138334453105927,
+  "parameter_count": 11809
+}

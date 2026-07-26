@@ -1,0 +1,97 @@
+{
+  "release_id": "e_stage_best_model_v1",
+  "created_at_utc": "2026-07-26T08:15:39.412170+00:00",
+  "model_id": "stock_node_gwnet_fixed_industry_l8",
+  "decision": "UNIQUE_CANDIDATE_RECOMMENDATION",
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "checkpoint_count": 9,
+  "checkpoints": [
+    {
+      "fold_id": "E_RO_01",
+      "seed": 20260723,
+      "checkpoint": "checkpoints/E_RO_01/seed_20260723.pt",
+      "checkpoint_sha256": "d4c4f2362371b4731f91133c707a581eaa2312bcad6b08a0358c2de37513a8b9",
+      "independent_load_max_abs_difference": 1.3941214849211292e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_01",
+      "seed": 20260724,
+      "checkpoint": "checkpoints/E_RO_01/seed_20260724.pt",
+      "checkpoint_sha256": "55aaf83eb482c535faa3618f605385ee62c53a09f5abf0d0bfea3be56c22147c",
+      "independent_load_max_abs_difference": 1.3907148765923694e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_01",
+      "seed": 20260725,
+      "checkpoint": "checkpoints/E_RO_01/seed_20260725.pt",
+      "checkpoint_sha256": "cd9eb217403a43e7abb1df98fb0d5cd53378bc5de84495b5d58e31d411b96780",
+      "independent_load_max_abs_difference": 1.2946128613577912e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_02",
+      "seed": 20260723,
+      "checkpoint": "checkpoints/E_RO_02/seed_20260723.pt",
+      "checkpoint_sha256": "208e6008f8d6a8b77938ce17f860c86aad5a4b995779284500ef2445cf118b64",
+      "independent_load_max_abs_difference": 3.1027771463243425e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_02",
+      "seed": 20260724,
+      "checkpoint": "checkpoints/E_RO_02/seed_20260724.pt",
+      "checkpoint_sha256": "f4eef1bb5410be23d4cb6b58dff1a22b28ff59a96026222f5ee0efb1b1fd0093",
+      "independent_load_max_abs_difference": 2.765879525412629e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_02",
+      "seed": 20260725,
+      "checkpoint": "checkpoints/E_RO_02/seed_20260725.pt",
+      "checkpoint_sha256": "2ad303b049bb1ebbd2e3a05bc75259f0e83203e07a202a0b6b8c8faf1e85de4d",
+      "independent_load_max_abs_difference": 3.120730340810951e-09,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_03",
+      "seed": 20260723,
+      "checkpoint": "checkpoints/E_RO_03/seed_20260723.pt",
+      "checkpoint_sha256": "9fc33a2e304f492331f4c8baed83ec5c74933d6b21ef90075852c00f8edd10cc",
+      "independent_load_max_abs_difference": 6.97887303502398e-10,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_03",
+      "seed": 20260724,
+      "checkpoint": "checkpoints/E_RO_03/seed_20260724.pt",
+      "checkpoint_sha256": "bc51f164cbabe65223ff12fef415ad0b0b14629ae3255a9f0b580aac6c617454",
+      "independent_load_max_abs_difference": 9.01202223957398e-10,
+      "parameter_count": 15777
+    },
+    {
+      "fold_id": "E_RO_03",
+      "seed": 20260725,
+      "checkpoint": "checkpoints/E_RO_03/seed_20260725.pt",
+      "checkpoint_sha256": "5b1f34da2729716eed0a98bc12800106fd1e52aa8ee8a28b7542ffb76bda0dc9",
+      "independent_load_max_abs_difference": 6.977146638220688e-10,
+      "parameter_count": 15777
+    }
+  ],
+  "e6_acceptance_sha256": "b1abf359b6e1ff6aa20ad85b150cbc2a66485933c5ae6b3627d5bcc9e0e2197e",
+  "e6_metadata_sha256": "85ad0016d867cb197d7702b6a0569e5c8647e15bca9c7abc093975ee2a421828",
+  "e6_recommendation_sha256": "e01b39b5e1f385a6317179ea5c14e0b7a26f58a77f6a48b17140020a5996a180",
+  "new_training_performed": false,
+  "screening_accessed": false,
+  "commercial_status": "research candidate; not production or investment approval"
+}

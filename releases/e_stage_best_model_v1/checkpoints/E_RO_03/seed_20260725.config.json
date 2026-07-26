@@ -1,0 +1,33 @@
+{
+  "experiment_id": "e5_neural_graph_baselines_v1",
+  "model_id": "stock_node_gwnet_fixed_industry_l8",
+  "family": "stock_node_gwnet_fixed_industry",
+  "feature_view": "numeric_price_l8",
+  "node_semantics": "real_stock_code_nodes",
+  "parameters": {
+    "sequence_length": 8,
+    "hidden_channels": 32,
+    "kernel_size": 3,
+    "dilations": [
+      1,
+      2
+    ],
+    "graph_order": 2,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber"
+  },
+  "fold_id": "E_RO_03",
+  "seed": 20260725,
+  "interface_config_sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4",
+  "implementation_sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc",
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+  "selection_exposure": "single-seed TRAIN/VALIDATION engineering receipt only; no ranking, deletion, candidate promotion, or SCREENING",
+  "future_or_sealed_data_read": false
+}

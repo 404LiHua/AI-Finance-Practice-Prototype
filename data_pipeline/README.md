@@ -60,6 +60,37 @@ powershell -ExecutionPolicy Bypass -File .\data_pipeline\setup_stage_a.ps1
 
 可提交的验收结果位于 `reports/`。
 
+## panel_v2 点时股票池
+
+`panel_v2` 将 Stage A 稀疏长表扩展为规范化的 `trade_date × stock_code × feature` 稠密面板，并将“是否属于当期股票池”和“当期是否可交易”分开处理。
+
+```powershell
+.\.venv-baostock\Scripts\python.exe .\data_pipeline\build_panel_v2.py `
+  --config .\data_pipeline\configs\panel_v2_30stocks.json `
+  --overwrite
+```
+
+核心规则：
+
+- `trade_date` 使用周五结束的规范交易周，`observation_trade_date` 保留原始实际交易日；
+- 上市状态事件只有在公告日期和执行日期均已到达后才生效；
+- 退市股票从点时股票池中退出，上市前的行保留但不属于股票池；
+- 停牌股票仍属于点时股票池，但 `is_tradable_pit=false`、`model_eligible_pit=false`；
+- 零成交量是严格停牌证据；缺少周线记录单独标记为 `no_weekly_bar`，避免把数据缺口误判为停牌；
+- 前复权价格继续作为模型价格，未复权价格和 BaoStock 复权因子保留用于审计；
+- 股本变化和复权因子按有效日期向后生效，未来公司行动不会回填历史样本；
+- 当前股票基础表中的“上市状态”仅作快照审计，不用于重写历史股票池。
+
+输出目录默认为 `data/processed/panel_v2_30stocks_20220603_20230602/`，包含：
+
+- `panel_v2.csv.gz`：完整稠密面板；
+- `universe_membership.csv.gz`：逐股票逐周点时状态；
+- `corporate_actions.csv.gz`：股本和复权事件账本；
+- `validation_report.json`：主键、上市/退市、停牌和样本资格约束检查；
+- `metadata.json`、`contract_snapshot.json`：构建来源、假设和契约快照。
+
+当前 30 股票候选集来自“当前仍上市且代码靠前”的试验选择，因此 `panel_v2` 只能消除候选集内部的逐行时间穿越，不能消除候选集本身的幸存者偏差。扩大到 100/300 股票时必须从历史时点可投资全集重新选取候选池。
+
 ## 防止数据泄漏
 
 - 时间切分不随机打乱。

@@ -1,0 +1,20 @@
+{
+  "experiment_id": "e4s2_control_stability_v2",
+  "expected_protocol_sha256": "dcaf3b6899296939b06859b43eb0e26b40b5f0556fd8d89867231b5bb4b125ef",
+  "paths": {
+    "protocol": "stage_e/configs/e4_training_protocol_v2.json",
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "graph_root": "data/processed/e3_graphs_100stocks_v1",
+    "output_root": "outputs/stage_e/e4s2_control_stability_v2"
+  },
+  "controls": [
+    {"id": "temporal_no_graph_no_text", "graph": "no_graph", "branch": "temporal_only", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "time_industry_no_text", "graph": "industry", "branch": "time_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"}
+  ],
+  "restrictions": {
+    "validation_checkpoint_selection": false,
+    "candidate_creation_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  }
+}

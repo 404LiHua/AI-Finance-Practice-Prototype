@@ -1,0 +1,22 @@
+{
+  "model_id": "stock_node_gwnet_fixed_industry_l8",
+  "family": "stock_node_gwnet_fixed_industry",
+  "fold_id": "E_RO_01",
+  "seed": 20260724,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "node_semantics": "real_stock_code_nodes",
+  "deterministic_graph_sampling": true,
+  "real_stock_node_graph": true,
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+  "independent_load_max_abs_difference": 1.3907148765923694e-09,
+  "checkpoint_sha256": "55aaf83eb482c535faa3618f605385ee62c53a09f5abf0d0bfea3be56c22147c",
+  "resolved_config_sha256": "7bcc3814a2dc7e904a94c66edc022a92de6f8251674683d0459a78802b8fd1ad",
+  "duration_seconds": 3.362845499999821,
+  "training_seconds": 3.352385800000775,
+  "inference_seconds": 0.0018803000020852778,
+  "epochs_completed": 13,
+  "best_validation_loss": 0.12843577563762665,
+  "parameter_count": 15777
+}

@@ -1,0 +1,38 @@
+{
+  "experiment_id": "e4_ablations_100stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "seed": 20260725,
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "graph_root": "data/processed/e3_graphs_100stocks_v1",
+    "output_root": "outputs/stage_e/e4_ablations_100stocks_v1"
+  },
+  "training": {
+    "hidden_dim": 16,
+    "top_k": 8,
+    "dropout": 0.0,
+    "epochs": 12,
+    "patience": 3,
+    "batch_size": 16,
+    "train_cross_section_cap": 48,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "loss": "huber"
+  },
+  "text": {
+    "include_availability_and_log_count": true
+  },
+  "variants": [
+    {"id": "temporal_no_graph_no_text", "graph": "no_graph", "branch": "temporal_only", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "time_industry_no_text", "graph": "industry", "branch": "time_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "time_rolling_no_text", "graph": "rolling_correlation", "branch": "time_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "time_learned_no_text", "graph": "learned_deterministic", "branch": "time_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "frequency_learned_no_text", "graph": "learned_deterministic", "branch": "frequency_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_learned_fixed_no_text", "graph": "learned_deterministic", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_learned_gated_no_text", "graph": "learned_deterministic", "branch": "dual_branch", "fusion": "gated", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_learned_fixed_tfidf_early", "graph": "learned_deterministic", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "tfidf_svd", "text_fusion": "early"},
+    {"id": "dual_learned_fixed_bge_early", "graph": "learned_deterministic", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "semantic_bge", "text_fusion": "early"},
+    {"id": "dual_learned_fixed_bge_mid", "graph": "learned_deterministic", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "semantic_bge", "text_fusion": "mid"}
+  ]
+}

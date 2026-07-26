@@ -1,0 +1,29 @@
+{
+  "stage": "E-4",
+  "generated_at_utc": "2026-07-25T06:08:25.051362+00:00",
+  "protocol_pass": true,
+  "stage_completed": false,
+  "status": "NOT_COMPLETED_STABILITY_GATE_FAILURE",
+  "protocol_checks": {
+    "e3_still_accepted": true,
+    "architecture_accepted": true,
+    "adapter_accepted": true,
+    "first_layer_ablation_accepted": true,
+    "fixed_graph_process_accepted": true,
+    "fixed_graph_stability_failure_preserved": true,
+    "two_controls_three_seeds_three_folds": true,
+    "control_batch_hash_valid": true,
+    "diagnostic_hashes_valid": true,
+    "future_or_sealed_data_not_read": true,
+    "three_hundred_expansion_remained_disabled": true
+  },
+  "completion_checks": {
+    "at_least_one_stable_control": false,
+    "graph_frequency_text_three_seed_pass": false,
+    "three_hundred_stock_graph_frequency_text_completed": false,
+    "grouped_diagnostics_completed": true
+  },
+  "stable_controls": [],
+  "allow_300_stock_expansion": false,
+  "control_results_sha256": "04e3e8d681d32e6e6c2d613ba0de89f99b2216b5c8e5d0ad2e5fffd50e003605"
+}

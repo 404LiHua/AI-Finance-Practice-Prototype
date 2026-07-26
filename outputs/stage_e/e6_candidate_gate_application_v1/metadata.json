@@ -1,0 +1,87 @@
+{
+  "stage": "E-6.2 one-shot frozen gate application",
+  "generated_at_utc": "2026-07-25T08:45:44.205161+00:00",
+  "one_shot_authorization_consumed": true,
+  "candidate_source_table_reads": [
+    {
+      "table": "overall",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/overall_pooled_metrics.csv",
+      "sha256": "f95ed8d89b0557eaad7de1e2c917f0ad22d4af30ee14e51d7f9ff8332a9da156",
+      "read_count": 1
+    },
+    {
+      "table": "worst_fold",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/worst_fold_summary.csv",
+      "sha256": "94d031771bf3be48dfe95390f806ad8581a2ab7860ee3a31393ecc788442a545",
+      "read_count": 1
+    },
+    {
+      "table": "per_stock",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/diagnostics_per_stock.csv",
+      "sha256": "7d7a0087de5f0d3103e5c338515f6e237c544e93f45e570cbdc135d64f7c7045",
+      "read_count": 1
+    },
+    {
+      "table": "industry",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/diagnostics_industry.csv",
+      "sha256": "d8185c5944bd89c01bb33594556593f771c8b246743e48d68f79389d0009e111",
+      "read_count": 1
+    },
+    {
+      "table": "market_cap",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/diagnostics_market_cap.csv",
+      "sha256": "42ab38c3d29f6b0bc20e861fe52ab7401ff8a27c80766e6cc1cf994874287ded",
+      "read_count": 1
+    },
+    {
+      "table": "return_decile",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/diagnostics_return_decile.csv",
+      "sha256": "0a27670ade834dff4ddca738e58d228873d7e2d73db7b10d70af64182c1eb48b",
+      "read_count": 1
+    },
+    {
+      "table": "seed_summary",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/seed_summary.csv",
+      "sha256": "2936a07cdcaeeb7c328f9205a67d7245528cbc1ea600c9ceab1aceabecb5c9d5",
+      "read_count": 1
+    },
+    {
+      "table": "pairwise_seed",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/pairwise_seed_stability.csv",
+      "sha256": "966050ac9f848a3f2c9c7c1e17e933688862151e559f8e1d7bd64b496f64e010",
+      "read_count": 1
+    },
+    {
+      "table": "seed_dispersion",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/seed_prediction_dispersion.csv",
+      "sha256": "161cb8f5ba9e3d2d79f8d467497f4810b39b8db0e495bdbd8b200a2030072a88",
+      "read_count": 1
+    },
+    {
+      "table": "cost",
+      "path": "outputs/stage_e/e5_unified_diagnostics_v1/engineering_cost_summary.csv",
+      "sha256": "98860933bf301dacfde493fc4c669507959e8ac4482d2703a3dfb76ca26915c9",
+      "read_count": 1
+    }
+  ],
+  "candidate_source_tables_read_once_each": true,
+  "candidate_count": 8,
+  "eligible_count": 1,
+  "outcome_status": "UNIQUE_CANDIDATE_RECOMMENDATION",
+  "unique_candidate": "stock_node_gwnet_fixed_industry_l8",
+  "candidate_ranking_performed": false,
+  "frozen_tie_break_applied": false,
+  "new_training_performed": false,
+  "threshold_change_performed": false,
+  "future_or_sealed_data_read": false,
+  "screening_accessed": false,
+  "application_config_sha256": "6653383662320b0a481c5c3f947bb44d99d3f00758d6106462b599cc0c6fc2f7",
+  "gate_config_sha256": "7769f13af45110cb7f83f575193e352037150f4d3b48ec3beaab3d22c0f51f68",
+  "source_diagnostic_batch_sha256": "fea38e3c09ede4ab0c462bed89f5db87e8e0a1ffb04246b9f0d74acd792b3240",
+  "artifacts": {
+    "candidate_gate_matrix_sha256": "b3004beed93f3759ef19e0a922971182d0021a0b6140e1ae63ae3335dbb9f39e",
+    "candidate_gate_failures_sha256": "32950bf17175614aec02dd4a41cc9a8dd6fb5536e3879177438f7de24f8d0770",
+    "unique_candidate_recommendation_sha256": "e01b39b5e1f385a6317179ea5c14e0b7a26f58a77f6a48b17140020a5996a180"
+  },
+  "batch_sha256": "e1c581b6386ce6c9dfbc883e5e7d5fc113f6a9cdf8868071b42ebb53a162d5b4"
+}

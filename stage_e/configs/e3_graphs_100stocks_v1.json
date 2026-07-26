@@ -1,0 +1,22 @@
+{
+  "graph_batch_id": "e3_graphs_100stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "paths": {
+    "panel": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/panel_v2.csv.gz",
+    "selected_universe": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "output_root": "data/processed/e3_graphs_100stocks_v1"
+  },
+  "industry_graph": {
+    "unknown_groups": ["其他", "未知", ""],
+    "unknown_self_only": true,
+    "self_weight": 1.0
+  },
+  "rolling_correlation_graph": {
+    "return_column": "return_1w",
+    "window_weeks": 26,
+    "minimum_periods": 12,
+    "top_k": 8,
+    "minimum_absolute_correlation": 0.05,
+    "self_weight": 1.0
+  }
+}

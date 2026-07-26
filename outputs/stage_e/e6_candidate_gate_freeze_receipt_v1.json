@@ -1,0 +1,35 @@
+{
+  "stage": "E-6.1 candidate gate freeze",
+  "generated_at_utc": "2026-07-25T08:35:15.013625+00:00",
+  "passed": true,
+  "checks": {
+    "status_frozen_before_eligibility_or_ranking": true,
+    "source_config_hash_valid": true,
+    "source_metadata_hash_and_batch_valid": true,
+    "source_acceptance_hash_and_status_valid": true,
+    "baseline_anchors_match_frozen_diagnostics": true,
+    "resolved_threshold_formulas_match": true,
+    "candidate_pool_exactly_eight_non_baselines": true,
+    "all_required_gate_families_present": true,
+    "three_seed_aggregation_frozen": true,
+    "all_gates_hard_and_no_relaxation": true,
+    "tie_break_frozen_without_weights": true,
+    "no_candidate_metrics_or_ranking_read": true,
+    "no_training_future_or_screening_authorized": true
+  },
+  "candidate_metrics_read": false,
+  "candidate_ranking_performed": false,
+  "candidate_eligibility_evaluated": false,
+  "candidate_recommendation_formed": false,
+  "baseline_ids": [
+    "naive",
+    "frets_return_l4__fixed_shrink_a075"
+  ],
+  "baseline_anchors_sha256": "3c5eff6e36f6c8f59771d0de14bf8813158bb2a1fb362c2907e0920410e0166a",
+  "gate_rules_sha256": "1a31e0fcaf10c12eed360e30cafe06ead5d3a9ffdcec5331d274afce8b155996",
+  "aggregation_sha256": "73d34785d90662ca392d8d4f60e61eb6b4caccc13afba2a172afc8550c597a82",
+  "config_sha256": "7769f13af45110cb7f83f575193e352037150f4d3b48ec3beaab3d22c0f51f68",
+  "source_diagnostic_batch_sha256": "fea38e3c09ede4ab0c462bed89f5db87e8e0a1ffb04246b9f0d74acd792b3240",
+  "next_authorized_action": "read existing candidate diagnostic rows once and apply the frozen hard gates",
+  "freeze_receipt_sha256": "cdc7f131190ef13503a6db68bd49a354da7aea8cc674f2c80f6303146d22fb94"
+}

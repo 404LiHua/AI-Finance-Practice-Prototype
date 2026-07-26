@@ -1,0 +1,41 @@
+{
+  "stage": "E-5.2 single-seed engineering acceptance",
+  "generated_at_utc": "2026-07-25T07:30:24.651421+00:00",
+  "passed": true,
+  "checks": {
+    "config_locked_before_run": true,
+    "model_set_exactly_locked_six": true,
+    "three_folds_one_engineering_seed": true,
+    "eighteen_run_receipts": true,
+    "no_failure_receipts": true,
+    "frozen_validation_keys_500_per_fold_1500_total": true,
+    "prediction_contract_complete": true,
+    "independent_loading_within_tolerance": true,
+    "checkpoint_and_config_hashes_valid": true,
+    "metrics_finite": true,
+    "independent_metric_recalculation_matches": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "engineering_pass_declared": true,
+    "no_model_deletion_or_candidate_selection": true,
+    "future_or_sealed_data_not_read": true,
+    "screening_not_accessed": true
+  },
+  "models": [
+    "naive",
+    "frets_return_l4__fixed_shrink_a075",
+    "minimalist_price_only_l8",
+    "random_forest_price_l12",
+    "svm_rbf_price_l12",
+    "industry_var1_ridge"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "engineering_seed": 20260725,
+  "selection_exposure": "single-seed TRAIN/VALIDATION engineering receipt only; no candidate ranking or deletion",
+  "config_sha256": "9468df9d4ee492f1ace7c77f4a9313ccdca930d38ffc8723869f90fd0053ec4c",
+  "metadata_sha256": "6923dbbd598e7301ee9b0e4c4ca80106e634d34bad599f2a6c042ac4a75c7067"
+}

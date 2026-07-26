@@ -1,0 +1,178 @@
+{
+  "release_id": "e_stage_best_model_v1",
+  "model_id": "stock_node_gwnet_fixed_industry_l8",
+  "artifact_count": 34,
+  "artifacts": [
+    {
+      "path": "checkpoints/E_RO_01/seed_20260723.config.json",
+      "size_bytes": 1208,
+      "sha256": "8232e97c0791a6d833cfb15afde56bc8929c811a31242e8f3c18476b26351063"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260723.pt",
+      "size_bytes": 149772,
+      "sha256": "d4c4f2362371b4731f91133c707a581eaa2312bcad6b08a0358c2de37513a8b9"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260723.receipt.json",
+      "size_bytes": 996,
+      "sha256": "f5ed559052dc9a5cd22a4faf18760bcfb66bfd3ce89e2e7845984f74d7584c1d"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260724.config.json",
+      "size_bytes": 1208,
+      "sha256": "7bcc3814a2dc7e904a94c66edc022a92de6f8251674683d0459a78802b8fd1ad"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260724.pt",
+      "size_bytes": 149772,
+      "sha256": "55aaf83eb482c535faa3618f605385ee62c53a09f5abf0d0bfea3be56c22147c"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260724.receipt.json",
+      "size_bytes": 995,
+      "sha256": "7be6f49fedbc16217efff5138d6c9d78ad3b09aa32abdd29783812a6f414b398"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260725.config.json",
+      "size_bytes": 1208,
+      "sha256": "373d0218364bcd07500d5aee173a2454d246c4258de7b704b401cfde1c924cbf"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260725.pt",
+      "size_bytes": 149772,
+      "sha256": "cd9eb217403a43e7abb1df98fb0d5cd53378bc5de84495b5d58e31d411b96780"
+    },
+    {
+      "path": "checkpoints/E_RO_01/seed_20260725.receipt.json",
+      "size_bytes": 996,
+      "sha256": "0bc8328ab11c8eda2ba840c71913d78139933d47455cad96514fd7b2c33ce6d5"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260723.config.json",
+      "size_bytes": 1208,
+      "sha256": "34be26da1130aea7b8817bf488d0e52116d9ca71547f4611fe24f09cd65455df"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260723.pt",
+      "size_bytes": 149772,
+      "sha256": "208e6008f8d6a8b77938ce17f860c86aad5a4b995779284500ef2445cf118b64"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260723.receipt.json",
+      "size_bytes": 994,
+      "sha256": "9fa08aaa0c3738bed3156134eb2de757ed05540da05fa8684a849172abd978b0"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260724.config.json",
+      "size_bytes": 1208,
+      "sha256": "6969cf958ad990d75de60e98e01109b00fce4079df857bce4e4061b9ea5cad11"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260724.pt",
+      "size_bytes": 149772,
+      "sha256": "f4eef1bb5410be23d4cb6b58dff1a22b28ff59a96026222f5ee0efb1b1fd0093"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260724.receipt.json",
+      "size_bytes": 995,
+      "sha256": "b10ea71e8e39a750161b9fa5e90afe44d4db9643e81059e8b7b6603e93413880"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260725.config.json",
+      "size_bytes": 1208,
+      "sha256": "69689a15b9db15bc244c93c6096c6992c86f59c40a142a2a8e7914789e7456b4"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260725.pt",
+      "size_bytes": 149772,
+      "sha256": "2ad303b049bb1ebbd2e3a05bc75259f0e83203e07a202a0b6b8c8faf1e85de4d"
+    },
+    {
+      "path": "checkpoints/E_RO_02/seed_20260725.receipt.json",
+      "size_bytes": 994,
+      "sha256": "87befb13c085be1ff1a1c5666e08f774aee20cc65f40ceed7c94ac30fd9d11ab"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260723.config.json",
+      "size_bytes": 1208,
+      "sha256": "480e51051d59176f5acb6d77e574ebac7874f083b66e589de59e21bb23be114f"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260723.pt",
+      "size_bytes": 149772,
+      "sha256": "9fc33a2e304f492331f4c8baed83ec5c74933d6b21ef90075852c00f8edd10cc"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260723.receipt.json",
+      "size_bytes": 993,
+      "sha256": "11e47fd5a2bb0b2070ae1187b4830c077708c5a78b01881119941dbba6cf964f"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260724.config.json",
+      "size_bytes": 1208,
+      "sha256": "4f217f840b9fa1ec11a6a0e7f312cfb417bf68ec5386284096cc016b19f02e2d"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260724.pt",
+      "size_bytes": 149772,
+      "sha256": "bc51f164cbabe65223ff12fef415ad0b0b14629ae3255a9f0b580aac6c617454"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260724.receipt.json",
+      "size_bytes": 994,
+      "sha256": "c062b2304962029779d25a5f7b37fe71275b2fea2d380f5462b49efdb79ed106"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260725.config.json",
+      "size_bytes": 1208,
+      "sha256": "8261a148ca86608e5a07bbd403a37e4c1efc462faf77e1ade979f2c02fb3e606"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260725.pt",
+      "size_bytes": 149772,
+      "sha256": "5b1f34da2729716eed0a98bc12800106fd1e52aa8ee8a28b7542ffb76bda0dc9"
+    },
+    {
+      "path": "checkpoints/E_RO_03/seed_20260725.receipt.json",
+      "size_bytes": 994,
+      "sha256": "8d7bcdeb8b41a7c4bab37afc566659ccf4cf8b2c01d013089a4c2585536a7d1b"
+    },
+    {
+      "path": "feature_schema.json",
+      "size_bytes": 443,
+      "sha256": "7b9b9bad177c73f2c48675ce8a56e1d3366522754a1bf5d89c52131f9aed2a45"
+    },
+    {
+      "path": "inference.py",
+      "size_bytes": 4652,
+      "sha256": "1f48823d3c535a9b75ca5abcfb6cd7f58b76ef9eb7d0d3e657619b360cd22874"
+    },
+    {
+      "path": "model_metrics.json",
+      "size_bytes": 1174,
+      "sha256": "7e9ba4eb9761efe5e12964f0d1aa3f56751eac8a87e93f797994cf2891be66fb"
+    },
+    {
+      "path": "provenance.json",
+      "size_bytes": 3774,
+      "sha256": "e17c3e84e73701059f4984a943d8784dcae3636e266664d938ef0e841db6b779"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1083,
+      "sha256": "64035dd7d41ead10436e010aae740a675b650cb332246cf3ea91343fbce6a109"
+    },
+    {
+      "path": "stock_order.json",
+      "size_bytes": 1853,
+      "sha256": "f24e7b7865223aabe0ee9f4219ff795b7f8ab3e6475d1cdc80f4377d22ef3faa"
+    },
+    {
+      "path": "verify_package.py",
+      "size_bytes": 1475,
+      "sha256": "817fc6001cfdb91ddd5727759ec6ecb2671dc1b59dad9c19c107d1325e4983dc"
+    }
+  ],
+  "manifest_root_sha256": "f75265b6337448a2ce9ac52e18e5dc56f539a7d6d7b74072a8397b06c00ffff5"
+}

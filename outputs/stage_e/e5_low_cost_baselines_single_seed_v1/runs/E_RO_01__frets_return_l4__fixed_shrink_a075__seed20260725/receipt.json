@@ -1,0 +1,16 @@
+{
+  "model_id": "frets_return_l4__fixed_shrink_a075",
+  "family": "frets",
+  "fold_id": "E_RO_01",
+  "seed": 20260725,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "d205d68de14ae72b40c9e081a58539e327e08d108ee0cc5a57d4c69518b6bc0e",
+  "resolved_config_sha256": "f911321859e72e2bfb8171d189a8238b8a037fa5bd3656bba8853d8ba30f4725",
+  "duration_seconds": 26.255449000000226,
+  "training_seconds": 24.78268770000068,
+  "epochs_completed": 32,
+  "best_validation_loss": 0.1309865266084671,
+  "parameter_count": 197761
+}

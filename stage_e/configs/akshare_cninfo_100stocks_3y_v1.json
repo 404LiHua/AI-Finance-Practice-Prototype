@@ -1,0 +1,10 @@
+{
+  "selected_universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+  "start_date": "2020-06-05",
+  "end_date": "2023-06-02",
+  "output_root": "D:/\u9879\u76ee/data/licensed_text/akshare_cninfo_100stocks_3y_v1",
+  "max_pdf_kb": 2048,
+  "max_pdf_pages": 20,
+  "max_text_chars": 12000,
+  "download_workers": 6
+}

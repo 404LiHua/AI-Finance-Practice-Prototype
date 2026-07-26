@@ -1,0 +1,145 @@
+{
+  "protocol_id": "stage_e_rolling_origin_v1",
+  "data_batch_id": "panel_v2_30stocks_20220603_20230602_v1",
+  "development_date_ceiling": "2023-06-02",
+  "config_sha256": "ba7eeef9a32fbc0aefe8127efab3f720f4d7d4780b9df9bf9fb14c65869c50c1",
+  "custody_sha256": "1e89599d25715df621368a8b423c217df69f9387b95a15e4ad269a087c4d1fde",
+  "panel_sha256": "909dab06300db13b1027d457444bb8e949706958608f4083dbddd78878eb6c11",
+  "panel_row_set_sha256": "f4905b46d2e35478d9897f20be341481f1bbfb8c85935e8702eadd0a95d8852b",
+  "source_manifest_root_sha256": "ce05f5c05779fc47c0c4fa5519d14d113b860e67c846db789b2bc16aae9c6a70",
+  "fold_protocol_sha256": "91dd42f05bc8661c3910399e65d6c33ba9657acf68f62eb04bb7adcce915c82f",
+  "code": [
+    {
+      "path": "data_pipeline/build_panel_v2.py",
+      "sha256": "ca3729f2cce576f52db97b4b581b340f186bee2bf3dc9ed718d2550a370819be"
+    },
+    {
+      "path": "data_pipeline/schemas/panel_v2_contract.json",
+      "sha256": "0d52efffbb977d05d5388a4499eb5abe5eca639c3e443d050fd106ce24506deb"
+    },
+    {
+      "path": "stage_e/custody.py",
+      "sha256": "3b679376e789fe37fffe52f65a528e35d34b2c2533e3cbd3e418a2c45a05f7c2"
+    },
+    {
+      "path": "stage_e/hashing.py",
+      "sha256": "2c49719065560896b01de5f54755c73239e03965918a1ca16778fbcd13662f8d"
+    },
+    {
+      "path": "stage_e/protocol.py",
+      "sha256": "7e961f4921be3976f3cb1ef513414d217ab74eadcd707ef15e7e34bbfbe84769"
+    },
+    {
+      "path": "stage_e/run_development_protocol.py",
+      "sha256": "2fff6429bce3578f13416ccf99f5c3dea5995dd27498c66cc0d62a560b31dfdc"
+    }
+  ],
+  "processing_batch_sha256": "bc027addda7e75d3310af7a234ed35f33f65584a378906d9b72c14a18f899a2b",
+  "generated_at_utc": "2026-07-24T08:44:14.415208+00:00",
+  "evidence_class": "STAGE_E_SELECTION_EXPOSED_DEVELOPMENT_ONLY",
+  "custody_policy_id": "stage_e_development_custody_v1",
+  "stock_count": 30,
+  "panel_row_count": 1500,
+  "source_file_count": 5091,
+  "source_file_counts_by_class": {
+    "processed_panel_v2": 6,
+    "processed_restricted_event_data": 7,
+    "processed_stage_a": 12,
+    "raw_adjusted_market_data": 61,
+    "raw_market_data": 5000,
+    "raw_reference_data": 1,
+    "raw_restricted_event_data": 4
+  },
+  "fold_count": 3,
+  "folds": [
+    {
+      "fold_id": "E_RO_01",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-01-13",
+      "purge_start": "2023-01-20",
+      "purge_end": "2023-01-20",
+      "validation_start": "2023-02-03",
+      "validation_end": "2023-03-10",
+      "train_start_effective": "2022-08-26",
+      "train_samples": 568,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "0f9bac407ee4ce7cf1cdb3e7e31494ef467165102286cfaa9c66d69ff67bc150",
+      "validation_row_set_sha256": "5c51ea7ce5ecbf8f0c0fffe8c72052afb415da794033aa4f2443d541d78c3cdb",
+      "train_sample_content_sha256": "18b7fc17ee2508cab42ca39b7bcb05e11c5e72e468445d464469362635ddd351",
+      "validation_sample_content_sha256": "6966cff3d0a8e6e1a7748de84c0ed8dcca7a13785a6c8044bd53fb593eda85fa"
+    },
+    {
+      "fold_id": "E_RO_02",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-03-03",
+      "purge_start": "2023-03-10",
+      "purge_end": "2023-03-10",
+      "validation_start": "2023-03-17",
+      "validation_end": "2023-04-21",
+      "train_start_effective": "2022-08-26",
+      "train_samples": 748,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "8c65725095ff045acba296cb8e6fec899e45e9b3b2f517bd87421a4a42ce5089",
+      "validation_row_set_sha256": "f0c745b8d0c878f78bba476a4a346f51d25dbc6f9ddcd1a7db39043a81cb8a60",
+      "train_sample_content_sha256": "24966e2579222673ec626ddcf12c6475ed84d3b9b8eec310342e06da04aa4684",
+      "validation_sample_content_sha256": "eac2ec917c1a65cb89b45215fad5ad791b622c333671dc063f06a5d279b02da9"
+    },
+    {
+      "fold_id": "E_RO_03",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-04-14",
+      "purge_start": "2023-04-21",
+      "purge_end": "2023-04-21",
+      "validation_start": "2023-04-28",
+      "validation_end": "2023-06-02",
+      "train_start_effective": "2022-08-26",
+      "train_samples": 928,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "83cce0461a83525de1fed571a4af196748ae9da2784a571595c4f9c7de148409",
+      "validation_row_set_sha256": "737289d56d14acb330dd6b89f065fc87c7d9f773b9576d9f1f38694e7430248d",
+      "train_sample_content_sha256": "99993c39900cd9e1d781dedf51b2b9c603d8297c429ba30fcf6e26862478a4b7",
+      "validation_sample_content_sha256": "a698abf8853edf31fd4738184b3e20fa4af4dddd3239b6ecef1dea0878089c94"
+    }
+  ],
+  "generated_artifacts": {
+    "source_file_manifest_sha256": "d9b9ac7190485804c17e6e308d0da694449b9ee350907814574d71d7a70deca4",
+    "fold_assignments_sha256": "38ba950f07e009b8beb91e145ddf6d9a5fbfa3078f46fd0281d9477aa56a6979",
+    "fold_summary_sha256": "5f2264b57a2d0815f832743e3e244dc593b833bc923d8ca17cb51cc0a8abc8f7"
+  },
+  "sealed_data_read": false,
+  "future_screening_or_final_read": false,
+  "expansion_policy": {
+    "frozen_items": [
+      "development_date_ceiling",
+      "validation and purge date boundaries",
+      "lookback_weeks",
+      "eligibility logic",
+      "custody rejection rules",
+      "row and content hash algorithms"
+    ],
+    "allowed_batch_changes": [
+      "more historically eligible stocks",
+      "additional history strictly before the development ceiling",
+      "new authorized feature sources available no later than each sample date"
+    ],
+    "required_for_expansion": [
+      "new data_batch_id",
+      "new full source file manifest",
+      "new processing_batch_sha256",
+      "new panel and fold row-set hashes",
+      "same frozen fold validation boundaries"
+    ],
+    "forbidden": [
+      "reading C-4 or D-5 row-level data",
+      "reading future Stage E SCREENING or FINAL data",
+      "moving validation windows after seeing model results",
+      "changing custody rules inside an existing batch"
+    ]
+  }
+}

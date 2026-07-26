@@ -1,0 +1,104 @@
+{
+  "experiment_id": "e5_neural_graph_baselines_v1",
+  "status": "PREREGISTERED_LOCKED_BEFORE_SINGLE_SEED_RUN",
+  "interface_config": "stage_e/configs/e5_interface_v1.json",
+  "interface_config_sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4",
+  "development_date_ceiling": "2023-06-02",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "engineering_seed": 20260725,
+  "future_three_seeds": [20260723, 20260724, 20260725],
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "output_root": "outputs/stage_e/e5_neural_graph_baselines_single_seed_v1"
+  },
+  "source_registry": {
+    "implementation": {
+      "path": "stage_e/e5/neural_graph.py",
+      "sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc",
+      "license": "project-owned implementation"
+    },
+    "timegnn_upstream": {
+      "snapshot": "source_zips/Time-GNN-main.zip",
+      "snapshot_sha256": "6ae4188f39e71df584f90f10c8a4d59e60ac59b7f14acf94ffc1f5f742bff7a2",
+      "model_file_sha256": "f09717e7c37dfb8865b7f08ab45bff08d83c354c13bc002de68f32980468d65b",
+      "license": "MIT",
+      "license_sha256": "b3322d79391ac2d968d97c63c3a244cd013b074cca8a213608bc954c702a79a2",
+      "attribution": "stage_e/e5/TIMEGNN_ATTRIBUTION.md",
+      "attribution_sha256": "e7aaccfacbbf6b1f827bad6fc5785ceaca55078e7e3e3783c8160842d2e22268"
+    }
+  },
+  "models": [
+    {
+      "id": "lstm_price_l8",
+      "family": "lstm",
+      "feature_view": "numeric_price_l8",
+      "node_semantics": "independent_stock_sequence",
+      "parameters": {
+        "sequence_length": 8, "hidden_size": 32, "num_layers": 1, "dropout": 0.0,
+        "batch_size": 64, "epochs": 60, "patience": 10, "learning_rate": 0.001,
+        "weight_decay": 0.0001, "gradient_clip": 1.0, "loss": "huber"
+      }
+    },
+    {
+      "id": "tcn_price_l8",
+      "family": "tcn",
+      "feature_view": "numeric_price_l8",
+      "node_semantics": "independent_stock_sequence",
+      "parameters": {
+        "sequence_length": 8, "hidden_channels": 32, "kernel_size": 3,
+        "dilations": [1, 2, 4], "dropout": 0.1, "batch_size": 64,
+        "epochs": 60, "patience": 10, "learning_rate": 0.001,
+        "weight_decay": 0.0001, "gradient_clip": 1.0, "loss": "huber"
+      }
+    },
+    {
+      "id": "timegnn_deterministic_topk_l8",
+      "family": "timegnn_stable",
+      "feature_view": "numeric_price_l8",
+      "node_semantics": "temporal_positions_within_each_stock",
+      "stabilization": "deterministic_temperature_scaled_topk_no_gumbel",
+      "parameters": {
+        "sequence_length": 8, "hidden_dim": 32, "top_k": 3, "temperature": 0.5,
+        "graph_layers": 2, "batch_size": 64, "epochs": 60, "patience": 10,
+        "learning_rate": 0.001, "weight_decay": 0.0001,
+        "gradient_clip": 1.0, "loss": "huber"
+      }
+    },
+    {
+      "id": "stock_node_gwnet_fixed_industry_l8",
+      "family": "stock_node_gwnet_fixed_industry",
+      "feature_view": "numeric_price_l8",
+      "node_semantics": "real_stock_code_nodes",
+      "graph_definition": "fixed_same_industry_row_normalized_with_self_loops",
+      "parameters": {
+        "sequence_length": 8, "hidden_channels": 32, "kernel_size": 3,
+        "dilations": [1, 2], "graph_order": 2, "dropout": 0.1,
+        "batch_size": 8, "epochs": 60, "patience": 10,
+        "learning_rate": 0.001, "weight_decay": 0.0001,
+        "gradient_clip": 1.0, "loss": "huber"
+      }
+    }
+  ],
+  "failure_conditions": [
+    "model_set_feature_view_or_training_parameter_differs_from_locked_config",
+    "timegnn_uses_random_gumbel_or_stochastic_edge_sampling",
+    "stock_graph_nodes_are_not_the_frozen_100_stock_codes",
+    "stock_graph_adjacency_order_differs_from_fold_stock_order",
+    "missing_frozen_validation_key_or_extra_prediction_key",
+    "non_finite_training_loss_metric_or_prediction",
+    "independent_load_prediction_max_abs_difference_above_1e-7",
+    "missing_checkpoint_config_source_or_adjacency_sha256",
+    "silent_model_deletion_after_failure",
+    "future_or_sealed_data_read",
+    "screening_access"
+  ],
+  "independent_loading": {"required": true, "maximum_prediction_absolute_difference": 1e-7},
+  "selection_exposure": "single-seed TRAIN/VALIDATION engineering receipt only; no ranking, deletion, candidate promotion, or SCREENING",
+  "restrictions": {
+    "candidate_selection_allowed": false,
+    "model_deletion_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  }
+}

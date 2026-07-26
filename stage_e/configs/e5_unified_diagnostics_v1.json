@@ -1,0 +1,98 @@
+{
+  "experiment_id": "e5_unified_diagnostics_v1",
+  "status": "DIAGNOSTIC_RULES_FROZEN_BEFORE_CROSS_BATCH_READ",
+  "interface_config": "stage_e/configs/e5_interface_v1.json",
+  "interface_config_sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "models": [
+    {"id": "naive", "component_family": "deterministic"},
+    {"id": "frets_return_l4__fixed_shrink_a075", "component_family": "frequency_temporal"},
+    {"id": "minimalist_price_only_l8", "component_family": "attention_temporal"},
+    {"id": "random_forest_price_l12", "component_family": "tree_machine_learning"},
+    {"id": "svm_rbf_price_l12", "component_family": "kernel_machine_learning"},
+    {"id": "industry_var1_ridge", "component_family": "industry_statistical"},
+    {"id": "lstm_price_l8", "component_family": "recurrent_temporal"},
+    {"id": "tcn_price_l8", "component_family": "convolution_temporal"},
+    {"id": "timegnn_deterministic_topk_l8", "component_family": "temporal_position_graph"},
+    {"id": "stock_node_gwnet_fixed_industry_l8", "component_family": "real_stock_node_graph"}
+  ],
+  "sources": [
+    {
+      "source_id": "e5_low_cost_three_seed",
+      "metadata": "outputs/stage_e/e5_low_cost_baselines_three_seed_v1/metadata.json",
+      "metadata_sha256": "6692a5bdf0a43280137270d733b7bf85c8365af53c1ca52eaf03057ab8e2a6d3",
+      "batch_sha256": "c234485365354333bd43a6396a83552644e40c92b8993d6f17463b1a2cfaf5a5",
+      "predictions": "outputs/stage_e/e5_low_cost_baselines_three_seed_v1/unified_predictions_three_seed.csv.gz",
+      "predictions_sha256": "9f801fec63609258e9dd94c977c1d82b93ec1bbd23cf5da3316801c69d391bd6",
+      "receipts": "outputs/stage_e/e5_low_cost_baselines_three_seed_v1/engineering_receipts_three_seed.csv",
+      "receipts_sha256": "fb4313c4bb77e27c3e3b08210c6c9406cc9c87f91a1af9792ee05935be4cb12d",
+      "acceptance": "outputs/stage_e/e5_low_cost_three_seed_acceptance_v1.json",
+      "acceptance_sha256": "42911b554b2f020e2e9c5cc5d91afda5f4d8dca998d27fd70329ebcc2d3aa1d4",
+      "frozen_keys": "outputs/stage_e/e5_low_cost_baselines_three_seed_v1/frozen_validation_keys.csv.gz"
+    },
+    {
+      "source_id": "e5_neural_graph_three_seed",
+      "metadata": "outputs/stage_e/e5_neural_graph_baselines_three_seed_v1/metadata.json",
+      "metadata_sha256": "7cb867e3b3f338d5808c231c896cbfac47c849c3de6811912c6667b4ff43e2fe",
+      "batch_sha256": "44cc5262afad388eb130b49d5eb305adefa995fc9012e4dc70f9c1159211a60c",
+      "predictions": "outputs/stage_e/e5_neural_graph_baselines_three_seed_v1/unified_predictions_three_seed.csv.gz",
+      "predictions_sha256": "c5f0d66268de0121d26c12afc4bba3ae3f6260470cf84d6c9ac999e52288305b",
+      "receipts": "outputs/stage_e/e5_neural_graph_baselines_three_seed_v1/engineering_receipts_three_seed.csv",
+      "receipts_sha256": "80e6b3ad9054b1018c93f6540eb4c6e0583d1b097cdf2f75ab82cdc33754c872",
+      "acceptance": "outputs/stage_e/e5_neural_graph_three_seed_acceptance_v1.json",
+      "acceptance_sha256": "2d60f322662af4d287791e82a6a409808864d42dc3c66765466dec0ff0345c08",
+      "frozen_keys": "outputs/stage_e/e5_neural_graph_baselines_three_seed_v1/frozen_validation_keys.csv.gz"
+    }
+  ],
+  "paths": {
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "output_root": "outputs/stage_e/e5_unified_diagnostics_v1"
+  },
+  "diagnostic_rules": {
+    "seed_aggregation_for_model_disagreement": "arithmetic_mean",
+    "worst_fold_rule": "maximum_MAE_after_pooling_three_seeds_within_each_fold",
+    "return_group_count": 10,
+    "return_group_scope": "within_model_and_seed_using_frozen_target_rank",
+    "direction_positive_threshold": 0.0,
+    "model_pair_count": 45,
+    "cost_fields": [
+      "run_count", "total_duration_seconds", "total_training_seconds",
+      "recorded_inference_seconds", "inference_receipt_count", "total_epochs_completed",
+      "median_parameter_count", "maximum_parameter_count", "independent_load_max_abs_difference"
+    ],
+    "required_diagnostics": [
+      "overall", "fold", "worst_fold", "per_stock", "industry", "market_cap",
+      "return_decile", "seed_stability", "seed_prediction_dispersion",
+      "engineering_cost", "model_disagreement", "component_disagreement"
+    ]
+  },
+  "failure_conditions": [
+    "source_acceptance_or_sha_mismatch",
+    "model_set_differs_from_frozen_ten",
+    "fold_seed_or_frozen_sample_key_mismatch",
+    "prediction_or_metric_non_finite",
+    "missing_cost_field_or_run_receipt",
+    "missing_worst_fold_per_model",
+    "missing_stock_industry_market_cap_or_return_group_diagnostic",
+    "missing_three_seed_stability_or_dispersion",
+    "model_disagreement_pair_count_not_45",
+    "diagnostic_rule_changed_after_cross_batch_read",
+    "new_training_or_checkpoint_write",
+    "candidate_ranking_deletion_or_promotion",
+    "future_or_sealed_data_read",
+    "screening_access"
+  ],
+  "restrictions": {
+    "training_allowed": false,
+    "checkpoint_write_allowed": false,
+    "model_set_change_allowed": false,
+    "diagnostic_rule_change_allowed": false,
+    "candidate_ranking_allowed": false,
+    "candidate_selection_allowed": false,
+    "model_deletion_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  },
+  "selection_exposure": "E-5.4 cross-model TRAIN/VALIDATION diagnostics only; descriptive outputs sorted by model_id, no candidate ranking or promotion"
+}

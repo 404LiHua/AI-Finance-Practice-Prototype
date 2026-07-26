@@ -1,0 +1,32 @@
+{
+  "experiment_id": "e5_low_cost_baselines_three_seed_review_v1",
+  "status": "PREREGISTERED_LOCKED_BEFORE_REMAINING_SEED_RUNS",
+  "base_protocol_config": "stage_e/configs/e5_low_cost_baselines_v1.json",
+  "base_protocol_config_sha256": "9468df9d4ee492f1ace7c77f4a9313ccdca930d38ffc8723869f90fd0053ec4c",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "new_training_seeds": [20260723, 20260724],
+  "reused_engineering_seed": 20260725,
+  "paths": {
+    "existing_single_seed_root": "outputs/stage_e/e5_low_cost_baselines_single_seed_v1",
+    "existing_single_seed_acceptance": "outputs/stage_e/e5_low_cost_single_seed_acceptance_v1.json",
+    "output_root": "outputs/stage_e/e5_low_cost_baselines_three_seed_v1"
+  },
+  "reuse_requirements": {
+    "existing_acceptance_must_pass": true,
+    "existing_config_sha_must_match": true,
+    "existing_artifact_hashes_must_match": true,
+    "existing_seed_must_equal_reused_engineering_seed": true
+  },
+  "restrictions": {
+    "model_set_change_allowed": false,
+    "feature_view_change_allowed": false,
+    "training_protocol_change_allowed": false,
+    "fold_change_allowed": false,
+    "candidate_selection_allowed": false,
+    "model_deletion_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  },
+  "selection_exposure": "three-seed TRAIN/VALIDATION stability review only; no ranking, deletion, candidate promotion, or SCREENING"
+}

@@ -1,0 +1,29 @@
+{
+  "interface_id": "e5_unified_interface_v1",
+  "status": "INTERFACE_CONTRACT_FROZEN_BEFORE_E5_BASELINE_TRAINING",
+  "development_date_ceiling": "2023-06-02",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "prediction_schema": "stage_e/schemas/e5_prediction_contract_v1.json",
+    "acceptance_fixture_config": "stage_e/configs/e4s2_control_stability_v2.json",
+    "acceptance_fixture_predictions": "outputs/stage_e/e4s2_control_stability_v2/predictions.csv.gz",
+    "acceptance_fixture_fold_results": "outputs/stage_e/e4s2_control_stability_v2/fold_results.csv",
+    "output_root": "outputs/stage_e/e5_interface_acceptance_v1"
+  },
+  "evaluation": {
+    "mape_denominator_floor": 0.000001,
+    "direction_positive_threshold": 0.0,
+    "return_group_count": 10,
+    "require_all_frozen_keys": true,
+    "allow_extra_prediction_rows": false
+  },
+  "required_text_views": ["no_text", "tfidf_svd", "semantic_bge"],
+  "restrictions": {
+    "baseline_training_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "protocol_id": "stage_e_rolling_origin_v1",
+  "data_batch_id": "panel_v2_300stocks_5y_20180608_20230602_v1",
+  "status": "FROZEN_DEVELOPMENT_PROTOCOL",
+  "development_date_ceiling": "2023-06-02",
+  "panel_path": "data/processed/panel_v2_300stocks_5y_20180608_20230602_v1/panel_v2.csv.gz",
+  "lookback_weeks": 12,
+  "minimum_stock_count": 300,
+  "folds": [
+    {"fold_id": "E_RO_01", "train_start_policy": "available_history_start", "train_end": "2023-01-13", "purge_start": "2023-01-20", "purge_end": "2023-01-20", "validation_start": "2023-02-03", "validation_end": "2023-03-10"},
+    {"fold_id": "E_RO_02", "train_start_policy": "available_history_start", "train_end": "2023-03-03", "purge_start": "2023-03-10", "purge_end": "2023-03-10", "validation_start": "2023-03-17", "validation_end": "2023-04-21"},
+    {"fold_id": "E_RO_03", "train_start_policy": "available_history_start", "train_end": "2023-04-14", "purge_start": "2023-04-21", "purge_end": "2023-04-21", "validation_start": "2023-04-28", "validation_end": "2023-06-02"}
+  ],
+  "source_files": [
+    {"source_id": "expanded_build_config", "source_class": "frozen_config", "kind": "file", "path": "stage_e/configs/panel_v2_300stocks_5y.json", "required": true},
+    {"source_id": "raw_stock_basic", "source_class": "raw_reference_data", "kind": "file", "path": "D:/\u9879\u76ee/data/stock_basic/stock_basic.csv", "required": true},
+    {"source_id": "raw_csmar", "source_class": "raw_restricted_event_data", "kind": "directory_glob", "path": "D:/\u9879\u76ee/data/csmar", "glob": "*.zip", "required": true},
+    {"source_id": "expanded_processed_batch", "source_class": "processed_panel_v2", "kind": "directory_glob", "path": "data/processed/panel_v2_300stocks_5y_20180608_20230602_v1", "glob": "*", "required": true}
+  ],
+  "protocol_code_files": [
+    "stage_e/build_expanded_panel.py", "stage_e/custody.py", "stage_e/hashing.py",
+    "stage_e/protocol.py", "stage_e/run_development_protocol.py"
+  ],
+  "output_root": "outputs/stage_e/expanded_development_protocol_v1",
+  "frozen_snapshot_path": "stage_e/protocols/development_protocol_300stocks_5y_v1.json",
+  "expansion_policy": {
+    "frozen_items": ["development_date_ceiling", "validation and purge date boundaries", "lookback_weeks", "eligibility logic", "custody rejection rules", "row and content hash algorithms"],
+    "allowed_batch_changes": ["more historically eligible stocks", "additional history strictly before the development ceiling", "new authorized feature sources available no later than each sample date"],
+    "required_for_expansion": ["new data_batch_id", "new source manifest", "new processing_batch_sha256", "new panel and fold row-set hashes", "same frozen fold validation boundaries"],
+    "forbidden": ["reading C-4 or D-5 row-level data", "reading future Stage E SCREENING or FINAL data", "moving validation windows after seeing model results", "changing custody rules inside an existing batch"]
+  }
+}

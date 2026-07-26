@@ -1,0 +1,46 @@
+{
+  "contract_version": "panel_v2.0.0",
+  "grain": "one row per canonical trade_date and stock_code",
+  "primary_key": ["trade_date", "stock_code"],
+  "dimensions": {
+    "trade_date": "canonical market week ending Friday",
+    "stock_code": "exchange-qualified A-share code",
+    "feature": "price, lifecycle, tradability, adjustment, corporate action, text and model feature columns"
+  },
+  "required_columns": {
+    "trade_date": "datetime64[ns]",
+    "stock_code": "string",
+    "observation_trade_date": "datetime64[ns] or null",
+    "listing_date": "datetime64[ns] or null",
+    "is_listed_asof": "boolean",
+    "listing_status_asof": "string",
+    "is_delisted_asof": "boolean",
+    "is_suspended_listing_asof": "boolean",
+    "universe_member_pit": "boolean",
+    "has_price_observation": "boolean",
+    "is_zero_volume_observation": "boolean",
+    "is_suspended": "boolean",
+    "is_no_weekly_bar": "boolean",
+    "is_tradable_pit": "boolean",
+    "model_eligible_pit": "boolean",
+    "sample_eligible_v2": "boolean",
+    "trade_state": "enum: not_listed, delisted, suspended, no_weekly_bar, tradable, inactive_or_unknown",
+    "total_shares_asof": "number or null",
+    "tradable_a_shares_asof": "number or null",
+    "forward_adjust_factor_asof": "number or null",
+    "back_adjust_factor_asof": "number or null",
+    "adjust_factor_asof": "number or null",
+    "capital_change_this_week": "boolean",
+    "adjust_factor_change_this_week": "boolean",
+    "corporate_action_this_week": "boolean"
+  },
+  "invariants": [
+    "primary key is unique and non-null",
+    "universe_member_pit implies is_listed_asof and not is_delisted_asof",
+    "model_eligible_pit implies universe_member_pit, has_price_observation and not is_suspended",
+    "sample_eligible_v2 implies model_eligible_pit and preserves the date-level chronological split",
+    "future listing, status, capital and adjustment events are never backfilled",
+    "suspended or missing-bar stocks are retained in the dense panel",
+    "current snapshot listing status is not used to rewrite historical membership"
+  ]
+}

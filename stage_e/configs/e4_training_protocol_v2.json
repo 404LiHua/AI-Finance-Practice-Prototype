@@ -1,0 +1,51 @@
+{
+  "protocol_id": "e4_training_protocol_v2",
+  "status": "FROZEN_BEFORE_FIRST_TRAINING_RUN",
+  "frozen_at_date": "2026-07-25",
+  "development_date_ceiling": "2023-06-02",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "allowed_stage_e4s2_controls": [
+    "temporal_no_graph_no_text",
+    "time_industry_no_text"
+  ],
+  "conditional_stage_e4s3_variant": "dual_industry_fixed_bge_mid",
+  "training": {
+    "use_all_train_cross_sections": true,
+    "hidden_dim": 16,
+    "top_k": 8,
+    "dropout": 0.0,
+    "epochs": 40,
+    "batch_size": 16,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "gradient_clip": 5.0,
+    "loss": "huber",
+    "validation_checkpoint_selection": false,
+    "ema_enabled": true,
+    "ema_decay": 0.99,
+    "evaluation_weights": "final_epoch_ema"
+  },
+  "stability_thresholds": {
+    "minimum_pairwise_edge_jaccard": 0.04,
+    "minimum_pairwise_prediction_correlation": 0.90,
+    "maximum_mae_coefficient_of_variation": 0.50
+  },
+  "gates": {
+    "stage_e4s2": "at_least_one_control_passes_all_original_stability_thresholds",
+    "stage_e4s3": "run_only_if_stage_e4s2_passes",
+    "stage_e4s4_300stocks": "run_only_if_dual_industry_fixed_bge_mid_passes_stage_e4s3"
+  },
+  "prohibited": [
+    "validation_selected_best_epoch",
+    "seed_retry_or_seed_selection",
+    "new_graph_candidate",
+    "new_fusion_candidate",
+    "new_text_position",
+    "threshold_relaxation",
+    "future_or_sealed_data_read",
+    "screening_access_before_freeze"
+  ]
+}

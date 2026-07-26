@@ -1,0 +1,52 @@
+{
+  "experiment_id": "e4_fixed_graph_stabilization_100stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "seed": 20260725,
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "graph_root": "data/processed/e3_graphs_100stocks_v1",
+    "original_training_checks_config": "stage_e/configs/e4_training_checks_100stocks_v1.json",
+    "output_root": "outputs/stage_e/e4_fixed_graph_stabilization_100stocks_v1"
+  },
+  "training": {
+    "hidden_dim": 16,
+    "top_k": 8,
+    "dropout": 0.0,
+    "epochs": 12,
+    "patience": 3,
+    "batch_size": 16,
+    "train_cross_section_cap": 48,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "loss": "huber"
+  },
+  "text": {
+    "include_availability_and_log_count": true
+  },
+  "selection_rule": [
+    "adjacency_valid_desc",
+    "mean_mae_asc",
+    "worst_fold_mae_asc",
+    "fold_mae_std_asc",
+    "variant_id_asc"
+  ],
+  "stability": {
+    "seeds": [20260723, 20260724, 20260725],
+    "minimum_pairwise_edge_jaccard": 0.04,
+    "minimum_pairwise_prediction_correlation": 0.90,
+    "maximum_mae_coefficient_of_variation": 0.50
+  },
+  "variants": [
+    {"id": "frequency_industry_no_text", "graph": "industry", "branch": "frequency_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "frequency_rolling_no_text", "graph": "rolling_correlation", "branch": "frequency_graph", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_industry_fixed_no_text", "graph": "industry", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_rolling_fixed_no_text", "graph": "rolling_correlation", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "no_text", "text_fusion": "none"},
+    {"id": "dual_industry_fixed_bge_mid", "graph": "industry", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "semantic_bge", "text_fusion": "mid"},
+    {"id": "dual_rolling_fixed_bge_mid", "graph": "rolling_correlation", "branch": "dual_branch", "fusion": "fixed_mean", "text_view": "semantic_bge", "text_fusion": "mid"}
+  ],
+  "fallback_controls": [
+    "temporal_no_graph_no_text",
+    "time_industry_no_text"
+  ]
+}

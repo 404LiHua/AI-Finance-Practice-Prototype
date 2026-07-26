@@ -1,0 +1,17 @@
+{
+  "data_batch_id": "e2_text_views_300stocks_5y_v1",
+  "development_date_ceiling": "2023-06-02",
+  "required_use_scope": "academic_research",
+  "timezone": "Asia/Shanghai",
+  "random_seed": 20260725,
+  "paths": {
+    "panel": "data/processed/panel_v2_300stocks_5y_20180608_20230602_v1/panel_v2.csv.gz",
+    "fold_assignments": "outputs/stage_e/expanded_development_protocol_v1/panel_v2_300stocks_5y_20180608_20230602_v1/fold_assignments.csv.gz",
+    "licensed_text_root": "D:/\u9879\u76ee/data/licensed_text/akshare_cninfo_300stocks_5y_v1",
+    "license_registry": "D:/\u9879\u76ee/data/licensed_text/akshare_cninfo_300stocks_5y_v1/license_registry.csv",
+    "output_root": "data/processed/e2_text_views_300stocks_5y_v1"
+  },
+  "input_patterns": ["cninfo_announcements.csv"],
+  "tfidf_svd": {"analyzer": "char", "ngram_range": [2, 4], "max_features": 8192, "min_df": 2, "svd_components": 64, "minimum_train_documents": 50},
+  "semantic_encoder": {"model_path": "D:/\u9879\u76ee/\u6e90\u6587\u4ef6/models/bge-small-zh-v1.5", "model_license_id": "MODEL_BGE_SMALL_ZH_V15_MIT", "device": "cpu", "batch_size": 32, "normalize_embeddings": true}
+}

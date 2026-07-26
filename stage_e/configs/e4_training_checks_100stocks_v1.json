@@ -1,0 +1,36 @@
+{
+  "experiment_id": "e4_training_checks_100stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "output_root": "outputs/stage_e/e4_training_checks_100stocks_v1"
+  },
+  "fold_id": "E_RO_01",
+  "train_cross_sections": 4,
+  "model": {
+    "hidden_dim": 32,
+    "top_k": 8,
+    "dropout": 0.0,
+    "graph_mode": "learned_deterministic",
+    "branch_mode": "dual_branch",
+    "fusion_mode": "fixed_mean",
+    "text_fusion": "none"
+  },
+  "overfit": {
+    "seed": 20260725,
+    "epochs": 350,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "required_loss_reduction": 0.98,
+    "maximum_raw_mae": 0.006
+  },
+  "stability": {
+    "seeds": [20260723, 20260724, 20260725],
+    "epochs": 220,
+    "learning_rate": 0.006,
+    "weight_decay": 0.00001,
+    "minimum_pairwise_edge_jaccard": 0.04,
+    "minimum_pairwise_prediction_correlation": 0.90,
+    "maximum_mae_coefficient_of_variation": 0.50
+  }
+}

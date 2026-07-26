@@ -1,0 +1,61 @@
+{
+  "stage": "E-2",
+  "generated_at_utc": "2026-07-25T03:17:19.423602+00:00",
+  "passed": true,
+  "batches": [
+    {
+      "batch_id": "e2_text_views_100stocks_3y_v1",
+      "passed": true,
+      "missing": [],
+      "checks": {
+        "academic_scope": true,
+        "stock_coverage_complete": true,
+        "timestamps_parseable": true,
+        "development_ceiling_respected": true,
+        "required_trace_fields_complete": true,
+        "extraction_success_rate_ge_95pct": true,
+        "source_manifest_files_valid": true,
+        "source_manifest_batch_sha_valid": true,
+        "no_text_keys_equal_assignments": true,
+        "tfidf_all_folds_present": true,
+        "semantic_view_present": true,
+        "semantic_keys_equal_assignments": true,
+        "semantic_dimension_positive": true,
+        "sealed_or_future_data_not_read": true
+      },
+      "panel_stock_count": 100,
+      "event_stock_count": 100,
+      "event_rows": 1282,
+      "assignment_rows": 40182,
+      "selected_metadata_rows": 1291,
+      "extraction_success_rate": 0.9930286599535244
+    },
+    {
+      "batch_id": "e2_text_views_300stocks_5y_v1",
+      "passed": true,
+      "missing": [],
+      "checks": {
+        "academic_scope": true,
+        "stock_coverage_complete": true,
+        "timestamps_parseable": true,
+        "development_ceiling_respected": true,
+        "required_trace_fields_complete": true,
+        "extraction_success_rate_ge_95pct": true,
+        "source_manifest_files_valid": true,
+        "source_manifest_batch_sha_valid": true,
+        "no_text_keys_equal_assignments": true,
+        "tfidf_all_folds_present": true,
+        "semantic_view_present": true,
+        "semantic_keys_equal_assignments": true,
+        "semantic_dimension_positive": true,
+        "sealed_or_future_data_not_read": true
+      },
+      "panel_stock_count": 300,
+      "event_stock_count": 300,
+      "event_rows": 6239,
+      "assignment_rows": 210983,
+      "selected_metadata_rows": 6267,
+      "extraction_success_rate": 0.9955321525450774
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+license_id,asset_type,provider,effective_from,effective_to,research_use_allowed,commercial_use_allowed,derivative_features_allowed,raw_text_storage_allowed,redistribution_allowed,evidence_path,evidence_sha256,license_notes
+CNINFO_PUBLIC_DISCLOSURE_ACADEMIC_RESEARCH_V1,text,CNINFO,2018-01-01,,true,false,true,true,false,licenses/CNINFO_RESEARCH_USE_BASIS.md,REPLACE_WITH_FILE_SHA256,Public statutory disclosures used only for academic research; no commercial claim or redistribution
+MODEL_BGE_SMALL_ZH_V15_MIT,model,BAAI,2023-09-01,,true,true,true,true,true,licenses/bge-small-zh-v1.5-LICENSE.txt,REPLACE_WITH_FILE_SHA256,MIT model license

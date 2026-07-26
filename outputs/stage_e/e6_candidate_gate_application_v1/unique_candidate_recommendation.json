@@ -1,0 +1,37 @@
+{
+  "status": "UNIQUE_CANDIDATE_RECOMMENDATION",
+  "unique_candidate": "stock_node_gwnet_fixed_industry_l8",
+  "eligible_models": [
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "candidate_count": 8,
+  "eligible_count": 1,
+  "gate_column_count": 34,
+  "formed_at_utc": "2026-07-25T08:45:44.200953+00:00",
+  "gate_config_sha256": "7769f13af45110cb7f83f575193e352037150f4d3b48ec3beaab3d22c0f51f68",
+  "gate_freeze_receipt_sha256": "88316f6ffa6ca542fec5e074f19957c5e7de9baf05fc968221c73708f8250b17",
+  "three_seed_inference_aggregation": {
+    "method": "arithmetic_mean",
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "seed_order": [
+      20260723,
+      20260724,
+      20260725
+    ],
+    "all_three_checkpoints_must_load_independently": true,
+    "sample_keys_must_match_exactly": true,
+    "post_hoc_calibration_allowed": false,
+    "median_or_best_seed_switching_allowed": false,
+    "uncertainty_output": "sample_standard_deviation_across_three_seed_predictions"
+  },
+  "threshold_relaxation_performed": false,
+  "new_candidate_added": false,
+  "new_training_performed": false,
+  "future_or_sealed_data_read": false,
+  "screening_accessed": false,
+  "recommendation_sha256": "433c5d98c7345f59c40e25428e4e3db854c7fda542ae339daf9a5bdb81cfcc1c"
+}

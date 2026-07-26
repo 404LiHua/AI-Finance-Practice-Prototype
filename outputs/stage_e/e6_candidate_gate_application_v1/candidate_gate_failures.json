@@ -1,0 +1,90 @@
+{
+  "minimalist_price_only_l8": [
+    "gate_worst_fold_mae",
+    "gate_pairwise_pearson",
+    "gate_pairwise_spearman",
+    "gate_seed_std_mean",
+    "gate_seed_std_p95",
+    "gate_inference_receipts",
+    "gate_inference_seconds"
+  ],
+  "random_forest_price_l12": [
+    "gate_overall_mae",
+    "gate_overall_rmse",
+    "gate_worst_fold_mae",
+    "gate_stock_below_naive_count",
+    "gate_stock_max_mae",
+    "gate_industry_below_naive_count",
+    "gate_all_industries_within_baselines",
+    "gate_market_cap_below_naive_count",
+    "gate_mid_cap",
+    "gate_inference_receipts",
+    "gate_inference_seconds"
+  ],
+  "svm_rbf_price_l12": [
+    "gate_overall_mae",
+    "gate_overall_rmse",
+    "gate_worst_fold_mae",
+    "gate_stock_below_naive_count",
+    "gate_stock_max_mae",
+    "gate_industry_below_naive_count",
+    "gate_all_industries_within_baselines",
+    "gate_information_technology",
+    "gate_market_cap_below_naive_count",
+    "gate_all_market_caps_within_baselines",
+    "gate_mid_cap",
+    "gate_training_seconds",
+    "gate_duration_seconds",
+    "gate_inference_receipts",
+    "gate_inference_seconds"
+  ],
+  "industry_var1_ridge": [
+    "gate_overall_mae",
+    "gate_overall_rmse",
+    "gate_worst_fold_mae",
+    "gate_stock_below_naive_count",
+    "gate_stock_max_mae",
+    "gate_industry_below_naive_count",
+    "gate_all_industries_within_baselines",
+    "gate_market_cap_below_naive_count",
+    "gate_mid_cap",
+    "gate_inference_receipts",
+    "gate_inference_seconds"
+  ],
+  "lstm_price_l8": [
+    "gate_overall_mae",
+    "gate_worst_fold_mae",
+    "gate_stock_below_naive_count",
+    "gate_industry_below_naive_count",
+    "gate_market_cap_below_naive_count",
+    "gate_pairwise_pearson",
+    "gate_pairwise_spearman",
+    "gate_seed_std_mean",
+    "gate_seed_std_p95"
+  ],
+  "tcn_price_l8": [
+    "gate_overall_rmse",
+    "gate_stock_below_naive_count",
+    "gate_stock_max_mae",
+    "gate_pairwise_pearson",
+    "gate_pairwise_spearman",
+    "gate_seed_std_mean",
+    "gate_seed_std_p95",
+    "gate_training_seconds",
+    "gate_duration_seconds"
+  ],
+  "timegnn_deterministic_topk_l8": [
+    "gate_overall_mae",
+    "gate_overall_rmse",
+    "gate_worst_fold_mae",
+    "gate_stock_below_naive_count",
+    "gate_industry_below_naive_count",
+    "gate_pairwise_pearson",
+    "gate_pairwise_spearman",
+    "gate_seed_std_mean",
+    "gate_seed_std_p95",
+    "gate_training_seconds",
+    "gate_duration_seconds"
+  ],
+  "stock_node_gwnet_fixed_industry_l8": []
+}

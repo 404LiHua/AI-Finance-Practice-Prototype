@@ -1,0 +1,24 @@
+{
+  "stage": "E final closure acceptance",
+  "generated_at_utc": "2026-07-26T08:21:51.362939+00:00",
+  "passed": true,
+  "checks": {
+    "e6_acceptance_passed": true,
+    "unique_candidate_matches": true,
+    "all_34_hard_gates_passed": true,
+    "three_folds_three_seeds_packaged": true,
+    "release_artifact_hashes_valid": true,
+    "stock_and_feature_contract_present": true,
+    "standalone_inference_and_verifier_present": true,
+    "dashboard_uses_frozen_candidate": true,
+    "closure_reports_present": true,
+    "readme_and_changelog_updated": true,
+    "no_new_training_or_screening": true
+  },
+  "unique_candidate": "stock_node_gwnet_fixed_industry_l8",
+  "release_manifest_root_sha256": "f75265b6337448a2ce9ac52e18e5dc56f539a7d6d7b74072a8397b06c00ffff5",
+  "release_manifest_sha256": "5686bc403cc88dee4e2e4cf4fa1a118732f053409b2880f5c731f78d7c105565",
+  "dashboard_sha256": "0e6430d175faf0c16df52f9821751d81ef6a2b0e411744c588bc423c5805f29f",
+  "new_training_performed": false,
+  "screening_accessed": false
+}

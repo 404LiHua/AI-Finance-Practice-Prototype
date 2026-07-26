@@ -1,0 +1,14 @@
+{
+  "model_id": "industry_var1_ridge",
+  "family": "industry_var1_ridge",
+  "fold_id": "E_RO_02",
+  "seed": 20260725,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "b99fb3fa122cd79b3e363ef8afd2b46daf0a7c728c4fa7a7cf4cf747272a14cd",
+  "resolved_config_sha256": "3d15ac216b8f43567be37ab43cd17a454478273152a89b709153d9802b5a4f9f",
+  "duration_seconds": 0.01741989999936777,
+  "training_seconds": 0.0,
+  "parameter_count": 182
+}

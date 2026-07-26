@@ -1,0 +1,106 @@
+{
+  "stage": "E-4.2",
+  "generated_at_utc": "2026-07-25T05:31:47.113441+00:00",
+  "passed": true,
+  "checks": {
+    "metadata_batch_sha_valid": true,
+    "all_fold_base_checks": true,
+    "all_view_checks": true,
+    "tfidf_not_refitted_in_adapter": true,
+    "missing_text_policy_is_left_join_zero": true,
+    "future_or_sealed_data_not_read": true
+  },
+  "folds": [
+    {
+      "fold_id": "E_RO_01",
+      "base_shape_valid": true,
+      "sample_count_preserved": true,
+      "sample_ids_equal_assignments": true,
+      "base_hash_valid": true,
+      "maximum_date_valid": true,
+      "train_and_validation_present": true,
+      "tfidf_model_hash_frozen": true,
+      "views": {
+        "no_text": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "tfidf_svd": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "semantic_bge": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        }
+      }
+    },
+    {
+      "fold_id": "E_RO_02",
+      "base_shape_valid": true,
+      "sample_count_preserved": true,
+      "sample_ids_equal_assignments": true,
+      "base_hash_valid": true,
+      "maximum_date_valid": true,
+      "train_and_validation_present": true,
+      "tfidf_model_hash_frozen": true,
+      "views": {
+        "no_text": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "tfidf_svd": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "semantic_bge": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        }
+      }
+    },
+    {
+      "fold_id": "E_RO_03",
+      "base_shape_valid": true,
+      "sample_count_preserved": true,
+      "sample_ids_equal_assignments": true,
+      "base_hash_valid": true,
+      "maximum_date_valid": true,
+      "train_and_validation_present": true,
+      "tfidf_model_hash_frozen": true,
+      "views": {
+        "no_text": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "tfidf_svd": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        },
+        "semantic_bge": {
+          "shape_valid": true,
+          "sample_keys_equal": true,
+          "missing_text_zero": true,
+          "hash_valid": true
+        }
+      }
+    }
+  ],
+  "metadata_sha256": "7a29ea18384516e7677ca8242f4aea23c16ef4dd15756dd65341f6556de140c4"
+}

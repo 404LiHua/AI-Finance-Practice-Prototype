@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-07-25T05:07:36.419480+00:00",
+  "stage": "E-3.1",
+  "graph_batch_id": "e3_graphs_300stocks_v1",
+  "passed": true,
+  "missing": [],
+  "checks": {
+    "stock_order_unique": true,
+    "stock_order_consistent": true,
+    "identity_shape": true,
+    "industry_shape": true,
+    "rolling_shape": true,
+    "dates_parseable": true,
+    "development_ceiling_respected": true,
+    "finite_nonnegative": true,
+    "identity_exact": true,
+    "industry_row_stochastic": true,
+    "rolling_row_stochastic": true,
+    "rolling_topk_bounded": true,
+    "warmup_is_identity": true,
+    "artifact_hashes_valid": true,
+    "batch_sha_valid": true,
+    "future_or_sealed_data_not_read": true
+  },
+  "stock_count": 300,
+  "date_count": 255,
+  "maximum_date": "2023-06-02",
+  "rolling_graph_shape": [
+    255,
+    300,
+    300
+  ],
+  "batch_sha256": "f82d4ee9e41696e30e46b46b5f84c416f3be46b49910f59604122fe421408dbd"
+}

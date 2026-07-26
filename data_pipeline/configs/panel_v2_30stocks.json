@@ -1,0 +1,17 @@
+{
+  "contract_version": "panel_v2.0.0",
+  "contract_schema": "data_pipeline/schemas/panel_v2_contract.json",
+  "paths": {
+    "base_panel": "data/processed/weekly_30stocks_stage_a_v1/panel.csv.gz",
+    "stock_basic": "D:/项目/data/stock_basic/stock_basic.csv",
+    "csmar_prepared_root": "data/external/csmar_30stocks_20220603_20230602",
+    "baostock_adjust_root": "data/external/baostock_30stocks_20220603_20230602",
+    "output_root": "data/processed/panel_v2_30stocks_20220603_20230602"
+  },
+  "universe": {
+    "codes": [],
+    "selection_method": "inherit codes from the Stage A panel",
+    "selection_bias_warning": "The current 30-stock pilot was selected from currently active low codes. panel_v2 fixes row-level point-in-time membership inside this candidate set, but a future 100/300-stock universe must be selected from historical eligibility to remove candidate-set survivorship bias."
+  },
+  "overwrite": false
+}
