@@ -1,0 +1,72 @@
+{
+  "acceptance_id": "stage_f_f1_3_three_seed_acceptance_v1",
+  "generated_at": "2026-07-28",
+  "status": "ENGINEERING_PASS_STABILITY_HARD_GATE_FAIL",
+  "config_path": "stage_f/configs/f1_3_three_seed_review_v1.json",
+  "config_sha256": "f75b4bed6af0a6565fd67379eb2467074165427e757a8e1abca3d45df81952c1",
+  "metadata_path": "outputs/stage_f/f1_3_three_seed_review_v1/metadata.json",
+  "metadata_sha256": "a1cfbb575edb0c798fbff8682b61a726fa0f7a56982636d308477ce7949c4419",
+  "seeds": [20260723, 20260724, 20260725],
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "engineering_checks": [
+    {"id": "authorized_additional_seeds_only", "status": "PASS"},
+    {"id": "frozen_training_code_sha", "status": "PASS", "sha256": "8cc97d6e27b9e7eb81b1b4bde08c12a6b43d63898cadb20003daff6edfcdfac2"},
+    {"id": "unchanged_folds_candidates_and_parameters", "status": "PASS"},
+    {"id": "additional_runs", "status": "PASS", "observed": 18},
+    {"id": "combined_runs", "status": "PASS", "observed": 27},
+    {"id": "combined_prediction_rows", "status": "PASS", "observed": 13500},
+    {"id": "frozen_sample_keys", "status": "PASS", "rows_per_fold_candidate_seed": 500},
+    {"id": "finite_losses", "status": "PASS"},
+    {"id": "independent_loading", "status": "PASS", "maximum_absolute_difference": 4.6470285397504085e-09, "threshold": 1e-7},
+    {"id": "three_seed_stress_entries", "status": "PASS"},
+    {"id": "failure_retention", "status": "PASS", "failure_count": 0},
+    {"id": "governance", "status": "PASS", "ranking": false, "deletion": false, "promotion_recommendation": false, "gan": false, "screening": false, "final": false}
+  ],
+  "engineering_passed_checks": 12,
+  "engineering_required_checks": 12,
+  "stability_results_in_frozen_candidate_order": [
+    {
+      "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+      "seed_mae_cv": 0.001961188759365479,
+      "minimum_pearson": 0.7080612616159309,
+      "minimum_spearman": 0.4734680378721515,
+      "prediction_std_mean": 0.0018396348542731515,
+      "prediction_std_p95": 0.004323803038285875,
+      "passed_gates": ["seed_mae_cv", "prediction_std_mean", "prediction_std_p95"],
+      "failed_gates": ["pairwise_pearson", "pairwise_spearman"],
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_noise_aug_l8",
+      "seed_mae_cv": 0.001454717283217812,
+      "minimum_pearson": 0.7498751768236139,
+      "minimum_spearman": 0.6157305269221077,
+      "prediction_std_mean": 0.0014629017926394484,
+      "prediction_std_p95": 0.003363860424123838,
+      "passed_gates": ["seed_mae_cv", "prediction_std_mean", "prediction_std_p95"],
+      "failed_gates": ["pairwise_pearson", "pairwise_spearman"],
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_feature_mask_l8",
+      "seed_mae_cv": 0.001739069788789985,
+      "minimum_pearson": 0.7452669885717033,
+      "minimum_spearman": 0.6085830103320413,
+      "prediction_std_mean": 0.0015095897712926736,
+      "prediction_std_p95": 0.0034308420851723717,
+      "passed_gates": ["seed_mae_cv", "prediction_std_mean", "prediction_std_p95"],
+      "failed_gates": ["pairwise_pearson", "pairwise_spearman"],
+      "all_stability_gates_pass": false
+    }
+  ],
+  "candidates_passing_all_stability_gates": 0,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "next_node": "F-1.4_UNIFIED_ROBUSTNESS_DIAGNOSTICS_WITH_STABILITY_FAILURES_RETAINED"
+}

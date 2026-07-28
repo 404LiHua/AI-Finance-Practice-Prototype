@@ -1,0 +1,135 @@
+{
+  "stage": "F-2.3 frozen three-seed GAN review",
+  "generated_at_utc": "2026-07-28T06:58:33.678053+00:00",
+  "status": "PASS",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "additional_seeds": [
+    20260723,
+    20260724
+  ],
+  "all_seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "additional_run_count": 6,
+  "all_three_seed_run_count": 9,
+  "failure_count": 0,
+  "prediction_rows": 4500,
+  "prediction_contract_pass": true,
+  "all_losses_finite": true,
+  "all_collapse_conditions_pass": true,
+  "maximum_independent_load_difference": 2.4477504467768085e-09,
+  "all_independent_loads_pass": true,
+  "three_seed_stress_nonempty": true,
+  "total_nine_run_seconds": 244.3159611999945,
+  "cost_limit_pass": true,
+  "stability_result": {
+    "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+    "seed_mae": {
+      "20260723": 0.03178869095103194,
+      "20260724": 0.031600702852321166,
+      "20260725": 0.03156347962926759
+    },
+    "seed_mae_cv": 0.003114296502253656,
+    "minimum_pairwise_prediction_pearson": 0.3211707708579821,
+    "minimum_pairwise_prediction_spearman": 0.18395516782067126,
+    "prediction_seed_std_mean": 0.002452276453137974,
+    "prediction_seed_std_p95": 0.0071112867530004654,
+    "fold_seed_pairs": [
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.9310110833290364,
+        "spearman": 0.9172923091692368
+      },
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.8853167402374198,
+        "spearman": 0.8954018216072864
+      },
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.9004873113640365,
+        "spearman": 0.8901966807867229
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.8273783901453491,
+        "spearman": 0.6813018612074447
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.8842661542949333,
+        "spearman": 0.7920254401017602
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.8332666778097939,
+        "spearman": 0.7330932043728174
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.6287823027724349,
+        "spearman": 0.582003000012
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.3211707708579821,
+        "spearman": 0.18395516782067126
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.41714450011776916,
+        "spearman": 0.31246963387853555
+      }
+    ],
+    "stability_gates": {
+      "seed_mae_cv": true,
+      "pairwise_pearson": false,
+      "pairwise_spearman": false,
+      "prediction_std_mean": false,
+      "prediction_std_p95": false
+    },
+    "all_stability_gates_pass": false
+  },
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "config_sha256": "a1828c2be67a9ee581467ddcfdba74f4082b17bc7275a2707888e830c62db8c8",
+  "upstream_f2_2_config_sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312",
+  "artifacts": {
+    "additional_seed_receipts_sha256": "ada2bd34dd280c4df4f344a3a8862a99a053c6e6576040574409b14317f9c6e4",
+    "all_three_seed_receipts_sha256": "7f239c66104ef500202ad5a83249f92a5e316689da29ca2fb7f4aae2f6e55674",
+    "failure_receipts_sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "three_seed_predictions_sha256": "5b950f6c185083064c903b616601087ed095d4e1c9ca62a4a39c5645811509cb",
+    "stability_diagnostics_sha256": "1d5df46e6098770eb94843a35eb17089874e4731c1ad61c657e5ca05c4ae9185",
+    "stress_counts_sha256": "8e8a5eda34185fd92f9153735c7db7098cd0992997fae466bff3da47b5062a6c"
+  },
+  "next_action": "F-2.4 unified robustness diagnostics with all stability failures retained; no automatic promotion",
+  "batch_sha256": "18d00daf4f60dfb57e304855602ef7b82714c9cefe84f2ac496e8916da6f804c"
+}

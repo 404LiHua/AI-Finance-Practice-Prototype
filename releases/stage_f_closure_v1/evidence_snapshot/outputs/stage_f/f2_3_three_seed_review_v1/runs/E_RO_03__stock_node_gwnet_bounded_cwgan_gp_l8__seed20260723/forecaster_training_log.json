@@ -1,0 +1,86 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.3453143274082857,
+    "validation_loss": 0.25678539276123047,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.3556250123416676,
+    "validation_loss": 0.25597500801086426,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.34205357116811413,
+    "validation_loss": 0.25648608803749084,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.34313884026863994,
+    "validation_loss": 0.2581128776073456,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.3491419965729994,
+    "validation_loss": 0.25785472989082336,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.3470722209004795,
+    "validation_loss": 0.2576371431350708,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.3469972049488741,
+    "validation_loss": 0.2600758373737335,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.33167383425375996,
+    "validation_loss": 0.25785836577415466,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.3377240326474695,
+    "validation_loss": 0.25778162479400635,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.3349480979582843,
+    "validation_loss": 0.259525865316391,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.3412826657295227,
+    "validation_loss": 0.2575690746307373,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.34589148794903474,
+    "validation_loss": 0.25867071747779846,
+    "original_train_windows": 135,
+    "augmented_train_windows": 67
+  }
+]

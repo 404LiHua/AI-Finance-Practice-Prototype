@@ -1,0 +1,32 @@
+{
+  "experiment_id": "stage_f_f2_2_single_seed_gan_engineering_v3",
+  "status": "FROZEN_INFERENCE_COST_CORRECTION_BEFORE_RERUN",
+  "correction_id": "f2_2_single_checkpoint_load_for_stress_inference_v1",
+  "extends_config": {
+    "path": "stage_f/configs/f2_2_single_seed_engineering_v2.json",
+    "sha256": "40d4cadfda265684583bd048527771b3682908e1115ca3041a58ea34741ad3eb"
+  },
+  "runner_override": {
+    "path": "stage_f/run_f2_single_seed.py",
+    "sha256": "2b241af1395077388c277172c309fd14ebfaeff4d7418a98b8892912e8bee780"
+  },
+  "acceptance_override": {
+    "path": "stage_f/accept_f2_single_seed.py",
+    "sha256": "8d004654c0ca2c505d5e6f1dbdf8ded49020d91f1b3bd60ac70ddfc687fead38"
+  },
+  "output_root": "outputs/stage_f/f2_2_single_seed_engineering_v3",
+  "acceptance_output": "outputs/stage_f/f2_2_single_seed_engineering_acceptance_v1.json",
+  "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v2",
+  "correction_scope": "load the independently reconstructed forecaster once and reuse it for four unchanged normal/stress inference tensors",
+  "training_data_changed": false,
+  "folds_changed": false,
+  "seed_changed": false,
+  "architecture_changed": false,
+  "loss_changed": false,
+  "training_schedule_changed": false,
+  "collapse_thresholds_changed": false,
+  "cost_limits_changed": false,
+  "validation_keys_changed": false,
+  "stress_tensors_or_scenarios_changed": false,
+  "candidate_metrics_read_before_correction": false
+}

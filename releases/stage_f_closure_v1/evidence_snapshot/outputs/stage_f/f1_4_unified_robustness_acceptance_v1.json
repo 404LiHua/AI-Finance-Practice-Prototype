@@ -1,0 +1,57 @@
+{
+  "acceptance_id": "stage_f_f1_4_unified_robustness_acceptance_v1",
+  "generated_at": "2026-07-28",
+  "status": "PASS_FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE",
+  "effective_config": "stage_f/configs/f1_4_unified_robustness_diagnostics_v2.json",
+  "effective_config_sha256": "833f087e78e3833ed870b95c07ce652839efcdd32caee3b0b43fd74f0dcc4ca8",
+  "f0_hard_gates_sha256": "be3132911d2b7354492ad1a2998d1e0754c04b658c8f529702df6b3e64183176",
+  "metadata_path": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/metadata.json",
+  "metadata_sha256": "924071331526198f85ccce3a92687d6ca0056a416b20913985b7f6edc4e8d394",
+  "checks": [
+    {"id": "frozen_model_set", "status": "PASS", "controls": 3, "candidates": 3},
+    {"id": "normal_prediction_contract", "status": "PASS", "rows": 27000},
+    {"id": "stress_prediction_contract", "status": "PASS", "rows": 114696},
+    {"id": "control_checkpoint_reload", "status": "PASS", "maximum_absolute_difference": 6.423834363750158e-09, "threshold": 1e-7},
+    {"id": "normal_diagnostics", "status": "PASS"},
+    {"id": "stress_diagnostics", "status": "PASS"},
+    {"id": "per_stock_diagnostics", "status": "PASS"},
+    {"id": "industry_and_market_cap_diagnostics", "status": "PASS"},
+    {"id": "return_tail_diagnostics", "status": "PASS"},
+    {"id": "three_seed_stability_diagnostics", "status": "PASS_WITH_RETAINED_CANDIDATE_FAILURES"},
+    {"id": "engineering_cost_diagnostics", "status": "PASS"},
+    {"id": "f0_hard_gate_application", "status": "PASS", "gate_rows": 60},
+    {"id": "stability_non_compensation", "status": "PASS"},
+    {"id": "failed_attempt_retention", "status": "PASS", "path": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v1/failure_receipt.json"},
+    {"id": "governance", "status": "PASS", "new_training": false, "ranking": false, "deletion": false, "threshold_relaxation": false, "gan": false, "screening": false, "final": false}
+  ],
+  "passed_checks": 15,
+  "required_checks": 15,
+  "candidate_results_in_frozen_order": [
+    {
+      "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+      "passed_gates": 12,
+      "required_gates": 20,
+      "all_hard_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_noise_aug_l8",
+      "passed_gates": 13,
+      "required_gates": 20,
+      "all_hard_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_feature_mask_l8",
+      "passed_gates": 13,
+      "required_gates": 20,
+      "all_hard_gates_pass": false
+    }
+  ],
+  "eligibility_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+  "eligible_candidate_count": 0,
+  "unique_candidate": null,
+  "retained_model": "stock_node_gwnet_fixed_industry_l8",
+  "stability_failures_non_compensable": true,
+  "ranking_performed": false,
+  "threshold_relaxation_performed": false,
+  "next_node": "F-1_CLOSE_NON_GAN_BRANCH_AND_DECIDE_WHETHER_TO_AUTHORIZE_SEPARATE_F2_GAN_ADDENDUM"
+}

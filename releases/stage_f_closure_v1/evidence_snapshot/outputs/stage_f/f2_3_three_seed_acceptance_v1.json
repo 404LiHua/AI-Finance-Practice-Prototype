@@ -1,0 +1,127 @@
+{
+  "stage": "F-2.3 three-seed GAN engineering and stability acceptance",
+  "generated_at_utc": "2026-07-28T06:59:08.752058+00:00",
+  "status": "ENGINEERING_PASS_STABILITY_HARD_GATE_FAIL",
+  "engineering_checks": {
+    "engineering_metadata_pass": true,
+    "authorized_additional_seeds_only": true,
+    "nine_runs_complete": true,
+    "no_failures": true,
+    "prediction_contract": true,
+    "losses_and_collapse": true,
+    "independent_loading": true,
+    "stress_entries": true,
+    "cost": true,
+    "stability_computed_without_ranking": true,
+    "future_data_closed": true
+  },
+  "engineering_passed_checks": 11,
+  "engineering_required_checks": 11,
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "stability_result": {
+    "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+    "seed_mae": {
+      "20260723": 0.03178869095103194,
+      "20260724": 0.031600702852321166,
+      "20260725": 0.03156347962926759
+    },
+    "seed_mae_cv": 0.003114296502253656,
+    "minimum_pairwise_prediction_pearson": 0.3211707708579821,
+    "minimum_pairwise_prediction_spearman": 0.18395516782067126,
+    "prediction_seed_std_mean": 0.002452276453137974,
+    "prediction_seed_std_p95": 0.0071112867530004654,
+    "fold_seed_pairs": [
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.9310110833290364,
+        "spearman": 0.9172923091692368
+      },
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.8853167402374198,
+        "spearman": 0.8954018216072864
+      },
+      {
+        "fold_id": "E_RO_01",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.9004873113640365,
+        "spearman": 0.8901966807867229
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.8273783901453491,
+        "spearman": 0.6813018612074447
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.8842661542949333,
+        "spearman": 0.7920254401017602
+      },
+      {
+        "fold_id": "E_RO_02",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.8332666778097939,
+        "spearman": 0.7330932043728174
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260723,
+        "right_seed": 20260724,
+        "pearson": 0.6287823027724349,
+        "spearman": 0.582003000012
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260723,
+        "right_seed": 20260725,
+        "pearson": 0.3211707708579821,
+        "spearman": 0.18395516782067126
+      },
+      {
+        "fold_id": "E_RO_03",
+        "left_seed": 20260724,
+        "right_seed": 20260725,
+        "pearson": 0.41714450011776916,
+        "spearman": 0.31246963387853555
+      }
+    ],
+    "stability_gates": {
+      "seed_mae_cv": true,
+      "pairwise_pearson": false,
+      "pairwise_spearman": false,
+      "prediction_std_mean": false,
+      "prediction_std_p95": false
+    },
+    "all_stability_gates_pass": false
+  },
+  "all_stability_gates_pass": false,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "config_sha256": "a1828c2be67a9ee581467ddcfdba74f4082b17bc7275a2707888e830c62db8c8",
+  "metadata_sha256": "77d9daa66c46eda68af5f4933983c98913a57d4ef3f8358d5aea44084e4f1355",
+  "screening_authorized": false,
+  "final_authorized": false,
+  "next_action": "F-2.4 unified robustness diagnostics with all stability failures retained; no automatic promotion",
+  "acceptance_sha256": "53bef9a22a1a2e565d28c801060029dfba1fa90df53a56138c319b43c34cb05e"
+}

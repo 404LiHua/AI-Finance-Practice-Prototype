@@ -1,0 +1,79 @@
+{
+  "diagnostic_id": "stage_f_f2_4_unified_robustness_diagnostics_v1",
+  "status": "FROZEN_BEFORE_OFFLINE_DIAGNOSTIC_READ",
+  "frozen_at": "2026-07-28",
+  "scope": "merge sealed Stage E controls, F-1 non-GAN candidates and F-2 GAN predictions without retraining or new model inference",
+  "extends_f1_config": {
+    "path": "stage_f/configs/f1_4_unified_robustness_diagnostics_v1.json",
+    "sha256": "f95c51c98489ba0eb0e5e122f76e2876f7d5ba11e56f27478ed00436b0535338"
+  },
+  "gan_candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "normal_artifact_max_abs_difference": 1e-07,
+  "target_artifact_max_abs_difference": 1e-07,
+  "paths": {
+    "f1_4_normal_predictions": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/unified_normal_predictions.csv.gz",
+    "f1_4_stress_predictions": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/unified_stress_predictions.csv.gz",
+    "f1_4_engineering_costs": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/engineering_costs.csv",
+    "f2_3_predictions": "outputs/stage_f/f2_3_three_seed_review_v1/three_seed_unified_predictions.csv.gz",
+    "f2_3_receipts": "outputs/stage_f/f2_3_three_seed_review_v1/all_three_seed_receipts.json",
+    "f2_3_stability": "outputs/stage_f/f2_3_three_seed_review_v1/three_seed_stability_diagnostics.json",
+    "f2_2_run_root": "outputs/stage_f/f2_2_single_seed_engineering_v3/runs",
+    "f2_3_run_root": "outputs/stage_f/f2_3_three_seed_review_v1/runs",
+    "output_root": "outputs/stage_f/f2_4_unified_robustness_diagnostics_v1",
+    "acceptance": "outputs/stage_f/f2_4_unified_robustness_acceptance_v1.json"
+  },
+  "source_registry": {
+    "diagnostic_runner": {
+      "path": "stage_f/run_f2_unified_diagnostics.py",
+      "sha256": "57725d65db08b49f7dee671b5d2dc2eac200f6742d3792cab7dee205541ed32c"
+    },
+    "independent_acceptance": {
+      "path": "stage_f/accept_f2_unified_diagnostics.py",
+      "sha256": "cb66efd6ebab4c12fde905ba44537a83393b67275745ffd62921c88379c0ff96"
+    },
+    "contract_test": {
+      "path": "stage_f/tests/test_f2_4_unified_diagnostics.py",
+      "sha256": "5e4aa5b48285cbe68ec987932221a3de8c9e6fa1dc5e88829564d62658ec1827"
+    },
+    "f0_protocol": {
+      "path": "stage_f/configs/f0_robustness_protocol_v1.json",
+      "sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e"
+    },
+    "f1_4_normal_predictions": {
+      "path": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/unified_normal_predictions.csv.gz",
+      "sha256": "224952de50c20b71b3df9a71196fc9b6881a161db6d28421af1b151096fd69e1"
+    },
+    "f1_4_stress_predictions": {
+      "path": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/unified_stress_predictions.csv.gz",
+      "sha256": "c127036d02382bb22fcfb92370195f872e252771d7b0bdca43074e0043bba86b"
+    },
+    "f1_4_engineering_costs": {
+      "path": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2/engineering_costs.csv",
+      "sha256": "1db287825642fa6b86c3f51b74ec747916d5a33e295e4fb10f6a28a448882be4"
+    },
+    "f2_3_predictions": {
+      "path": "outputs/stage_f/f2_3_three_seed_review_v1/three_seed_unified_predictions.csv.gz",
+      "sha256": "5b950f6c185083064c903b616601087ed095d4e1c9ca62a4a39c5645811509cb"
+    },
+    "f2_3_receipts": {
+      "path": "outputs/stage_f/f2_3_three_seed_review_v1/all_three_seed_receipts.json",
+      "sha256": "7f239c66104ef500202ad5a83249f92a5e316689da29ca2fb7f4aae2f6e55674"
+    },
+    "f2_3_stability": {
+      "path": "outputs/stage_f/f2_3_three_seed_review_v1/three_seed_stability_diagnostics.json",
+      "sha256": "1d5df46e6098770eb94843a35eb17089874e4731c1ad61c657e5ca05c4ae9185"
+    }
+  },
+  "restrictions": {
+    "new_training_allowed": false,
+    "new_model_inference_allowed": false,
+    "new_candidate_allowed": false,
+    "candidate_deletion_allowed": false,
+    "ranking_allowed": false,
+    "threshold_change_allowed": false,
+    "stability_failure_compensation_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "required_result": "apply unchanged F-0 twenty hard gates; stability hard failures remain non-compensable"
+}

@@ -1,0 +1,1820 @@
+[
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "527de071000d94c53dd24333d7a7a389ea40a2a9d44c15a77efbb0bd6a116e77",
+    "independent_load_max_abs_difference": 1.245390679471825e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "4f96e7dd58e25a2f430de6211b442fb4d7698f827f93c620a84bb92c5ace5928"
+    },
+    "duration_seconds": 4.036066500000743,
+    "training_seconds": 2.639211100000466,
+    "inference_seconds": 0.002118799999152543,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.1506413370370865,
+    "first_train_loss": 0.4898389168083668,
+    "last_train_loss": 0.46917951107025146,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09712622538208962
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "c124b200e4e7e380973e7d8a4d0d4cf9d7742f51043d8a2ff23f0c2879b48bfa",
+    "independent_load_max_abs_difference": 1.329820475959309e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "b0a8cdb63ae6a3123db4bc40609a76bc5f67eb4341d907fcb3d2f157ed3c2b0c"
+    },
+    "duration_seconds": 2.760804100000314,
+    "training_seconds": 2.7248030999999173,
+    "inference_seconds": 0.0020363999992696336,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.12975488603115082,
+    "first_train_loss": 0.35228936187922955,
+    "last_train_loss": 0.3389176521450281,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "b1a57a736c8783fc229cf88411ad68f49e8d9dfa94bda4000aa2701fc1a7c7fc",
+    "independent_load_max_abs_difference": 1.3309346957868229e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "56767e65a849287490867cf3bb0535f02a46375b3fa6faac8c0caa0093920105"
+    },
+    "duration_seconds": 2.5889815999998973,
+    "training_seconds": 2.562128900000971,
+    "inference_seconds": 0.0019249999986641342,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.1295287311077118,
+    "first_train_loss": 0.3522972669452429,
+    "last_train_loss": 0.3393520936369896,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "bd211103108e67795a5a3f639f6aa6162769aa21157c4047ea44ca768e2775c6",
+    "independent_load_max_abs_difference": 4.6470285397504085e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "d94b0ae18c1dc2ab9440e313c5ea9be63f0198d3c02c998d00f8a04cd5fadac8"
+    },
+    "duration_seconds": 4.878746899999896,
+    "training_seconds": 4.850172299999031,
+    "inference_seconds": 0.0019019999999727588,
+    "epochs_completed": 21,
+    "best_validation_loss": 0.30673059821128845,
+    "first_train_loss": 0.4914496453369365,
+    "last_train_loss": 0.49592989332535686,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.0952179647982121
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "5f570b94223524e07b45526d8bd1000d6bdfd7d85a6ed3ce8a9f2639f657df23",
+    "independent_load_max_abs_difference": 3.263766590322348e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "3126da887c5d806372cc1a3c081c3c49feb7d3e29d57367e68d878d89fa979a4"
+    },
+    "duration_seconds": 3.9267593000004126,
+    "training_seconds": 3.9003044000000955,
+    "inference_seconds": 0.0018699000011110911,
+    "epochs_completed": 18,
+    "best_validation_loss": 0.22963610291481018,
+    "first_train_loss": 0.35577405726208405,
+    "last_train_loss": 0.3397841488613802,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "ae85abba40232b04a489e53c8344dc8dbfc69ed7d25f8c1ece46edaf67e3790e",
+    "independent_load_max_abs_difference": 1.4069176934583538e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "8f1ef52b3f357d8582760e26229b1af67a0330b8b94e8f8c1aa34f47a0fdcf8b"
+    },
+    "duration_seconds": 3.8837516000003234,
+    "training_seconds": 3.8551167999994504,
+    "inference_seconds": 0.002049899998382898,
+    "epochs_completed": 18,
+    "best_validation_loss": 0.23015256226062775,
+    "first_train_loss": 0.35587626169709596,
+    "last_train_loss": 0.3411533499465269,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "98c7ff9d57e14bd465d035396c8b1e9985ffe3f45ebc8650bc3a88429baf2f75",
+    "independent_load_max_abs_difference": 6.646483363681455e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "6ae3c40aaa7cb288a32ef3cf4a04f098e13596eb150ae3b654f0c1986cee5ad9"
+    },
+    "duration_seconds": 2.486524300000383,
+    "training_seconds": 2.457915499999217,
+    "inference_seconds": 0.0021497000016097445,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.35381391644477844,
+    "first_train_loss": 0.4886719286441803,
+    "last_train_loss": 0.47227652984506946,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09411111474037172
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "675ff3ca986f3f94792d6050b62ba83745602557f29032c4976b3a8e94815c5a",
+    "independent_load_max_abs_difference": 9.236693632175275e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "15362c8c8a5317754cae2b1f9d803da7af2b49332ef80598984c39b7a1fcaba3"
+    },
+    "duration_seconds": 2.6734462000003987,
+    "training_seconds": 2.644737600001463,
+    "inference_seconds": 0.0018559000000095693,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.25577953457832336,
+    "first_train_loss": 0.35265811576562767,
+    "last_train_loss": 0.34056005057166605,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "294dc3bc13e76cd391019763d2478b7adcc417272d8b7344b1d7d834d547ecb7",
+    "independent_load_max_abs_difference": 9.543690282498574e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "ea7b58cab561e08c2e31ba3fb08dc2a975511bd256d87ea6e68c35ec6fbec02d"
+    },
+    "duration_seconds": 2.479912900000272,
+    "training_seconds": 2.4533401999997295,
+    "inference_seconds": 0.0018350000009377254,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.25607794523239136,
+    "first_train_loss": 0.35274233362253976,
+    "last_train_loss": 0.34122518932118134,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "26564a73edc6a70b24b7ad979de203a0b598ff203beaac209df1e5d9f30bcf9e",
+    "independent_load_max_abs_difference": 1.2215610745158756e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "d752bfe80771ce528c16940767e21121594e6d44aa5fb3fffe172a906cd45e66"
+    },
+    "duration_seconds": 4.347309200000382,
+    "training_seconds": 2.9966442999993887,
+    "inference_seconds": 0.0018979000014951453,
+    "epochs_completed": 15,
+    "best_validation_loss": 0.152237668633461,
+    "first_train_loss": 0.48500013165175915,
+    "last_train_loss": 0.4724925961345434,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09712622538208962
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "5d2278eb48d75a2b451f2852044133327a6461382eb93a65622f1d288b7a5772",
+    "independent_load_max_abs_difference": 1.3445011770585324e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "f573da4963855ffab91b383e2812fdb03dc08b8e4385eb2f981e6f65c5c7932d"
+    },
+    "duration_seconds": 3.1227610999994795,
+    "training_seconds": 3.0963117999999668,
+    "inference_seconds": 0.0018249999993713573,
+    "epochs_completed": 15,
+    "best_validation_loss": 0.1314263492822647,
+    "first_train_loss": 0.3514959830790758,
+    "last_train_loss": 0.3424452021718025,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "bd202791354976eb7776fcf2d247b535c22e1eb03de3fa44026005b478f551fa",
+    "independent_load_max_abs_difference": 1.3687977418186392e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "d6e714eb96e1af5e50c763ac3e39d6adda2b9f8db9c27af2fc5b2f4389d46062"
+    },
+    "duration_seconds": 2.9422006999993755,
+    "training_seconds": 2.9156036999993376,
+    "inference_seconds": 0.0018340999995416496,
+    "epochs_completed": 15,
+    "best_validation_loss": 0.13107836246490479,
+    "first_train_loss": 0.3514775801450014,
+    "last_train_loss": 0.34376916754990816,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "fa0e866aa1ea53afef218abbb79859263f9ac75b0229bf3f861d243a92e582fe",
+    "independent_load_max_abs_difference": 3.0585178834030557e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "ae18dae18badbfe669f4d9e85f1e351f8b947767a6aa4385274127990f72574d"
+    },
+    "duration_seconds": 2.3579267999994045,
+    "training_seconds": 2.33078839999871,
+    "inference_seconds": 0.001867599999968661,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.30345603823661804,
+    "first_train_loss": 0.4665476666653858,
+    "last_train_loss": 0.46088458510006175,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.0952179647982121
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "f95b3ae07dc3c572e305e3ef645b0413bfaa2882a7c7a77ebebee599547a2447",
+    "independent_load_max_abs_difference": 2.7086488607608317e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "730037b0a15783e3d1a388316e1ad471fe67e05f377b4a4be3841c09e712932f"
+    },
+    "duration_seconds": 2.268875499999922,
+    "training_seconds": 2.2434188999995968,
+    "inference_seconds": 0.001881899999716552,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.22891415655612946,
+    "first_train_loss": 0.3376460824819172,
+    "last_train_loss": 0.33433588199755726,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "a9044d1ec0585c9969b12545f58048431e2c03f1eb856da6b716879d48583bbb",
+    "independent_load_max_abs_difference": 3.358517464135957e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "f3ae8f1ca9555d2cd65a1226e08db34ee20e49da8a39b0bf2d2f22f2974daf2a"
+    },
+    "duration_seconds": 2.2701661999999487,
+    "training_seconds": 2.244983599999614,
+    "inference_seconds": 0.0018615999997564359,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.2291618436574936,
+    "first_train_loss": 0.3376232525881599,
+    "last_train_loss": 0.3355970347628874,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "f2ab0ffc2f3188cd6274b980d69602d494cdfd37b26fb8f5e33b87920e307138",
+    "independent_load_max_abs_difference": 1.723042153400911e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "6ced248b8f27afe1976b2eed5bb9ad581475891ea9c5fa62c0bd1c1ed30e2490"
+    },
+    "duration_seconds": 2.820615500000713,
+    "training_seconds": 2.7928358999997727,
+    "inference_seconds": 0.0018397000003460562,
+    "epochs_completed": 13,
+    "best_validation_loss": 0.3555481433868408,
+    "first_train_loss": 0.48396752687061534,
+    "last_train_loss": 0.47003859807463255,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09411111474037172
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "05c790319157b8f6da8da81f39815e59f55daf5d0206ee83db021f850332dbc2",
+    "independent_load_max_abs_difference": 1.0896410440608406e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "0095a8e496448ec36e2175a9f77242e5d04968f3ac2bc062bdaabe3448054fa3"
+    },
+    "duration_seconds": 2.5787730000010924,
+    "training_seconds": 2.5534336999990046,
+    "inference_seconds": 0.0018385000003036112,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.2557092308998108,
+    "first_train_loss": 0.34896855494555307,
+    "last_train_loss": 0.34175416827201843,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260723,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "c54aae8c0986ee3635110caf09b6940cbd19b5432441d106f19a0acc4644db63",
+    "independent_load_max_abs_difference": 1.139825123175342e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "dd827008b463663fc05e70cee72d9ae49e4f9c62aada94e5fe3d192c67c14e12"
+    },
+    "duration_seconds": 2.842711799999961,
+    "training_seconds": 2.816576700000951,
+    "inference_seconds": 0.0018565999998827465,
+    "epochs_completed": 13,
+    "best_validation_loss": 0.25576508045196533,
+    "first_train_loss": 0.34931018422631654,
+    "last_train_loss": 0.34018756361568675,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "4c30fa344bb219248990fafbd0e4665f203b7b4ba6ba7b4488f60cbb6835a5b1",
+    "independent_load_max_abs_difference": 1.3648965291324089e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "7dde8afaaf52221cd85c549abbce623e8795f0725c4c5d9bb86f3153cd03f4fb"
+    },
+    "duration_seconds": 2.928368099999716,
+    "training_seconds": 2.900976700000683,
+    "inference_seconds": 0.0018430000000080327,
+    "epochs_completed": 15,
+    "best_validation_loss": 0.1489018201828003,
+    "first_train_loss": 0.48620338179171085,
+    "last_train_loss": 0.46857605315744877,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09712622538208962
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "60a76256d393e428649e8cbb1c8ed53d924d4089048df8a74f9bb4aadcd3347f",
+    "independent_load_max_abs_difference": 1.3436824986001739e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "40a1e53814aa89493cb8e86fd7b1fa52186ffab4a968a1cc12bcaabb34462a6d"
+    },
+    "duration_seconds": 2.6159603000014613,
+    "training_seconds": 2.5908551000011357,
+    "inference_seconds": 0.0018314999997528503,
+    "epochs_completed": 13,
+    "best_validation_loss": 0.12840676307678223,
+    "first_train_loss": 0.3515688981860876,
+    "last_train_loss": 0.3419064376503229,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_01",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "9514f308ccf95460747c225887174e1529a1d90a9b6de2551c89db02b7f20bd1",
+    "independent_load_max_abs_difference": 1.3522127861875788e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 11,
+        "positive_return_tail_q90": 17,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 19,
+        "four_week_drawdown_q10": 7,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06536003947257996,
+        "positive_return_tail_q90": 0.0714285746216774,
+        "high_volatility_q90": 1.039017915725708,
+        "low_liquidity_q10": -1.227514624595642,
+        "four_week_drawdown_q10": -2.043951988220215
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "5bd0a718ba04ef6becb21c76c53606965f6d3887305f7254ead9f8b867bc5256"
+    },
+    "duration_seconds": 2.588647699998546,
+    "training_seconds": 2.563330799999676,
+    "inference_seconds": 0.002301399999851128,
+    "epochs_completed": 13,
+    "best_validation_loss": 0.12855377793312073,
+    "first_train_loss": 0.3516530692577362,
+    "last_train_loss": 0.34238133020699024,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "8c215367da789ffbff8e9642384d6b827a6fbfb97ed0a5c033fccc4dee52d0fa",
+    "independent_load_max_abs_difference": 2.1141008943459383e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "67a857a888460ec825f20cf3fa386ad328b30debfd4e37b5be885b80fec5c280"
+    },
+    "duration_seconds": 2.5090708000007,
+    "training_seconds": 2.4819072999998752,
+    "inference_seconds": 0.001910400000269874,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.3043913245201111,
+    "first_train_loss": 0.4877863561405855,
+    "last_train_loss": 0.47466596785713644,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.0952179647982121
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "25bdee1037f6f92216996c469049864f13f6da6dd3ab8c6667c88dc7c33aae94",
+    "independent_load_max_abs_difference": 2.7222504250801194e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "2a154c36d7854a5eee47bcc9853c98a44d7ead84e24960d73a4a69dc4686ca34"
+    },
+    "duration_seconds": 3.5060458999996627,
+    "training_seconds": 3.4801522999987355,
+    "inference_seconds": 0.0019492000010359334,
+    "epochs_completed": 17,
+    "best_validation_loss": 0.22874487936496735,
+    "first_train_loss": 0.3536651379921857,
+    "last_train_loss": 0.3373519620474647,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_02",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "c421c952efc888903609e0af3d5e08aa65f95a9046d667be7c215edd22fafffd",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "5bd2ce8bec8dc478d2b13ec42aec45fce3190324adc5361f91a43e86442e16ed",
+    "independent_load_max_abs_difference": 3.3077420802385404e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 39,
+        "positive_return_tail_q90": 25,
+        "high_volatility_q90": 0,
+        "low_liquidity_q10": 23,
+        "four_week_drawdown_q10": 19,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06383006274700165,
+        "positive_return_tail_q90": 0.07050970196723938,
+        "high_volatility_q90": 1.0093789100646973,
+        "low_liquidity_q10": -1.233411431312561,
+        "four_week_drawdown_q10": -2.0319647789001465
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [
+        "high_volatility_q90"
+      ],
+      "artifact_sha256": "3c5aa3f9bdb417bce4b476ce8d490230e823db84f7eb0496faaf67a80aef41c2"
+    },
+    "duration_seconds": 3.8351268999995227,
+    "training_seconds": 3.8066479000008258,
+    "inference_seconds": 0.0018459000002621906,
+    "epochs_completed": 17,
+    "best_validation_loss": 0.22875601053237915,
+    "first_train_loss": 0.35362353570321026,
+    "last_train_loss": 0.33845584883409385,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "5b76386dd0b1461d14adef7f75dca86923bfdb0851bbf299b0602d818fc30195",
+    "independent_load_max_abs_difference": 1.1489551532406495e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "be0056e8e9c3204bc3d971da4f044cc86a5485960b3da7ae64e96545f93c6c48"
+    },
+    "duration_seconds": 2.66341310000098,
+    "training_seconds": 2.634167600001092,
+    "inference_seconds": 0.0020452999997360166,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.3586014211177826,
+    "first_train_loss": 0.4893803543904248,
+    "last_train_loss": 0.4724950124235714,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09411111474037172
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "bc80453af0396730e88e505683acc9540f75bd69d84e7150185bcadb4f111651",
+    "independent_load_max_abs_difference": 1.1638251473655714e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "9129dd09a7e600380a55988198a19a89cefbb3b2df0455b856810df6506a484c"
+    },
+    "duration_seconds": 2.9161318999995274,
+    "training_seconds": 2.8879127000000153,
+    "inference_seconds": 0.002233699999123928,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.25799667835235596,
+    "first_train_loss": 0.35325483188909645,
+    "last_train_loss": 0.3415828426094616,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260724,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "b7a6e10652b1a4bf7893625045e1ea6b7604808cefef44067c4257549b4afe0e",
+    "independent_load_max_abs_difference": 1.1482497175308026e-09,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "empty_observed_scenarios_in_fold": [],
+      "artifact_sha256": "2f63325a1008948a8aa872e16df5a1eadee52a9c7d237271b950cd2e98c1270b"
+    },
+    "duration_seconds": 2.667599100001098,
+    "training_seconds": 2.6409702000000834,
+    "inference_seconds": 0.0022177999999257736,
+    "epochs_completed": 12,
+    "best_validation_loss": 0.25812867283821106,
+    "first_train_loss": 0.3534314299330992,
+    "last_train_loss": 0.34188926745863524,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  }
+]

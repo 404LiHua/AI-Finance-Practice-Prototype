@@ -1,0 +1,82 @@
+{
+  "health_check_id": "stage_f_f2_1_minimal_gan_training_health_v1",
+  "status": "EXPLICITLY_AUTHORIZED_MINIMAL_TRAINING_HEALTH_CHECK_ONLY",
+  "authorized_at": "2026-07-28",
+  "authorization_source": "explicit user instruction: 进行F-2.1 最小GAN训练健康检查",
+  "frozen_addendum": {
+    "path": "stage_f/configs/f2_gan_addendum_v1.json",
+    "sha256": "52927541e34f905065a0552c7288c5205803067a97ea3c373aff0ba1d9d475ba"
+  },
+  "frozen_addendum_acceptance": {
+    "path": "outputs/stage_f/f2_gan_addendum_acceptance_v1.json",
+    "sha256": "5c7bbc111fd3a2e17f1d3425f3cefbae1e0fbec16571cea149cd678286d983dd"
+  },
+  "source_registry": {
+    "training_health_runner": {
+      "path": "stage_f/run_f2_minimal_health.py",
+      "sha256": "1ec0332a79e8de04441c12e1b835f8369a02af41a0938b9908a5c99bdc991434"
+    },
+    "independent_acceptance": {
+      "path": "stage_f/accept_f2_minimal_health.py",
+      "sha256": "d15404f629d79667e15ec8a1780c28d5f67b14467ca9102c4adb51246d5461ce"
+    },
+    "contract_test": {
+      "path": "stage_f/tests/test_f2_1_minimal_health.py",
+      "sha256": "4b8890c0fac500001ec105d1042332498e257444764bd435050aeb7da5f5e134"
+    }
+  },
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "synthetic_batch": {
+    "batch_size": 2,
+    "sequence_length": 8,
+    "stock_count": 100,
+    "feature_count": 6,
+    "unavailable_stock_count": 5
+  },
+  "training_schedule": {
+    "critic_warmup_epochs": 5,
+    "joint_epochs": 20,
+    "critic_steps_per_generator_step": 3,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "betas": [0.0, 0.9]
+  },
+  "required_checks": [
+    "determinism",
+    "tensor_shapes_and_finite_training",
+    "minimum_overfit_and_parameter_updates",
+    "data_boundaries"
+  ],
+  "minimum_health_thresholds": {
+    "maximum_repeat_metric_difference": 0.0,
+    "maximum_generated_absolute_delta": 0.05,
+    "minimum_critic_loss_relative_improvement": 0.01,
+    "minimum_generator_parameter_l2_change": 1e-8,
+    "minimum_critic_parameter_l2_change": 1e-8,
+    "maximum_total_health_check_seconds": 40.0
+  },
+  "authorization": {
+    "optimizer_steps_authorized": true,
+    "synthetic_minimal_training_authorized": true,
+    "formal_fold_training_authorized": false,
+    "additional_seed_training_authorized": false,
+    "candidate_ranking_authorized": false,
+    "screening_authorized": false,
+    "final_authorized": false
+  },
+  "restrictions": {
+    "frozen_architecture_change_allowed": false,
+    "frozen_loss_change_allowed": false,
+    "frozen_schedule_change_allowed": false,
+    "real_validation_sample_read_allowed": false,
+    "candidate_metric_read_allowed": false,
+    "checkpoint_promotion_allowed": false
+  },
+  "paths": {
+    "receipt": "outputs/stage_f/f2_1_minimal_training_health_receipt_v1.json",
+    "acceptance": "outputs/stage_f/f2_1_minimal_training_health_acceptance_v1.json"
+  },
+  "next_action_if_pass": "request separate authorization before F-2.2 single-seed three-fold engineering training",
+  "next_action_if_fail": "retain failure receipt and repair only the frozen implementation defect without adding an architecture"
+}

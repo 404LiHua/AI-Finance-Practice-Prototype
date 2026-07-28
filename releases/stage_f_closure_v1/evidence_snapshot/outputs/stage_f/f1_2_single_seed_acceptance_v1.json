@@ -1,0 +1,41 @@
+{
+  "acceptance_id": "stage_f_f1_2_single_seed_acceptance_v1",
+  "generated_at": "2026-07-28",
+  "status": "PASS",
+  "effective_config": "stage_f/configs/f1_2_single_seed_engineering_v2.json",
+  "effective_config_sha256": "13a505e0e237e3d0be82590dffd1e5efec68cf4bf9900d7ebe2dd5e41bdf6e61",
+  "metadata_path": "outputs/stage_f/f1_2_single_seed_engineering_v2/metadata.json",
+  "metadata_sha256": "c62cae78f62ab40499b59cd1a2bc66c41f7be4137f2b581987c91a67001febea",
+  "seed": 20260725,
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "checks": [
+    {"id": "exact_seed", "status": "PASS", "observed": [20260725]},
+    {"id": "exact_folds", "status": "PASS", "observed": ["E_RO_01", "E_RO_02", "E_RO_03"]},
+    {"id": "exact_candidate_set", "status": "PASS", "observed_count": 3},
+    {"id": "nine_engineering_runs", "status": "PASS", "observed": 9},
+    {"id": "finite_losses", "status": "PASS"},
+    {"id": "frozen_validation_keys", "status": "PASS", "rows_per_fold_candidate": 500},
+    {"id": "independent_checkpoint_loading", "status": "PASS", "maximum_absolute_difference": 4.6470285397504085e-09, "threshold": 1e-7},
+    {"id": "normal_and_stress_inference", "status": "PASS", "scenario_count": 9, "pooling_scope": "three frozen folds per candidate"},
+    {"id": "checkpoint_count", "status": "PASS", "observed": 9},
+    {"id": "engineering_cost", "status": "PASS", "total_training_seconds": 28.08772990000034, "maximum_parameter_count": 15777},
+    {"id": "negative_receipt_retention", "status": "PASS", "path": "outputs/stage_f/f1_2_single_seed_engineering_v1"},
+    {"id": "governance_restrictions", "status": "PASS", "ranking": false, "deletion": false, "promotion_recommendation": false, "additional_seed": false, "gan": false, "screening": false, "final": false}
+  ],
+  "passed_checks": 12,
+  "required_checks": 12,
+  "prediction_rows": 4500,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "gan_training_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "next_node": "F-1.3_THREE_SEED_REVIEW_REQUIRES_AUTHORIZATION_FOR_20260723_20260724"
+}

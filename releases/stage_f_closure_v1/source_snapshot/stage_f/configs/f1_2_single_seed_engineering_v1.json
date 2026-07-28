@@ -1,0 +1,78 @@
+{
+  "experiment_id": "stage_f_f1_2_single_seed_engineering_v1",
+  "status": "FROZEN_AFTER_F1_1_PASS_BEFORE_F1_2_REAL_FOLD_TRAINING",
+  "frozen_at": "2026-07-28",
+  "development_date_ceiling": "2023-06-02",
+  "seed": 20260725,
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "feature_order": [
+    "return_1w",
+    "log_return_1w",
+    "return_vol_4",
+    "return_vol_12",
+    "model_close",
+    "model_volume_hands"
+  ],
+  "base_parameters": {
+    "sequence_length": 8,
+    "hidden_channels": 32,
+    "kernel_size": 3,
+    "dilations": [1, 2],
+    "graph_order": 2,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber"
+  },
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "frozen_validation_keys": "outputs/stage_e/e5_interface_acceptance_v1/frozen_validation_keys.csv.gz",
+    "custody_config": "stage_f/configs/f0_data_custody_v1.json",
+    "output_root": "outputs/stage_f/f1_2_single_seed_engineering_v1"
+  },
+  "source_registry": {
+    "runner": {"path": "stage_f/run_f1_single_seed.py", "sha256": "592b65923cfb8c615cd600bdbd2d704b75dbf2217fd67535a5d15ef030fbf283"},
+    "robustness": {"path": "stage_f/robustness.py", "sha256": "8f196a4deb3d709fe81dcb85d91c363dd138bf9f208de61430fff28e7fb30dd4"},
+    "base_model": {"path": "stage_e/e5/neural_graph.py", "sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc"},
+    "fold_interface": {"path": "stage_e/e5/interface.py", "sha256": "10bf9a1dd0a0f6c67106458b63c770caac6ea7028b7ed66a523f19b55675f560"},
+    "custody": {"path": "stage_f/custody.py", "sha256": "997937c4e43286b428a0d47eeb244a17d81f8fb6210b5856fe4be55a1a3972c9"},
+    "custody_config": {"path": "stage_f/configs/f0_data_custody_v1.json", "sha256": "5f4878f20474877a2becb74dfe16c23bf3089c797bd9a10834656ed810040a76"},
+    "stress_contract": {"path": "stage_f/configs/f0_stress_scenarios_v1.json", "sha256": "35ef95898d5faf4acddb8378d12d1e397362eb82dc026dbcf06d506ece762b6c"},
+    "f1_1_contract": {"path": "stage_f/configs/f1_1_implementation_contract_v1.json", "sha256": "b0cf9e8ed7ab0134ccdea446913df5bdb327a2c81c986c24cd72d69daba478b5"},
+    "adapter_metadata": {"path": "data/processed/e4_adapter_100stocks_v1/metadata.json", "sha256": "7a29ea18384516e7677ca8242f4aea23c16ef4dd15756dd65341f6556de140c4"},
+    "universe": {"path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv", "sha256": "b5b5ed3864a5a4889233acb49da9d328879d4a7c42cdcdc8755451d2447ce90d"},
+    "frozen_validation_keys": {"path": "outputs/stage_e/e5_interface_acceptance_v1/frozen_validation_keys.csv.gz", "sha256": "8803c7691f3d41b58c54795dfbe56d6ffd3260edb6caad4a82372cc31bf4b315"}
+  },
+  "independent_loading_max_abs_difference": 1e-7,
+  "required_engineering_checks": [
+    "nine_of_nine_fold_candidate_runs_pass",
+    "all_training_and_validation_losses_finite",
+    "each_fold_has_exactly_500_frozen_validation_keys",
+    "all_checkpoint_reload_prediction_differences_at_or_below_1e-7",
+    "all_nine_frozen_normal_and_stress_scenarios_have_nonempty_inference_entries",
+    "no_candidate_ranking_deletion_or_promotion_recommendation"
+  ],
+  "restrictions": {
+    "allowed_seed": [20260725],
+    "additional_seed_execution_allowed": false,
+    "candidate_ranking_allowed": false,
+    "candidate_deletion_allowed": false,
+    "promotion_recommendation_allowed": false,
+    "hyperparameter_change_allowed": false,
+    "validation_stress_threshold_refit_allowed": false,
+    "gan_training_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "next_action_if_pass": "request authorization to run seeds 20260723 and 20260724 under unchanged hashes"
+}

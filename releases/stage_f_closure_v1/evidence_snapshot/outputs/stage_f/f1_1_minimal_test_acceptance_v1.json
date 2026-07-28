@@ -1,0 +1,27 @@
+{
+  "acceptance_id": "stage_f_f1_1_minimal_test_acceptance_v1",
+  "generated_at": "2026-07-28",
+  "status": "PASS",
+  "implementation_contract_sha256": "b0cf9e8ed7ab0134ccdea446913df5bdb327a2c81c986c24cd72d69daba478b5",
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "checks": [
+    {"id": "determinism", "status": "PASS", "detail": "same seed reproduces consecutive augmentation tensors; inference is bitwise unchanged"},
+    {"id": "tensor_shapes", "status": "PASS", "detail": "all transforms preserve [batch,time,stock,feature] and predictions preserve [batch,stock]"},
+    {"id": "minimum_overfit", "status": "PASS", "detail": "all three candidates reduce synthetic full-batch Huber loss below 35% of initialization"},
+    {"id": "data_boundaries", "status": "PASS", "detail": "validation threshold fitting, C-4, D-5, SCREENING, FINAL and post-ceiling dates are rejected"}
+  ],
+  "passed_checks": 4,
+  "required_checks": 4,
+  "synthetic_minimal_training_only": true,
+  "formal_fold_training_executed": false,
+  "candidate_metrics_read": false,
+  "candidate_ranking_performed": false,
+  "gan_training_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "next_node": "F-1.2_SINGLE_SEED_ENGINEERING_RECEIPT_SEED_20260725"
+}

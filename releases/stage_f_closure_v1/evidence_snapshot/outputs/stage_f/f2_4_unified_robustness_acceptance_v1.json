@@ -1,0 +1,43 @@
+{
+  "stage": "F-2.4 independent unified robustness acceptance",
+  "generated_at_utc": "2026-07-28T07:11:00.643886+00:00",
+  "status": "PASS",
+  "checks": {
+    "metadata_pass": true,
+    "seven_models_retained": true,
+    "four_candidates_retained": true,
+    "all_twenty_gates_present": true,
+    "gan_stability_failure_retained": true,
+    "gan_known_four_stability_failures_retained": true,
+    "gan_not_eligible": true,
+    "no_compensation": true,
+    "no_new_training_or_inference": true,
+    "no_ranking_or_deletion": true,
+    "future_data_closed": true
+  },
+  "passed_checks": 11,
+  "required_checks": 11,
+  "gan_candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "gan_failed_stability_gates": [
+    "stability_pairwise_pearson",
+    "stability_pairwise_spearman",
+    "stability_prediction_std_mean",
+    "stability_prediction_std_p95"
+  ],
+  "eligible_candidates": [],
+  "eligibility_conclusion": {
+    "conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+    "eligible_candidate_count": 0,
+    "unique_candidate": null,
+    "stage_e_incumbent_retained": true,
+    "stability_failures_non_compensable": true,
+    "ranking_performed": false,
+    "threshold_relaxation_performed": false
+  },
+  "stability_failures_non_compensable": true,
+  "config_sha256": "b3949000d2b5d38065b7d8a992cdf7a16c1ad407b50d157f4c9f83965336423b",
+  "metadata_sha256": "235f694bc28cdc7c52886d6c3b3a30a28883af32dd68ae01956a924371fb5caf",
+  "screening_authorized": false,
+  "final_authorized": false,
+  "acceptance_sha256": "2c9819d3d4f68aa4d888f9dab6989f5221f541d7879c8ea9248c69799ab8cd84"
+}

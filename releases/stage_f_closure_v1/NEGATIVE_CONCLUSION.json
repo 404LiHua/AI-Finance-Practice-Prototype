@@ -1,0 +1,26 @@
+{
+  "stage": "F",
+  "version": "v0.6.0-stage-f",
+  "closed_at": "2026-07-28",
+  "status": "CLOSED",
+  "formal_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+  "retained_model": "stock_node_gwnet_fixed_industry_l8",
+  "promotable_candidate_count": 0,
+  "candidate_gate_counts": {
+    "stock_node_gwnet_tail_weighted_l8": "12/20",
+    "stock_node_gwnet_noise_aug_l8": "13/20",
+    "stock_node_gwnet_feature_mask_l8": "13/20",
+    "stock_node_gwnet_bounded_cwgan_gp_l8": "11/20"
+  },
+  "gan_non_compensable_stability_failures": [
+    "stability_pairwise_pearson",
+    "stability_pairwise_spearman",
+    "stability_prediction_std_mean",
+    "stability_prediction_std_p95"
+  ],
+  "new_training_performed_during_closure": false,
+  "new_inference_performed_during_closure": false,
+  "ranking_performed_during_closure": false,
+  "screening_accessed": false,
+  "final_accessed": false
+}

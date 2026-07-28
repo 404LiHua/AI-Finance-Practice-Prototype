@@ -1,0 +1,85 @@
+{
+  "experiment_id": "stage_f_f2_3_three_seed_gan_review_v1",
+  "status": "AUTHORIZED_AND_FROZEN_BEFORE_ADDITIONAL_SEED_EXECUTION",
+  "authorized_at": "2026-07-28",
+  "authorization_scope": "add only seeds 20260723 and 20260724 to accepted seed 20260725 under unchanged F-2.2 V3",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "additional_seeds": [20260723, 20260724],
+  "all_seeds": [20260723, 20260724, 20260725],
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "upstream_f2_2": {
+    "base_config_path": "stage_f/configs/f2_2_single_seed_engineering_v1.json",
+    "base_config_sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867",
+    "effective_config_path": "stage_f/configs/f2_2_single_seed_engineering_v3.json",
+    "effective_config_sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312",
+    "output_root": "outputs/stage_f/f2_2_single_seed_engineering_v3",
+    "metadata_sha256": "28d7161be638b5e7b51bc63aaad7bb85c682fd51e5af997a21c889a4318b5edf",
+    "receipts_sha256": "7469ab7bfa1a26c4bf677de41416d705139fdef685e59e53e5c92e5c9fafc0c0",
+    "predictions_sha256": "965f9798d36ebcd70b9a538b5638c465656fa327fbf13139b2443c0bba8e5998",
+    "acceptance_sha256": "e3dfe5f0b24e450c535b1f4a083c9a44b368a52a07d1872d534a59fcd9ded922",
+    "accepted_seed": 20260725,
+    "accepted_run_count": 3
+  },
+  "frozen_forecaster_checkpoints": {
+    "20260723": {
+      "E_RO_01": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_01/seed_20260723.pt", "sha256": "d4c4f2362371b4731f91133c707a581eaa2312bcad6b08a0358c2de37513a8b9"},
+      "E_RO_02": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_02/seed_20260723.pt", "sha256": "208e6008f8d6a8b77938ce17f860c86aad5a4b995779284500ef2445cf118b64"},
+      "E_RO_03": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_03/seed_20260723.pt", "sha256": "9fc33a2e304f492331f4c8baed83ec5c74933d6b21ef90075852c00f8edd10cc"}
+    },
+    "20260724": {
+      "E_RO_01": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_01/seed_20260724.pt", "sha256": "55aaf83eb482c535faa3618f605385ee62c53a09f5abf0d0bfea3be56c22147c"},
+      "E_RO_02": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_02/seed_20260724.pt", "sha256": "f4eef1bb5410be23d4cb6b58dff1a22b28ff59a96026222f5ee0efb1b1fd0093"},
+      "E_RO_03": {"path": "releases/e_stage_best_model_v1/checkpoints/E_RO_03/seed_20260724.pt", "sha256": "bc51f164cbabe65223ff12fef415ad0b0b14629ae3255a9f0b580aac6c617454"}
+    }
+  },
+  "paths": {
+    "output_root": "outputs/stage_f/f2_3_three_seed_review_v1",
+    "acceptance": "outputs/stage_f/f2_3_three_seed_acceptance_v1.json"
+  },
+  "source_registry": {
+    "orchestrator": {"path": "stage_f/run_f2_three_seed_review.py", "sha256": "d4173f80674b11f7ca5dd105f817115c4f24fbb2a440dceb4325cc0a2e5cd3f1"},
+    "independent_acceptance": {"path": "stage_f/accept_f2_three_seed_review.py", "sha256": "c22319a27337e91ee6501db8099544adc240548581e745d654da01ca022d9afc"},
+    "contract_test": {"path": "stage_f/tests/test_f2_3_three_seed_review.py", "sha256": "6d05c9b93af88969da5ed05bd69224f15f6dc83bda6a94b0c97acfe2c7b3ef5b"},
+    "frozen_training_runner": {"path": "stage_f/run_f2_single_seed.py", "sha256": "2b241af1395077388c277172c309fd14ebfaeff4d7418a98b8892912e8bee780"},
+    "f2_2_effective_config": {"path": "stage_f/configs/f2_2_single_seed_engineering_v3.json", "sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312"},
+    "f2_2_metadata": {"path": "outputs/stage_f/f2_2_single_seed_engineering_v3/metadata.json", "sha256": "28d7161be638b5e7b51bc63aaad7bb85c682fd51e5af997a21c889a4318b5edf"},
+    "f2_2_receipts": {"path": "outputs/stage_f/f2_2_single_seed_engineering_v3/engineering_receipts.json", "sha256": "7469ab7bfa1a26c4bf677de41416d705139fdef685e59e53e5c92e5c9fafc0c0"},
+    "f2_2_predictions": {"path": "outputs/stage_f/f2_2_single_seed_engineering_v3/unified_predictions.csv.gz", "sha256": "965f9798d36ebcd70b9a538b5638c465656fa327fbf13139b2443c0bba8e5998"},
+    "f2_2_acceptance": {"path": "outputs/stage_f/f2_2_single_seed_engineering_acceptance_v1.json", "sha256": "e3dfe5f0b24e450c535b1f4a083c9a44b368a52a07d1872d534a59fcd9ded922"},
+    "f0_protocol": {"path": "stage_f/configs/f0_robustness_protocol_v1.json", "sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e"}
+  },
+  "independent_loading_max_abs_difference": 1e-7,
+  "maximum_fold_duration_seconds": 40.0,
+  "maximum_total_nine_run_seconds": 360.0,
+  "seed_stability_thresholds": {
+    "seed_mae_cv_max": 0.005,
+    "minimum_all_pairwise_prediction_pearson": 0.80,
+    "minimum_all_pairwise_prediction_spearman": 0.80,
+    "prediction_seed_std_mean_max": 0.002,
+    "prediction_seed_std_p95_max": 0.005
+  },
+  "required_checks": [
+    "additional_six_runs_complete_without_silent_failure",
+    "combined_nine_fold_seed_receipts_present",
+    "combined_4500_prediction_rows_preserve_frozen_keys",
+    "all_losses_finite_and_no_collapse_condition_triggered",
+    "all_independent_load_differences_at_or_below_1e-7",
+    "all_pressure_scenarios_nonempty_after_three_fold_pooling_per_seed",
+    "all_nine_runs_within_40_seconds_and_360_seconds_total",
+    "stability_metrics_computed_without_ranking"
+  ],
+  "restrictions": {
+    "frozen_training_code_change_allowed": false,
+    "fold_change_allowed": false,
+    "candidate_change_allowed": false,
+    "training_parameter_change_allowed": false,
+    "collapse_threshold_change_allowed": false,
+    "seed_outside_authorized_set_allowed": false,
+    "candidate_ranking_allowed": false,
+    "candidate_deletion_allowed": false,
+    "promotion_recommendation_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "next_action_if_complete": "F-2.4 unified robustness diagnostics with all stability failures retained; no automatic promotion"
+}

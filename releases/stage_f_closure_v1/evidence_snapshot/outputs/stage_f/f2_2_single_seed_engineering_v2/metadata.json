@@ -1,0 +1,55 @@
+{
+  "stage": "F-2.2 single-seed three-fold GAN engineering receipts",
+  "generated_at_utc": "2026-07-28T06:40:17.575732+00:00",
+  "status": "FAIL",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "expected_run_count": 3,
+  "completed_run_count": 2,
+  "failure_count": 1,
+  "all_gan_losses_finite": true,
+  "all_forecaster_losses_finite": true,
+  "all_collapse_conditions_pass": true,
+  "all_independent_loads_pass": true,
+  "all_frozen_validation_keys_pass": true,
+  "all_normal_and_stress_entries_pass": false,
+  "pooled_three_fold_stress_counts": {
+    "feature_noise_sigma_005": 1000,
+    "four_week_drawdown_q10": 26,
+    "high_volatility_q90": 0,
+    "latest_week_feature_mask": 1000,
+    "low_liquidity_q10": 42,
+    "negative_return_tail_q10": 50,
+    "node_mask_10pct": 1000,
+    "normal_unperturbed": 1000,
+    "positive_return_tail_q90": 42
+  },
+  "total_duration_seconds": 101.4976276999987,
+  "cost_limit_pass": true,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "adapter_correction": {
+    "correction_applied": true,
+    "correction_id": "f2_2_zero_augmentation_batch_guard_v1",
+    "correction_scope": "when floor(batch_size*0.5) equals zero, skip generator call and append zero augmented samples",
+    "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v1",
+    "base_config_sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867"
+  },
+  "config_sha256": "40d4cadfda265684583bd048527771b3682908e1115ca3041a58ea34741ad3eb",
+  "artifacts": {
+    "engineering_receipts_sha256": "dcf698d533f025e48c5c9df8bdd46577c090bbb08b56fe501c92e3149f21feee",
+    "failure_receipts_sha256": "d10c2d4ba66d2c970ab52d2e9aba388b3cf988857a5a83a4c587e6417d843bc5",
+    "unified_predictions_sha256": "c8e6621a59e9aaa116328d26675f60089fd4893c618e31eaf4741005797804ae"
+  },
+  "next_action": "retain all failure receipts and do not add or tune a GAN architecture",
+  "batch_sha256": "05d90b560d585eb0a54cf9b72d24705598b4c5f601f3f44df9fae2be5bb3b2a6"
+}

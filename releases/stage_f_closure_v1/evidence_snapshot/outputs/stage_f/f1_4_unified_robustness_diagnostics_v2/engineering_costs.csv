@@ -1,0 +1,7 @@
+model_id,role,run_count,total_duration_seconds,total_training_seconds,maximum_parameter_count,independent_load_max_abs_difference
+naive,control,9,0.0233833000092996,0.0,0,0.0
+frets_return_l4__fixed_shrink_a075,control,9,152.02617929999906,148.54277829999774,197761,0.0
+stock_node_gwnet_fixed_industry_l8,control,9,32.44996439999886,32.34518179999577,15777,3.120730340810951e-09
+stock_node_gwnet_tail_weighted_l8,candidate,9,29.028041200002917,26.084619099998235,15777,4.6470285397504085e-09
+stock_node_gwnet_noise_aug_l8,candidate,9,26.36955730000227,26.12192959999993,15777,3.263766590322348e-09
+stock_node_gwnet_feature_mask_l8,candidate,9,26.099098499998945,25.85869880000064,15777,3.358517464135957e-09

@@ -1,0 +1,10 @@
+{
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "fold_id": "E_RO_02",
+  "seed": 20260725,
+  "status": "FAIL",
+  "error_type": "RuntimeError",
+  "error": "cannot reshape tensor of 0 elements into shape [0, -1, 8] because the unspecified dimension size -1 can be any value and is ambiguous",
+  "collapse_conditions": [],
+  "duration_seconds": 17.448929999998654
+}

@@ -1,0 +1,530 @@
+{
+  "status": "COMPUTED_WITHOUT_RANKING",
+  "thresholds": {
+    "seed_mae_cv_max": 0.005,
+    "minimum_all_pairwise_prediction_pearson": 0.8,
+    "minimum_all_pairwise_prediction_spearman": 0.8,
+    "prediction_seed_std_mean_max": 0.002,
+    "prediction_seed_std_p95_max": 0.005
+  },
+  "models_in_frozen_order": [
+    {
+      "candidate_id": "naive",
+      "seed_mae": {
+        "20260723": 0.032254677215125364,
+        "20260724": 0.032254677215125364,
+        "20260725": 0.032254677215125364
+      },
+      "seed_mae_cv": 0.0,
+      "minimum_pairwise_prediction_pearson": 1.0,
+      "minimum_pairwise_prediction_spearman": 1.0,
+      "prediction_seed_std_mean": 0.0,
+      "prediction_seed_std_p95": 0.0,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 1.0,
+          "spearman": 1.0
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": true,
+        "pairwise_spearman": true,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": true
+    },
+    {
+      "candidate_id": "frets_return_l4__fixed_shrink_a075",
+      "seed_mae": {
+        "20260723": 0.031901064267808844,
+        "20260724": 0.0319464715281695,
+        "20260725": 0.03187396154222851
+      },
+      "seed_mae_cv": 0.0009375584526705589,
+      "minimum_pairwise_prediction_pearson": 0.2841768993838225,
+      "minimum_pairwise_prediction_spearman": 0.04383531134124537,
+      "prediction_seed_std_mean": 0.0014236743535249135,
+      "prediction_seed_std_p95": 0.003754156690519706,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7963126348624283,
+          "spearman": 0.6013031092124368
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.575371359636466,
+          "spearman": 0.44806316825267295
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8101808012130235,
+          "spearman": 0.9087138108552435
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.710218316743092,
+          "spearman": 0.35639844959379835
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.5433420148755687,
+          "spearman": 0.04383531134124537
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7965663045983032,
+          "spearman": 0.6717843831375325
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.2841768993838225,
+          "spearman": 0.24651717806871226
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.6588978225423529,
+          "spearman": 0.5418529514118057
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7864299919638679,
+          "spearman": 0.7990318361273444
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_fixed_industry_l8",
+      "seed_mae": {
+        "20260723": 0.03158748919881566,
+        "20260724": 0.031593667301970184,
+        "20260725": 0.031683718809547484
+      },
+      "seed_mae_cv": 0.001390797084439513,
+      "minimum_pairwise_prediction_pearson": 0.7740990242431274,
+      "minimum_pairwise_prediction_spearman": 0.7177718310873243,
+      "prediction_seed_std_mean": 0.0014222877482830446,
+      "prediction_seed_std_p95": 0.0033532117636549835,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8758753461388958,
+          "spearman": 0.8648882915531662
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8535632634944386,
+          "spearman": 0.864004992019968
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.9023265274179153,
+          "spearman": 0.8968904035616142
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8803388457974092,
+          "spearman": 0.8029046836187343
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8312681926367099,
+          "spearman": 0.7177718310873243
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8647777054125809,
+          "spearman": 0.8159864639458557
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7740990242431274,
+          "spearman": 0.7283905295621181
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8088284227082286,
+          "spearman": 0.7725202740810964
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8061553839798666,
+          "spearman": 0.7718228312913251
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+      "seed_mae": {
+        "20260723": 0.0318094634810307,
+        "20260724": 0.031803087469500765,
+        "20260725": 0.0319386679261612
+      },
+      "seed_mae_cv": 0.0019611887593660414,
+      "minimum_pairwise_prediction_pearson": 0.7080612616159311,
+      "minimum_pairwise_prediction_spearman": 0.4734680378721515,
+      "prediction_seed_std_mean": 0.0018396348542731413,
+      "prediction_seed_std_p95": 0.004323803038285856,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.9383590147509151,
+          "spearman": 0.926250201000804
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8953625892650389,
+          "spearman": 0.9006219384877541
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8842966760471311,
+          "spearman": 0.8718309433237733
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8805370089159011,
+          "spearman": 0.7955279181116723
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7080612616159311,
+          "spearman": 0.4734680378721515
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7269597466084337,
+          "spearman": 0.5530381481525926
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7946163951572137,
+          "spearman": 0.7362079368317473
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7539669464734129,
+          "spearman": 0.6824387937551749
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7938683394432178,
+          "spearman": 0.7628326833307333
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_noise_aug_l8",
+      "seed_mae": {
+        "20260723": 0.031593861797746856,
+        "20260724": 0.03158075966352283,
+        "20260725": 0.03168422438980387
+      },
+      "seed_mae_cv": 0.0014547172832183267,
+      "minimum_pairwise_prediction_pearson": 0.7498751768236149,
+      "minimum_pairwise_prediction_spearman": 0.6157305269221077,
+      "prediction_seed_std_mean": 0.0014629017926394408,
+      "prediction_seed_std_p95": 0.003363860424123826,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8693205968776724,
+          "spearman": 0.8569478117912471
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8520148354869987,
+          "spearman": 0.8619167916671667
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8969316608399293,
+          "spearman": 0.8909721718886875
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7498751768236149,
+          "spearman": 0.6157305269221077
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8332938461247931,
+          "spearman": 0.7155914703658814
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8946167201945123,
+          "spearman": 0.8507796911187645
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7778884017408425,
+          "spearman": 0.7338917355669423
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8062120150227533,
+          "spearman": 0.7693658934635739
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8075354100320028,
+          "spearman": 0.7724741938967756
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_feature_mask_l8",
+      "seed_mae": {
+        "20260723": 0.03158442894152051,
+        "20260724": 0.031592121505876966,
+        "20260725": 0.03170476118886529
+      },
+      "seed_mae_cv": 0.0017390697887905596,
+      "minimum_pairwise_prediction_pearson": 0.7452669885717036,
+      "minimum_pairwise_prediction_spearman": 0.6085830103320413,
+      "prediction_seed_std_mean": 0.0015095897712926654,
+      "prediction_seed_std_p95": 0.003430842085172356,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8702350029663315,
+          "spearman": 0.8660798483193932
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8594311341899354,
+          "spearman": 0.8674167496669987
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8956573149620556,
+          "spearman": 0.8980811923247692
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7452669885717036,
+          "spearman": 0.6085830103320413
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8408637974765321,
+          "spearman": 0.7309110196440786
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.89731882267844,
+          "spearman": 0.8661149844599378
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8113937939336188,
+          "spearman": 0.7475745742982971
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7577101821900569,
+          "spearman": 0.7031635486541946
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8065053247094696,
+          "spearman": 0.7780803283213132
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    }
+  ],
+  "ranking_performed": false,
+  "promotion_recommendation_formed": false
+}

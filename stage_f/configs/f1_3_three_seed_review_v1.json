@@ -1,0 +1,82 @@
+{
+  "experiment_id": "stage_f_f1_3_three_seed_review_v1",
+  "status": "AUTHORIZED_AND_FROZEN_BEFORE_ADDITIONAL_SEED_EXECUTION",
+  "authorized_at": "2026-07-28",
+  "authorization_scope": "add only seeds 20260723 and 20260724 to accepted seed 20260725",
+  "additional_seeds": [20260723, 20260724],
+  "all_seeds": [20260723, 20260724, 20260725],
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "base_parameters": {
+    "sequence_length": 8,
+    "hidden_channels": 32,
+    "kernel_size": 3,
+    "dilations": [1, 2],
+    "graph_order": 2,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber"
+  },
+  "upstream_f1_2": {
+    "config_path": "stage_f/configs/f1_2_single_seed_engineering_v2.json",
+    "config_sha256": "13a505e0e237e3d0be82590dffd1e5efec68cf4bf9900d7ebe2dd5e41bdf6e61",
+    "output_root": "outputs/stage_f/f1_2_single_seed_engineering_v2",
+    "metadata_sha256": "c62cae78f62ab40499b59cd1a2bc66c41f7be4137f2b581987c91a67001febea",
+    "accepted_seed": 20260725,
+    "accepted_run_count": 9
+  },
+  "paths": {
+    "output_root": "outputs/stage_f/f1_3_three_seed_review_v1"
+  },
+  "source_registry": {
+    "orchestrator": {"path": "stage_f/run_f1_three_seed_review.py", "sha256": "e9b419df6f93cc8d42db5cb8610806d1a4e385292384cf52c09ce0595632e107"},
+    "frozen_training_runner": {"path": "stage_f/run_f1_single_seed.py", "sha256": "8cc97d6e27b9e7eb81b1b4bde08c12a6b43d63898cadb20003daff6edfcdfac2"},
+    "frozen_robustness": {"path": "stage_f/robustness.py", "sha256": "8f196a4deb3d709fe81dcb85d91c363dd138bf9f208de61430fff28e7fb30dd4"},
+    "f1_2_effective_config": {"path": "stage_f/configs/f1_2_single_seed_engineering_v2.json", "sha256": "13a505e0e237e3d0be82590dffd1e5efec68cf4bf9900d7ebe2dd5e41bdf6e61"},
+    "f1_2_metadata": {"path": "outputs/stage_f/f1_2_single_seed_engineering_v2/metadata.json", "sha256": "c62cae78f62ab40499b59cd1a2bc66c41f7be4137f2b581987c91a67001febea"},
+    "f1_2_receipts": {"path": "outputs/stage_f/f1_2_single_seed_engineering_v2/engineering_receipts.json", "sha256": "ac5b6abf7000574ba33bdb3bcaf288a830fd515daa26c0c5574ae5b14da70bd8"},
+    "f1_2_predictions": {"path": "outputs/stage_f/f1_2_single_seed_engineering_v2/unified_predictions.csv.gz", "sha256": "32e29ed3d2e864fd5bfcf21b2fe2a7b565c048510538328c9a233f3632f1a3f1"},
+    "f0_protocol": {"path": "stage_f/configs/f0_robustness_protocol_v1.json", "sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e"}
+  },
+  "independent_loading_max_abs_difference": 1e-7,
+  "seed_stability_thresholds": {
+    "seed_mae_cv_max": 0.005,
+    "minimum_all_pairwise_prediction_pearson": 0.80,
+    "minimum_all_pairwise_prediction_spearman": 0.80,
+    "prediction_seed_std_mean_max": 0.002,
+    "prediction_seed_std_p95_max": 0.005
+  },
+  "required_checks": [
+    "additional_18_runs_complete_without_silent_failure",
+    "combined_27_fold_candidate_seed_receipts_present",
+    "combined_13500_prediction_rows_preserve_frozen_keys",
+    "all_losses_finite",
+    "all_independent_load_differences_at_or_below_1e-7",
+    "all_pressure_scenarios_nonempty_after_three_fold_pooling_per_candidate_seed",
+    "stability_metrics_computed_for_each_candidate_without_ranking",
+    "no_candidate_deletion_or_promotion_recommendation"
+  ],
+  "restrictions": {
+    "code_change_allowed": false,
+    "fold_change_allowed": false,
+    "candidate_change_allowed": false,
+    "training_parameter_change_allowed": false,
+    "seed_outside_authorized_set_allowed": false,
+    "candidate_ranking_allowed": false,
+    "candidate_deletion_allowed": false,
+    "promotion_recommendation_allowed": false,
+    "gan_training_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "next_action_if_complete": "F-1.4 unified robustness diagnostics under frozen F-0 gates; no automatic promotion"
+}

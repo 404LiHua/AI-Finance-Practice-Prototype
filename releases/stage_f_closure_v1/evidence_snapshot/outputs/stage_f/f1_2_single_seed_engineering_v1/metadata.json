@@ -1,0 +1,36 @@
+{
+  "stage": "F-1.2 single-seed engineering receipt",
+  "generated_at_utc": "2026-07-28T05:13:32.156902+00:00",
+  "status": "FAIL",
+  "seed": 20260725,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "expected_run_count": 9,
+  "completed_run_count": 3,
+  "failure_count": 6,
+  "all_losses_finite": true,
+  "all_independent_loads_pass": true,
+  "all_stress_entries_pass": true,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "gan_training_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "config_sha256": "99dcd8a4bf45066c271b0e99450c82b33671851bf3c814f098cc2668e3c781c4",
+  "artifacts": {
+    "engineering_receipts_sha256": "a85632368769c139a8267db6bb553583b6793805c5ba8c03bafff4841e94680a",
+    "failure_receipts_sha256": "d0fd8f2c71e233e47d48c83f48f8287e2b74108999eb4484106e4ec3af7ed2ee",
+    "unified_predictions_sha256": "d62ec19edaf0424cb89fe3449c8366f7d413e085b434fd813a29bf75661f0c03"
+  },
+  "batch_sha256": "fba4a39c45aed74962044de44f1c0903127958652c9eabbd206b433a1ce6cb25"
+}

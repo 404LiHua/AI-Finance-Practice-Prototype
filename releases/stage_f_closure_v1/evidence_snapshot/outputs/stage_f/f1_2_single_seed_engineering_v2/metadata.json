@@ -1,0 +1,72 @@
+{
+  "stage": "F-1.2 single-seed engineering receipt",
+  "generated_at_utc": "2026-07-28T05:17:55.779777+00:00",
+  "status": "PASS",
+  "seed": 20260725,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "candidate_ids": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "expected_run_count": 9,
+  "completed_run_count": 9,
+  "failure_count": 0,
+  "all_losses_finite": true,
+  "all_independent_loads_pass": true,
+  "all_stress_entries_pass": true,
+  "pooled_three_fold_stress_counts_by_candidate": {
+    "stock_node_gwnet_tail_weighted_l8": {
+      "feature_noise_sigma_005": 1500,
+      "four_week_drawdown_q10": 93,
+      "high_volatility_q90": 29,
+      "latest_week_feature_mask": 1500,
+      "low_liquidity_q10": 90,
+      "negative_return_tail_q10": 85,
+      "node_mask_10pct": 1500,
+      "normal_unperturbed": 1500,
+      "positive_return_tail_q90": 75
+    },
+    "stock_node_gwnet_noise_aug_l8": {
+      "feature_noise_sigma_005": 1500,
+      "four_week_drawdown_q10": 93,
+      "high_volatility_q90": 29,
+      "latest_week_feature_mask": 1500,
+      "low_liquidity_q10": 90,
+      "negative_return_tail_q10": 85,
+      "node_mask_10pct": 1500,
+      "normal_unperturbed": 1500,
+      "positive_return_tail_q90": 75
+    },
+    "stock_node_gwnet_feature_mask_l8": {
+      "feature_noise_sigma_005": 1500,
+      "four_week_drawdown_q10": 93,
+      "high_volatility_q90": 29,
+      "latest_week_feature_mask": 1500,
+      "low_liquidity_q10": 90,
+      "negative_return_tail_q10": 85,
+      "node_mask_10pct": 1500,
+      "normal_unperturbed": 1500,
+      "positive_return_tail_q90": 75
+    }
+  },
+  "pooled_three_fold_stress_nonempty": true,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "gan_training_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "config_sha256": "13a505e0e237e3d0be82590dffd1e5efec68cf4bf9900d7ebe2dd5e41bdf6e61",
+  "artifacts": {
+    "engineering_receipts_sha256": "ac5b6abf7000574ba33bdb3bcaf288a830fd515daa26c0c5574ae5b14da70bd8",
+    "failure_receipts_sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "unified_predictions_sha256": "32e29ed3d2e864fd5bfcf21b2fe2a7b565c048510538328c9a233f3632f1a3f1"
+  },
+  "batch_sha256": "58a0156a4124600e4af53cf8762db7303e6098f722356b3e9a41ffade5d552f1"
+}

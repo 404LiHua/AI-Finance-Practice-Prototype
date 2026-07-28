@@ -1,0 +1,9 @@
+{
+  "conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+  "eligible_candidate_count": 0,
+  "unique_candidate": null,
+  "stage_e_incumbent_retained": true,
+  "stability_failures_non_compensable": true,
+  "ranking_performed": false,
+  "threshold_relaxation_performed": false
+}

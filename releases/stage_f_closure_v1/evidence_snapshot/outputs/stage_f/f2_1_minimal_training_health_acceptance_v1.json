@@ -1,0 +1,26 @@
+{
+  "stage": "F-2.1 minimal GAN training health independent acceptance",
+  "generated_at_utc": "2026-07-28T06:20:52.771372+00:00",
+  "status": "PASS",
+  "checks": {
+    "source_hashes_valid": true,
+    "receipt_pass": true,
+    "all_health_checks_pass": true,
+    "all_protocol_checks_pass": true,
+    "config_hash_matches": true,
+    "unique_candidate_unchanged": true,
+    "optimizer_steps_were_minimal_only": true,
+    "no_additional_seed_training": true,
+    "no_ranking_or_metric_read": true,
+    "future_data_not_accessed": true
+  },
+  "passed_checks": 10,
+  "required_checks": 10,
+  "config_sha256": "444814e59a9e9fbe5e890b1f619782df9c3a19e31dbaa9fee896fd75d464755a",
+  "receipt_sha256": "286e8fb5640189e9e59879fb39160e204dbdf33ccafd1614f553ebbcce2d2227",
+  "formal_fold_training_authorized": false,
+  "screening_authorized": false,
+  "final_authorized": false,
+  "next_action": "request separate authorization before F-2.2 single-seed three-fold engineering training",
+  "acceptance_sha256": "bb545116bb0822beb39eebbf9cddb223088f68a133202348cd3ea20cdba43ac8"
+}

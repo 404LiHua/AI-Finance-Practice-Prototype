@@ -1,0 +1,48 @@
+{
+  "stage": "F-2.2 single-seed three-fold GAN engineering receipts",
+  "generated_at_utc": "2026-07-28T06:36:42.517936+00:00",
+  "status": "FAIL",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "expected_run_count": 3,
+  "completed_run_count": 2,
+  "failure_count": 1,
+  "all_gan_losses_finite": true,
+  "all_forecaster_losses_finite": true,
+  "all_collapse_conditions_pass": true,
+  "all_independent_loads_pass": true,
+  "all_frozen_validation_keys_pass": true,
+  "all_normal_and_stress_entries_pass": true,
+  "pooled_three_fold_stress_counts": {
+    "feature_noise_sigma_005": 1000,
+    "four_week_drawdown_q10": 74,
+    "high_volatility_q90": 29,
+    "latest_week_feature_mask": 1000,
+    "low_liquidity_q10": 67,
+    "negative_return_tail_q10": 46,
+    "node_mask_10pct": 1000,
+    "normal_unperturbed": 1000,
+    "positive_return_tail_q90": 50
+  },
+  "total_duration_seconds": 66.78490840000086,
+  "cost_limit_pass": true,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "config_sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867",
+  "artifacts": {
+    "engineering_receipts_sha256": "3fef69278fbfc7ee2ca1445f99ac734fce769781c668d14b5e7f557e9d718d8d",
+    "failure_receipts_sha256": "f0018a083fbc37c474e5312742d7c36d68cafd138084e2c8877614a35e9684e3",
+    "unified_predictions_sha256": "83b2ea5a799d3b720dde4b3f5eb7d7fdb6e616f10485689083e7aea8aee903da"
+  },
+  "next_action": "retain all failure receipts and do not add or tune a GAN architecture",
+  "batch_sha256": "444ab4f3854b4b33fa8621c7eafb05e350755caf21a5370bb8677bb3f455b396"
+}

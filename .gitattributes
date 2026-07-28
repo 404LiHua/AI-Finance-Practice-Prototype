@@ -1,0 +1,5 @@
+# Stage-F configs use byte-level SHA-256 checks and must remain LF on Windows clones.
+stage_f/** text eol=lf
+
+# The closure archive is a byte-preserved evidence package verified by its manifest.
+releases/stage_f_closure_v1/** -text
