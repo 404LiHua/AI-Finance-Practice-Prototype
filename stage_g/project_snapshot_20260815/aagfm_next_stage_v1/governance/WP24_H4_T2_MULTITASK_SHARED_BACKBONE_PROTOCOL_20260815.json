@@ -1,0 +1,75 @@
+{
+  "node_id": "WP24_H4_T2_MULTITASK_SHARED_BACKBONE_PROTOCOL_V1",
+  "status": "FROZEN_BEFORE_CANDIDATE_TRAINING_OR_METRIC_READ",
+  "purpose": "Independent new research route for the proposal-aligned H4 continuous relative-return core with a derived T2 ordered classification head.",
+  "target": {
+    "continuous": "same-origin valid-stock target_return_h4 minus same-origin valid-stock median",
+    "classification": "T2_MARKET_RELATIVE_FIXED",
+    "threshold": 0.01,
+    "ordinal_mapping": ["DOWN=0", "NEUTRAL=1 inclusive at boundary", "UP=2"]
+  },
+  "immutable_inputs": {
+    "samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "rg3_features_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "rg2_state_features_sha256": "1b06bc5a5b62f9f3d8ab0337261cb269e32972a8a9305c9fd966e9aa732ff09a",
+    "split_contract_sha256": "d469af80bb77e6f521e293799744d2f972010f67c0416b7d58b5124bd6273b6b"
+  },
+  "scope": {
+    "folds": ["REV2_RO_01", "REV2_RO_02", "REV2_RO_03", "REV2_RO_04", "REV2_RO_05", "REV2_RO_06"],
+    "roles": ["TRAIN", "VALIDATION"],
+    "fresh": false,
+    "screening": false,
+    "final": false,
+    "text_body": false,
+    "production_replacement": false
+  },
+  "features": {
+    "rg3_daily": ["momentum_20d", "momentum_60d", "momentum_120d", "realized_volatility_20d", "realized_volatility_60d", "downside_volatility_60d", "current_drawdown_60d", "rsi_14", "macd_scaled", "bollinger_position_20", "amihud_20d", "zero_volume_fraction_20d", "volume_ratio_20d_60d", "intraday_range_mean_20d"],
+    "rg3_structural": ["log_market_cap_total", "log_market_cap_float", "float_share_ratio", "listing_age_weeks", "is_special_treatment", "is_suspended", "is_delisted_asof", "is_suspended_listing_asof", "history_weeks_scaled", "market_cap_small", "market_cap_medium", "market_cap_large", "structural_state_missing"],
+    "rg2_state_graph_summary": ["capital_event_this_week", "capital_event_increase_flag", "capital_event_decrease_flag", "log_total_shares_change_at_event", "log_tradable_shares_change_at_event", "tradable_share_ratio_change_at_event", "capital_event_age_260_scaled", "capital_history_missing_flag", "market_tradable_fraction", "market_eligible_fraction", "market_small_cap_fraction", "industry_tradable_fraction", "industry_eligible_fraction", "log1p_industry_member_count", "graph_mean_absolute_change", "graph_intra_industry_weight_fraction", "graph_mean_nonself_out_degree_scaled", "graph_max_nonself_out_degree_scaled"],
+    "count": 45,
+    "normalization": "fold-train-only median/IQR, finite-value fail-closed, clip to [-8,8]"
+  },
+  "model": {
+    "id": "REV9_WP24_SHARED_MULTITASK_H4_T2",
+    "backbone": "45 -> 96 SiLU LayerNorm -> 64 SiLU LayerNorm -> 32",
+    "heads": ["heteroscedastic H4 relative-return regression", "proportional-odds T2 ordered classification"],
+    "dropout": 0.05,
+    "loss": "heteroscedastic Gaussian NLL + 0.5 ordinal cumulative BCE",
+    "regression_weight": 1.0,
+    "ordinal_weight": 0.5,
+    "optimizer": "AdamW",
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "epochs": 35,
+    "batch_size": 8192,
+    "gradient_clip": 1.0,
+    "seed": 2026081524
+  },
+  "decision_gates": {
+    "regression": ["mean weekly Spearman IC positive", "median fold MAE no worse than zero baseline by >0.001", "at least 5 of 6 folds positive IC"],
+    "classification": ["positive MCC against NAIVE_PRIOR in at least 5 of 6 folds", "worst-fold MCC delta versus incumbent >= -0.02", "Brier worst increase versus best baseline <= 0.01"],
+    "joint": ["both heads finite and probability rows sum to one", "no head materially degrades the other relative to its single-task comparator"],
+    "failure_action": "research-only, no production promotion, no post-hoc retuning within this protocol"
+  },
+  "sealing": {
+    "predictions_before_metric_read": true,
+    "prediction_sha256_required": true,
+    "targets_written_to_prediction_files": false,
+    "independent_evaluator_required": true
+  },
+  "resource_policy": {
+    "training_device": "single shared CUDA GPU, one fold at a time",
+    "cpu_policy": "two threads for I/O, joins, normalization, hashing and metrics",
+    "max_heavy_gpu_jobs": 1,
+    "production_cpu_only": true
+  },
+  "authorization": {
+    "development_training": true,
+    "development_validation_metric_read": true,
+    "future_labels": false,
+    "fresh_payloads": false,
+    "production_registry_change": false,
+    "automatic_trading": false
+  }
+}

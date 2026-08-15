@@ -23,6 +23,16 @@ logs/
 *.log
 *.tmp
 
+# Never publish model weights or binary prediction/data payloads.
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.parquet
+*.feather
+*.pkl
+__pycache__/
+
 # Secrets and local configuration
 .env
 .env.*

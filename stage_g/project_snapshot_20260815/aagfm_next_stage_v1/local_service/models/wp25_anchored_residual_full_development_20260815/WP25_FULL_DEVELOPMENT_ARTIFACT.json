@@ -1,0 +1,19 @@
+{
+  "artifact_id": "WP25_ANCHORED_RESIDUAL_FULL_DEVELOPMENT_V1",
+  "status": "NON_PRODUCTION_SHADOW_ARTIFACT",
+  "candidate_id": "REV9_WP25_ANCHORED_RESIDUAL_H4_T2",
+  "training_rows": 67706,
+  "development_origins": 220,
+  "model_sha256": "3f59c00a5383f1aecf4e7458eaad8ee865c7eb32c08361cb42b8659775a3c230",
+  "protocol_sha256": "912bcdbd1276f2264f01343feba57d7af48af904144bea178517ee750ad6a4e9",
+  "input_sha256": {
+    "samples": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "rg3": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "rg2": "1b06bc5a5b62f9f3d8ab0337261cb269e32972a8a9305c9fd966e9aa732ff09a",
+    "split": "d469af80bb77e6f521e293799744d2f972010f67c0416b7d58b5124bd6273b6b"
+  },
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "future_labels_read": false,
+  "production_replacement_allowed": false,
+  "created_at_utc": "2026-08-15T13:15:23.419194+00:00"
+}

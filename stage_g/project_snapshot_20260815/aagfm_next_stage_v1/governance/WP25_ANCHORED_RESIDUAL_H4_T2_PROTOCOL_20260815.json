@@ -1,0 +1,35 @@
+{
+  "node_id": "WP25_ANCHORED_RESIDUAL_H4_T2_PROTOCOL_V1",
+  "status": "FROZEN_BEFORE_CANDIDATE_TRAINING_OR_METRIC_READ",
+  "rationale": "WP24 showed positive H4 rank information but degraded T2 worst-fold MCC and Brier; this independent route preserves the frozen ordinal incumbent and permits only a fixed low-amplitude residual correction.",
+  "supersedes": null,
+  "immutable_inputs": {
+    "samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "rg3_features_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "rg2_state_features_sha256": "1b06bc5a5b62f9f3d8ab0337261cb269e32972a8a9305c9fd966e9aa732ff09a",
+    "split_contract_sha256": "d469af80bb77e6f521e293799744d2f972010f67c0416b7d58b5124bd6273b6b"
+  },
+  "target": {"continuous": "H4 target_return_h4 minus same-origin valid-stock median", "classification": "T2_MARKET_RELATIVE_FIXED", "threshold": 0.01},
+  "features": {"count": 45, "source": "frozen RG3 daily/structural features plus frozen RG2 state/graph summaries", "normalization": "fold-train-only median/IQR clipped [-8,8]"},
+  "model": {
+    "id": "REV9_WP25_ANCHORED_RESIDUAL_H4_T2",
+    "anchor": "fold-train-only proportional-odds incumbent on 14 RG3 daily features",
+    "residual_backbone": "45 -> 64 SiLU LayerNorm -> 32 SiLU",
+    "heads": ["H4 relative-return Huber residual", "T2 logit residual"],
+    "classification_formula": "softmax(log(anchor_probability) + 0.20 * residual_logits)",
+    "classification_residual_scale": 0.20,
+    "regression_formula": "anchor_score + bounded residual, anchor_score=0.10*(p_up-p_down), residual=0.10*tanh(raw_residual)",
+    "loss": "Huber(delta=0.05) regression + cross-entropy anchored probabilities + 0.05 residual-logit L2",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 40,
+    "batch_size": 8192,
+    "seed": 2026081525
+  },
+  "scope": {"folds": ["REV2_RO_01", "REV2_RO_02", "REV2_RO_03", "REV2_RO_04", "REV2_RO_05", "REV2_RO_06"], "roles": ["TRAIN", "VALIDATION"], "fresh": false, "screening": false, "final": false, "text_body": false, "production_replacement": false},
+  "gates": {"h4_positive_ic_folds_min": 5, "h4_median_mae_delta_vs_zero_max": 0.001, "t2_worst_mcc_delta_vs_incumbent_floor": -0.02, "t2_worst_brier_delta_vs_incumbent_max": 0.01, "failure_action": "research-only-no-post-hoc-retuning"},
+  "sealing": {"predictions_before_metric_read": true, "targets_written": false, "sha256_required": true, "independent_evaluator_required": true},
+  "resource_policy": {"training_device": "single shared CUDA GPU, one fold at a time", "cpu_threads": 2, "max_heavy_gpu_jobs": 1, "production_cpu_only": true},
+  "authorization": {"development_training": true, "development_validation_metric_read": true, "future_labels": false, "fresh_payloads": false, "production_registry_change": false}
+}
