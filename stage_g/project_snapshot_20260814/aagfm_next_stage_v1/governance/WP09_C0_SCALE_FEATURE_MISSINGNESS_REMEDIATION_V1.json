@@ -1,0 +1,31 @@
+{
+  "node_id": "WP09_C0_SCALE_FEATURE_MISSINGNESS_REMEDIATION_V1",
+  "status": "FROZEN_AFTER_PRECONSUMPTION_FAILURE_BEFORE_ANY_CANDIDATE_FIT_OR_SEALED_PREDICTION",
+  "incident": "The C0 executor correctly rejected 43,206 missing market_volatility_4w cells while all fourteen RG3 daily technical features and every target/feature key join were complete.",
+  "scope_of_observation": {
+    "sample_rows_checked": 365333,
+    "market_volatility_4w_missing_rows": 43206,
+    "rg3_technical_feature_missing_rows": 0,
+    "candidate_model_fits_completed": 0,
+    "sealed_prediction_rows": 0,
+    "candidate_validation_metrics_read": 0
+  },
+  "frozen_remediation": {
+    "affected_feature": "market_volatility_4w",
+    "policy": "retain every frozen sample; fit robust median and IQR scale on each own TRAIN or inner-fit partition only; transform missing/non-finite values to standardized zero after using that partition's fitted scaler",
+    "interpretation": "fit-partition median imputation with no missingness indicator and no future information",
+    "validation_policy": "apply the outer TRAIN fitted scaler only",
+    "inner_oof_policy": "apply the strictly earlier inner-fit scaler only",
+    "row_deletion": false,
+    "additional_feature": false,
+    "target_or_split_change": false
+  },
+  "implementation_binding": {
+    "source": "aagfm_next_stage_v1/src/heteroscedastic_ordinal_t2_v1.py",
+    "function": "RobustScaler.transform",
+    "existing_behavior": "non-finite standardized values are assigned 0.0 after TRAIN-partition robust scaling"
+  },
+  "authorization": "restart the unchanged unique C0 candidate with this missingness handling; no candidate addition, hyperparameter change, validation metric read or FRESH access is authorized."
+}
+
+

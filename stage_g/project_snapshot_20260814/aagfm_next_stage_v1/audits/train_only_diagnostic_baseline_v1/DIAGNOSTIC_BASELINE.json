@@ -1,0 +1,22 @@
+{
+  "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_BASELINE",
+  "cube_sha256": "8ff48ae656fa177a86928831efb01cded512c8fe4f999d22831fd919da289430",
+  "shape": [
+    299,
+    5796
+  ],
+  "observed_count": 1321849,
+  "finite_count": 1321849,
+  "return_mean": 0.013908689941841952,
+  "return_std": 0.12592270853793222,
+  "return_median": 0.0,
+  "return_q01": -0.2500335192680359,
+  "return_q99": 0.4338088846206666,
+  "up_rate": 0.4446165938772129,
+  "down_rate": 0.44299991905278135,
+  "neutral_rate": 0.11238348707000573,
+  "formal_panel_used": false,
+  "test_or_fresh_read": false,
+  "promotion_allowed": false
+}
+

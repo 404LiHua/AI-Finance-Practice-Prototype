@@ -1,0 +1,15 @@
+{
+  "protocol_id": "AA_GFMNET_STRICT_LAGGED_PIT_PROXY_PROTOCOL_V1",
+  "status": "COMPLETE_LAGGED_PROXY",
+  "input_sha256": "d9f0c54cca68c1068e17a849cc5bcb8b6acfd141838d35c218f5db283206d24b",
+  "output_sha256": "c97f2bb348307eccafdc49e42415c7922519c00a236f7e51a36bd5fb22c6ca28",
+  "shape": [
+    154,
+    300,
+    36
+  ],
+  "first_origin_all_missing": true,
+  "lag_exact_match": true,
+  "promotion_allowed": false
+}
+

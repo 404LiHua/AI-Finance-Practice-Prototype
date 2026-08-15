@@ -1,0 +1,10 @@
+{
+  "status": "EXECUTED_READ_ONLY",
+  "inputs": [
+    "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\rev7_proposal_guarded_graph_frequency_multimodal_v1\\data\\train_only_sequence_cube_v1\\TRAIN_ONLY_SEQUENCE_CUBE.npz"
+  ],
+  "outputs": [
+    "DIAGNOSTIC_BASELINE.json"
+  ]
+}
+

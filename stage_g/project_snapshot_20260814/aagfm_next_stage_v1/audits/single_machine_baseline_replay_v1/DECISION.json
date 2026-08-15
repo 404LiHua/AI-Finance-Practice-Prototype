@@ -1,0 +1,33 @@
+{
+    "node_id":  "AA_GFMNET_SINGLE_MACHINE_BASELINE_REPLAY_AND_RUNTIME_HARDENING_V1",
+    "status":  "SINGLE_MACHINE_REPLAY_PASS",
+    "model_id":  "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "model_sha256":  "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "replay_result_sha256":  "4321e393a01610b5ec106f5f48bdb7b89d33f088eaf0f41ab8aa4c80e0b6cf67",
+    "replay_stock_code":  "000001.SZ",
+    "point_in_time":  true,
+    "gpu_policy":  "research_only",
+    "anchor_device":  "cpu",
+    "cpu_roles":  [
+                      "csv_io",
+                      "feature_engineering",
+                      "http_service"
+                  ],
+    "gpu_roles":  [
+                      "separately_audited_research_training",
+                      "optional_candidate_inference"
+                  ],
+    "unit_tests":  "9/9 PASS",
+    "training_executed":  false,
+    "test_split_read":  false,
+    "fresh_labels_read":  false,
+    "production_kernel_modified":  false,
+    "known_limitations":  [
+                              "local_runtime_example_requires_user_data_root_or_AAGFMNET_DATA_ROOT",
+                              "production_package_dependency_lock_not_yet_frozen",
+                              "candidate_GPU_device_consistency_requires_separate_receipt"
+                          ],
+    "next_node":  "AA_GFMNET_DATA_CONTRACT_AND_RESEARCH_BASELINE_REBUILD_V1"
+}
+
+

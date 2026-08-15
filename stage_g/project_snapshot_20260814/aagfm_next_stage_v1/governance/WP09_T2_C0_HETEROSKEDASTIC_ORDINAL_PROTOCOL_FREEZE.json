@@ -1,0 +1,105 @@
+{
+  "node_id": "WP09_T2_C0_HETEROSKEDASTIC_ORDINAL_PROTOCOL_FREEZE_V1",
+  "status": "FROZEN_BEFORE_CANDIDATE_TRAINING_OR_CANDIDATE_METRIC_READ",
+  "authority": {
+    "source": "production_t2_source_binding_20260814_v1/governance/rev8_0_target_audit/REV8_3_SELECTED_TARGET_MODEL_FREEZE.json",
+    "formal_candidate": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+    "candidate_budget": 1,
+    "candidate_training_authorized_in_source_freeze": true
+  },
+  "target": {
+    "id": "T2_MARKET_RELATIVE_FIXED",
+    "definition": "same-origin valid-stock H4 raw return minus cross-sectional median",
+    "threshold": 0.01,
+    "ordinal_mapping": ["DOWN=0", "NEUTRAL=1 inclusive at boundary", "UP=2"],
+    "production_replacement_allowed": false
+  },
+  "immutable_inputs": {
+    "samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "rg3_features_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "weekly_panel_sha256": "4633c51055154309a9af766ea51c75f545783c82f4046261cc211f6a8449815f",
+    "split_contract_sha256": "d469af80bb77e6f521e293799744d2f972010f67c0416b7d58b5124bd6273b6b"
+  },
+  "scope": {
+    "folds": ["REV2_RO_01", "REV2_RO_02", "REV2_RO_03", "REV2_RO_04", "REV2_RO_05", "REV2_RO_06"],
+    "roles": ["TRAIN", "VALIDATION"],
+    "fresh": false,
+    "screening": false,
+    "final": false,
+    "sealed_holdout": false,
+    "graph": false,
+    "event": false,
+    "text": false,
+    "continuous_return_head": false
+  },
+  "candidate": {
+    "id": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+    "location_features": ["14 frozen RG3 daily technical features"],
+    "scale_features": ["realized_volatility_20d", "downside_volatility_60d", "market_volatility_4w"],
+    "likelihood": "three-class proportional odds with positive sample-specific scale exp(tanh(z gamma))",
+    "location_l2": 0.001,
+    "scale_l2": 0.01,
+    "log_scale_bound": 1.0,
+    "optimizer": "torch LBFGS double precision, max_iter=200, strong_wolfe",
+    "seed_search": false,
+    "feature_search": false,
+    "hyperparameter_search": false
+  },
+  "inner_calibration": {
+    "folds": 3,
+    "mode": "expanding TRAIN-only OOF",
+    "embargo_weeks": 11,
+    "minimum_fit_weeks": 26,
+    "temperatures": [1.0, 1.25, 1.5, 2.0, 3.0, 4.0],
+    "prior_shrinkages": [0.0, 0.05, 0.1, 0.2, 0.35, 0.5],
+    "admissibility": "Brier <= minimum grid Brier + 0.005",
+    "selection": "maximum multiclass MCC among admissible settings; exact tie resolves to lower temperature then lower prior shrinkage"
+  },
+  "sealing": {
+    "candidate_predictions_before_metric_read": true,
+    "prediction_targets_written": false,
+    "independent_evaluator_must_verify_all_prediction_sha256": true
+  },
+  "statistics": {
+    "primary_hypothesis": "candidate mean weekly cross-sectional Spearman IC is nonzero; expected sign is positive",
+    "weekly_minimum_valid_stocks": 300,
+    "rank_ties": "average",
+    "permutation": {
+      "method": "two-sided time-block target permutation preserving each weekly cross-section",
+      "block_length_weeks": 8,
+      "replications": 2000,
+      "seed": 2026081409
+    },
+    "bootstrap": {
+      "method": "moving-block bootstrap over ordered weekly IC values",
+      "block_length_weeks": 8,
+      "replications": 2000,
+      "confidence_interval": [0.025, 0.975],
+      "seed": 2026081410
+    },
+    "multiple_testing": {
+      "family": "one registered candidate x one primary IC hypothesis",
+      "method": "Benjamini-Hochberg",
+      "q": 0.05
+    },
+    "rationale": "The source freeze requires global BH-FDR but does not include the referenced statistical-engine source; this explicit single-candidate implementation adopts the already frozen 8-week time-block / moving-block methodology used in historical project statistical protocols and is frozen before C0 execution."
+  },
+  "decision_gates": {
+    "positive_MCC_blocks_vs_each_naive_baseline_minimum": 5,
+    "positive_IC_blocks_minimum": 5,
+    "worst_block_MCC_delta_vs_incumbent_floor": -0.02,
+    "Brier_increase_vs_best_baseline_max": 0.01,
+    "global_BH_FDR_max": 0.05,
+    "bootstrap_IC_lower_bound_must_be_positive": true,
+    "unique_passing_candidate_required": true,
+    "failure_non_compensation": true
+  },
+  "resource_policy": {
+    "training_device": "CPU, two threads; the parameter count is too small to justify GPU contention",
+    "gpu_used": false,
+    "single_heavy_job": true
+  },
+  "only_next_node": "WP09_IMPLEMENT_SEAL_AND_INDEPENDENTLY_EVALUATE_C0"
+}
+
+

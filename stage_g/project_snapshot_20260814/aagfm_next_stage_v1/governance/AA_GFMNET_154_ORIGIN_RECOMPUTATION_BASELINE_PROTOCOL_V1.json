@@ -1,0 +1,16 @@
+{
+  "protocol_id":"AA_GFMNET_154_ORIGIN_RECOMPUTATION_BASELINE_PROTOCOL_V1",
+  "status":"FROZEN_DEVELOPMENT_ONLY",
+  "identity":"independent_recomputation_not_original_incumbent_not_337_origin_formal_panel",
+  "input_shape":[154,300,36],
+  "primary_target":"H4_continuous_relative_return",
+  "auxiliary_target":"T2_ordered_classification_at_minus_plus_1pct",
+  "fold_validation_starts":[64,79,94,109,124,139],
+  "validation_length":15,
+  "purge_weeks":11,
+  "models":["cross_sectional_zero_naive","ridge_h4","xgboost_h4_limited_cpu","proportional_odds_t2"],
+  "resource_policy":{"cpu_threads":4,"gpu_used":false,"reason":"small baseline and interactive machine responsiveness"},
+  "forbidden":["Test","FRESH","SCREENING","FINAL","production_registry_change","promotion_claim"]
+}
+
+

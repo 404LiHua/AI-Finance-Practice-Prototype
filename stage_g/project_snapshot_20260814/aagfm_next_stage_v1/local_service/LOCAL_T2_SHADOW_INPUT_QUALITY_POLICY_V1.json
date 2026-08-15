@@ -1,0 +1,22 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_SHADOW_INPUT_QUALITY_POLICY_V1",
+  "status": "FROZEN_BEFORE_LABEL_FREE_SHADOW_AUDIT",
+  "scope": "offline single-machine shadow only; no production registry change, deployment, or order generation",
+  "identity": {
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "required_feature_asof_rule": "source_trade_date must equal trade_date for operational eligibility"
+  },
+  "quality_gates": {
+    "max_feature_age_days": 0,
+    "require_finite_14_rg3_features": true,
+    "require_finite_probability_and_unit_sum": true,
+    "require_unique_trade_date_stock_code": true
+  },
+  "action": {
+    "eligible": "label-free shadow observation only",
+    "ineligible": "exclude from any hypothetical trade universe; retain output for audit",
+    "automatic_trading": false
+  }
+}
+
+

@@ -1,0 +1,20 @@
+{
+  "registry_id": "AA_GFMNET_LOCAL_T2_REGISTRY_V1",
+  "status": "ACTIVE_INCUMBENT_ONLY_C0_WP10_TAINTED_WP11_SHADOW_ONLY",
+  "active_model": {
+    "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "path": "C:\\Users\\27793\\Documents\\project1\\deliverables\\RG_OBGNet_source_v1\\models\\rg_obgnet_confirmed_safe_v1_1\\MODEL.json",
+    "sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "output_contract": ["t2_class", "prob_down", "prob_neutral", "prob_up", "confidence", "distribution_support", "reliability", "gated_ordinal_score"],
+    "branches": {"graph": false, "event": false}
+  },
+  "candidate_state": {
+    "candidate_id": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+    "status": "DEVELOPMENT_RESULT_RETAINED_WP10_FRESH_TAINTED_WP11_LABEL_FREE_SHADOW_ONLY",
+    "eligible_for_active_registry": false
+  },
+  "promotion_policy": "A registry change requires a new independent untainted authorization, same-target evidence, single-machine shadow/paper validation, and a separate atomic approval. WP10 FRESH evidence is permanently excluded from selection."
+}
+
+

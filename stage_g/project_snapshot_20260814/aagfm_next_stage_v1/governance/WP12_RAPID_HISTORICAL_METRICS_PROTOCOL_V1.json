@@ -1,0 +1,38 @@
+{
+  "node_id": "WP12_RAPID_HISTORICAL_METRICS_PROTOCOL_V1",
+  "status": "FROZEN_FOR_RESEARCH_METRIC_MEASUREMENT",
+  "purpose": "Measure complete research diagnostics from existing rolling historical out-of-sample predictions without reading any FRESH, SCREENING, or FINAL payload. This shortens the research iteration loop; it is not a production-promotion protocol.",
+  "target": {
+    "id": "T2_MARKET_RELATIVE_FIXED",
+    "definition": "H4 raw return minus same-origin cross-sectional market median; DOWN < -1%, NEUTRAL inclusive between -1% and +1%, UP > +1%",
+    "minimum_valid_stocks_per_week": 300
+  },
+  "permitted_data": {
+    "source_samples": "data/rg1_4_materialized/samples.csv.gz",
+    "source_samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "folds": ["REV2_RO_01", "REV2_RO_02", "REV2_RO_03", "REV2_RO_04", "REV2_RO_05", "REV2_RO_06"],
+    "roles": ["VALIDATION"],
+    "prediction_inputs": "already sealed development prediction files only"
+  },
+  "prohibited_data": ["FRESH", "SCREENING", "FINAL", "WP10 output", "future-label shadow payloads"],
+  "metrics": {
+    "classification": ["confusion_matrix", "accuracy", "balanced_accuracy", "MCC", "macro_precision", "macro_recall", "macro_F1", "per_class_precision_recall_F1", "ordinal_MAE"],
+    "probability": ["multiclass_Brier", "multiclass_log_loss", "ECE_10bin", "mean_confidence", "mean_entropy", "predicted_and_observed_class_prevalence"],
+    "ranking": ["weekly_Spearman_IC", "mean_IC", "median_IC", "IC_standard_deviation", "ICIR_annualized", "positive_IC_week_rate", "top_bottom_decile_H4_spread"],
+    "robustness": ["per_fold_metrics", "per_week_metrics", "key_coverage", "valid_target_coverage", "minimum_universe_compliance"],
+    "operational": ["prediction_probability_finiteness", "probability_sum_error", "runtime_seconds"]
+  },
+  "interpretation": {
+    "research_use": "A candidate may be diagnosed, compared, rejected, or iterated from these metrics immediately. A failed candidate does not consume a new FRESH window.",
+    "promotion_use": "Forbidden. Historical metrics quantify evidence but do not prove live generalization or authorize production replacement.",
+    "fresh_policy": "A new clean future window is required only once for the final frozen candidate that is proposed for promotion; it is never used as a routine experiment loop."
+  },
+  "resource_policy": {
+    "device": "CPU only",
+    "threads": 2,
+    "gpu_used": false,
+    "heavy_jobs": "one at a time"
+  }
+}
+
+

@@ -1,0 +1,8 @@
+gap_id,status,need,allowed_acquisition
+T2_TARGET_SEMANTICS,MISSING_NOT_GUESSABLE,"Freeze the exact T2 class boundary, threshold source, probability semantics, and target universe.",Recover from production registry/source artifacts with paths and SHA-256; do not infer from the name.
+H4_TO_T2_DERIVATION,MISSING_NOT_GUESSABLE,Define the ordinal head or deterministic H4-to-T2 derivation before any production-grade T2 comparison.,Freeze a protocol before training; no validation-picked thresholds.
+RELIABILITY_SEMANTICS,BOUND_FROM_PRODUCTION_MODEL_JSON,Freeze reliability output formula and calibration protocol.,Use operational_reliability in the confirmed production MODEL.json; do not invent a new production formula.
+FROZEN_CN_SENTENCE_EMBEDDING_MODEL,MISSING_OPTIONAL_ROUTE_CLOSED,"Local frozen model, tokenizer, version, and SHA-256 before sentence embedding route can run.",Provide the local model package and manifest; no downloading or ad hoc replacement in this phase.
+PRODUCTION_MODEL_JSON,BOUND_FROM_DELIVERABLES,Production anchor MODEL.json for production-comparable T2 checks.,Bound from deliverables/RG_OBGNet_source_v1/models/rg_obgnet_confirmed_safe_v1_1/MODEL.json.
+
+

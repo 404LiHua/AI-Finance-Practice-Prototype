@@ -1,0 +1,196 @@
+{
+  "node_id": "AA_GFMNET_PRODUCTION_T2_SOURCE_BINDING_V1",
+  "status": "FAIL_CLOSED_INCOMPLETE_RUNTIME_AND_RAW_SOURCE_BINDING",
+  "provenance": {
+    "delivery": "user copied archive subset into workspace inbox",
+    "direct_archive_inspection": false,
+    "direct_archive_inspection_reason": "Codex external-directory approval backend returned 502",
+    "original_archive_identity_independently_verified": false
+  },
+  "manifest": {
+    "manifest_rows": 33,
+    "actual_files": 33,
+    "missing_files": 0,
+    "unexpected_files": 0,
+    "passing_files": 33,
+    "failing_files": 0
+  },
+  "required_entrypoints": {
+    "src/rev8_targets.py": true,
+    "scripts/materialize_rev8_selected_target.py": true,
+    "scripts/materialize_rg3_features.py": true,
+    "scripts/materialize_fresh1_confirmation_data.py": true,
+    "scripts/materialize_fresh2_confirmation_data.py": true,
+    "scripts/materialize_fresh3_incumbent_confirmation.py": true,
+    "scripts/build_confirmed_safe_model.py": true
+  },
+  "python_source_syntax": {
+    "scripts/build_confirmed_safe_model.py": {
+      "sha256": "ca54e0a8b3e0a80528dbe8a0372331367b09597e8feff60725f7ac73c24cfce3",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts.run_fresh1_one_shot_confirmation",
+        "src.confirmed_safe_model",
+        "src.rg2_calibrated_ordinal",
+        "src.rg3_features",
+        "sys"
+      ]
+    },
+    "scripts/materialize_fresh1_confirmation_data.py": {
+      "sha256": "47c89e2e566f9dc8bf40a3eab0cbf33eb9008892d8ac04821943ff250ae17d91",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "gzip",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "scripts.audit_fresh0_confirmation_availability",
+        "src.rg3_features",
+        "sys"
+      ]
+    },
+    "scripts/materialize_fresh2_confirmation_data.py": {
+      "sha256": "bc289a0bf668f3ca9cefb4fe7b1bbbf0f9d043c4f8adc7e86869f5357a646e2a",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "json",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "sys"
+      ]
+    },
+    "scripts/materialize_fresh3_incumbent_confirmation.py": {
+      "sha256": "2b2b114b0e3be064b0e0b6542287613675f713d37c2c36e32fc75bf14c039056",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "json",
+        "pandas",
+        "pathlib",
+        "scripts",
+        "sys"
+      ]
+    },
+    "scripts/materialize_rev8_selected_target.py": {
+      "sha256": "8229106df0b9edbedcd5177f832fa0f00ddbfdbbbb2f85de0934316594c806fc",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "gzip",
+        "hashlib",
+        "json",
+        "pandas",
+        "pathlib",
+        "src.rev8_targets",
+        "sys"
+      ]
+    },
+    "scripts/materialize_rg1_4_dataset.py": {
+      "sha256": "73ffa566243dea07f04ab3219069cb6c0f20af9a157e55b86cfef744ebc22880",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "gzip",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src.rg_data",
+        "sys"
+      ]
+    },
+    "scripts/materialize_rg2_features.py": {
+      "sha256": "53301c125f075ade78cb08bf146f4051bcd1f37d522cb61f00d7f66d17903fe9",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "gzip",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "scripts/materialize_rg3_features.py": {
+      "sha256": "305ebff96f823c4adad2102384b34cc65e6079640c3bd0425c7f74f3e664f1d8",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "gzip",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "src.rg3_features",
+        "sys"
+      ]
+    },
+    "src/rev8_targets.py": {
+      "sha256": "dd680a812816a711918df2556896c0367e986e43209ba8d65f775d4e850e6934",
+      "syntax_pass": true,
+      "imports": [
+        "__future__",
+        "numpy",
+        "pandas"
+      ]
+    }
+  },
+  "missing_runtime_modules": {
+    "scripts/materialize_rg3_features.py": [
+      "src.rg3_features"
+    ],
+    "scripts/build_confirmed_safe_model.py": [
+      "scripts.run_fresh1_one_shot_confirmation",
+      "src.confirmed_safe_model",
+      "src.rg2_calibrated_ordinal",
+      "src.rg3_features"
+    ]
+  },
+  "missing_materializer_inputs": {
+    "scripts/materialize_rev8_selected_target.py": [
+      "data/rg1_4_materialized/samples.csv.gz"
+    ],
+    "scripts/materialize_rg3_features.py": [
+      "data/rg1_4_materialized/weekly_panel.csv.gz",
+      "data/rg3_materialized/raw 312 daily files (external DAILY_ROOT)",
+      "structural panel (external PANEL_SOURCE)"
+    ]
+  },
+  "t2_core_contract": {
+    "train_target_path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\sources\\production_t2_reconstruction_20260814_v1\\rev8_ro01_train_target.csv.gz",
+    "train_target_sha256": "aadada6cbdcaaefd0edd0df1a66b176daba6b015cee6d9f6867cf95d6d92204c",
+    "rows": 39312,
+    "market_median_exact_to_1e15": true,
+    "relative_return_exact_to_1e15": true,
+    "threshold_exact": true,
+    "validity_exact": true,
+    "ordinal_label_exact": true,
+    "pass": true
+  },
+  "fresh_payloads_opened": false,
+  "fresh_labels_read": false,
+  "screening_read": false,
+  "final_read": false,
+  "materializers_executed": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "controlled_source_copy_allowed": false,
+  "production_replacement_allowed": false,
+  "created_at_utc": "2026-08-14T04:23:18.323662+00:00"
+}
+
+

@@ -1,0 +1,12 @@
+{
+  "protocol_id":"AA_GFMNET_STRICT_LAGGED_PIT_PROXY_PROTOCOL_V1",
+  "status":"FROZEN_DEVELOPMENT_ONLY",
+  "identity":"one_origin_lag_proxy_not_source_timestamp_proof",
+  "rule":"x_lagged[0,:,:]=NaN; x_lagged[i,:,:]=x_original[i-1,:,:] for i>=1",
+  "requirements":["origin dates strictly increasing","all feature channels shifted together","labels unchanged","original assets immutable"],
+  "purpose":"diagnose whether same-origin PIT boundary materially explains weak signal",
+  "promotion_allowed":false,
+  "production_registry_change_allowed":false
+}
+
+

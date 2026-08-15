@@ -1,0 +1,55 @@
+{
+  "node_id": "WP08_T2_DUAL_BASELINE_INDEPENDENT_METRIC_READ_V1",
+  "status": "PASS_DEVELOPMENT_METRICS_READ_NO_CANDIDATE_TRAINING_AUTHORIZED",
+  "sealed_run": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\aagfm_next_stage_v1\\runs\\wp08_production_t2_dual_baselines_v2",
+  "sealed_manifest_sha256": "8e5beadf6421509bcc68b943849edf8f3772abbfd1d5109d9a054bb8927f6878",
+  "seal_hashes_verified": true,
+  "sample_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+  "fold_count": 6,
+  "baseline_ids": [
+    "NAIVE_PRIOR",
+    "NAIVE_NEUTRAL",
+    "INCUMBENT_ORDINAL_T2_DEV"
+  ],
+  "best_naive_by_global_mcc": null,
+  "best_naive_tie": [
+    "NAIVE_NEUTRAL",
+    "NAIVE_PRIOR"
+  ],
+  "global_metrics": [
+    {
+      "scored_rows": 33282,
+      "mcc": 0.07356440832166648,
+      "brier": 0.5896104508199045,
+      "mean_weekly_spearman_ic": 0.14137082795344136,
+      "weekly_ic_count": 109,
+      "baseline_id": "INCUMBENT_ORDINAL_T2_DEV"
+    },
+    {
+      "scored_rows": 33282,
+      "mcc": 0.0,
+      "brier": 1.77297037437654,
+      "mean_weekly_spearman_ic": NaN,
+      "weekly_ic_count": 0,
+      "baseline_id": "NAIVE_NEUTRAL"
+    },
+    {
+      "scored_rows": 33282,
+      "mcc": 0.0,
+      "brier": 0.5946211488956133,
+      "mean_weekly_spearman_ic": NaN,
+      "weekly_ic_count": 0,
+      "baseline_id": "NAIVE_PRIOR"
+    }
+  ],
+  "fresh_payloads_opened": false,
+  "screening_read": false,
+  "final_read": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "candidate_training_authorized": false,
+  "production_replacement_allowed": false,
+  "created_at_utc": "2026-08-14T04:44:53.022351+00:00"
+}
+
+

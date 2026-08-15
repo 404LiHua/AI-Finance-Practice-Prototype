@@ -1,0 +1,19 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_LOOPBACK_SOAK_POLICY_V1",
+  "status": "FROZEN_BEFORE_LOCAL_LOOPBACK_SOAK_TEST",
+  "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "host": "127.0.0.1",
+  "gpu_policy": "disabled",
+  "cpu_threads": 2,
+  "warmup_requests": 1,
+  "sequential_requests": 100,
+  "concurrent_requests": 20,
+  "max_client_workers": 2,
+  "p99_latency_max_seconds": 3.0,
+  "max_tracemalloc_current_growth_bytes": 8388608,
+  "stock_code": "000001.SZ",
+  "forbidden": ["labels", "returns", "FRESH", "WP10", "training", "GPU", "automatic trading"]
+}
+
+

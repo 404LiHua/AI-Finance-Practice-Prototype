@@ -1,0 +1,47 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_RUNTIME_ENVIRONMENT_LOCK_V1",
+  "status": "PASS_LOCAL_RUNTIME_ENVIRONMENT_LOCKED",
+  "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "python": {
+    "implementation": "CPython",
+    "version": "3.12.13",
+    "executable": "C:\\Users\\27793\\Documents\\deep\\cuda-venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "packages": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.0",
+    "torch": "2.9.1+cu128",
+    "xgboost": "3.0.5",
+    "cupy-cuda12x": "14.1.1"
+  },
+  "cuda_research_environment": {
+    "torch_cuda_build": "12.8",
+    "cuda_available": true,
+    "device_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "anchor_runtime_gpu_policy": "disabled"
+  },
+  "roles": {
+    "anchor_http_and_batch": [
+      "numpy",
+      "pandas",
+      "pyarrow",
+      "CPU only"
+    ],
+    "research_only": [
+      "torch",
+      "xgboost",
+      "cupy-cuda12x",
+      "CUDA only after a separate protocol"
+    ]
+  },
+  "secrets_recorded": false,
+  "target_labels_read": false,
+  "fresh_labels_read": false,
+  "gpu_used": false,
+  "created_at_utc": "2026-08-14T06:21:57.671291+00:00"
+}
+
+

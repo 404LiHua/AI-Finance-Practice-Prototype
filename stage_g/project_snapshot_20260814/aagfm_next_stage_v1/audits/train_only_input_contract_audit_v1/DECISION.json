@@ -1,0 +1,9 @@
+{
+  "status": "TRAIN_ONLY_ASSETS_ACCEPTED_WITH_FORMAL_PANEL_BLOCK",
+  "formal_training_authorized": false,
+  "joint_model_training_authorized": false,
+  "findings": [
+    "FORMAL_PANEL_NOT_PRESENT:origins=337,stocks=300"
+  ]
+}
+

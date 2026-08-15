@@ -1,0 +1,28 @@
+[
+    {
+        "path":  "C:\\Users\\27793\\Documents\\project1\\deliverables\\RG_OBGNet_source_v1\\models\\rg_obgnet_confirmed_safe_v1_1\\MODEL.json",
+        "exists":  true,
+        "size_bytes":  3950,
+        "sha256":  "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8"
+    },
+    {
+        "path":  "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\governance\\KERNEL_REGISTRY.json",
+        "exists":  true,
+        "size_bytes":  1645,
+        "sha256":  "0445d5169845a163464def4403c47bcc64f6f9c4dce60bba10f09b7a6f95f2dd"
+    },
+    {
+        "path":  "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\governance\\AA_GFMNET_TEXTCU_ORIGINAL_INCUMBENT_COMPLETE_SNAPSHOT_CURRENT_STATE_20260813.json",
+        "exists":  true,
+        "size_bytes":  1952,
+        "sha256":  "4248acdb09546441d7d3b86192e894f05efc936e96964fd8f97eec73a1809ed1"
+    },
+    {
+        "path":  "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\aagfm_next_stage_v1\\governance\\AA_GFMNET_ASSET_STATUS_REGISTER_V1.csv",
+        "exists":  false,
+        "size_bytes":  null,
+        "sha256":  null
+    }
+]
+
+

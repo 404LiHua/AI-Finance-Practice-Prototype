@@ -1,0 +1,75 @@
+{
+  "node_id": "AA_GFMNET_PHASE_A_FREEZE_MANIFEST_V1",
+  "status": "PASS_PHASE_A_READY_FOR_H4_T2_PACKAGE",
+  "created_at_utc": "2026-08-13T08:15:12.590710+00:00",
+  "ai_root": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype",
+  "hard_failures": [],
+  "inspections": {
+    "formal_stock_rows": 300,
+    "origin_rows": 337,
+    "split_rows": 6,
+    "sequence": {
+      "exists": true,
+      "x_shape": [
+        337,
+        8,
+        300,
+        6
+      ],
+      "origin_count": 337,
+      "stock_count": 300,
+      "feature_names": [
+        "return_1w",
+        "log_return_1w",
+        "return_vol_4",
+        "return_vol_12",
+        "model_close",
+        "model_volume_hands"
+      ],
+      "future_rows": 0,
+      "node_available": 101100
+    },
+    "labels": {
+      "exists": true,
+      "rows": 101100,
+      "unique_keys": 101100,
+      "valid_labels": 101100,
+      "finite_h4": 101100
+    },
+    "architecture_model_oof": {
+      "exists": true,
+      "rows": 101100,
+      "unique_keys": 101100,
+      "prediction_valid_rows": 10491,
+      "id_column": "model_id",
+      "ids": [
+        "stock_node_gwnet_fixed_industry_l8_architecture_recomputation"
+      ]
+    },
+    "title_body_hash_ngram_oof": {
+      "exists": true,
+      "rows": 101100,
+      "unique_keys": 101100,
+      "prediction_valid_rows": 10491,
+      "id_column": "candidate_id",
+      "ids": [
+        "TITLE_BODY_HASH_NGRAM"
+      ]
+    }
+  },
+  "gaps_not_guessable": [
+    "T2_TARGET_SEMANTICS",
+    "H4_TO_T2_DERIVATION",
+    "RELIABILITY_SEMANTICS",
+    "FROZEN_CN_SENTENCE_EMBEDDING_MODEL",
+    "PRODUCTION_MODEL_JSON"
+  ],
+  "screening_read": false,
+  "final_read": false,
+  "sealed_holdout_read": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "promotion_allowed": false
+}
+
+

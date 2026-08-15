@@ -1,0 +1,21 @@
+{
+  "node_id": "WP12_RAPID_HISTORICAL_METRICS_V1",
+  "status": "COMPLETE_RESEARCH_ONLY_NOT_PROMOTION_EVIDENCE",
+  "protocol_sha256": "3eb18549403527b50020df8b0cc02daaa175559ac4ff3ea0d858dce8abb80570",
+  "source_samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+  "baseline_manifest_sha256": "8e5beadf6421509bcc68b943849edf8f3772abbfd1d5109d9a054bb8927f6878",
+  "candidate_manifest_sha256": "d560ab59e5e0ef3a2465da2af796cd8f2b6f9a6072776d13c0e27cea4ea28032",
+  "models": [
+    "INCUMBENT_ORDINAL_T2_DEV",
+    "NAIVE_NEUTRAL",
+    "NAIVE_PRIOR",
+    "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL"
+  ],
+  "fresh_payloads_opened": false,
+  "production_replacement_allowed": false,
+  "gpu_used": false,
+  "runtime_seconds": 2.973,
+  "created_at_utc": "2026-08-14T13:30:35.914891+00:00"
+}
+
+

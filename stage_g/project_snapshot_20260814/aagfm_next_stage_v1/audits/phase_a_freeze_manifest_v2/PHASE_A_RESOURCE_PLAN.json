@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN",
+  "cpu_roles": [
+    "file_io",
+    "sha256",
+    "manifest",
+    "csv_parquet_summary",
+    "key_audit",
+    "reporting"
+  ],
+  "gpu_roles": [
+    "training",
+    "validation_inference",
+    "checkpoint_reload_predict"
+  ],
+  "scheduling_rules": [
+    "one heavy GPU training job at a time",
+    "run CPU audits between folds",
+    "fail closed before GPU consumption if dry-run fails",
+    "do not read SCREENING, FINAL, sealed holdout, or future external data in Phase A"
+  ]
+}
+
+

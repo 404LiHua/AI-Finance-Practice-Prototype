@@ -1,0 +1,20 @@
+{
+  "node_id": "T2_PRODUCTION_TRAIN_ORIGIN_REGISTRY_V1",
+  "status": "PASS_NON_LABEL_T2_ORIGIN_REGISTRY_FROZEN",
+  "source_samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+  "source_columns_read": [
+    "trade_date",
+    "stock_code",
+    "fold_id",
+    "split_role"
+  ],
+  "labels_payload_read": false,
+  "fresh_payload_read": false,
+  "origin_count": 257,
+  "minimum_distinct_stock_code_count": 300,
+  "maximum_distinct_stock_code_count": 312,
+  "registry_sha256": "6638834f6dcbd9eb79a95350a3913fb393e31cc749b77385481276761be277c0",
+  "created_at_utc": "2026-08-14T07:14:04.498279+00:00"
+}
+
+

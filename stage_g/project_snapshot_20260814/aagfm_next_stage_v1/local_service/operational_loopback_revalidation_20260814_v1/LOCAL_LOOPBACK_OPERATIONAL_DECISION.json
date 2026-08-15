@@ -1,0 +1,109 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_LOOPBACK_OPERATIONAL_AUDIT_V1",
+  "status": "PASS_LOCAL_LOOPBACK_OPERATIONAL_ACCEPTANCE",
+  "failure": null,
+  "policy_sha256": "eed2d55119500b1dfecc3d1daa09d6f8f1328d9be3850c731e93a1063ee73a75",
+  "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "daily_root": "D:\\项目\\data\\rixian\\stk_factor",
+  "source_hashes": {
+    "server_source_sha256": "32d59679a7919d0883dc5bc20524561186c8b6aab18ee076b52212ffa84700df",
+    "stock_service_source_sha256": "d3d953c281a6fc7b1f192708af9169c149dae29f758f06c3d48883df558ff566",
+    "confirmed_model_source_sha256": "c38c8f8ae82f76ed3ad3352bdd71c10f9662da96e2fe425051c08fd441204b32"
+  },
+  "checks": {
+    "health": {
+      "status": 200,
+      "elapsed_seconds": 0.05873699999938253,
+      "payload": {
+        "status": "ok",
+        "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+        "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+        "stock_files": 5796,
+        "source_read_only": true,
+        "source_root": "D:\\项目\\data\\rixian\\stk_factor",
+        "feature_count": 14,
+        "graph_weight": 0.0,
+        "event_weight": 0.0,
+        "execution_policy": {
+          "anchor_device": "cpu",
+          "gpu_policy": "disabled",
+          "cpu_role": "csv_io_feature_engineering_http_service",
+          "gpu_role": "separately_audited_research_candidates_only"
+        },
+        "runtime": {
+          "python": "3.12.13",
+          "platform": "Windows-11-10.0.26200-SP0"
+        }
+      }
+    },
+    "model": {
+      "status": 200,
+      "elapsed_seconds": 0.0014227000010578195,
+      "payload": {
+        "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+        "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+        "target": "未来 H4 市场相对收益，固定 ±1% 三分类",
+        "features": [
+          "momentum_20d",
+          "momentum_60d",
+          "momentum_120d",
+          "realized_volatility_20d",
+          "realized_volatility_60d",
+          "downside_volatility_60d",
+          "current_drawdown_60d",
+          "rsi_14",
+          "macd_scaled",
+          "bollinger_position_20",
+          "amihud_20d",
+          "zero_volume_fraction_20d",
+          "volume_ratio_20d_60d",
+          "intraday_range_mean_20d"
+        ],
+        "feature_count": 14,
+        "temperature": 1.0,
+        "prior_shrinkage": 0.0,
+        "graph_weight": 0.0,
+        "event_weight": 0.0,
+        "class_labels": {
+          "0": "下跌",
+          "1": "中性",
+          "2": "上涨"
+        }
+      }
+    },
+    "prediction": {
+      "first_status": 200,
+      "second_status": 200,
+      "latency_seconds": [
+        0.050943399999596295,
+        0.030366200000571553
+      ],
+      "first_cache": "MISS",
+      "second_cache": "HIT",
+      "requested_decision_date": "2026-07-22",
+      "review_route": "CAUTION_REVIEW"
+    },
+    "invalid_stock": {
+      "status": 400,
+      "elapsed_seconds": 0.0009901000012177974,
+      "type": "input_error"
+    },
+    "future_date": {
+      "status": 400,
+      "elapsed_seconds": 0.002338199999940116,
+      "type": "input_error"
+    }
+  },
+  "target_labels_read": false,
+  "fresh_labels_read": false,
+  "wp10_outputs_read": false,
+  "metrics_read": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "automatic_trading": false,
+  "production_assets_modified": false,
+  "created_at_utc": "2026-08-14T07:04:04.211908+00:00"
+}
+
+

@@ -1,0 +1,9 @@
+{
+  "node_id": "AA_GFMNET_PRODUCTION_T2_RECONSTRUCTION_PHASE_B_PRECONSUMPTION_V1",
+  "status": "PASS_READY_FOR_SOURCE_BINDING_AND_NEW_AUTHORIZATION",
+  "input_manifest_sha256": "1fe7ad6a965596b5604ae5f392395878d79d58755f880123d498ff8a1fba57e9",
+  "fresh_payloads_opened": false,
+  "gpu_used": false
+}
+
+

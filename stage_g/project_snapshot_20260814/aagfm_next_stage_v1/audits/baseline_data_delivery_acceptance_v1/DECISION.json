@@ -1,0 +1,29 @@
+{
+    "node_id":  "AA_GFMNET_BASELINE_AND_DATA_DELIVERY_ACCEPTANCE_V1",
+    "status":  "BASELINE_PARTIAL_PASS_DATA_DELIVERY_BLOCKED",
+    "generated_at_utc":  "2026-08-13T06:50:22.9865190Z",
+    "training_executed":  false,
+    "test_split_read":  false,
+    "fresh_labels_read":  false,
+    "production_kernel_modified":  false,
+    "production_model_sha256":  "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "registry_active_kernel":  "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "registry_production_kernel_replaced":  false,
+    "unit_tests_count":  7,
+    "unit_tests_status":  "PASS",
+    "cuda_available":  true,
+    "gpu":  "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cupy_available":  true,
+    "original_incumbent_status":  "WAITING_FOR_SUPPLIER_COMPLETE_DELIVERY",
+    "r26_status":  "PAPER_TRADING_PARTIAL_NO_CUPY",
+    "hard_blockers":  [
+                          "original_incumbent_M01_M14_incomplete",
+                          "R26_GPU_inference_device_consistency_receipt_incomplete",
+                          "PIT_text_received_but_unverified",
+                          "Tushare_access_insufficient",
+                          "production_dependency_lock_and_path_portability_incomplete"
+                      ],
+    "next_node":  "AA_GFMNET_SINGLE_MACHINE_BASELINE_REPLAY_AND_RUNTIME_HARDENING_V1"
+}
+
+
