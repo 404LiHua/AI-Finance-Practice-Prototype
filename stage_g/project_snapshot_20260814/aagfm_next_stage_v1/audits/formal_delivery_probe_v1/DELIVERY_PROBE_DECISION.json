@@ -1,0 +1,30 @@
+{
+  "status": "WAITING_FOR_SUPPLIER_COMPLETE_DELIVERY",
+  "formal_authorization_allowed": false,
+  "joint_training_allowed": false,
+  "gaps": [
+    "M14_RECEIPT missing",
+    "M14_MANIFEST missing",
+    "delivery root missing"
+  ],
+  "checks": [
+    {
+      "id": "M05",
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\frozen_inputs\\m5_frozen_tensor_300stocks_2023_2025_v3\\M5_FORMAL_STOCK_UNIVERSE_300.csv",
+      "exists": true,
+      "sha256": "87922e5c556234048b8b90523b657a0fef59931dae1e6fe2cedbbe153ba93a21"
+    },
+    {
+      "id": "M14_RECEIPT",
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\sources\\incumbent_model_textcu_delivery\\DELIVERY_RECEIPT.json",
+      "exists": false
+    },
+    {
+      "id": "M14_MANIFEST",
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\sources\\incumbent_model_textcu_delivery\\SHA256_MANIFEST.csv",
+      "exists": false
+    }
+  ],
+  "delivery_root": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\pit_information_incremental_v1\\sources\\incumbent_model_textcu_delivery"
+}
+

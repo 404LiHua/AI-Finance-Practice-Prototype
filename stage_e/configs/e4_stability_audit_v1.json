@@ -1,0 +1,31 @@
+{
+  "audit_id": "e4_stability_audit_v1",
+  "development_date_ceiling": "2023-06-02",
+  "expected_seeds": [20260723, 20260724, 20260725],
+  "expected_folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "learned_graph_config": "stage_e/configs/e4_training_checks_100stocks_v1.json",
+    "learned_graph_results": "outputs/stage_e/e4_training_checks_100stocks_v1/results.json",
+    "learned_graph_checkpoint_root": "outputs/stage_e/e4_training_checks_100stocks_v1",
+    "fixed_graph_predictions": "outputs/stage_e/e4_fixed_graph_stabilization_100stocks_v1/stability_predictions.csv.gz",
+    "fixed_graph_results": "outputs/stage_e/e4_fixed_graph_stabilization_100stocks_v1/results.json",
+    "fixed_graph_fold_results": "outputs/stage_e/e4_fixed_graph_stabilization_100stocks_v1/stability_fold_results.csv",
+    "control_predictions": "outputs/stage_e/e4_control_closure_100stocks_v1/predictions.csv.gz",
+    "control_results": "outputs/stage_e/e4_control_closure_100stocks_v1/results.json",
+    "control_fold_results": "outputs/stage_e/e4_control_closure_100stocks_v1/fold_results.csv",
+    "training_protocol_v2": "stage_e/configs/e4_training_protocol_v2.json",
+    "output_root": "outputs/stage_e/e4_stability_audit_v1"
+  },
+  "tolerances": {
+    "metric_absolute_difference": 1e-8,
+    "target_absolute_difference": 1e-12,
+    "minimum_prediction_std": 1e-8
+  },
+  "restrictions": {
+    "training_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "candidate_creation_allowed": false,
+    "screening_allowed": false
+  }
+}

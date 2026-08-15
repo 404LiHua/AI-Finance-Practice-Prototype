@@ -1,0 +1,63 @@
+{
+  "contract_id": "stage_f_f1_1_implementation_contract_v1",
+  "status": "DERIVED_FROM_FROZEN_F0_NO_NEW_CANDIDATE_OR_HYPERPARAMETER_FREEDOM",
+  "recorded_at": "2026-07-28",
+  "f0_protocol": {
+    "path": "stage_f/configs/f0_robustness_protocol_v1.json",
+    "sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e"
+  },
+  "base_model": {
+    "id": "stock_node_gwnet_fixed_industry_l8",
+    "implementation_path": "stage_e/e5/neural_graph.py",
+    "implementation_sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc",
+    "architecture_change_allowed": false
+  },
+  "implementation": {
+    "path": "stage_f/robustness.py",
+    "sha256": "8f196a4deb3d709fe81dcb85d91c363dd138bf9f208de61430fff28e7fb30dd4"
+  },
+  "tests": {
+    "path": "stage_f/tests/test_f1_bounded_candidates.py",
+    "sha256": "806200981bba4716ef75902b09c54ff1af95e197f6bb5c9f877b24535722763d",
+    "required_checks": [
+      "deterministic_training_transform_and_inference_identity",
+      "unchanged_input_and_prediction_tensor_shapes",
+      "synthetic_minimum_overfit_for_all_three_candidates",
+      "train_only_threshold_fit_and_frozen_data_custody_rejection"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "stock_node_gwnet_tail_weighted_l8",
+      "only_change": "TRAIN absolute raw target Q90 tail receives weight 2 in masked Huber loss"
+    },
+    {
+      "id": "stock_node_gwnet_noise_aug_l8",
+      "only_change": "TRAIN numeric tensor receives deterministic Gaussian noise sigma 0.03"
+    },
+    {
+      "id": "stock_node_gwnet_feature_mask_l8",
+      "only_change": "TRAIN numeric tensor receives deterministic element mask probability 0.05"
+    }
+  ],
+  "minimal_test_scope": {
+    "data": "synthetic_only",
+    "stock_nodes": 4,
+    "sequence_length": 8,
+    "formal_fold_training": false,
+    "candidate_metric_read": false,
+    "screening_access": false,
+    "final_access": false
+  },
+  "restrictions": {
+    "new_candidate_allowed": false,
+    "frozen_strength_change_allowed": false,
+    "validation_threshold_fit_allowed": false,
+    "validation_augmentation_allowed": false,
+    "formal_three_seed_training_before_all_minimal_checks_pass": false,
+    "gan_training_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "next_action_if_all_checks_pass": "F-1.2 single-seed engineering receipt using seed 20260725 and unchanged F-0/F-1.1 hashes"
+}

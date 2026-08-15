@@ -1,0 +1,37 @@
+{
+  "node_id": "AA_GFMNET_CSN_FUTURE_ANCHOR_ELIGIBLE_FRESH_V4_BINDING_PREFLIGHT_V1",
+  "status": "PASS_V4_BINDING_IMPLEMENTATION_AND_SYNTHETIC_TEST__NOT_YET_REAL_DATA_EXECUTABLE",
+  "as_of_date": "2026-08-15",
+  "checks": {
+    "v1_input_audit_preserved": true,
+    "v2_input_hash_cross_binding_added": true,
+    "exact_eight_origin_binding_enforced": true,
+    "candidate_and_anchor_immutable_identity_enforced": true,
+    "sealed_label_hash_only_no_label_path": true,
+    "candidate_gpu_anchor_cpu_resource_receipts_enforced": true,
+    "synthetic_200_stock_binding_test_passed": true,
+    "real_fresh_labels_read": false,
+    "candidate_inference_run": false,
+    "anchor_inference_run": false,
+    "production_kernel_modified": false
+  },
+  "artifact_sha256": {
+    "v2_input_contract_audit": "dac853d6078f2d604abd00038cc5797f7d35a19931850e009c61b26827373f1f",
+    "preconsumption_binding_audit": "c1f52ea13171be8b75afd62ae647616a173fdd364fb5844d1e5a8bbd3ce45133",
+    "binding_synthetic_test": "3a12e130999c9aae1bc4f58f9af4e84d685d2974844a34e385742661bcc1dd5a",
+    "binding_synthetic_receipt": "28996ff61b833d84f800d638380eaf6321ff9190906908f40d42e39766872793",
+    "v2_contract_synthetic_receipt": "6fb8c777d0d6a46feb869336d20db4d46dba80c39bd870859e7d6b71ccce1d7b"
+  },
+  "remaining_fail_closed_conditions": [
+    "2026-09-11_or_later_frozen_delivery",
+    "v4_input_materialization_and_v2_contract_pass",
+    "sequential_candidate_gpu_and_anchor_cpu_predictions",
+    "new_one_time_scoring_authorization"
+  ],
+  "labels_read": false,
+  "fresh_labels_read": false,
+  "returns_read": false,
+  "gpu_jobs_concurrent": 0,
+  "cpu_thread_cap": 1,
+  "created_at_utc": "2026-08-15T06:53:45.756470+00:00"
+}

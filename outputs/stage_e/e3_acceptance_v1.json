@@ -1,0 +1,59 @@
+{
+  "stage": "E-3",
+  "generated_at_utc": "2026-07-25T06:09:00.566214+00:00",
+  "passed": true,
+  "checks": {
+    "graph_100_pass": true,
+    "graph_300_pass": true,
+    "minimal_overfit_pass": true,
+    "three_seed_stability_pass": true,
+    "training_batch_sha_valid": true,
+    "scalability_300_pass": true,
+    "scalability_batch_sha_valid": true,
+    "training_curve_hash_valid": true,
+    "training_prediction_hash_valid": true,
+    "training_edge_hash_valid": true,
+    "training_checkpoint_hashes_valid": true,
+    "scalability_edge_hash_valid": true,
+    "scalability_checkpoint_hash_valid": true,
+    "future_or_sealed_data_not_read": true
+  },
+  "evidence": {
+    "graph_100": {
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\outputs\\stage_e\\e3_graph_acceptance_v1.json",
+      "sha256": "d5761425e38153b7a28a0ce2d870991f241e0df09d2f617e43073cbe9e0a394b"
+    },
+    "graph_300": {
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\outputs\\stage_e\\e3_graph_acceptance_300stocks_v1.json",
+      "sha256": "ce9cd2354899c247ebff09687d7023c492f4fae79ee1db63c4b89af36e979348"
+    },
+    "training": {
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\outputs\\stage_e\\e3_training_checks_v1\\results.json",
+      "sha256": "32d4f7357c8a1c2947ac46e2fcee66e08f7f8f5bf818b20ed2deead07e848dce"
+    },
+    "scalability_300": {
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\outputs\\stage_e\\e3_scalability_300stocks_v1\\results.json",
+      "sha256": "c0d0f13a5542795b0c144cd9497a1c70a00527081c954e9965883912cf652931"
+    }
+  },
+  "summary": {
+    "graph_100_shape": [
+      154,
+      100,
+      100
+    ],
+    "graph_300_shape": [
+      255,
+      300,
+      300
+    ],
+    "overfit_loss_reduction": 0.9992383045719133,
+    "minimum_edge_jaccard": 0.5152910226899047,
+    "minimum_prediction_correlation": 0.9983226764421305,
+    "scalability_adjacency_shape": [
+      2,
+      300,
+      300
+    ]
+  }
+}

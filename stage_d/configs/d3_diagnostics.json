@@ -1,0 +1,43 @@
+{
+  "diagnostic_id": "stage_d_d3_robust_diagnostics_v1",
+  "status": "DIAGNOSTIC_RULES_LOCKED",
+  "source_experiment_id": "stage_d_d2_bounded_baselines_v1",
+  "source_root": "outputs/stage_d/d2_bounded_baselines_v1",
+  "source_config_path": "stage_d/configs/d2_baselines.json",
+  "source_config_sha256": "f0a88faccc400fbe3dcb3d07788132529307e8d38658495de0ef1a3d0dd904a2",
+  "custody_config_path": "stage_d/configs/data_custody.json",
+  "output_root": "outputs/stage_d/d3_robust_diagnostics_v1",
+  "protocol_id": "stage_d_rolling_origin_v1",
+  "protocol_sha256": "5dcd3c7e28b5577472743c171bd98ba17a514920e8088c405c4ecca68f102cb6",
+  "candidate_source": "exactly the 17 registered D-2 model results",
+  "candidate_additions_allowed": false,
+  "shrinkage_changes_allowed": false,
+  "return_groups": [
+    {"name": "negative_tail", "minimum": null, "maximum": -0.03, "maximum_inclusive": false},
+    {"name": "negative_moderate", "minimum": -0.03, "maximum": -0.01, "maximum_inclusive": false},
+    {"name": "near_zero", "minimum": -0.01, "maximum": 0.01, "maximum_inclusive": true},
+    {"name": "positive_moderate", "minimum": 0.01, "maximum": 0.03, "maximum_inclusive": true},
+    {"name": "positive_tail", "minimum": 0.03, "maximum": null, "maximum_inclusive": true}
+  ],
+  "robust_gate": {
+    "minimum_folds_beating_naive_mae": 2,
+    "maximum_worst_fold_mae_gap_vs_naive_pct": 2.0,
+    "minimum_mean_mae_improvement_vs_naive_pct_exclusive": 0.0,
+    "exclude_baseline_from_recommendation": true
+  },
+  "unique_selection_order": [
+    {"field": "mae_mean", "ascending": true},
+    {"field": "worst_fold_mae_gap_vs_baseline_pct", "ascending": true},
+    {"field": "mae_cv", "ascending": true},
+    {"field": "rmse_mean", "ascending": true},
+    {"field": "model", "ascending": true}
+  ],
+  "component_models": [
+    "frets_return_l4",
+    "minimalist_price_only_l8",
+    "temporal_only_control",
+    "fixed_temporal_graph_control"
+  ],
+  "evidence_class": "STAGE_D_SELECTION_EXPOSED_ROLLING_DEVELOPMENT",
+  "independent_screening": false
+}

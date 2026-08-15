@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "contract_type": "QRG_DATA_PIT",
+  "dataset_id": "weekly_30stocks_stage_a_v1_all_accessed_as_train",
+  "canonical_timezone": "UTC",
+  "point_in_time": true,
+  "future_information_forbidden": true,
+  "available_at_field": "trade_date",
+  "decision_at_field": "trade_date",
+  "execution_at_field": "target_date",
+  "decision_precedes_execution": true,
+  "same_event_decision_forbidden": true,
+  "physical_splits": {
+    "train": {
+      "split_id": "stage_a_all_accessed_selection_exposed_v1",
+      "start": "2022-06-10T08:00:00Z",
+      "end": "2023-06-02T08:00:00Z",
+      "manifest_sha256": "a6604e882eba11ff8d95231f789bd5dbc386a9a37d96e505815dafe36c9113be"
+    },
+    "screening": {
+      "split_id": "future_weekly_screening_20230609_20240607_v1",
+      "start": "2023-06-09T08:00:00Z",
+      "end": "2024-06-07T08:00:00Z",
+      "manifest_sha256": "993cbdaa8c406268f81d116f6d8d40dffddcf0a7231ba27b8cc944aabc634032"
+    }
+  }
+}

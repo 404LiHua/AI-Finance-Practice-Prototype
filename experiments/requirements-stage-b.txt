@@ -1,0 +1,7 @@
+numpy>=1.26,<3
+pandas>=2.2,<3
+scikit-learn>=1.4,<2
+scipy>=1.12,<2
+# Optional for general ARIMA orders. ARIMA(1,0,0) has an offline closed-form backend.
+statsmodels>=0.14,<1
+torch>=2.2,<3

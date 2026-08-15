@@ -1,0 +1,29 @@
+{
+  "stage": "E-4S.2",
+  "generated_at_utc": "2026-07-25T06:45:19.237524+00:00",
+  "passed": true,
+  "checks": {
+    "frozen_protocol_hash_unchanged": true,
+    "only_two_frozen_controls": true,
+    "original_three_seeds_and_folds": true,
+    "all_18_runs_complete": true,
+    "all_train_cross_sections_used": true,
+    "fixed_40_epochs": true,
+    "no_validation_checkpoint_selection": true,
+    "metrics_finite": true,
+    "adjacency_valid": true,
+    "prediction_keys_complete": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "decision_consistent": true,
+    "future_or_sealed_data_not_read": true,
+    "screening_not_accessed": true,
+    "three_hundred_still_disabled": true
+  },
+  "gate_a_pass": false,
+  "stable_controls": [],
+  "allow_stage_e4s3": false,
+  "allow_300_stock_expansion": false,
+  "protocol_sha256": "dcaf3b6899296939b06859b43eb0e26b40b5f0556fd8d89867231b5bb4b125ef",
+  "results_sha256": "1e0434860c4e33bd21849bca609bc06e1fa86cc3ba56425e1251a02350b4694f"
+}

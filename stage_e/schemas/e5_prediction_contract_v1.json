@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage E E-5 prediction row contract v1",
+  "type": "object",
+  "required": [
+    "model_id", "seed", "fold_id", "sample_row_id", "trade_date", "target_date",
+    "stock_code", "target_return", "prediction", "sample_valid", "text_available",
+    "checkpoint_sha256", "config_sha256"
+  ],
+  "properties": {
+    "model_id": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer"},
+    "fold_id": {"type": "string", "enum": ["E_RO_01", "E_RO_02", "E_RO_03"]},
+    "sample_row_id": {"type": "string", "minLength": 1},
+    "trade_date": {"type": "string", "format": "date"},
+    "target_date": {"type": "string", "format": "date"},
+    "stock_code": {"type": "string", "minLength": 1},
+    "target_return": {"type": "number"},
+    "prediction": {"type": "number"},
+    "sample_valid": {"type": "boolean"},
+    "text_available": {"type": "boolean"},
+    "checkpoint_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

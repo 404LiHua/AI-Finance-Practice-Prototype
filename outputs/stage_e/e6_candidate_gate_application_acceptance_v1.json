@@ -1,0 +1,28 @@
+{
+  "stage": "E-6.2 one-shot frozen gate application acceptance",
+  "generated_at_utc": "2026-07-25T08:46:02.832867+00:00",
+  "passed": true,
+  "checks": {
+    "application_config_hash_valid": true,
+    "gate_config_hash_valid": true,
+    "freeze_receipt_hash_valid": true,
+    "implementation_hashes_valid": true,
+    "exactly_eight_frozen_candidates": true,
+    "all_hard_gate_columns_present": true,
+    "failure_lists_match_matrix": true,
+    "eligible_set_matches_recommendation": true,
+    "formal_outcome_is_valid": true,
+    "source_tables_read_once_each": true,
+    "sealed_artifact_hashes_valid": true,
+    "metadata_batch_hash_valid": true,
+    "no_ranking_training_threshold_change_future_or_screening": true
+  },
+  "outcome_status": "UNIQUE_CANDIDATE_RECOMMENDATION",
+  "unique_candidate": "stock_node_gwnet_fixed_industry_l8",
+  "eligible_models": [
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "config_sha256": "6653383662320b0a481c5c3f947bb44d99d3f00758d6106462b599cc0c6fc2f7",
+  "sealed_metadata_sha256": "85ad0016d867cb197d7702b6a0569e5c8647e15bca9c7abc093975ee2a421828",
+  "source_candidate_diagnostics_reread": false
+}

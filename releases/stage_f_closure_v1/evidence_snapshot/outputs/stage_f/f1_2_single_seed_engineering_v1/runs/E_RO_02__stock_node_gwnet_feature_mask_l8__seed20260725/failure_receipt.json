@@ -1,0 +1,9 @@
+{
+  "candidate_id": "stock_node_gwnet_feature_mask_l8",
+  "fold_id": "E_RO_02",
+  "seed": 20260725,
+  "status": "FAIL",
+  "error_type": "RuntimeError",
+  "error": "empty F-1.2 stress scenario: {'normal_unperturbed': 500, 'negative_return_tail_q10': 39, 'positive_return_tail_q90': 25, 'high_volatility_q90': 0, 'low_liquidity_q10': 23, 'four_week_drawdown_q10': 19, 'feature_noise_sigma_005': 500, 'node_mask_10pct': 500, 'latest_week_feature_mask': 500}",
+  "duration_seconds": 3.8224905999995826
+}

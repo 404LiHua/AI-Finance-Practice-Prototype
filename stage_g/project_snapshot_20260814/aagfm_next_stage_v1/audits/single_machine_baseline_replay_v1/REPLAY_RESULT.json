@@ -1,0 +1,27 @@
+{
+  "status": "REPLAY_PASS",
+  "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "stock_code": "000001.SZ",
+  "requested_decision_date": "2026-07-22",
+  "effective_origin_date": "2026-07-17",
+  "feature_source_date": "2026-07-17",
+  "prediction": {
+    "class_id": 2,
+    "class_label": "上涨",
+    "p_down": 0.39258226232936455,
+    "p_neutral": 0.1267489085247471,
+    "p_up": 0.48066882914588843,
+    "ordinal_score": 0.08808656681652388,
+    "confidence": 0.10705469357987896,
+    "distribution_support": 1.0,
+    "reliability": 0.10705469357987896,
+    "gated_ordinal_score": 0.009430080419046498,
+    "review_route": "CAUTION_REVIEW"
+  },
+  "source_file_sha256": "e1a424d5ac4f9db779a5023530900622aa6798eb0bf722d82fd14c1ed50cc148",
+  "point_in_time": true,
+  "gpu_policy": "research_only"
+}
+
+

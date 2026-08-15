@@ -1,0 +1,20 @@
+{
+  "adapter_batch_id": "e4_adapter_100stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "paths": {
+    "panel": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/panel_v2.csv.gz",
+    "stock_order": "data/processed/e3_graphs_100stocks_v1/stock_order.csv",
+    "fold_assignments": "outputs/stage_e/expanded_development_protocol_v1/panel_v2_100stocks_3y_20200605_20230602_v1/fold_assignments.csv.gz",
+    "e2_root": "data/processed/e2_text_views_100stocks_3y_v1",
+    "output_root": "data/processed/e4_adapter_100stocks_v1"
+  },
+  "lookback_weeks": 12,
+  "feature_columns": ["return_1w", "log_return_1w", "return_vol_4", "return_vol_12", "model_close", "model_volume_hands"],
+  "target_column": "target_return",
+  "text_views": {
+    "no_text": "no_text_view.csv.gz",
+    "tfidf_svd_pattern": "tfidf_svd/{fold_id}/features.csv.gz",
+    "tfidf_model_pattern": "tfidf_svd/{fold_id}/train_fitted_model.pkl",
+    "semantic": "semantic_view.csv.gz"
+  }
+}

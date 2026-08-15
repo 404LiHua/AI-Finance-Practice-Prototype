@@ -1,0 +1,25 @@
+{
+  "stage": "E-5.1",
+  "generated_at_utc": "2026-07-25T06:59:19.433655+00:00",
+  "passed": true,
+  "checks": {
+    "interface_status_frozen": true,
+    "no_baseline_training_executed": true,
+    "three_folds_three_seeds": true,
+    "all_text_views_share_frozen_keys": true,
+    "prediction_contract_valid": true,
+    "metrics_finite": true,
+    "independent_metric_recalculation_matches": true,
+    "prediction_hash_valid": true,
+    "frozen_key_hash_valid": true,
+    "batch_hash_valid": true,
+    "future_or_sealed_data_not_read": true,
+    "screening_not_accessed": true
+  },
+  "models_in_fixture": [
+    "temporal_no_graph_no_text",
+    "time_industry_no_text"
+  ],
+  "config_sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4",
+  "metadata_sha256": "f3bf8d97a9eccc88478fa6b4f0cfd39202efa449c8e00ba31829d60fc48caa22"
+}

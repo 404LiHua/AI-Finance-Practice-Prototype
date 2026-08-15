@@ -1,0 +1,55 @@
+{
+  "stage": "E-5.4 ten-model unified diagnostics acceptance",
+  "generated_at_utc": "2026-07-25T08:26:27.921621+00:00",
+  "passed": true,
+  "checks": {
+    "rules_frozen_before_cross_batch_read": true,
+    "all_mutation_permissions_false": true,
+    "source_acceptances_and_hashes_valid": true,
+    "exactly_ten_frozen_models": true,
+    "three_folds_three_seeds_complete": true,
+    "prediction_row_count_45000": true,
+    "receipt_row_count_90": true,
+    "engineering_cost_complete": true,
+    "worst_fold_complete": true,
+    "per_stock_complete": true,
+    "industry_market_cap_return_groups_complete": true,
+    "seed_stability_complete": true,
+    "seed_dispersion_complete": true,
+    "model_disagreement_has_45_pairs": true,
+    "component_disagreement_complete": true,
+    "diagnostics_finite": true,
+    "independent_diagnostic_recalculation_matches": true,
+    "core_artifact_hashes_valid": true,
+    "diagnostic_rule_hash_valid": true,
+    "batch_hash_valid": true,
+    "no_training_or_checkpoint_write": true,
+    "no_ranking_selection_deletion_or_promotion": true,
+    "future_and_screening_not_accessed": true
+  },
+  "models": [
+    "naive",
+    "frets_return_l4__fixed_shrink_a075",
+    "minimalist_price_only_l8",
+    "random_forest_price_l12",
+    "svm_rbf_price_l12",
+    "industry_var1_ridge",
+    "lstm_price_l8",
+    "tcn_price_l8",
+    "timegnn_deterministic_topk_l8",
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "selection_exposure": "E-5.4 cross-model TRAIN/VALIDATION diagnostics only; descriptive outputs sorted by model_id, no candidate ranking or promotion",
+  "config_sha256": "57c703206d29cab7eb66d52867e9dca247354e766690c4c93e34217ef2c9b3db",
+  "metadata_sha256": "3a4839e065e933a90a02a8b496e5dbc45ae6dea2b4f6de1a418de4989a8e88d6"
+}

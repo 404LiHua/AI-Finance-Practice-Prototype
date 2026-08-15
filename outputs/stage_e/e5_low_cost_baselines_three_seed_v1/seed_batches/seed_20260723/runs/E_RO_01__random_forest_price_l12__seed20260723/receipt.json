@@ -1,0 +1,14 @@
+{
+  "model_id": "random_forest_price_l12",
+  "family": "random_forest",
+  "fold_id": "E_RO_01",
+  "seed": 20260723,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "f7001386345fdef9769bc7e4d2e1925708d945783e1946eb70279ff742b36bea",
+  "resolved_config_sha256": "c64cf255e1d4ac73210f71209df7259e475b5ef17bc99fe0d4ad85e4baa32d58",
+  "duration_seconds": 5.980590700000903,
+  "training_seconds": 5.941286499997659,
+  "parameter_count": 25700
+}

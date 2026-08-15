@@ -1,0 +1,14 @@
+{
+  "model_id": "naive",
+  "family": "deterministic",
+  "fold_id": "E_RO_02",
+  "seed": 20260725,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "c36f75dd5200eee0e862ac2230a8228012a66ce39080c9193a56d5ed69776f10",
+  "resolved_config_sha256": "4449cb5a895e600b465e0e284c09cd113aed8051669ceabc22ffe488906bb079",
+  "duration_seconds": 0.002191100000345614,
+  "training_seconds": 0.0,
+  "parameter_count": 0
+}

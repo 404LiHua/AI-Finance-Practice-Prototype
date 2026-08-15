@@ -1,0 +1,135 @@
+{
+  "contract_id": "AA_GFMNET_DATA_CONTRACT_V1",
+  "decision": "TRAIN_ONLY_ASSETS_ACCEPTED_WITH_FORMAL_PANEL_BLOCK",
+  "findings": [
+    "FORMAL_PANEL_NOT_PRESENT:origins=337,stocks=300"
+  ],
+  "assets": [
+    {
+      "id": "sequence_cube",
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\rev7_proposal_guarded_graph_frequency_multimodal_v1\\data\\train_only_sequence_cube_v1\\TRAIN_ONLY_SEQUENCE_CUBE.npz",
+      "exists": true,
+      "sha256": "8ff48ae656fa177a86928831efb01cded512c8fe4f999d22831fd919da289430",
+      "keys": [
+        "dense_history_source",
+        "target",
+        "relative_return",
+        "observed",
+        "history_days",
+        "exchange",
+        "origin_index",
+        "origin_date",
+        "lookback"
+      ],
+      "shapes": {
+        "dense_history_source": [
+          299,
+          5796,
+          14
+        ],
+        "target": [
+          299,
+          5796
+        ],
+        "relative_return": [
+          299,
+          5796
+        ],
+        "observed": [
+          299,
+          5796
+        ],
+        "history_days": [
+          299,
+          5796
+        ],
+        "exchange": [
+          5796
+        ],
+        "origin_index": [
+          299
+        ],
+        "origin_date": [
+          299
+        ],
+        "lookback": [
+          1
+        ]
+      },
+      "dtypes": {
+        "dense_history_source": "float32",
+        "target": "int8",
+        "relative_return": "float32",
+        "observed": "bool",
+        "history_days": "uint16",
+        "exchange": "uint8",
+        "origin_index": "uint16",
+        "origin_date": "<U10",
+        "lookback": "uint16"
+      },
+      "nan_counts": {
+        "dense_history_source": 5756170,
+        "relative_return": 411155
+      },
+      "observed_false": 411155
+    },
+    {
+      "id": "multiview_cube",
+      "path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\research_tracks\\rev7_proposal_guarded_graph_frequency_multimodal_v1\\data\\train_only_multiview_cube_v1\\TRAIN_ONLY_MULTIVIEW_CUBE.npz",
+      "exists": true,
+      "sha256": "aec078bb10b39ccf4b3761118f649aaef4e37315b3fb0077987ddd9f091366a0",
+      "keys": [
+        "dense",
+        "target",
+        "relative_return",
+        "observed",
+        "origin_index",
+        "origin_date",
+        "lookback"
+      ],
+      "shapes": {
+        "dense": [
+          299,
+          5796,
+          49
+        ],
+        "target": [
+          299,
+          5796
+        ],
+        "relative_return": [
+          299,
+          5796
+        ],
+        "observed": [
+          299,
+          5796
+        ],
+        "origin_index": [
+          299
+        ],
+        "origin_date": [
+          299
+        ],
+        "lookback": [
+          1
+        ]
+      },
+      "dtypes": {
+        "dense": "float32",
+        "target": "int8",
+        "relative_return": "float32",
+        "observed": "bool",
+        "origin_index": "uint16",
+        "origin_date": "<U10",
+        "lookback": "uint16"
+      },
+      "nan_counts": {
+        "dense": 20743561,
+        "relative_return": 411155
+      },
+      "observed_false": 411155
+    }
+  ]
+}
+

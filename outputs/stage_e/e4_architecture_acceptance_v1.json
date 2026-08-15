@@ -1,0 +1,157 @@
+{
+  "stage": "E-4.1",
+  "generated_at_utc": "2026-07-25T05:22:06.258056+00:00",
+  "passed": true,
+  "checks": {
+    "all_branch_fusion_modes_finite": true,
+    "all_branch_fusion_shapes_valid": true,
+    "all_branch_fusion_gradients_positive": true,
+    "provided_adjacency_preserved": true,
+    "no_graph_uses_identity_only": true,
+    "early_text_fusion_valid": true,
+    "mid_text_fusion_valid": true
+  },
+  "mode_results": [
+    {
+      "branch": "temporal_only",
+      "fusion": "concat",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 1.799722671508789
+    },
+    {
+      "branch": "temporal_only",
+      "fusion": "fixed_mean",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 5.213721752166748
+    },
+    {
+      "branch": "temporal_only",
+      "fusion": "gated",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 1.5940214395523071
+    },
+    {
+      "branch": "temporal_only",
+      "fusion": "residual",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 2.9492499828338623
+    },
+    {
+      "branch": "time_graph",
+      "fusion": "concat",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 3.9900598526000977
+    },
+    {
+      "branch": "time_graph",
+      "fusion": "fixed_mean",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 3.0751593112945557
+    },
+    {
+      "branch": "time_graph",
+      "fusion": "gated",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 1.158853530883789
+    },
+    {
+      "branch": "time_graph",
+      "fusion": "residual",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 2.6583821773529053
+    },
+    {
+      "branch": "frequency_graph",
+      "fusion": "concat",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 9.173781394958496
+    },
+    {
+      "branch": "frequency_graph",
+      "fusion": "fixed_mean",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 0.9606891870498657
+    },
+    {
+      "branch": "frequency_graph",
+      "fusion": "gated",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 10.246681213378906
+    },
+    {
+      "branch": "frequency_graph",
+      "fusion": "residual",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 2.534087657928467
+    },
+    {
+      "branch": "dual_branch",
+      "fusion": "concat",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 12.077659606933594
+    },
+    {
+      "branch": "dual_branch",
+      "fusion": "fixed_mean",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 1.8681538105010986
+    },
+    {
+      "branch": "dual_branch",
+      "fusion": "gated",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 9.600349426269531
+    },
+    {
+      "branch": "dual_branch",
+      "fusion": "residual",
+      "finite": true,
+      "shapes_valid": true,
+      "gradient_norm": 2.370060443878174
+    }
+  ],
+  "text_results": [
+    {
+      "text_fusion": "early",
+      "finite": true,
+      "shape": [
+        2,
+        10
+      ]
+    },
+    {
+      "text_fusion": "mid",
+      "finite": true,
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "input_shape": [
+    2,
+    12,
+    10,
+    6
+  ],
+  "temporal_axis_fft": 1,
+  "stock_axis_graph": 2,
+  "model_sha256": "ca47a8d8466228ba002f3cd715f9d93458dbdd915d29ba480df91ec4d13261d2",
+  "future_or_sealed_data_read": false,
+  "batch_sha256": "c05c54bfa8e2d69c89ee44530cc0808ec3bdba93a427ecd493f6b1ef518b68bf"
+}

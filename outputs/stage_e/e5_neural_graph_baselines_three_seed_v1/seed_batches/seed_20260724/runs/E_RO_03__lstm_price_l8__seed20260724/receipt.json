@@ -1,0 +1,22 @@
+{
+  "model_id": "lstm_price_l8",
+  "family": "lstm",
+  "fold_id": "E_RO_03",
+  "seed": 20260724,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "node_semantics": "independent_stock_sequence",
+  "deterministic_graph_sampling": true,
+  "real_stock_node_graph": false,
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": null,
+  "independent_load_max_abs_difference": 1.0260623461988416e-09,
+  "checkpoint_sha256": "78829bf6bfeb5c3d1b0a5e96927daa20637a6584a20b8b6a564dc84820bc7950",
+  "resolved_config_sha256": "3505e83600e52f1270605e5cf50c186b7f77073c2aef172601db6e96bb087345",
+  "duration_seconds": 5.943778100001509,
+  "training_seconds": 5.9328447000007145,
+  "inference_seconds": 0.0006296000028669368,
+  "epochs_completed": 11,
+  "best_validation_loss": 0.2576405704021454,
+  "parameter_count": 5153
+}

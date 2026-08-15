@@ -1,0 +1,87 @@
+{
+  "freeze_id": "stage_d_frets_l4_shrink_a075_d4_20260724",
+  "freeze_status": "LOCKED_BEFORE_D_SCREENING",
+  "frozen_on": "2026-07-24",
+  "protocol_id": "stage_d_rolling_origin_v1",
+  "protocol_sha256": "5dcd3c7e28b5577472743c171bd98ba17a514920e8088c405c4ecca68f102cb6",
+  "development_evidence": "STAGE_D_SELECTION_EXPOSED_ROLLING_DEVELOPMENT",
+  "future_d_screening_status": "RESERVED_NOT_ACQUIRED_NOT_READ_UNAUTHORIZED",
+  "candidate": {
+    "model_id": "frets_return_l4__fixed_shrink_a075",
+    "base_model": "frets_return_l4",
+    "checkpoint_fold": "D_RO_03",
+    "sequence_length": 4,
+    "feature_columns": ["return_1w"],
+    "shrinkage_alpha": 0.75,
+    "seeds": [20260723, 20260724, 20260725],
+    "seed_aggregation": "arithmetic_mean_after_per_seed_shrinkage",
+    "seed_weights": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+    "refitting_after_freeze_allowed": false,
+    "seed_selection_after_freeze_allowed": false
+  },
+  "baseline": {
+    "model_id": "naive",
+    "prediction": 0.0,
+    "training_required": false
+  },
+  "coverage_requirements": {
+    "stock_count": 30,
+    "minimum_eligible_samples_per_stock": 4,
+    "identical_rows_for_candidate_and_naive": true,
+    "finite_predictions_required": true
+  },
+  "pass_all_required": [
+    {"rule": "candidate_mae_le_naive", "operator": "le", "threshold": 1.0, "ratio": "candidate_mae/naive_mae"},
+    {"rule": "candidate_rmse_within_5pct_naive", "operator": "le", "threshold": 1.05, "ratio": "candidate_rmse/naive_rmse"},
+    {"rule": "direction_accuracy_floor", "operator": "ge", "threshold": 0.5},
+    {"rule": "direction_f1_floor", "operator": "ge", "threshold": 0.15},
+    {"rule": "three_seed_mae_cv_ceiling", "operator": "le", "threshold": 0.1},
+    {"rule": "stocks_beating_naive_floor", "operator": "ge", "threshold": 15},
+    {"rule": "worst_five_stock_error_share_ceiling", "operator": "le", "threshold": 0.45},
+    {"rule": "worst_single_stock_mae_ratio_ceiling", "operator": "le", "threshold": 1.5},
+    {"rule": "negative_tail_mae_ratio_ceiling", "operator": "le", "threshold": 1.05},
+    {"rule": "positive_tail_mae_ratio_ceiling", "operator": "le", "threshold": 1.1},
+    {"rule": "near_zero_mae_ratio_ceiling", "operator": "le", "threshold": 1.5}
+  ],
+  "performance_failure_if_any": [
+    {"rule": "candidate_mae_worse_than_naive", "operator": "gt", "threshold": 1.0, "ratio": "candidate_mae/naive_mae"},
+    {"rule": "candidate_rmse_more_than_10pct_worse", "operator": "gt", "threshold": 1.1, "ratio": "candidate_rmse/naive_rmse"},
+    {"rule": "direction_accuracy_failure_floor", "operator": "lt", "threshold": 0.45},
+    {"rule": "direction_f1_failure_floor", "operator": "lt", "threshold": 0.1},
+    {"rule": "three_seed_mae_cv_failure_ceiling", "operator": "gt", "threshold": 0.15},
+    {"rule": "stocks_beating_naive_failure_floor", "operator": "lt", "threshold": 12},
+    {"rule": "worst_five_stock_error_share_failure_ceiling", "operator": "gt", "threshold": 0.5},
+    {"rule": "worst_single_stock_mae_ratio_failure_ceiling", "operator": "gt", "threshold": 2.0},
+    {"rule": "negative_tail_mae_ratio_failure_ceiling", "operator": "gt", "threshold": 1.2},
+    {"rule": "positive_tail_mae_ratio_failure_ceiling", "operator": "gt", "threshold": 1.25},
+    {"rule": "near_zero_mae_ratio_failure_ceiling", "operator": "gt", "threshold": 2.0}
+  ],
+  "return_group_definition_source": "stage_d/configs/d3_diagnostics.json",
+  "inconclusive_rule": "If no failure condition triggers but any PASS condition is missed, return INCONCLUSIVE.",
+  "integrity_hard_failures": [
+    "missing frozen artifact",
+    "SHA-256 or byte-size mismatch",
+    "candidate checkpoint, upstream source, scaler, feature order, sequence length, seed, shrinkage or aggregation differs from freeze",
+    "candidate or baseline cannot produce finite predictions",
+    "candidate and baseline rows differ",
+    "stock coverage or minimum per-stock sample coverage fails",
+    "training, refitting, seed selection, threshold revision or candidate change occurs after freeze",
+    "C-4 or future D-SCREENING is read before explicit authorization"
+  ],
+  "screening_policy": {
+    "authorization_required_before_data_access": true,
+    "single_use": true,
+    "no_post_screening_tuning": true,
+    "allowed_outcomes": ["PASS", "FAIL", "INCONCLUSIVE", "INVALID_INTEGRITY_FAILURE"]
+  },
+  "prohibited_changes_after_freeze": [
+    "candidate model or checkpoint fold",
+    "seed list, seed weights or aggregation",
+    "shrinkage alpha",
+    "Naive baseline definition",
+    "feature order or sequence length",
+    "metric definitions",
+    "coverage requirements",
+    "PASS, FAIL or INCONCLUSIVE thresholds"
+  ]
+}

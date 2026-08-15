@@ -1,0 +1,24 @@
+{
+  "stage": "E-4.4",
+  "generated_at_utc": "2026-07-25T05:45:42.114023+00:00",
+  "passed": true,
+  "checks": {
+    "variant_set_frozen": true,
+    "all_three_folds_run": true,
+    "metrics_finite": true,
+    "all_adjacencies_finite": true,
+    "all_adjacencies_row_stochastic": true,
+    "validation_predictions_present": true,
+    "fold_results_hash_valid": true,
+    "summary_hash_valid": true,
+    "predictions_hash_valid": true,
+    "metadata_batch_sha_valid": true,
+    "single_frozen_seed": true,
+    "selection_exposure_declared": true,
+    "future_or_sealed_data_not_read": true
+  },
+  "best_mean_mae_variant": "dual_learned_fixed_bge_mid",
+  "best_mean_mae": 0.0319345270593961,
+  "run_count": 30,
+  "metadata_sha256": "8c03a67a27c5f9f49bae90b934928f021434933f427759cf6373724ac6a13757"
+}

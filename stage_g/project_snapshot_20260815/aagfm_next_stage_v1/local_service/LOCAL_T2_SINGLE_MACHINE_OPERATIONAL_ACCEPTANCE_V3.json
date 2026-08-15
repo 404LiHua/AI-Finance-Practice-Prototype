@@ -1,0 +1,33 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_SINGLE_MACHINE_OPERATIONAL_ACCEPTANCE_V3",
+  "status": "FROZEN_BEFORE_LOCAL_LOOPBACK_OPERATIONAL_AUDIT",
+  "identity": {
+    "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+    "active_model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "active_model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "server_source_sha256": "f459c8c0ab5509bd95d411d8e4b215868a00ea3b0ed8b08a2545c8c532a2c9ab",
+    "stock_service_source_sha256": "0418b90778096a21a31e061624c6d29b154d442293b2247e5f0bd960ad42f98c",
+    "confirmed_model_source_sha256": "c38c8f8ae82f76ed3ad3352bdd71c10f9662da96e2fe425051c08fd441204b32"
+  },
+  "target_contract": {
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "target_horizon": "T2_4W",
+    "description": "four-week market-relative return, fixed ±1% three-class output"
+  },
+  "runtime_policy": {
+    "host": "127.0.0.1",
+    "gpu_policy": "disabled",
+    "cpu_threads": 2,
+    "public_network_listener_allowed": false,
+    "automatic_trading_allowed": false
+  },
+  "checks": {
+    "health_model_prediction_cache_and_fail_closed_inputs": "PASS",
+    "target_contract": "PASS",
+    "active_production_not_research_only": "PASS",
+    "labels_read": false,
+    "fresh_labels_read": false,
+    "gpu_used": false,
+    "production_assets_modified": false
+  }
+}

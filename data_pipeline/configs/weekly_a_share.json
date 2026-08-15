@@ -1,0 +1,85 @@
+{
+  "source": {
+    "root": "D:/\u9879\u76ee/data/weekly",
+    "provider": "JiuZhang Quant (\u4e5d\u7ae0\u91cf\u5316)",
+    "dataset_name": "A-share weekly bars",
+    "retrieval_method": "JiuZhang Quant platform batch export (user confirmed)",
+    "retrieved_at": "2026-07-23",
+    "license_or_terms": "USER_CONFIRM_REQUIRED",
+    "price_adjustment": "unadjusted (user confirmed)",
+    "frequency": "weekly",
+    "timezone": "Asia/Shanghai"
+  },
+  "stock_basic": {
+    "enabled": true,
+    "path": "D:/\u9879\u76ee/data/stock_basic/stock_basic.csv",
+    "provider": "JiuZhang Quant (\u4e5d\u7ae0\u91cf\u5316)",
+    "retrieval_method": "JiuZhang Quant platform export (user confirmed)",
+    "retrieved_at": "2026-07-23",
+    "license_or_terms": "USER_CONFIRM_REQUIRED"
+  },
+  "baostock": {
+    "enabled": true,
+    "root": "data/external/baostock_30stocks_20220603_20230602",
+    "required_for_model": true,
+    "price_adjustment": "forward-adjusted",
+    "provider": "BaoStock"
+  },
+  "csmar": {
+    "enabled": true,
+    "weekly_features_path": "data/external/csmar_30stocks_20220603_20230602/weekly_features.csv",
+    "manifest_path": "data/external/csmar_30stocks_20220603_20230602/manifest.json"
+  },
+  "text": {
+    "enabled": true,
+    "path": "data/external/csmar_30stocks_20220603_20230602/text_events.csv",
+    "encoding": "utf-8",
+    "columns": {
+      "published_at": "published_at",
+      "stock_code": "stock_code",
+      "title": "title",
+      "body": "body",
+      "source": "source",
+      "url": "url"
+    }
+  },
+  "universe": {
+    "codes": [
+      "000001.SZ", "000002.SZ", "000006.SZ", "000007.SZ", "000008.SZ",
+      "000009.SZ", "000010.SZ", "000011.SZ", "000012.SZ", "000014.SZ",
+      "000016.SZ", "000017.SZ", "000019.SZ", "000020.SZ", "000021.SZ",
+      "000025.SZ", "000026.SZ", "000027.SZ", "000028.SZ", "000029.SZ",
+      "000030.SZ", "000031.SZ", "000032.SZ", "000034.SZ", "000035.SZ",
+      "000036.SZ", "000037.SZ", "000039.SZ", "000042.SZ", "000045.SZ"
+    ],
+    "min_weeks": 12,
+    "max_stocks": 30,
+    "selection": "explicit_active_lowest_codes"
+  },
+  "date_range": {
+    "start": "2022-06-03",
+    "end": "2023-06-02"
+  },
+  "task": {
+    "lookback_weeks": 12,
+    "forecast_horizon_weeks": 1,
+    "minimum_cross_section_coverage": 0.8
+  },
+  "text_features": {
+    "max_tfidf_features": 512,
+    "svd_components": 8,
+    "clusters": 4
+  },
+  "split": {
+    "train_ratio": 0.7,
+    "validation_ratio": 0.1,
+    "test_ratio": 0.2,
+    "purge_weeks": 1
+  },
+  "output": {
+    "root": "data/processed/weekly_30stocks_stage_a_v1",
+    "format": "csv.gz",
+    "overwrite": false
+  },
+  "strict_provenance": false
+}

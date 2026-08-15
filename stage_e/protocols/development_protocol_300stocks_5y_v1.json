@@ -1,0 +1,138 @@
+{
+  "protocol_id": "stage_e_rolling_origin_v1",
+  "data_batch_id": "panel_v2_300stocks_5y_20180608_20230602_v1",
+  "development_date_ceiling": "2023-06-02",
+  "config_sha256": "55422bab075912e73ac64b2e2fe70414695b9fa773792de5316e32c790786329",
+  "custody_sha256": "1e89599d25715df621368a8b423c217df69f9387b95a15e4ad269a087c4d1fde",
+  "panel_sha256": "2e5ce4511381005c33eea793bfb46f1ee009a5dc0f0cb1924afd8e4c4196c2fe",
+  "panel_row_set_sha256": "85b453bd6643a70ce712a0d2af2b7a05f07c257bdcf148aba66ac4476dafa6e1",
+  "source_manifest_root_sha256": "88bff4a1119ec2c29b32be338f2dd8b4fb99f54fbd8bfa45e850a218b721724f",
+  "fold_protocol_sha256": "c49ae566a401a7e26bc85c3c23fa949320309f4f2001a9848e7a1dadc0383b54",
+  "code": [
+    {
+      "path": "stage_e/build_expanded_panel.py",
+      "sha256": "2b02eaecb02f42c24bd64bb31dcc3632fd85edf1090c7064f1c7f754ef38d6a5"
+    },
+    {
+      "path": "stage_e/custody.py",
+      "sha256": "3b679376e789fe37fffe52f65a528e35d34b2c2533e3cbd3e418a2c45a05f7c2"
+    },
+    {
+      "path": "stage_e/hashing.py",
+      "sha256": "2c49719065560896b01de5f54755c73239e03965918a1ca16778fbcd13662f8d"
+    },
+    {
+      "path": "stage_e/protocol.py",
+      "sha256": "7e961f4921be3976f3cb1ef513414d217ab74eadcd707ef15e7e34bbfbe84769"
+    },
+    {
+      "path": "stage_e/run_development_protocol.py",
+      "sha256": "2fff6429bce3578f13416ccf99f5c3dea5995dd27498c66cc0d62a560b31dfdc"
+    }
+  ],
+  "processing_batch_sha256": "33dd43760ef99a6cb8610567afa62ef21041c46bf0f644fa5b6541a8e0f4c5e9",
+  "generated_at_utc": "2026-07-25T01:29:53.979342+00:00",
+  "evidence_class": "STAGE_E_SELECTION_EXPOSED_DEVELOPMENT_ONLY",
+  "custody_policy_id": "stage_e_development_custody_v1",
+  "stock_count": 300,
+  "panel_row_count": 78300,
+  "source_file_count": 13,
+  "source_file_counts_by_class": {
+    "frozen_config": 1,
+    "processed_panel_v2": 7,
+    "raw_reference_data": 1,
+    "raw_restricted_event_data": 4
+  },
+  "fold_count": 3,
+  "folds": [
+    {
+      "fold_id": "E_RO_01",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-01-13",
+      "purge_start": "2023-01-20",
+      "purge_end": "2023-01-20",
+      "validation_start": "2023-02-03",
+      "validation_end": "2023-03-10",
+      "train_start_effective": "2018-08-24",
+      "train_samples": 67028,
+      "validation_samples": 1500,
+      "train_stock_count": 300,
+      "validation_stock_count": 300,
+      "train_row_set_sha256": "7c4c4c72f51dd8fed193cd327cfcc8f339d9aec696e50bbf639f7a1e6f0b2af5",
+      "validation_row_set_sha256": "cc35afab8ccc4980ee9344780c0e2a3280e9bd2f71e710834b8ddad6cf70624c",
+      "train_sample_content_sha256": "da845100a2142f51421b525cdf77d9339a5db3208a4410e1d6fd36bd5c49fa24",
+      "validation_sample_content_sha256": "c59624d7e499e4b65af0cc14cb6c1a730147ea2ab7c633ecefd4fddd8bf920fe"
+    },
+    {
+      "fold_id": "E_RO_02",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-03-03",
+      "purge_start": "2023-03-10",
+      "purge_end": "2023-03-10",
+      "validation_start": "2023-03-17",
+      "validation_end": "2023-04-21",
+      "train_start_effective": "2018-08-24",
+      "train_samples": 68828,
+      "validation_samples": 1500,
+      "train_stock_count": 300,
+      "validation_stock_count": 300,
+      "train_row_set_sha256": "0c4270500b29924d0acf2a724264d31268ccbf85ffe5a16b393d5426ef7ca867",
+      "validation_row_set_sha256": "ba656666d80a7850736d9a6bcc56d71fb0e317c47d62178ecc663a2ce91efd3c",
+      "train_sample_content_sha256": "c8a3e39f60ecf3b2b49546a786a2a287c267116997556aed23f57ef0525fb026",
+      "validation_sample_content_sha256": "ac23e40bb24bb4ef89700d4d5878be4bd67235a2e9a4da5eba113bc4ca616525"
+    },
+    {
+      "fold_id": "E_RO_03",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-04-14",
+      "purge_start": "2023-04-21",
+      "purge_end": "2023-04-21",
+      "validation_start": "2023-04-28",
+      "validation_end": "2023-06-02",
+      "train_start_effective": "2018-08-24",
+      "train_samples": 70628,
+      "validation_samples": 1499,
+      "train_stock_count": 300,
+      "validation_stock_count": 300,
+      "train_row_set_sha256": "9212ba73566053ecd84f09a7b6b6d48fd10e25416f480d9fbb7882781e504744",
+      "validation_row_set_sha256": "5bca79213cba1bedd6d832bac9ebf147a9831157ebd62f85cd943b1e5d7fc401",
+      "train_sample_content_sha256": "6bae78abcf2879b96da33cabc54d2d956bc37634d353ee749a64dccd508bece4",
+      "validation_sample_content_sha256": "ed12d2723851528c5282c76b7a4d5164e95ae01761b36cbf222607af0beb8f70"
+    }
+  ],
+  "generated_artifacts": {
+    "source_file_manifest_sha256": "543518eb7a2e091c8d23fff0fb66a801db3dd76fc83b77ec1564849515af5b0c",
+    "fold_assignments_sha256": "198cd0d7d0ddb14d01a52dabda4ff6a6dfa63dc6ebcaa248adcf4a4ebe4f8449",
+    "fold_summary_sha256": "683987c496597945dd31ead0fd939eacf2ee5e047f97c1fe825c44a6de7e1d38"
+  },
+  "sealed_data_read": false,
+  "future_screening_or_final_read": false,
+  "expansion_policy": {
+    "frozen_items": [
+      "development_date_ceiling",
+      "validation and purge date boundaries",
+      "lookback_weeks",
+      "eligibility logic",
+      "custody rejection rules",
+      "row and content hash algorithms"
+    ],
+    "allowed_batch_changes": [
+      "more historically eligible stocks",
+      "additional history strictly before the development ceiling",
+      "new authorized feature sources available no later than each sample date"
+    ],
+    "required_for_expansion": [
+      "new data_batch_id",
+      "new source manifest",
+      "new processing_batch_sha256",
+      "new panel and fold row-set hashes",
+      "same frozen fold validation boundaries"
+    ],
+    "forbidden": [
+      "reading C-4 or D-5 row-level data",
+      "reading future Stage E SCREENING or FINAL data",
+      "moving validation windows after seeing model results",
+      "changing custody rules inside an existing batch"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "stage": "E-5.2 three-seed frozen review acceptance",
+  "generated_at_utc": "2026-07-25T07:45:59.254799+00:00",
+  "passed": true,
+  "checks": {
+    "review_locked_before_remaining_runs": true,
+    "base_protocol_hash_unchanged": true,
+    "model_set_unchanged": true,
+    "folds_unchanged": true,
+    "three_preregistered_seeds": true,
+    "only_two_remaining_seeds_newly_trained": true,
+    "engineering_seed_reused": true,
+    "fifty_four_run_receipts": true,
+    "no_failures": true,
+    "all_models_cover_all_4500_keys": true,
+    "independent_loading_within_tolerance": true,
+    "metrics_finite": true,
+    "three_seed_pairwise_stability_present": true,
+    "independent_metric_recalculation_matches": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "review_pass_declared": true,
+    "no_selection_deletion_or_promotion": true,
+    "future_and_screening_not_accessed": true
+  },
+  "models": [
+    "naive",
+    "frets_return_l4__fixed_shrink_a075",
+    "minimalist_price_only_l8",
+    "random_forest_price_l12",
+    "svm_rbf_price_l12",
+    "industry_var1_ridge"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "selection_exposure": "three-seed TRAIN/VALIDATION stability review only; no ranking, deletion, candidate promotion, or SCREENING",
+  "review_config_sha256": "728171962ad91873e78cff1759af201ea106cb9e886257de9c986e63a125d02a",
+  "base_protocol_config_sha256": "9468df9d4ee492f1ace7c77f4a9313ccdca930d38ffc8723869f90fd0053ec4c",
+  "metadata_sha256": "6692a5bdf0a43280137270d733b7bf85c8365af53c1ca52eaf03057ab8e2a6d3"
+}

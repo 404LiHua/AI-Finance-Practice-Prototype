@@ -1,0 +1,15 @@
+{
+  "stage": "F-1.4 unified robustness diagnostics v1 attempt",
+  "generated_at": "2026-07-28",
+  "status": "FAIL_BEFORE_GATE_APPLICATION",
+  "error_type": "KeyError",
+  "error": "stability adapter expected candidate_id while unified table exposed model_id",
+  "new_training_performed": false,
+  "hard_gate_matrix_generated": false,
+  "eligibility_conclusion_generated": false,
+  "ranking_performed": false,
+  "threshold_relaxation_performed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "action": "retain failed attempt and correct only the column-name adapter in v2"
+}

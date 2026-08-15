@@ -1,0 +1,18 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_SINGLE_MACHINE_OPERATIONAL_ACCEPTANCE_V4",
+  "status": "FROZEN_BEFORE_LOCAL_LOOPBACK_OPERATIONAL_AUDIT",
+  "active_model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+  "active_model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "stock_service_source_sha256": "4c441502a7863692cc856b6e4ed7f7c04973c7364601ea1644982d7e55c28e93",
+  "target_contract": {"target_id": "T2_MARKET_RELATIVE_FIXED", "target_horizon": "T2_4W"},
+  "runtime_policy": {"host": "127.0.0.1", "gpu_policy": "disabled", "cpu_threads": 2},
+  "checks": {
+    "health_model_prediction_cache_and_fail_closed_inputs": "PASS",
+    "active_production_not_research_only": "PASS",
+    "active_production_candidate_selection_not_exposed": "PASS",
+    "labels_read": false,
+    "fresh_labels_read": false,
+    "gpu_used": false,
+    "production_assets_modified": false
+  }
+}

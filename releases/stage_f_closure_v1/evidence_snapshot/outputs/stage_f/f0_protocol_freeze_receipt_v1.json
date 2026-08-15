@@ -1,0 +1,94 @@
+{
+  "stage": "F-0 extreme-regime and robustness protocol freeze",
+  "generated_at_utc": "2026-07-28T04:40:21.259763+00:00",
+  "passed": true,
+  "checks": {
+    "status_frozen_before_training_or_metric_read": true,
+    "all_source_hashes_valid": true,
+    "e6_unique_incumbent_valid": true,
+    "best_model_release_has_nine_checkpoints": true,
+    "folds_and_seeds_unchanged": true,
+    "adapter_base_hashes_valid": true,
+    "fold_key_receipts_complete": true,
+    "development_ceiling_enforced": true,
+    "stress_contract_has_nine_bounded_scenarios": true,
+    "exactly_three_bounded_non_gan_candidates": true,
+    "all_gates_hard_and_no_relaxation": true,
+    "gan_requires_separate_addendum": true,
+    "future_screening_final_forbidden": true
+  },
+  "training_executed": false,
+  "candidate_metrics_read": false,
+  "gan_training_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "control_models": [
+    "naive",
+    "frets_return_l4__fixed_shrink_a075",
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "bounded_f1_candidates": [
+    "stock_node_gwnet_tail_weighted_l8",
+    "stock_node_gwnet_noise_aug_l8",
+    "stock_node_gwnet_feature_mask_l8"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "fold_key_receipts": [
+    {
+      "fold_id": "E_RO_01",
+      "cross_section_count": 128,
+      "stock_count": 100,
+      "train_cross_section_count": 123,
+      "validation_cross_section_count": 5,
+      "valid_sample_count": 12794,
+      "validation_valid_sample_count": 500,
+      "maximum_trade_date": "2023-03-03",
+      "sample_key_sha256": "2d2d2fd40fbc3c341ade24bf199d2552604f077151dad16efede59a6cf3c6020",
+      "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+      "base_windows_sha256": "cbc2da61dbc3376d59c547ff135ae25d1753bbb8dd101d84f27f5ad2f9a9973c"
+    },
+    {
+      "fold_id": "E_RO_02",
+      "cross_section_count": 134,
+      "stock_count": 100,
+      "train_cross_section_count": 129,
+      "validation_cross_section_count": 5,
+      "valid_sample_count": 13394,
+      "validation_valid_sample_count": 500,
+      "maximum_trade_date": "2023-04-14",
+      "sample_key_sha256": "9a017471d3d73edafe479d1577b91d949a1f6b2af9e3e5b928824cbbe9f4a94f",
+      "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+      "base_windows_sha256": "dd0b4a0176a2fe16b053384cf5679a4a83f7f70f7de2c290e93c2d026216af1a"
+    },
+    {
+      "fold_id": "E_RO_03",
+      "cross_section_count": 140,
+      "stock_count": 100,
+      "train_cross_section_count": 135,
+      "validation_cross_section_count": 5,
+      "valid_sample_count": 13994,
+      "validation_valid_sample_count": 500,
+      "maximum_trade_date": "2023-05-26",
+      "sample_key_sha256": "924e7f02df8c09b1b41335a5d3b93df086c84ad03d7abd8a3b5b013ab67610b2",
+      "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+      "base_windows_sha256": "62a26992c736c1e6a88dd39685289a413673e93200e83fb20e1c8101056bdd8b"
+    }
+  ],
+  "fold_key_receipts_sha256": "60a550b22de020f4380fae96c7ebc8dba31451cc27e77b21c9ed9b6e4d0ef16c",
+  "hard_gates_sha256": "be3132911d2b7354492ad1a2998d1e0754c04b658c8f529702df6b3e64183176",
+  "eligibility_logic_sha256": "cb348e83baedf18bc5457f1ed3977ae045e34a013d3103274a5d623f61cc2069",
+  "stress_contract_sha256": "35ef95898d5faf4acddb8378d12d1e397362eb82dc026dbcf06d506ece762b6c",
+  "custody_config_sha256": "5f4878f20474877a2becb74dfe16c23bf3089c797bd9a10834656ed810040a76",
+  "config_sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e",
+  "next_action": "run F-1 bounded non-GAN controls under this unchanged protocol",
+  "receipt_sha256": "471ac944f0f21de911f847fe121ccb03976ccfca64bfe981df921ad6843ec6fe"
+}

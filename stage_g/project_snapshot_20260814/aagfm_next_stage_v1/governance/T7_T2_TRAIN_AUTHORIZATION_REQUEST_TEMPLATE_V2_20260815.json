@@ -1,0 +1,42 @@
+{
+  "request_id": "T3-T7-TRAIN-REQUEST-20260815-002",
+  "status": "REQUEST_TEMPLATE_NOT_AUTHORIZATION",
+  "authorization_scope": "ONE_CANDIDATE_TRAIN_ONLY_T2_ONCE",
+  "candidate_id": "T7_PRODUCTION_ISOMORPHIC_MOMENTUM_SIGNED_LOG1P_V1",
+  "target_contract": {
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "forecast_horizon": "origin_index + 4",
+    "target_definition": "four-week market-relative return",
+    "class_thresholds": [-0.01, 0.01],
+    "stock_key_domain": "5513 recovered stock identities",
+    "comparison": "same-key production anchor and candidate predictions"
+  },
+  "production_kernel": {
+    "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "path": "deliverables/RG_OBGNet_source_v1/models/rg_obgnet_confirmed_safe_v1_1/MODEL.json",
+    "sha256": "D8E4316D0FAB70D3785B775C695A1F3A31225EDF441A3603E3830F7351C4E2E8"
+  },
+  "frozen_inputs": {
+    "protocol_path": "research_tracks/t3_comparable_incremental_evidence_v1/governance/T7_PRODUCTION_ISOMORPHIC_MOMENTUM_TRANSFORM_PROTOCOL_V1.md",
+    "formal_stock_mapping_path": "research_tracks/rev7_proposal_guarded_graph_frequency_multimodal_v1/audits/rev7_stock_index_recovery_20260812_complete_v1/RECOVERED_REV7_STOCK_INDEX_TO_CODE.csv",
+    "formal_stock_mapping_sha256": "735DFFA8ED4E27D2266AF09B84345A76B5C11B8CB6D181194505933D4D003E6D",
+    "formal_panel_path": "research_tracks/pit_information_incremental_v1/frozen_inputs/m5_frozen_tensor_300stocks_2023_2025_v3/M5_FORMAL_STOCK_UNIVERSE_300.csv",
+    "formal_panel_sha256": "87922E5C556234048B8B90523B657A0FEF59931DAE1E6FE2CEDBBE153BA93A21",
+    "train_only_source_path": "PENDING_PRODUCTION_ISOMORPHIC_TRAIN_ONLY_SOURCE",
+    "train_only_source_sha256": "PENDING",
+    "input_manifest_sha256": "PENDING"
+  },
+  "execution": {
+    "seeds": [2026081301, 2026081302, 2026081303],
+    "device": "CUDA_REQUIRED_WITH_CPU_EQUIVALENCE_CHECK",
+    "candidate_budget": 1,
+    "development_budget": 1,
+    "fresh_budget": 0,
+    "no_repeated_tuning": true,
+    "stop_on_any_gate_failure": true
+  },
+  "prohibited_access": ["FRESH_labels", "SCREENING", "FINAL", "incumbent_predictions", "future_information", "current_industry_backfill"],
+  "authorization_decision": "PENDING_INDEPENDENT_CUSTODIAN_SIGNATURE",
+  "authorization_signature": null,
+  "signed_at_utc": null
+}

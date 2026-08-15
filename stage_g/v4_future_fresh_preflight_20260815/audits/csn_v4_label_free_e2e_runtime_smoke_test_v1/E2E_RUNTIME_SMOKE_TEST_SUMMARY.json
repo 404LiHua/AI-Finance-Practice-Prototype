@@ -1,0 +1,28 @@
+{
+  "node_id": "AA_GFMNET_CSN_V4_LABEL_FREE_E2E_RUNTIME_SMOKE_TEST_V1",
+  "status": "PASS_LABEL_FREE_E2E_SYNTHETIC_CANDIDATE_GPU_ANCHOR_CPU",
+  "origins": [
+    "2026-07-20",
+    "2026-07-27",
+    "2026-08-03",
+    "2026-08-10",
+    "2026-08-17",
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-07"
+  ],
+  "stocks": [
+    "000001.SZ",
+    "600000.SH"
+  ],
+  "rows_per_prediction": 16,
+  "candidate_device": "cuda",
+  "candidate_gpu_jobs_concurrent": 1,
+  "candidate_cpu_thread_cap": 4,
+  "candidate_seconds": 4.019,
+  "anchor_workers": 1,
+  "anchor_seconds": 0.97,
+  "labels_created_or_read": false,
+  "returns_read": false,
+  "production_kernel_modified": false
+}

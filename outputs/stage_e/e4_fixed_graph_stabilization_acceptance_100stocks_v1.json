@@ -1,0 +1,23 @@
+{
+  "stage": "E-4.4 fixed-graph stabilization",
+  "generated_at_utc": "2026-07-25T05:57:41.071894+00:00",
+  "passed": true,
+  "checks": {
+    "six_preregistered_variants_only": true,
+    "development_three_folds_complete": true,
+    "unique_selected_variant": true,
+    "original_seeds_and_thresholds_unchanged": true,
+    "selected_variant_three_seed_three_fold_complete": true,
+    "metrics_finite": true,
+    "adjacency_valid": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "decision_consistent": true,
+    "future_or_sealed_data_not_read": true,
+    "selection_exposure_declared": true
+  },
+  "selected_variant": "dual_industry_fixed_bge_mid",
+  "stability_pass": false,
+  "allow_300_stock_expansion": false,
+  "results_sha256": "7b15d53f3cb0f52cdc43fa7c607998beec1f77a9da84a7108316aeddea22e696"
+}

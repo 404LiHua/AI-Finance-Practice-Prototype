@@ -1,0 +1,65 @@
+{
+  "stage": "F-2.2 single-seed three-fold GAN engineering receipts",
+  "generated_at_utc": "2026-07-28T06:43:23.778719+00:00",
+  "status": "PASS",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "expected_run_count": 3,
+  "completed_run_count": 3,
+  "failure_count": 0,
+  "all_gan_losses_finite": true,
+  "all_forecaster_losses_finite": true,
+  "all_collapse_conditions_pass": true,
+  "all_independent_loads_pass": true,
+  "all_frozen_validation_keys_pass": true,
+  "all_normal_and_stress_entries_pass": true,
+  "pooled_three_fold_stress_counts": {
+    "feature_noise_sigma_005": 1500,
+    "four_week_drawdown_q10": 93,
+    "high_volatility_q90": 29,
+    "latest_week_feature_mask": 1500,
+    "low_liquidity_q10": 90,
+    "negative_return_tail_q10": 85,
+    "node_mask_10pct": 1500,
+    "normal_unperturbed": 1500,
+    "positive_return_tail_q90": 75
+  },
+  "total_duration_seconds": 95.60839940000005,
+  "cost_limit_pass": true,
+  "ranking_performed": false,
+  "candidate_deletion_performed": false,
+  "promotion_recommendation_formed": false,
+  "additional_seed_executed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "adapter_correction": {
+    "correction_applied": true,
+    "correction_id": "f2_2_single_checkpoint_load_for_stress_inference_v1",
+    "correction_scope": "load the independently reconstructed forecaster once and reuse it for four unchanged normal/stress inference tensors",
+    "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v2",
+    "base_config_sha256": "40d4cadfda265684583bd048527771b3682908e1115ca3041a58ea34741ad3eb",
+    "prior_correction": {
+      "correction_applied": true,
+      "correction_id": "f2_2_zero_augmentation_batch_guard_v1",
+      "correction_scope": "when floor(batch_size*0.5) equals zero, skip generator call and append zero augmented samples",
+      "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v1",
+      "base_config_sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867",
+      "prior_correction": {
+        "correction_applied": false
+      }
+    }
+  },
+  "config_sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312",
+  "artifacts": {
+    "engineering_receipts_sha256": "7469ab7bfa1a26c4bf677de41416d705139fdef685e59e53e5c92e5c9fafc0c0",
+    "failure_receipts_sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "unified_predictions_sha256": "965f9798d36ebcd70b9a538b5638c465656fa327fbf13139b2443c0bba8e5998"
+  },
+  "next_action": "request separate authorization before F-2.3 seeds 20260723 and 20260724",
+  "batch_sha256": "174c009e253989015e7ffe348363bbf67c8795780e7d134234069245875ac820"
+}

@@ -1,0 +1,25 @@
+{
+  "stage": "F-0 protocol acceptance",
+  "generated_at_utc": "2026-07-28T04:40:37.158467+00:00",
+  "passed": true,
+  "checks": {
+    "freeze_receipt_passed": true,
+    "freeze_receipt_hash_valid": true,
+    "config_hash_valid": true,
+    "source_registry_hashes_valid": true,
+    "fold_key_receipts_complete": true,
+    "fold_key_receipt_root_valid": true,
+    "hard_gate_hash_valid": true,
+    "eligibility_hash_valid": true,
+    "bounded_candidates_exact": true,
+    "no_training_metric_read_or_future_access": true,
+    "next_action_is_f1_non_gan": true
+  },
+  "config_sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e",
+  "freeze_receipt_sha256": "8b0a3c75f371b55dedd86d40019fe071bed73bf579b99cd28103f0a3935f79f8",
+  "training_authorized_after_acceptance": true,
+  "authorized_scope": "F-1 bounded non-GAN controls only",
+  "gan_training_authorized": false,
+  "screening_authorized": false,
+  "final_authorized": false
+}

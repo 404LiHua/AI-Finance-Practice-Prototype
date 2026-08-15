@@ -1,0 +1,133 @@
+{
+  "protocol_id": "stage_e_rolling_origin_v1",
+  "data_batch_id": "panel_v2_30stocks_20220603_20230602_v1",
+  "status": "FROZEN_DEVELOPMENT_PROTOCOL",
+  "development_date_ceiling": "2023-06-02",
+  "panel_path": "data/processed/panel_v2_30stocks_20220603_20230602/panel_v2.csv.gz",
+  "lookback_weeks": 12,
+  "minimum_stock_count": 30,
+  "folds": [
+    {
+      "fold_id": "E_RO_01",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-01-13",
+      "purge_start": "2023-01-20",
+      "purge_end": "2023-01-20",
+      "validation_start": "2023-02-03",
+      "validation_end": "2023-03-10"
+    },
+    {
+      "fold_id": "E_RO_02",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-03-03",
+      "purge_start": "2023-03-10",
+      "purge_end": "2023-03-10",
+      "validation_start": "2023-03-17",
+      "validation_end": "2023-04-21"
+    },
+    {
+      "fold_id": "E_RO_03",
+      "train_start_policy": "available_history_start",
+      "train_end": "2023-04-14",
+      "purge_start": "2023-04-21",
+      "purge_end": "2023-04-21",
+      "validation_start": "2023-04-28",
+      "validation_end": "2023-06-02"
+    }
+  ],
+  "source_files": [
+    {
+      "source_id": "jiuzhang_weekly_raw",
+      "source_class": "raw_market_data",
+      "kind": "directory_glob",
+      "path": "D:/项目/data/weekly",
+      "glob": "*.csv",
+      "required": true
+    },
+    {
+      "source_id": "jiuzhang_stock_basic",
+      "source_class": "raw_reference_data",
+      "kind": "file",
+      "path": "D:/项目/data/stock_basic/stock_basic.csv",
+      "required": true
+    },
+    {
+      "source_id": "csmar_raw_exports",
+      "source_class": "raw_restricted_event_data",
+      "kind": "directory_glob",
+      "path": "D:/项目/data/csmar",
+      "glob": "*.zip",
+      "required": true
+    },
+    {
+      "source_id": "baostock_30stocks",
+      "source_class": "raw_adjusted_market_data",
+      "kind": "directory_glob",
+      "path": "data/external/baostock_30stocks_20220603_20230602",
+      "glob": "*",
+      "required": true
+    },
+    {
+      "source_id": "csmar_prepared_30stocks",
+      "source_class": "processed_restricted_event_data",
+      "kind": "directory_glob",
+      "path": "data/external/csmar_30stocks_20220603_20230602",
+      "glob": "*",
+      "required": true
+    },
+    {
+      "source_id": "stage_a_processed_batch",
+      "source_class": "processed_stage_a",
+      "kind": "directory_glob",
+      "path": "data/processed/weekly_30stocks_stage_a_v1",
+      "glob": "*",
+      "required": true
+    },
+    {
+      "source_id": "panel_v2_processed_batch",
+      "source_class": "processed_panel_v2",
+      "kind": "directory_glob",
+      "path": "data/processed/panel_v2_30stocks_20220603_20230602",
+      "glob": "*",
+      "required": true
+    }
+  ],
+  "protocol_code_files": [
+    "data_pipeline/build_panel_v2.py",
+    "data_pipeline/schemas/panel_v2_contract.json",
+    "stage_e/custody.py",
+    "stage_e/hashing.py",
+    "stage_e/protocol.py",
+    "stage_e/run_development_protocol.py"
+  ],
+  "output_root": "outputs/stage_e/development_protocol_v1",
+  "frozen_snapshot_path": "stage_e/protocols/development_protocol_v1.json",
+  "expansion_policy": {
+    "frozen_items": [
+      "development_date_ceiling",
+      "validation and purge date boundaries",
+      "lookback_weeks",
+      "eligibility logic",
+      "custody rejection rules",
+      "row and content hash algorithms"
+    ],
+    "allowed_batch_changes": [
+      "more historically eligible stocks",
+      "additional history strictly before the development ceiling",
+      "new authorized feature sources available no later than each sample date"
+    ],
+    "required_for_expansion": [
+      "new data_batch_id",
+      "new full source file manifest",
+      "new processing_batch_sha256",
+      "new panel and fold row-set hashes",
+      "same frozen fold validation boundaries"
+    ],
+    "forbidden": [
+      "reading C-4 or D-5 row-level data",
+      "reading future Stage E SCREENING or FINAL data",
+      "moving validation windows after seeing model results",
+      "changing custody rules inside an existing batch"
+    ]
+  }
+}

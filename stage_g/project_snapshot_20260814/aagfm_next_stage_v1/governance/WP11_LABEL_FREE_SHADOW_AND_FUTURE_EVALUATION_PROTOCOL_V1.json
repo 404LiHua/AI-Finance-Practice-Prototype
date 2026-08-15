@@ -1,0 +1,67 @@
+{
+  "node_id": "WP11_LABEL_FREE_SHADOW_AND_FUTURE_EVALUATION_PROTOCOL_V1",
+  "status": "FROZEN_BEFORE_C0_ARTIFACT_MATERIALIZATION_OR_WP11_SHADOW_PREDICTION",
+  "purpose": "Create an auditable, label-free, single-machine shadow comparison for the already-developed C0 model against the active T2 incumbent. This is not an evaluation, promotion, production replacement, or trading authorization.",
+  "governance": {
+    "active_production_model": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "active_production_model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "candidate_id": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+    "candidate_definition": "The exact WP09 heteroscedastic proportional-odds algorithm, fixed 14 RG3 location features, fixed three scale features, fixed regularizers and fixed calibration grid. Artifact materialization may serialize this already-defined candidate but may not search, tune, alter features, alter parameters, select a seed, or read a WP10 output.",
+    "wp10_boundary": "FAIL_CLOSED_FRESH_EVIDENCE_TAINTED_BY_SECOND_LABEL_READ_RETAIN_INCUMBENT. No WP10 label, target, metric, prediction, result, calibration, or conclusion may be read by a WP11 process or used to set any WP11 choice.",
+    "production_replacement_allowed": false,
+    "automatic_trading_allowed": false,
+    "model_retraining_allowed": false,
+    "artifact_materialization_allowed": true
+  },
+  "shadow": {
+    "origin_date": "2026-07-17",
+    "incumbent_fit_cutoff_exclusive": "2026-06-26",
+    "require_friday_origin": true,
+    "require_origin_strictly_after_incumbent_fit_cutoff": true,
+    "frozen_universe_size": 300,
+    "input_quality_rule": "A stock may enter a hypothetical paper universe only when source_trade_date equals origin_date, all 14 technical features are finite, and all three class probabilities are finite and sum to one. Every other row is retained only for audit.",
+    "label_free_only": true,
+    "allowed_payload_columns": ["trade_date", "stock_code", "source_trade_date", "14 RG3 technical features", "market_volatility_4w", "probabilities", "diagnostics"],
+    "forbidden_payload_columns": ["target_valid", "ordinal_target", "target_return_h4", "raw_target_return_h4", "market_h4_median", "realized_target", "metrics"]
+  },
+  "input_identities": {
+    "selected_universe_sha256": "7522a6053cd143f0046895713b0f66f76a30b15d9ff8ebb8410dc27b0da67f5c",
+    "development_samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "development_rg3_features_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "source_rev8_targets_sha256": "dd680a812816a711918df2556896c0367e986e43209ba8d65f775d4e850e6934",
+    "source_rg3_features_sha256": "68d9091006565c6a454c731311bd7ddc65af4112624f40681f7df1a82f23d584",
+    "source_rg2_ordinal_sha256": "851346986600940b40242e183ad56a128fb9439612da3be4a5a9320e32d7f5a6",
+    "c0_source_sha256": "229a2555d4ff051343e8f0642817840f5dbefbcd5cfd91e6ee2907700fa468bc",
+    "label_free_feature_sha256": "c1f4a797448c379ae423c26c1ba04b7993bb9ef395bcc64623f02b43a3329818",
+    "incumbent_shadow_prediction_sha256": "be01102b88eac4595ed445f05fc28af07adbb618205c0404aa544b672b926a1f"
+  },
+  "candidate_contract": {
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "location_features": ["14 frozen RG3 daily technical features"],
+    "scale_features": ["realized_volatility_20d", "downside_volatility_60d", "market_volatility_4w"],
+    "location_l2": 0.001,
+    "scale_l2": 0.01,
+    "log_scale_bound": 1.0,
+    "optimizer": "torch LBFGS float64, max_iter=200, strong_wolfe",
+    "calibration": "fixed expanding TRAIN-only calibration grid from WP09; selection rule is unchanged",
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "future_evaluation": {
+    "status": "NOT_AUTHORIZED_AND_NOT_READY",
+    "minimum_clean_weekly_origins": 12,
+    "weekly_minimum_valid_stocks": 300,
+    "primary_ic_rule": "Maintain the WP09 300-valid-stock threshold. It may not be reduced on the basis of WP10 observations. A week below 300 is reported as not evaluable and cannot support promotion.",
+    "independent_label_authorization_required": true,
+    "one_time_label_read_required": true,
+    "required_before_authorization": ["all future inputs and predictions sealed", "new target-construction source and SHA-locked daily snapshot audited", "candidate and incumbent key coverage validated", "independent custodian authorization received", "evaluation program hash frozen"],
+    "prohibited_uses": ["C0 hyperparameter tuning", "candidate or feature changes", "calibration or threshold changes", "incumbent registry replacement", "automatic trading"]
+  },
+  "resource_policy": {
+    "cpu": "Feature construction, hashing, C0 artifact materialization, and all shadow inference use two CPU threads.",
+    "gpu": "No GPU task is started by WP11. GPU remains available for a separately preregistered, unclosed future research candidate only.",
+    "heavy_jobs": "At most one heavy job at a time."
+  }
+}
+
+

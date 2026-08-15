@@ -1,0 +1,13 @@
+{
+  "node_id": "T7_PRODUCTION_ISOMORPHISM_METADATA_PREFLIGHT_V1",
+  "status": "PASS_SEMANTIC_PREFLIGHT_SOURCE_PENDING",
+  "candidate_id": "T7_PRODUCTION_ISOMORPHIC_MOMENTUM_SIGNED_LOG1P_V1",
+  "authorization_template": "T7_T2_TRAIN_AUTHORIZATION_REQUEST_TEMPLATE_V2_20260815.json",
+  "target_id": "T2_MARKET_RELATIVE_FIXED",
+  "forecast_horizon": "origin_index + 4",
+  "labels_read": false,
+  "training_executed": false,
+  "production_kernel_modified": false,
+  "warning": "train_only_source_or_manifest_not_delivered",
+  "next_node": "independent one-time T2 authorization plus bound train-only source manifest"
+}

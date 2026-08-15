@@ -1,0 +1,68 @@
+{
+  "candidate_id": "stock_node_gwnet_feature_mask_l8",
+  "fold_id": "E_RO_01",
+  "seed": 20260725,
+  "status": "PASS",
+  "validation_rows": 500,
+  "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+  "industry_count": 13,
+  "checkpoint_sha256": "b1a57a736c8783fc229cf88411ad68f49e8d9dfa94bda4000aa2701fc1a7c7fc",
+  "independent_load_max_abs_difference": 1.3309346957868229e-09,
+  "stress_inference": {
+    "status": "PASS",
+    "scenario_count": 9,
+    "scenario_valid_sample_counts": {
+      "normal_unperturbed": 500,
+      "negative_return_tail_q10": 11,
+      "positive_return_tail_q90": 17,
+      "high_volatility_q90": 0,
+      "low_liquidity_q10": 19,
+      "four_week_drawdown_q10": 7,
+      "feature_noise_sigma_005": 500,
+      "node_mask_10pct": 500,
+      "latest_week_feature_mask": 500
+    },
+    "train_only_observed_thresholds": {
+      "negative_return_tail_q10": -0.06536003947257996,
+      "positive_return_tail_q90": 0.0714285746216774,
+      "high_volatility_q90": 1.039017915725708,
+      "low_liquidity_q10": -1.227514624595642,
+      "four_week_drawdown_q10": -2.043951988220215
+    },
+    "synthetic_prediction_shapes": {
+      "normal": [
+        5,
+        100
+      ],
+      "feature_noise_sigma_005": [
+        5,
+        100
+      ],
+      "node_mask_10pct": [
+        5,
+        100
+      ],
+      "latest_week_feature_mask": [
+        5,
+        100
+      ]
+    },
+    "masked_node_count": 10,
+    "empty_observed_scenarios_in_fold": [
+      "high_volatility_q90"
+    ],
+    "artifact_sha256": "56767e65a849287490867cf3bb0535f02a46375b3fa6faac8c0caa0093920105"
+  },
+  "duration_seconds": 2.5889815999998973,
+  "training_seconds": 2.562128900000971,
+  "inference_seconds": 0.0019249999986641342,
+  "epochs_completed": 12,
+  "best_validation_loss": 0.1295287311077118,
+  "first_train_loss": 0.3522972669452429,
+  "last_train_loss": 0.3393520936369896,
+  "all_losses_finite": true,
+  "parameter_count": 15777,
+  "tail_threshold_raw": null
+}

@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-07-23T14:30:17.182596+00:00",
+  "evidence_class": "SELECTION_EXPOSED_NON_INDEPENDENT",
+  "stock_count": 30,
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "models": [
+    "naive",
+    "moving_average",
+    "arima",
+    "lstm",
+    "minimalist_transformer",
+    "frets",
+    "timegnn"
+  ],
+  "inputs": {
+    "baseline_summary": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\outputs\\experiments\\stage_b_30stocks_baselines\\baseline_summary.csv",
+    "baseline_summary_sha256": "0b0680b7c29a483974175cc3c71d9b6af20266ade33333072fe86dbe634d195c",
+    "run_count": 21
+  },
+  "figures": {
+    "prediction_comparison_30stocks.png": "d4f64c525462129afe9aed16b39e96bed076a389bf701762d6b06d7acd8e41d6",
+    "training_curves_30stocks.png": "57899be73ee3888295cc89836e624e0776472e8e17bf07607de1badc6279cc18"
+  },
+  "screening_rows_read": 0,
+  "final_rows_read": 0
+}

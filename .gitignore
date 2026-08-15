@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments and generated runtimes
+.venv/
+.venv-baostock/
+.venv-baselines/
+.venv-text/
+venv/
+env/
+runtime/
+.quant-research/
+
+# Model outputs and temporary data
+outputs/
+checkpoints/
+!stage_d/frozen/**/checkpoints/
+!stage_d/frozen/**/checkpoints/**
+logs/
+*.log
+*.tmp
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Reproducible data pipeline outputs
+data/processed/
+data/external/
+data/screening/
+
+# Stage G has one canonical public snapshot; do not recreate root-level copies.
+stage_g/results/
+stage_g/*.py

@@ -1,0 +1,166 @@
+{
+  "gate_id": "e6_candidate_gate_v1",
+  "status": "CANDIDATE_GATES_FROZEN_BEFORE_ANY_ELIGIBILITY_OR_RANKING",
+  "frozen_at": "2026-07-25",
+  "source_diagnostics": {
+    "config": "stage_e/configs/e5_unified_diagnostics_v1.json",
+    "config_sha256": "57c703206d29cab7eb66d52867e9dca247354e766690c4c93e34217ef2c9b3db",
+    "metadata": "outputs/stage_e/e5_unified_diagnostics_v1/metadata.json",
+    "metadata_sha256": "3a4839e065e933a90a02a8b496e5dbc45ae6dea2b4f6de1a418de4989a8e88d6",
+    "batch_sha256": "fea38e3c09ede4ab0c462bed89f5db87e8e0a1ffb04246b9f0d74acd792b3240",
+    "acceptance": "outputs/stage_e/e5_unified_diagnostics_acceptance_v1.json",
+    "acceptance_sha256": "fbec826196a2b3cc8a78d1079fa2caf5fe5bf37f01b767462cda6a7fef4c6991",
+    "output_root": "outputs/stage_e/e5_unified_diagnostics_v1"
+  },
+  "baseline_roles": {
+    "naive": "naive",
+    "strong_frozen_baseline": "frets_return_l4__fixed_shrink_a075"
+  },
+  "candidate_model_ids": [
+    "minimalist_price_only_l8",
+    "random_forest_price_l12",
+    "svm_rbf_price_l12",
+    "industry_var1_ridge",
+    "lstm_price_l8",
+    "tcn_price_l8",
+    "timegnn_deterministic_topk_l8",
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "baseline_anchors": {
+    "naive": {
+      "overall_mae": 0.0322546772151253,
+      "overall_rmse": 0.0462473595176249,
+      "worst_fold_mae": 0.0351496367986546,
+      "max_stock_mae": 0.084341419674456,
+      "information_technology_mae": 0.0421950040997385,
+      "mid_cap_mae": 0.0342289835013533,
+      "d1_mae": 0.0810390070825815,
+      "d10_mae": 0.0841852444658676
+    },
+    "frets_return_l4__fixed_shrink_a075": {
+      "overall_mae": 0.0319071657794022,
+      "overall_rmse": 0.0459857996721003,
+      "worst_fold_mae": 0.0350343832357126,
+      "max_stock_mae": 0.0824855786942255,
+      "information_technology_mae": 0.0420521088137814,
+      "mid_cap_mae": 0.0337901004883091,
+      "d1_mae": 0.0774080486258026,
+      "d10_mae": 0.0866054751000288
+    }
+  },
+  "gates": {
+    "overall": {
+      "mae_minimum_improvement_vs_each_baseline": 0.005,
+      "resolved_mae_max": 0.03174762995050519,
+      "rmse_max_ratio_vs_better_baseline": 1.01,
+      "resolved_rmse_max": 0.046445657668821305,
+      "mape_is_promotion_gate": false
+    },
+    "worst_fold": {
+      "definition": "maximum_MAE_after_pooling_three_seeds_within_each_fold",
+      "maximum_ratio_vs_better_baseline": 1.01,
+      "resolved_mae_max": 0.03538472706806972,
+      "required_fold_count": 3
+    },
+    "per_stock": {
+      "required_stock_count": 100,
+      "minimum_stocks_with_mae_below_naive": 70,
+      "maximum_stock_mae_ratio_vs_better_baseline_max_stock": 1.03,
+      "resolved_maximum_stock_mae": 0.08496014605505227,
+      "missing_stock_is_failure": true
+    },
+    "industry": {
+      "required_industry_count": 13,
+      "minimum_industries_with_mae_not_above_naive": 9,
+      "all_industry_mae_max_ratio_vs_each_baseline": 1.05,
+      "information_technology_mae_max_ratio_vs_better_baseline": 1.02,
+      "resolved_information_technology_mae_max": 0.04289315099005703,
+      "missing_industry_is_failure": true
+    },
+    "market_cap": {
+      "required_groups": ["large", "mid", "small"],
+      "minimum_groups_with_mae_not_above_naive": 3,
+      "all_group_mae_max_ratio_vs_each_baseline": 1.05,
+      "mid_cap_mae_max_ratio_vs_better_baseline": 1.02,
+      "resolved_mid_cap_mae_max": 0.03446590249807528,
+      "missing_group_is_failure": true
+    },
+    "return_tails": {
+      "required_groups": ["D1", "D10"],
+      "each_tail_mae_max_ratio_vs_better_corresponding_baseline": 1.10,
+      "resolved_d1_mae_max": 0.08514885348838286,
+      "resolved_d10_mae_max": 0.09260376891245437,
+      "mean_d1_d10_mae_max_ratio_vs_better_baseline_tail_mean": 1.02,
+      "resolved_tail_mean_mae_max": 0.083646897100174,
+      "missing_tail_is_failure": true
+    },
+    "seed_stability": {
+      "required_seed_count": 3,
+      "seed_mae_cv_max": 0.005,
+      "minimum_all_pairwise_prediction_pearson": 0.80,
+      "minimum_all_pairwise_prediction_spearman": 0.80,
+      "prediction_seed_std_mean_max": 0.002,
+      "prediction_seed_std_p95_max": 0.005,
+      "missing_seed_or_pair_is_failure": true
+    },
+    "engineering_cost": {
+      "required_run_receipts": 9,
+      "total_training_seconds_max": 180.0,
+      "total_duration_seconds_max": 185.0,
+      "maximum_parameter_count": 200000,
+      "independent_load_max_abs_difference": 1e-7,
+      "required_inference_receipt_count": 9,
+      "recorded_inference_seconds_max": 0.05,
+      "missing_inference_cost_evidence": "INELIGIBLE_UNTIL_INDEPENDENT_BENCHMARK_IS_FROZEN"
+    }
+  },
+  "three_seed_inference_aggregation": {
+    "method": "arithmetic_mean",
+    "weights": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+    "seed_order": [20260723, 20260724, 20260725],
+    "all_three_checkpoints_must_load_independently": true,
+    "sample_keys_must_match_exactly": true,
+    "post_hoc_calibration_allowed": false,
+    "median_or_best_seed_switching_allowed": false,
+    "uncertainty_output": "sample_standard_deviation_across_three_seed_predictions"
+  },
+  "eligibility_logic": {
+    "rule": "all_hard_gates_must_pass",
+    "zero_eligible_models": "formal_no_promotable_candidate_result",
+    "one_eligible_model": "unique_candidate_recommendation",
+    "multiple_eligible_models": "apply_frozen_lexicographic_tie_break_without_weights",
+    "tie_break_priority": [
+      "lowest_worst_fold_mae",
+      "lowest_overall_mae",
+      "lowest_prediction_seed_std_mean",
+      "lowest_total_training_seconds",
+      "lexicographically_smallest_model_id"
+    ],
+    "threshold_relaxation_allowed": false,
+    "new_candidate_allowed": false
+  },
+  "failure_conditions": [
+    "source_diagnostic_batch_or_acceptance_sha_mismatch",
+    "candidate_model_set_changed",
+    "any_hard_gate_failed",
+    "missing_stock_industry_market_cap_tail_seed_or_cost_evidence",
+    "three_seed_checkpoint_or_sample_key_mismatch",
+    "independent_load_difference_above_1e-7",
+    "inference_cost_evidence_incomplete",
+    "threshold_or_tie_break_changed_after_eligibility_read",
+    "new_training_calibration_or_candidate_added",
+    "future_or_sealed_data_read",
+    "screening_access"
+  ],
+  "restrictions": {
+    "candidate_metrics_read_before_freeze_receipt": false,
+    "candidate_ranking_before_freeze_receipt": false,
+    "threshold_change_after_freeze_allowed": false,
+    "candidate_addition_allowed": false,
+    "new_training_allowed": false,
+    "post_hoc_calibration_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  },
+  "next_authorized_action_after_freeze": "read existing candidate diagnostic rows once and apply the frozen hard gates"
+}

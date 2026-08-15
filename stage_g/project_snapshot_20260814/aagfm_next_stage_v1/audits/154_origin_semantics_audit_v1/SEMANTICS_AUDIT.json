@@ -1,0 +1,344 @@
+{
+  "status": "AUDIT_COMPLETE_WITH_PIT_BOUNDARY_FLAG",
+  "tensor_shape": [
+    154,
+    300,
+    36
+  ],
+  "tensor_sha256": "d9f0c54cca68c1068e17a849cc5bcb8b6acfd141838d35c218f5db283206d24b",
+  "technical_rows": 46200,
+  "h4_rows": 46200,
+  "t2_rows": 46200,
+  "technical_source_equal_origin": 46200,
+  "technical_source_after_origin": 0,
+  "strict_pit_rule_pass": false,
+  "h4_realized_after_origin": true,
+  "t2_realized_after_origin": true,
+  "feature_stats": [
+    {
+      "feature": "momentum_20d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.01170250203513816,
+      "std": 0.11571774533570219,
+      "q01": -0.22465815126895905,
+      "q99": 0.3949674001336117
+    },
+    {
+      "feature": "momentum_60d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.03112885859941213,
+      "std": 0.1959838027406466,
+      "q01": -0.3021178764104843,
+      "q99": 0.7195786643028261
+    },
+    {
+      "feature": "momentum_120d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.05238916388799211,
+      "std": 0.26261752742526073,
+      "q01": -0.3846974661946297,
+      "q99": 0.9814168971776989
+    },
+    {
+      "feature": "realized_volatility_20d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.021352139733398123,
+      "std": 0.011127691754896765,
+      "q01": 0.006428305963054299,
+      "q99": 0.0575041136145592
+    },
+    {
+      "feature": "realized_volatility_60d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.022689973239391818,
+      "std": 0.009317976995724574,
+      "q01": 0.008300546919927002,
+      "q99": 0.05076751966029407
+    },
+    {
+      "feature": "downside_volatility_60d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.0154160609438076,
+      "std": 0.006402147950795699,
+      "q01": 0.005586633011698722,
+      "q99": 0.03482421133667232
+    },
+    {
+      "feature": "current_drawdown_60d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": -0.11130859483076161,
+      "std": 0.083651937299157,
+      "q01": -0.3598441478610039,
+      "q99": 0.0
+    },
+    {
+      "feature": "rsi_14",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.49457175246920904,
+      "std": 0.16543851014217634,
+      "q01": 0.1355932205915451,
+      "q99": 0.875
+    },
+    {
+      "feature": "macd_scaled",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": -0.0004441665171901715,
+      "std": 0.025255975090030438,
+      "q01": -0.0654310068488121,
+      "q99": 0.06964447394013418
+    },
+    {
+      "feature": "bollinger_position_20",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": -0.00446584821504705,
+      "std": 0.6601534872521082,
+      "q01": -1.2682446789741517,
+      "q99": 1.5668085050582887
+    },
+    {
+      "feature": "amihud_20d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.15851338579917873,
+      "std": 0.16243635663119882,
+      "q01": 0.005231216247193515,
+      "q99": 0.7051302170753494
+    },
+    {
+      "feature": "zero_volume_fraction_20d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.0,
+      "std": 0.0,
+      "q01": 0.0,
+      "q99": 0.0
+    },
+    {
+      "feature": "volume_ratio_20d_60d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": -0.045594863238389634,
+      "std": 0.3353952056195707,
+      "q01": -0.8740976399183273,
+      "q99": 0.7389174187183384
+    },
+    {
+      "feature": "intraday_range_mean_20d",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.03143894523331791,
+      "std": 0.013259042091937345,
+      "q01": 0.011898220051079988,
+      "q99": 0.07427282080054289
+    },
+    {
+      "feature": "log_total_assets",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 23.491037091135464,
+      "std": 1.7476782339374741,
+      "q01": 20.202951431274414,
+      "q99": 29.92276954650879
+    },
+    {
+      "feature": "debt_to_assets",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.5031898580972122,
+      "std": 0.24195176398939539,
+      "q01": 0.08140145987272263,
+      "q99": 0.9342883229255676
+    },
+    {
+      "feature": "equity_to_assets",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.4968101419475246,
+      "std": 0.24195176624326245,
+      "q01": 0.06571169197559357,
+      "q99": 0.9185985326766968
+    },
+    {
+      "feature": "return_on_assets",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.01484439484965267,
+      "std": 0.042202469281095716,
+      "q01": -0.061615217477083206,
+      "q99": 0.11747017502784729
+    },
+    {
+      "feature": "net_margin",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.07427470745552679,
+      "std": 0.504464027112623,
+      "q01": -0.7481660211086265,
+      "q99": 0.6381460428237915
+    },
+    {
+      "feature": "asset_turnover",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.30688065658840785,
+      "std": 0.3154729605087756,
+      "q01": 0.007316980045288801,
+      "q99": 1.703748345375061
+    },
+    {
+      "feature": "revenue_yoy",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.09581033484452954,
+      "std": 0.9154696903360168,
+      "q01": -0.6861852359771727,
+      "q99": 2.8808693885803223
+    },
+    {
+      "feature": "profit_yoy",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.3943410392545348,
+      "std": 28.499665251073264,
+      "q01": -13.043408393859863,
+      "q99": 11.023173332214355
+    },
+    {
+      "feature": "asset_growth_yoy",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 0.06254778486655253,
+      "std": 0.29674921932798526,
+      "q01": -0.3478100299835205,
+      "q99": 0.9222525954246521
+    },
+    {
+      "feature": "leverage_change_yoy",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": -0.0003529088002775315,
+      "std": 0.17600841782030097,
+      "q01": -0.1951202154159546,
+      "q99": 0.23083841800689697
+    },
+    {
+      "feature": "report_age_anchor_days",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 69.39948051948052,
+      "std": 58.748896496504344,
+      "q01": 0.0,
+      "q99": 265.0
+    },
+    {
+      "feature": "has_fundamental_event",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "log_total_assets_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "debt_to_assets_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "equity_to_assets_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "return_on_assets_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "net_margin_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "asset_turnover_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "revenue_yoy_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "profit_yoy_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "asset_growth_yoy_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    },
+    {
+      "feature": "leverage_change_yoy_available",
+      "finite_rate": 1.0,
+      "nan_count": 0,
+      "mean": 1.0,
+      "std": 0.0,
+      "q01": 1.0,
+      "q99": 1.0
+    }
+  ]
+}
+

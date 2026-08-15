@@ -1,0 +1,30 @@
+{
+  "model": "fixed_control_ensemble_v2",
+  "status": "recommended_development_model",
+  "data_scope": "30 stocks, price-only, validation-selected",
+  "components": [
+    {
+      "model": "temporal_only_control",
+      "weight": 0.5
+    },
+    {
+      "model": "fixed_temporal_graph_control",
+      "weight": 0.5
+    }
+  ],
+  "trainable_ensemble_parameters": 0,
+  "evaluation_splits": ["validation"],
+  "test_status": "reserved_not_evaluated_or_used_for_selection",
+  "cross_sectional_node_design": "deferred",
+  "manifest_pattern": "outputs/experiments/stage_c_30stocks_recommended_v2/fixed_control_ensemble_v2_seed{seed}/model_manifest.json",
+  "inference_entrypoint": "stage_c/run_recommended_v2_inference.py",
+  "default_inference_device": "cpu",
+  "independent_inference_status": "three_seed_reconstruction_verified",
+  "verification_tolerance": 1e-7,
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "freeze_status": "LOCKED_BEFORE_SCREENING",
+  "freeze_policy": "stage_c/configs/recommended_v2_freeze_c3.json",
+  "freeze_manifest": "stage_c/frozen/recommended_v2_c3/SHA256_MANIFEST.json",
+  "post_freeze_changes_allowed": false,
+  "evidence_note": "Development validation-selected model; not independent screening or final evidence."
+}

@@ -1,0 +1,29 @@
+{
+  "experiment_id": "e5_neural_graph_three_seed_review_v1",
+  "status": "PREREGISTERED_LOCKED_BEFORE_REMAINING_SEED_RUNS",
+  "base_protocol_config": "stage_e/configs/e5_neural_graph_baselines_v1.json",
+  "base_protocol_config_sha256": "6ee08295cd508f97218390b2e2564ae638bb5b58ecbd86047e0565a0393a6a43",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "new_training_seeds": [20260723, 20260724],
+  "reused_engineering_seed": 20260725,
+  "paths": {
+    "existing_single_seed_root": "outputs/stage_e/e5_neural_graph_baselines_single_seed_v1",
+    "existing_single_seed_acceptance": "outputs/stage_e/e5_neural_graph_single_seed_acceptance_v1.json",
+    "output_root": "outputs/stage_e/e5_neural_graph_baselines_three_seed_v1"
+  },
+  "restrictions": {
+    "model_set_change_allowed": false,
+    "feature_view_change_allowed": false,
+    "training_protocol_change_allowed": false,
+    "timegnn_stabilization_change_allowed": false,
+    "stock_node_order_change_allowed": false,
+    "fixed_industry_adjacency_change_allowed": false,
+    "fold_change_allowed": false,
+    "candidate_selection_allowed": false,
+    "model_deletion_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  },
+  "selection_exposure": "E-5.3 three-seed TRAIN/VALIDATION stability review only; no ranking, deletion, candidate promotion, or SCREENING"
+}

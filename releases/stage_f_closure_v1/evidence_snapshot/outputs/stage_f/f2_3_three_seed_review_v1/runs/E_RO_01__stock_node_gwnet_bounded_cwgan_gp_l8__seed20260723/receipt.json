@@ -1,0 +1,95 @@
+{
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "fold_id": "E_RO_01",
+  "seed": 20260723,
+  "status": "PASS",
+  "validation_rows": 500,
+  "validation_sample_key_sha256": "2baf8ee60efda7185e78e64a2bbc4a8e2a6cf6ed9ac6d152574a2588e7663a1c",
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+  "industry_count": 13,
+  "frozen_forecaster_sha256": "d4c4f2362371b4731f91133c707a581eaa2312bcad6b08a0358c2de37513a8b9",
+  "gan_checkpoint_sha256": "f1e6f6b42e1a3d50dae79e2551e9edaa8af974522ed6e22ce18a66135fb97956",
+  "forecaster_checkpoint_sha256": "296f3f38c2d34d8fa36c3461816af39712d53e7ba2d077da457ea316af85dc7d",
+  "independent_load_max_abs_difference": 1.1267549115956399e-09,
+  "stress_inference": {
+    "status": "PASS",
+    "scenario_count": 9,
+    "scenario_valid_sample_counts": {
+      "normal_unperturbed": 500,
+      "negative_return_tail_q10": 11,
+      "positive_return_tail_q90": 17,
+      "high_volatility_q90": 0,
+      "low_liquidity_q10": 19,
+      "four_week_drawdown_q10": 7,
+      "feature_noise_sigma_005": 500,
+      "node_mask_10pct": 500,
+      "latest_week_feature_mask": 500
+    },
+    "train_only_observed_thresholds": {
+      "negative_return_tail_q10": -0.06536003947257996,
+      "positive_return_tail_q90": 0.0714285746216774,
+      "high_volatility_q90": 1.039017915725708,
+      "low_liquidity_q10": -1.227514624595642,
+      "four_week_drawdown_q10": -2.043951988220215
+    },
+    "prediction_shapes": {
+      "normal": [
+        5,
+        100
+      ],
+      "feature_noise": [
+        5,
+        100
+      ],
+      "node_mask": [
+        5,
+        100
+      ],
+      "latest_week_mask": [
+        5,
+        100
+      ]
+    },
+    "artifact_sha256": "877eb6fe817e1491f9528593b9f4f1af9d537041b1ec2ea12800bc9f6ef0701d"
+  },
+  "duration_seconds": 24.987926799996785,
+  "gan_training_seconds": 18.81235220000235,
+  "gan_epochs_completed": 25,
+  "critic_optimizer_steps": 520,
+  "generator_optimizer_steps": 160,
+  "all_gan_losses_finite": true,
+  "collapse_conditions_pass": true,
+  "generator_parameter_count": 7014,
+  "critic_parameter_count": 6465,
+  "final_epoch": {
+    "epoch": 25,
+    "phase": "joint",
+    "critic_loss": 8.66074025630951,
+    "generator_loss": 1.3069243729114532,
+    "gradient_penalty_max": 0.8591352105140686,
+    "critic_gap": -0.11329476535320282,
+    "critic_gradient_norm": 1.139581173658371,
+    "generator_gradient_norm": 0.1676120050251484,
+    "mean_absolute_delta": 0.02549866517074406,
+    "maximum_absolute_delta": 0.0495416633784771,
+    "unavailable_node_maximum_absolute_delta": 0.0,
+    "per_feature_delta_std": [
+      0.008082842454314232,
+      0.009050640277564526,
+      0.010007699951529503,
+      0.01298634335398674,
+      0.007784103974699974,
+      0.013184196315705776
+    ],
+    "high_similarity_pair_fraction": 0.0
+  },
+  "forecaster_training_seconds": 4.774166199997126,
+  "forecaster_epochs_completed": 14,
+  "first_train_loss": 0.3522781617939472,
+  "last_train_loss": 0.3422542866319418,
+  "best_validation_loss": 0.1318110078573227,
+  "all_forecaster_losses_finite": true,
+  "realized_augmentation_ratio": 0.4959349593495935,
+  "forecaster_parameter_count": 15777
+}

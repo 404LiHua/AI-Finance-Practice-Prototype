@@ -1,0 +1,15 @@
+{
+  "data_batch_id": "panel_v2_100stocks_3y_20200605_20230602_v1",
+  "date_range": {"start": "2020-06-05", "end": "2023-06-02"},
+  "paths": {
+    "data_root": "D:/\u9879\u76ee/data",
+    "output_root": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1"
+  },
+  "universe": {
+    "target_stock_count": 100,
+    "minimum_history_coverage": 0.95,
+    "minimum_industry_groups": 10,
+    "minimum_cap_bucket_fraction": 0.20
+  },
+  "task": {"lookback_weeks": 12, "forecast_horizon_weeks": 1, "minimum_cross_section_coverage": 0.90}
+}

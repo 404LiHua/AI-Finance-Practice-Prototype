@@ -1,0 +1,30 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_INFERENCE_V1",
+  "status": "PASS_LOCAL_CPU_INFERENCE",
+  "registry_sha256": "6b53473c67e390f82120ad0e2bdf006de45d31f59b9eaa7604589c1fec4ad85b",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "input_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+  "output_sha256": "4db86c365a08e6b499b0670c771c8af5286e0650c3c0c4a14b068ee0b83f6f01",
+  "rows": 81432,
+  "features": [
+    "momentum_20d",
+    "momentum_60d",
+    "momentum_120d",
+    "realized_volatility_20d",
+    "realized_volatility_60d",
+    "downside_volatility_60d",
+    "current_drawdown_60d",
+    "rsi_14",
+    "macd_scaled",
+    "bollinger_position_20",
+    "amihud_20d",
+    "zero_volume_fraction_20d",
+    "volume_ratio_20d_60d",
+    "intraday_range_mean_20d"
+  ],
+  "gpu_used": false,
+  "fresh_payloads_opened": false,
+  "created_at_utc": "2026-08-14T05:01:08.805025+00:00"
+}
+
+

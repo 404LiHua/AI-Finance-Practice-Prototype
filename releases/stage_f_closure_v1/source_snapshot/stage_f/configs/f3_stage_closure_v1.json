@@ -1,0 +1,57 @@
+{
+  "closure_id": "stage_f_f3_closure_v1",
+  "status": "FROZEN_STAGE_F_CLOSEOUT",
+  "closed_at": "2026-07-28",
+  "version": "v0.6.0-stage-f",
+  "retained_model": "stock_node_gwnet_fixed_industry_l8",
+  "formal_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+  "candidate_gate_counts": {
+    "stock_node_gwnet_tail_weighted_l8": "12/20",
+    "stock_node_gwnet_noise_aug_l8": "13/20",
+    "stock_node_gwnet_feature_mask_l8": "13/20",
+    "stock_node_gwnet_bounded_cwgan_gp_l8": "11/20"
+  },
+  "gan_non_compensable_stability_failures": [
+    "stability_pairwise_pearson",
+    "stability_pairwise_spearman",
+    "stability_prediction_std_mean",
+    "stability_prediction_std_p95"
+  ],
+  "upstream": {
+    "f2_4_config": {
+      "path": "stage_f/configs/f2_4_unified_robustness_diagnostics_v1.json",
+      "sha256": "b3949000d2b5d38065b7d8a992cdf7a16c1ad407b50d157f4c9f83965336423b"
+    },
+    "f2_4_metadata": {
+      "path": "outputs/stage_f/f2_4_unified_robustness_diagnostics_v1/metadata.json",
+      "sha256": "235f694bc28cdc7c52886d6c3b3a30a28883af32dd68ae01956a924371fb5caf"
+    },
+    "f2_4_acceptance": {
+      "path": "outputs/stage_f/f2_4_unified_robustness_acceptance_v1.json",
+      "sha256": "7eb3d0f2c4c133c86f2a029454b9f6534cf5e1df4e37343a9710366bf2ff7039"
+    }
+  },
+  "paths": {
+    "release_root": "releases/stage_f_closure_v1",
+    "acceptance": "outputs/stage_f/f3_stage_closure_acceptance_v1.json",
+    "local_importance_root": "D:/项目/源文件/importance"
+  },
+  "archive_policy": {
+    "copy_all_stage_f_source_configs_and_tests": true,
+    "copy_all_stage_f_reports_and_authoritative_plans": true,
+    "copy_compact_stage_f_evidence": true,
+    "copy_checkpoints": false,
+    "copy_npz_arrays": false,
+    "copy_row_level_gzip_predictions": false,
+    "retain_excluded_artifact_hashes_in_receipts": true
+  },
+  "restrictions": {
+    "new_training_allowed": false,
+    "new_inference_allowed": false,
+    "candidate_change_allowed": false,
+    "threshold_change_allowed": false,
+    "stability_failure_compensation_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  }
+}

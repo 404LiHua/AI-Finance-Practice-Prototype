@@ -1,0 +1,32 @@
+{
+  "experiment_id": "stage_f_f2_2_single_seed_gan_engineering_v2",
+  "status": "FROZEN_ADAPTER_CORRECTION_BEFORE_RERUN",
+  "correction_id": "f2_2_zero_augmentation_batch_guard_v1",
+  "extends_config": {
+    "path": "stage_f/configs/f2_2_single_seed_engineering_v1.json",
+    "sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867"
+  },
+  "runner_override": {
+    "path": "stage_f/run_f2_single_seed.py",
+    "sha256": "04d69112947cd6d9d327ccd064a7a22b5df02f17f81d411e48bf7d04203e5f5b"
+  },
+  "acceptance_override": {
+    "path": "stage_f/accept_f2_single_seed.py",
+    "sha256": "8d004654c0ca2c505d5e6f1dbdf8ded49020d91f1b3bd60ac70ddfc687fead38"
+  },
+  "output_root": "outputs/stage_f/f2_2_single_seed_engineering_v2",
+  "acceptance_output": "outputs/stage_f/f2_2_single_seed_engineering_acceptance_v1.json",
+  "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v1",
+  "correction_scope": "when floor(batch_size*0.5) equals zero, skip generator call and append zero augmented samples",
+  "training_data_changed": false,
+  "folds_changed": false,
+  "seed_changed": false,
+  "architecture_changed": false,
+  "loss_changed": false,
+  "training_schedule_changed": false,
+  "collapse_thresholds_changed": false,
+  "cost_limits_changed": false,
+  "validation_keys_changed": false,
+  "stress_protocol_changed": false,
+  "candidate_metrics_read_before_correction": false
+}

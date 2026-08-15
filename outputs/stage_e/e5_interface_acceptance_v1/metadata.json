@@ -1,0 +1,108 @@
+{
+  "stage": "E-5.1",
+  "interface_id": "e5_unified_interface_v1",
+  "generated_at_utc": "2026-07-25T06:57:35.276065+00:00",
+  "baseline_training_executed": false,
+  "future_or_sealed_data_read": false,
+  "screening_accessed": false,
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "models": [
+    "temporal_no_graph_no_text",
+    "time_industry_no_text"
+  ],
+  "prediction_contract_grid": [
+    {
+      "model_id": "temporal_no_graph_no_text",
+      "seed": 20260723,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    },
+    {
+      "model_id": "temporal_no_graph_no_text",
+      "seed": 20260724,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    },
+    {
+      "model_id": "temporal_no_graph_no_text",
+      "seed": 20260725,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    },
+    {
+      "model_id": "time_industry_no_text",
+      "seed": 20260723,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    },
+    {
+      "model_id": "time_industry_no_text",
+      "seed": 20260724,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    },
+    {
+      "model_id": "time_industry_no_text",
+      "seed": 20260725,
+      "row_count": 1500,
+      "frozen_key_count": 1500,
+      "missing_key_count": 0,
+      "extra_key_count": 0,
+      "maximum_target_difference": 9.75781955236954e-17
+    }
+  ],
+  "config_sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4",
+  "prediction_schema_sha256": "61c6865426f3ed3115a09f12f153c2f1802b192554d158101fd47c27c88849bf",
+  "fixture_config_sha256": "cc07b20d662b38c2cc14146bbd64aa576fb511e4ab233da272cbcfea1195ccd7",
+  "text_view_hashes": {
+    "E_RO_01/no_text": "6977922bf30a2f909e6721ca5a6875db62013f6e88b8257d7191f2d9beacaef3",
+    "E_RO_01/tfidf_svd": "c5f968e25c454a7eb7afe4daf00f2aef053f4b6c63e84b9151d35f3e99c77ce8",
+    "E_RO_01/semantic_bge": "a9c8f5ce5cbd585508587f5587f7116cf051c29e589230813efff16608f7c4de",
+    "E_RO_02/no_text": "baf80ccbdd18108de9b248ef4e575f170cc5fe37565f44ac2543f512c2db110a",
+    "E_RO_02/tfidf_svd": "07eb4a50d0e130e598d90748ce0f3cd6330daf06978c2baa211d4efe2d2eb101",
+    "E_RO_02/semantic_bge": "b1de85bf94fbc532fc9db653b29b70f4578f5086f3c5f73bb4543e18dad03ca7",
+    "E_RO_03/no_text": "fd8b69d403156d0f9a0a23d7644559b3dc510d87e4b3eef089e5987bce451f42",
+    "E_RO_03/tfidf_svd": "5ecaae614cae46ca52421c5f7a2d23ccf71f2435c7b38933f472294d023c2851",
+    "E_RO_03/semantic_bge": "66fa35da3541caf54718baf8943b8fc229334ba4849a588fb2ba2225a6949be4"
+  },
+  "artifacts": {
+    "frozen_validation_keys_sha256": "8803c7691f3d41b58c54795dfbe56d6ffd3260edb6caad4a82372cc31bf4b315",
+    "unified_predictions_sha256": "325e5ffea084f7f1a1aa4d3cca7ce3a2fd2f89f9181cea48cfe57b26c8b815f5",
+    "environment_sha256": "a047959376c0283f1aa4b0daabd745c456efb98812fee7d21bcfee006cd526f2",
+    "fold_metrics_sha256": "831cb383bed9905fb3b438a749a86398ae8c493e8015792250bfb0acd4ce1662",
+    "seed_metrics_sha256": "cc4166f47ebe5c1f43feb2afe053ed15b960179d67a75f09f0677e594b8fdf5b",
+    "overall_metrics_sha256": "1ed50b988177700f7dbe37372e1b455641ea358482c72461c595ebe1bc7de21b",
+    "seed_summary_sha256": "bd43d75c4db6e4629a73759aedc353ac4a2e6ef843e86431c96f51b210b39021",
+    "pairwise_seed_stability_sha256": "0a0614777a0760393642b6eb6777b9d0f63fccdf15ba93537f1d7785f37eaba7",
+    "diagnostics_per_stock_sha256": "c1373524d743cc1b3878a9e12ca5a14e43ffe7c5b38e8f4e2054635eef78cab5",
+    "diagnostics_industry_sha256": "4bb20f3a2769a4117a3c23d6702ab067d6efe8450dec2bf2c5b6135be31ab7ee",
+    "diagnostics_market_cap_sha256": "cf424c8d0b84b7f4bbe0f6fd2182460e0fe113670183f83a289fb112506c551a",
+    "diagnostics_return_decile_sha256": "6a99c194336a1cb3f6ecb7429fa50e87ff8c7236f0876af7b4ad25aaa123c156",
+    "diagnostics_text_availability_sha256": "3417c219a08d456f964eec248269968d991a9830e8bc4ae3272f7af6818799cb"
+  },
+  "batch_sha256": "7013461b447d04fb7469fc4f1802a4c7aadb6b5c03d8defadc9b9dcc91d81f55"
+}

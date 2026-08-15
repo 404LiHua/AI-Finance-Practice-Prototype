@@ -1,0 +1,40 @@
+{
+  "stage": "E-5.3 neural and real-stock-node graph single-seed acceptance",
+  "generated_at_utc": "2026-07-25T08:01:44.568818+00:00",
+  "passed": true,
+  "checks": {
+    "config_locked_before_training": true,
+    "model_set_exactly_four": true,
+    "source_and_attribution_hashes_valid": true,
+    "three_folds_one_seed_twelve_receipts": true,
+    "no_failures": true,
+    "prediction_contract_complete": true,
+    "independent_loading_within_tolerance": true,
+    "timegnn_is_deterministic_no_gumbel": true,
+    "real_stock_graph_has_three_fold_receipts": true,
+    "real_stock_graph_registry_valid": true,
+    "real_stock_graph_order_consistent": true,
+    "metrics_finite": true,
+    "independent_metric_recalculation_matches": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "engineering_pass_declared": true,
+    "no_selection_deletion_or_promotion": true,
+    "future_and_screening_not_accessed": true
+  },
+  "models": [
+    "lstm_price_l8",
+    "tcn_price_l8",
+    "timegnn_deterministic_topk_l8",
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "engineering_seed": 20260725,
+  "selection_exposure": "single-seed TRAIN/VALIDATION engineering receipt only; no ranking, deletion, candidate promotion, or SCREENING",
+  "config_sha256": "6ee08295cd508f97218390b2e2564ae638bb5b58ecbd86047e0565a0393a6a43",
+  "metadata_sha256": "c93b55f1bf164ff87d429f961208c00f8698f9809e1f23ffebaf13fa88974963"
+}

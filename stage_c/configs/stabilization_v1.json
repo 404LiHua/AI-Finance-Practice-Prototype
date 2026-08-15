@@ -1,0 +1,56 @@
+{
+  "experiment_name": "stage_c_30stocks_graph_stabilization",
+  "seeds": [20260723, 20260724, 20260725],
+  "variants": {
+    "temporal_only_control": {
+      "description": "仅时域 Transformer 稳定控制组",
+      "graph_mode": "identity",
+      "use_frequency": false,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 2
+    },
+    "fixed_temporal_graph_control": {
+      "description": "固定时间邻接图对照",
+      "graph_mode": "temporal_neighbor",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 2
+    },
+    "deterministic_topk2": {
+      "description": "确定性 Softmax Top-k=2",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 2
+    },
+    "deterministic_topk4": {
+      "description": "确定性 Softmax Top-k=4",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "sampling_mode": "deterministic",
+      "temperature_schedule": "constant",
+      "top_k": 4
+    },
+    "annealed_gumbel_topk2": {
+      "description": "Gumbel Top-k=2 温度从 1.5 线性退火到 0.3",
+      "graph_mode": "learned",
+      "use_frequency": true,
+      "fusion_mode": "gated",
+      "sampling_mode": "gumbel",
+      "temperature_schedule": "linear",
+      "temperature_start": 1.5,
+      "temperature_end": 0.3,
+      "top_k": 2
+    }
+  },
+  "cross_sectional_gate": {
+    "required": "A stabilized learned-graph variant must beat both controls on mean MAE and mean RMSE, and its MAE standard deviation must not exceed the temporal-only control."
+  }
+}

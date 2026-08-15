@@ -1,0 +1,16 @@
+{
+  "model_id": "minimalist_price_only_l8",
+  "family": "minimalist_transformer",
+  "fold_id": "E_RO_03",
+  "seed": 20260723,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "9cd455255e4a78ff0a3eaa98653ba846c64c6a7d36cfe387a46eeb5acefecb0a",
+  "resolved_config_sha256": "dd9beb47958b7520ee362154452da01ccac2e4805e4c4d6cc08680e78d27da0d",
+  "duration_seconds": 9.660041700000875,
+  "training_seconds": 9.647773699998652,
+  "epochs_completed": 14,
+  "best_validation_loss": 0.25724896788597107,
+  "parameter_count": 9121
+}

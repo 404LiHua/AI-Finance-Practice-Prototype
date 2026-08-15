@@ -1,0 +1,2 @@
+published_at,source_name,source_item_id,source_url,stock_code,title,body,license_id,retrieved_at,source_record_sha256
+2023-01-03T09:00:00+08:00,LICENSED_PROVIDER,provider-item-id,https://provider.example/item-id,000001.SZ,标题,正文,NEWS_COMMERCIAL_LICENSE_V1,2023-01-03T10:00:00+08:00,REPLACE_WITH_SHA256_OF_CANONICAL_RECORD

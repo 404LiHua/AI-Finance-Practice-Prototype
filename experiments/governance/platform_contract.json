@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "contract_type": "QRG_PLATFORM",
+  "platform_id": "ai-finance-prototype-stage-b-local-pytorch-cpu-v1",
+  "reuse_mode": "PROJECT_LOCAL",
+  "source_platform_contract_sha256": null,
+  "inherited_evidence": []
+}

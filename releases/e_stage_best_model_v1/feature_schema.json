@@ -1,0 +1,22 @@
+{
+  "input_shape": [
+    "batch",
+    8,
+    100,
+    6
+  ],
+  "feature_order": [
+    "return_1w",
+    "log_return_1w",
+    "return_vol_4",
+    "return_vol_12",
+    "model_close",
+    "model_volume_hands"
+  ],
+  "input_contract": "E-4 adapter normalized numeric_price_l8 view; stock order must exactly match stock_order.json",
+  "output_shape": [
+    "batch",
+    100
+  ],
+  "three_seed_aggregation": "arithmetic mean"
+}

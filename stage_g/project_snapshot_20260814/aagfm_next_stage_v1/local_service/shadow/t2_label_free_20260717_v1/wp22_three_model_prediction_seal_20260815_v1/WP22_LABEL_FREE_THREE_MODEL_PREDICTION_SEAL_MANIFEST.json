@@ -1,0 +1,26 @@
+{
+  "node_id": "WP22_LABEL_FREE_THREE_MODEL_PREDICTION_SEAL_V1",
+  "status": "SEALED_LABEL_FREE_SHADOW_PENDING_INDEPENDENT_T2_LABEL_AUTHORIZATION",
+  "origin_date": "2026-07-17",
+  "rows": 300,
+  "models": {
+    "incumbent": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "c0": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+    "c1": "REV8_C1_RG2_STATE_AUGMENTED_HETEROSKEDASTIC_ORDINAL"
+  },
+  "input_sha256": {
+    "incumbent": "be01102b88eac4595ed445f05fc28af07adbb618205c0404aa544b672b926a1f",
+    "c0": "7cbb52bf82f56f8833e19a80840a304df63080ca859ba1f7ba2bc9581c5abc52",
+    "c1": "8fae5de6759d628697673d99b5cb3f11a8525b13fc7763ad44c939b7020300ed"
+  },
+  "target_labels_read": false,
+  "fresh_labels_read": false,
+  "screening_read": false,
+  "final_read": false,
+  "metrics_read": false,
+  "production_registry_modified": false,
+  "automatic_trading": false,
+  "production_replacement_allowed": false,
+  "gpu_used": false,
+  "created_at_utc": "2026-08-15T11:34:55.672929+00:00"
+}

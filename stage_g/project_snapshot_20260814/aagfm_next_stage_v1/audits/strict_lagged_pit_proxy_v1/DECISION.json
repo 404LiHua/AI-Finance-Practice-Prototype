@@ -1,0 +1,8 @@
+{
+  "status": "PASS_STRICT_LAG_PROXY",
+  "findings": [],
+  "strict_lag_proxy_only": true,
+  "source_timestamp_proof": false,
+  "promotion_allowed": false
+}
+

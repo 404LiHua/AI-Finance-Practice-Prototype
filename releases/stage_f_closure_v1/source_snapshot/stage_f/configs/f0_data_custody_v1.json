@@ -1,0 +1,34 @@
+{
+  "policy_id": "stage_f_development_custody_v1",
+  "status": "FROZEN_BEFORE_STAGE_F_TRAINING",
+  "development_date_ceiling": "2023-06-02",
+  "forbidden_paths": [
+    "data/screening",
+    "data/final",
+    "outputs/screening",
+    "outputs/final",
+    "outputs/stage_d/d5_screening_20240614_20250613",
+    "outputs/stage_f/screening",
+    "outputs/stage_f/final"
+  ],
+  "forbidden_name_fragments": [
+    "stage_c_recommended_v2_c4_20230609_20240607",
+    "stage_d_d5_20240614_20250613",
+    "d5_screening_20240614_20250613",
+    "screening_predictions",
+    "future_f_screening",
+    "stage_f_final",
+    "project_final"
+  ],
+  "sealed_intervals": [
+    {"interval_id": "C4_SCREENING_ALREADY_CONSUMED", "start": "2023-06-09", "end": "2024-06-07"},
+    {"interval_id": "D5_SCREENING_ALREADY_CONSUMED", "start": "2024-06-14", "end": "2025-06-13"}
+  ],
+  "future_data": {
+    "earliest_possible_start": "2025-06-20",
+    "status": "NOT_ACQUIRED_NOT_READ_NOT_AUTHORIZED",
+    "screening_requires_frozen_candidate_rules_and_explicit_authorization": true,
+    "final_separately_custodied": true
+  },
+  "violation_action": "raise StageFDataCustodyViolation before opening or parsing the path"
+}

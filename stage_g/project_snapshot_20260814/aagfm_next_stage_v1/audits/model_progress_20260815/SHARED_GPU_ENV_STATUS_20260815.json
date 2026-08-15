@@ -1,0 +1,13 @@
+{
+  "status": "CUDA_TRAINING_READY_CUPY_HEADER_LIMITED",
+  "python": "C:\\Users\\27793\\Documents\\deep\\cuda-venv\\Scripts\\python.exe",
+  "torch": "2.9.1+cu128",
+  "xgboost": "3.0.5",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "xgboost_device_cuda_smoke": "PASS",
+  "cupy_header_lookup": "PARTIAL",
+  "resource_policy": "CPU audits/metrics/I-O; one concurrent GPU training task; CPU inference allowed",
+  "labels_read": false,
+  "production_kernel_modified": false
+}

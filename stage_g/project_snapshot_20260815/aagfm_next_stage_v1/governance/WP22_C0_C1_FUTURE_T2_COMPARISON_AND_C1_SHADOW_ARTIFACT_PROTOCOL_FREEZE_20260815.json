@@ -1,0 +1,59 @@
+{
+  "node_id": "WP22_C0_C1_FUTURE_T2_COMPARISON_AND_C1_SHADOW_ARTIFACT_PROTOCOL_FREEZE_V1",
+  "status": "FROZEN_BEFORE_C1_FULL_REFIT_OR_FUTURE_INPUT_OR_LABEL_READ",
+  "purpose": "Create a non-production, label-free C1 shadow artifact and pre-register the only fair future comparison between the two formal development candidates. This protocol does not authorize a production change.",
+  "target": {
+    "id": "T2_MARKET_RELATIVE_FIXED",
+    "definition": "same-origin valid-stock four-week raw return minus the same-origin cross-sectional median, classified at fixed -1%/+1% thresholds",
+    "production_replacement_allowed": false
+  },
+  "registered_candidates": [
+    {
+      "id": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL",
+      "upstream_protocol_sha256": "4556c4aa3c400f3dd725736c9a52a31897e66db000c44253810db8513446ed31",
+      "future_features": ["14 RG3 technical features", "realized_volatility_20d", "downside_volatility_60d", "market_volatility_4w"]
+    },
+    {
+      "id": "REV8_C1_RG2_STATE_AUGMENTED_HETEROSKEDASTIC_ORDINAL",
+      "upstream_protocol_sha256": "eb036f9b0d9a666bbc1df1c02363a775fa45efd47ed47694ec7532f6fb8092ec",
+      "future_features": ["14 RG3 technical features", "18 RG2 PIT state/graph-summary features", "realized_volatility_20d", "downside_volatility_60d", "market_volatility_4w"]
+    }
+  ],
+  "excluded_candidates": {
+    "REV8_C2_CUDA_FIXED_RG2_RG3_XGBOOST": "development worst-fold hard gate failed; it is not eligible for future selection",
+    "REV8_C3_FIXED_HALF_CUDA_HALF_INCUMBENT_BLEND": "post-result exploration; it is not eligible for formal selection"
+  },
+  "immutable_development_inputs": {
+    "samples_sha256": "60c1322c228a7a2e52b9c0b5dec054ba5a95de242170cca17759a7fb631091b6",
+    "weekly_panel_sha256": "4633c51055154309a9af766ea51c75f545783c82f4046261cc211f6a8449815f",
+    "rg3_features_sha256": "04f6b11b7296aa1d92bdc0a97d652565672ac90b1a01601b67f9a629989a9525",
+    "rg2_state_features_sha256": "1b06bc5a5b62f9f3d8ab0337261cb269e32972a8a9305c9fd966e9aa732ff09a",
+    "heteroscedastic_source_sha256": "229a2555d4ff051343e8f0642817840f5dbefbcd5cfd91e6ee2907700fa468bc",
+    "missingness_remediation_sha256": "0c211ecf896b87db1200d211849553afd564002356ed82f9e057d445f64a0b99"
+  },
+  "c1_full_refit": {
+    "allowed_inputs": "development assets above only; no FRESH, SCREENING, FINAL, sealed holdout, or future target payload",
+    "fit_population": "all unique development trade_date/stock_code rows with target_valid=true",
+    "location_features": "the exact 14 RG3 plus 18 RG2 order from the frozen C1 protocol",
+    "scale_features": ["realized_volatility_20d", "downside_volatility_60d", "market_volatility_4w"],
+    "model": "heteroscedastic proportional odds; location_l2=0.001; scale_l2=0.01; LBFGS double precision max_iter=200",
+    "calibration": "three expanding TRAIN-only-style chronological OOF splits over the full development panel; 11-week embargo; 26-week minimum fit; exact frozen temperature/prior grid; choose maximum MCC subject to Brier <= grid minimum + 0.005; ties use lower temperature then lower shrinkage",
+    "artifact_status": "NON_PRODUCTION_LABEL_FREE_SHADOW_ARTIFACT"
+  },
+  "future_evaluation": {
+    "minimum_qualified_origins": 12,
+    "origin_rule": "each origin strictly later than 2026-06-26, with completed four-week outcomes; keys must be from a frozen point-in-time universe",
+    "required_before_prediction": ["future RG3 coverage and source_trade_date PIT audit", "future RG2 18-feature coverage and PIT-date audit for C1", "future market_volatility_4w construction receipt", "candidate and incumbent prediction input SHA manifests", "new one-time label authorization naming exactly these two candidates and the incumbent"],
+    "order": ["freeze inputs and artifact hashes", "generate and seal C0, C1, and incumbent predictions without labels", "verify keys and prediction hashes", "single authorized label read", "report MCC, Brier, ECE, weekly IC, IC confidence interval, and paper-cost metrics", "single-machine shadow/paper before any promotion review"],
+    "selection": "A candidate must independently meet all pre-registered gates. If both pass, select the one with higher mean weekly IC only if its 95% moving-block IC confidence interval lower bound is positive and it has no worse MCC, Brier, or paper-cost gate outcome; otherwise retain incumbent and do not break a tie post hoc.",
+    "no_compensation": "No average improvement can offset a worst-window, calibration, PIT, coverage, or paper-cost failure."
+  },
+  "resources": {
+    "c1_full_refit": "CPU only; torch intra-op threads=2 and inter-op threads=1",
+    "future_prediction": "C0/C1 CPU sequentially; no concurrent GPU workload",
+    "automatic_trading": false
+  },
+  "forbidden": ["using WP10 outputs or labels", "changing C0/C1 hyperparameters", "adding C2 or C3 to the formal family", "production registry modification", "continuous-return head production replacement"]
+}
+
+

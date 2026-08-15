@@ -1,0 +1,43 @@
+{
+  "freeze_id": "stage_d_frets_l4_shrink_a075_d4_20260724",
+  "candidate_model": "frets_return_l4__fixed_shrink_a075",
+  "base_model": "frets_return_l4",
+  "checkpoint_fold": "D_RO_03",
+  "feature_columns": [
+    "return_1w"
+  ],
+  "sequence_length": 4,
+  "shrinkage_alpha": 0.75,
+  "aggregation": "arithmetic_mean",
+  "aggregation_order": "apply shrinkage to each seed prediction, then average three seeds",
+  "baseline": {
+    "model_id": "naive",
+    "prediction": 0.0,
+    "training_required": false
+  },
+  "upstream_source": {
+    "path": "stage_d/frozen/frets_l4_shrink_a075_d4/upstream/FreTS.py",
+    "sha256": "69358713ec370ec62d71641f56ae8201c175a256e157130c32650827dbf29415",
+    "bytes": 3939
+  },
+  "checkpoints": [
+    {
+      "seed": 20260723,
+      "path": "stage_d/frozen/frets_l4_shrink_a075_d4/checkpoints/seed20260723/model.pt",
+      "sha256": "355e9d6a5470352012802abad0052247df44ae58467d2607c15277dafb6c7bef",
+      "bytes": 795990
+    },
+    {
+      "seed": 20260724,
+      "path": "stage_d/frozen/frets_l4_shrink_a075_d4/checkpoints/seed20260724/model.pt",
+      "sha256": "b6fecc27ce656e4465b2212aabb3a9d4a3f64bca2494b4f7dd0b5ed9b06634b2",
+      "bytes": 795990
+    },
+    {
+      "seed": 20260725,
+      "path": "stage_d/frozen/frets_l4_shrink_a075_d4/checkpoints/seed20260725/model.pt",
+      "sha256": "e6c91240a924a2988584f88d04841674746468f8da2c60eb566f5da22e6b3b5e",
+      "bytes": 795990
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "node_id": "WP22_C1_LABEL_FREE_SHADOW_INFERENCE_V1",
+  "status": "PASS_NON_PRODUCTION_C1_LABEL_FREE_SHADOW_INFERENCE",
+  "artifact_sha256": "f184c45372317a5cd70d2e4ce368e420659857cc60b3a4f1edb0417f7cd008ca",
+  "model_sha256": "563ce8a19fd6a9aea20171abc34707fc866fa5ead3b34f0b8f395f5b0032b53c",
+  "rg3_sha256": "c1f4a797448c379ae423c26c1ba04b7993bb9ef395bcc64623f02b43a3329818",
+  "rg2_sha256": "cbeea9ea9213a617d9d02437a0043636b691f732508ec6f3cc186a753d1e7bbf",
+  "scale_panel_sha256": "d4ce5e0173b66cd3bc1e7fd86dd531f1f65d172498ecc5a6c6a9730d156de838",
+  "output_sha256": "8fae5de6759d628697673d99b5cb3f11a8525b13fc7763ad44c939b7020300ed",
+  "rows": 300,
+  "target_columns_read": false,
+  "fresh_payloads_opened": false,
+  "wp10_outputs_read": false,
+  "metrics_read": false,
+  "gpu_used": false,
+  "production_registry_modified": false,
+  "automatic_trading": false,
+  "created_at_utc": "2026-08-15T11:33:55.329293+00:00"
+}

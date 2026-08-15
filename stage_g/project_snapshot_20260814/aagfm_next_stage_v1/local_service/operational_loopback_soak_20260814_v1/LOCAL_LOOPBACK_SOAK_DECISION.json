@@ -1,0 +1,31 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_LOOPBACK_SOAK_V1",
+  "status": "PASS_LOCAL_LOOPBACK_SOAK",
+  "failure": null,
+  "policy_sha256": "e3d17e52200bb65dfc6456a532da5a0752503fd87417d134fe604d786746672b",
+  "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+  "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+  "requests": 121,
+  "latency_seconds": {
+    "min": 0.044894900000144844,
+    "median": 0.06101209999906132,
+    "p95": 0.13935039999887522,
+    "p99": 0.16133846000120683
+  },
+  "tracemalloc_current_growth_bytes": 181299,
+  "tracemalloc_peak_bytes": 7997393,
+  "cache_states": {
+    "miss": 1,
+    "hit": 120
+  },
+  "target_labels_read": false,
+  "fresh_labels_read": false,
+  "wp10_outputs_read": false,
+  "metrics_read": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "automatic_trading": false,
+  "created_at_utc": "2026-08-14T06:24:49.208191+00:00"
+}
+
+

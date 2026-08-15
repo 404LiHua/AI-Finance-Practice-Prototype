@@ -1,0 +1,156 @@
+{
+  "protocol_id": "stage_f_f2_bounded_gan_addendum_v1",
+  "status": "FROZEN_PROTOCOL_ONLY_NO_GAN_TRAINING_AUTHORIZATION",
+  "frozen_at": "2026-07-28",
+  "gan_candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "base_forecaster": "stock_node_gwnet_fixed_industry_l8",
+  "development_date_ceiling": "2023-06-02",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "source_registry": {
+    "gan_implementation": {
+      "path": "stage_f/gan.py",
+      "sha256": "8f1f3741340185542a23190c1851b92361587b8f1f944a5ab209769abb967165"
+    },
+    "contract_test": {
+      "path": "stage_f/tests/test_f2_gan_contract.py",
+      "sha256": "db08b8660a799bb53bde61a682cef6223377b3038a81a939c4270c5ed174949d"
+    },
+    "freeze_implementation": {
+      "path": "stage_f/freeze_f2_gan_addendum.py",
+      "sha256": "17e1d9be7c4a2d400881285436c0d0d23d8cc1acbbfe3380513ed55816043c93"
+    },
+    "acceptance_implementation": {
+      "path": "stage_f/accept_f2_gan_addendum.py",
+      "sha256": "a8af13bcb3ae8b7e94def8ecde0f58b3047dc37e30bff51809a74bda165384f5"
+    }
+  },
+  "upstream_f1_conclusion": {
+    "path": "outputs/stage_f/f1_4_unified_robustness_acceptance_v1.json",
+    "sha256": "bd6cd0d7a20c49f21c237a8db0a25c9f38274599beb3d6abd57df45bd9b96f7a",
+    "required_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT"
+  },
+  "architecture": {
+    "candidate_count": 1,
+    "input_contract": "batch x 8 weeks x 100 stocks x 6 numeric features",
+    "generator": {
+      "type": "bounded_conditional_residual_temporal_generator",
+      "constructor": {
+        "feature_count": 6,
+        "noise_dim": 8,
+        "hidden_channels": 32,
+        "max_delta": 0.05
+      },
+      "shared_stock_encoder": true,
+      "temporal_operator": "Conv1d",
+      "residual_output": true,
+      "unavailable_node_delta_forced_zero": true
+    },
+    "critic": {
+      "type": "spectral_temporal_wasserstein_critic",
+      "constructor": {
+        "feature_count": 6,
+        "hidden_channels": 32
+      },
+      "shared_stock_encoder": true,
+      "temporal_operator": "Conv1d",
+      "stock_pooling": "availability_masked_mean",
+      "output": "one_critic_score_per_batch_item"
+    }
+  },
+  "normalization": {
+    "generator": "GroupNorm(1,32); no BatchNorm",
+    "critic": "spectral_norm on every Conv1d and Linear; no BatchNorm",
+    "input_features": "reuse frozen stage-E TRAIN-fitted numeric normalization without refit",
+    "generated_delta_space": "normalized numeric feature space"
+  },
+  "losses": {
+    "critic": {
+      "type": "wasserstein_gp_with_drift",
+      "formula": "mean(fake_score)-mean(real_score)+10*gradient_penalty+0.001*mean(real_score^2)",
+      "gradient_penalty_weight": 10.0,
+      "drift_weight": 0.001
+    },
+    "generator": {
+      "formula": "realism+0.5*hardness+2.0*energy",
+      "realism": "-mean(fake_score)",
+      "hardness": "negative clipped increase in frozen stage-E forecaster loss",
+      "hardness_weight": 0.5,
+      "maximum_hardness_gain": 0.05,
+      "energy": "(mean(abs(delta))-0.02)^2",
+      "energy_weight": 2.0,
+      "target_mean_absolute_delta": 0.02
+    },
+    "forecaster_retraining": {
+      "base_loss": "unchanged stage-E incumbent training loss",
+      "augmentation_ratio": 0.5,
+      "generator_state": "frozen",
+      "scope": "TRAIN only",
+      "validation_augmentation_allowed": false
+    }
+  },
+  "pretraining": {
+    "critic_warmup_epochs": 5,
+    "joint_epochs": 20,
+    "critic_steps_per_generator_step": 3,
+    "optimizer": "Adam",
+    "generator_learning_rate": 0.0001,
+    "critic_learning_rate": 0.0001,
+    "betas": [0.0, 0.9],
+    "checkpoint_selection": "final_epoch_only_if_all_health_checks_pass",
+    "validation_based_checkpoint_selection_allowed": false
+  },
+  "collapse_policy": "any_condition_is_immediate_hard_failure_keep_receipt",
+  "collapse_failure_conditions": [
+    "any non-finite generator, critic, gradient-penalty, forecaster or total loss",
+    "gradient-penalty value above 100 or non-finite for any observed step",
+    "critic real-minus-fake score gap absolute value below 1e-4 for three consecutive epochs",
+    "critic real-minus-fake score gap absolute value above 20 for any epoch",
+    "mean absolute generated delta below 0.001 for three consecutive epochs",
+    "mean absolute generated delta above 0.045 for any epoch",
+    "per-feature generated-delta standard deviation below 1e-4 for at least half of features",
+    "pairwise generated-delta cosine similarity above 0.995 for at least 95 percent of sampled pairs",
+    "generator gradient norm below 1e-8 or above 100 for three consecutive updates",
+    "critic gradient norm below 1e-8 or above 100 for three consecutive updates",
+    "generated tensor shape, sample key, node mask or feature order differs from frozen input contract",
+    "unavailable node receives any non-zero generated delta",
+    "runtime or parameter cost exceeds a frozen cost limit"
+  ],
+  "cost_limits": {
+    "maximum_generator_parameters": 100000,
+    "maximum_critic_parameters": 100000,
+    "maximum_combined_gan_parameters": 200000,
+    "maximum_total_nine_run_seconds": 360.0,
+    "maximum_single_fold_seed_seconds": 40.0,
+    "maximum_training_runs": 9,
+    "extra_architecture_search_runs": 0
+  },
+  "frozen_evaluation": {
+    "f0_hard_gates_sha256": "be3132911d2b7354492ad1a2998d1e0754c04b658c8f529702df6b3e64183176",
+    "same_validation_sample_keys_required": true,
+    "same_stress_scenarios_required": true,
+    "threshold_change_allowed": false,
+    "f1_negative_conclusion_change_allowed": false
+  },
+  "authorization": {
+    "gan_protocol_freeze_authorized": true,
+    "gan_training_authorized": false,
+    "explicit_training_authorization_required": true,
+    "authorization_scope_when_requested": "F-2.1 minimal determinism, shape, overfit and boundary training checks only"
+  },
+  "restrictions": {
+    "optimizer_step_allowed_by_this_addendum": false,
+    "new_gan_architecture_allowed": false,
+    "fold_change_allowed": false,
+    "seed_change_allowed": false,
+    "validation_fit_allowed": false,
+    "validation_augmentation_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "paths": {
+    "freeze_receipt": "outputs/stage_f/f2_gan_addendum_freeze_receipt_v1.json",
+    "acceptance_receipt": "outputs/stage_f/f2_gan_addendum_acceptance_v1.json"
+  },
+  "next_action_after_acceptance": "await explicit user authorization before any F-2.1 GAN optimizer step"
+}

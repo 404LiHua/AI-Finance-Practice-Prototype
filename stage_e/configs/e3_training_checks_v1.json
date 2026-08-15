@@ -1,0 +1,40 @@
+{
+  "experiment_id": "e3_training_checks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "paths": {
+    "panel": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/panel_v2.csv.gz",
+    "stock_order": "data/processed/e3_graphs_100stocks_v1/stock_order.csv",
+    "output_root": "outputs/stage_e/e3_training_checks_v1"
+  },
+  "data": {
+    "stock_count": 12,
+    "cross_section_count": 24,
+    "lookback_weeks": 12,
+    "minimum_target_coverage": 0.90,
+    "feature_columns": ["return_1w", "log_return_1w", "return_vol_4", "return_vol_12", "model_close", "model_volume_hands"],
+    "target_column": "target_return"
+  },
+  "model": {
+    "hidden_dim": 64,
+    "top_k": 8,
+    "dropout": 0.0,
+    "sampling_mode": "deterministic"
+  },
+  "overfit": {
+    "seed": 20260725,
+    "epochs": 500,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0,
+    "required_loss_reduction": 0.95,
+    "maximum_raw_mae": 0.006
+  },
+  "stability": {
+    "seeds": [20260723, 20260724, 20260725],
+    "epochs": 300,
+    "learning_rate": 0.005,
+    "weight_decay": 0.00001,
+    "minimum_pairwise_edge_jaccard": 0.50,
+    "minimum_pairwise_prediction_correlation": 0.50,
+    "maximum_mae_coefficient_of_variation": 0.50
+  }
+}

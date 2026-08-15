@@ -1,0 +1,9 @@
+module_id,status,reason,next_action
+NUMERIC_SEQUENCE8_H4_BACKBONE,ALLOWED_H4_RESEARCH_ONLY,Strict-PIT sequence8 numeric tensor and four-trading-day absolute H4 labels are bound.,Build a single-task four-trading-day H4 research candidate with dry-run first. No production-T2-comparable or replacement claim is allowed.
+TITLE_BODY_HASH_NGRAM,ALLOWED_RESTRICTED_RESIDUAL_ONLY,R1 text-only signal gate passed.,Use only as small auditable residual/gate source; do not replace numeric backbone.
+TFIDF_BODY_NGRAM,CLOSED_NEGATIVE,R1 failed the positive-block gate.,Keep as negative evidence; no tuning or fusion.
+FROZEN_CN_SENTENCE_EMBEDDING,CLOSED_MISSING_LOCAL_MODEL,No local frozen model and SHA-256 are bound.,Do not execute until model package is provided and frozen.
+R26_LOW_GAMMA_XGB_ANCHOR_BLEND,CLOSED_FROZEN_TEST_FAIL,R26 closure report says promotion_allowed=false.,Do not tune gamma/window/seed.
+PRODUCTION_T2_KERNEL,PRESERVE_CURRENT,Current production kernel cannot be replaced without restored T2 semantics and full gates.,Keep RG_OBGNET_CONFIRMED_SAFE_V1_1 unchanged.
+
+

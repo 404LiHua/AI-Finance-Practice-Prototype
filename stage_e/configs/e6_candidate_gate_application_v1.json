@@ -1,0 +1,38 @@
+{
+  "application_id": "e6_candidate_gate_application_v1",
+  "status": "ONE_SHOT_AUTHORIZED_NOT_YET_CONSUMED",
+  "authorized_at": "2026-07-25",
+  "scope": "read the existing eight non-baseline model diagnostic rows once and apply the frozen E-6.1 hard gates",
+  "gate_config": "stage_e/configs/e6_candidate_gate_v1.json",
+  "gate_config_sha256": "7769f13af45110cb7f83f575193e352037150f4d3b48ec3beaab3d22c0f51f68",
+  "gate_freeze_receipt": "outputs/stage_e/e6_candidate_gate_freeze_receipt_v1.json",
+  "gate_freeze_receipt_sha256": "88316f6ffa6ca542fec5e074f19957c5e7de9baf05fc968221c73708f8250b17",
+  "gate_implementation": "stage_e/e6/gates.py",
+  "gate_implementation_sha256": "1d03d8a216184c2f9e5f373b48c762201bfaeb59507a4b5ffd6b64e1129db225",
+  "one_shot_executor": "stage_e/apply_e6_candidate_gates_once.py",
+  "one_shot_executor_sha256": "08beadc79096bebed738c17f09696b038f671af75edb9871a65420f2d5aa79bb",
+  "acceptance_entrypoint": "stage_e/accept_e6_candidate_gate_application.py",
+  "acceptance_entrypoint_sha256": "9d91a9e1c01ca66a6329feef86dfce53ec9fdf0bb7bf74042f616bc418a2c2b8",
+  "output_root": "outputs/stage_e/e6_candidate_gate_application_v1",
+  "one_shot_controls": {
+    "source_table_read_limit_each": 1,
+    "refuse_if_output_directory_nonempty": true,
+    "acceptance_must_not_reread_source_candidate_diagnostics": true,
+    "candidate_ranking_allowed": false
+  },
+  "restrictions": {
+    "second_application_run_allowed": false,
+    "threshold_change_allowed": false,
+    "candidate_addition_allowed": false,
+    "new_training_allowed": false,
+    "checkpoint_write_allowed": false,
+    "future_or_sealed_data_allowed": false,
+    "screening_allowed": false
+  },
+  "authorized_outputs": [
+    "candidate_gate_matrix.csv",
+    "candidate_gate_failures.json",
+    "unique_candidate_recommendation.json",
+    "metadata.json"
+  ]
+}

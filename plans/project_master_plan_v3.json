@@ -1,0 +1,137 @@
+{
+  "plan_id": "project_master_plan_v3",
+  "updated_at": "2026-07-28",
+  "project_period": {
+    "start": "2026-06-01",
+    "end": "2027-06-15"
+  },
+  "baseline": {
+    "git_commit": "resolved_by_tag_v0.6.0-stage-f",
+    "git_tag": "v0.6.0-stage-f",
+    "completed_stages": ["A", "B", "C", "D", "E", "F"],
+    "current_unique_development_candidate": "stock_node_gwnet_fixed_industry_l8",
+    "candidate_gate_result": "34/34 PASS",
+    "production_approved": false
+  },
+  "execution_status": {
+    "current_stage": "G",
+    "completed_nodes": ["F-0", "F-1.1", "F-1.2", "F-1.3", "F-1.4", "F-2.0", "F-2.1", "F-2.2", "F-2.3", "F-2.4", "F-3"],
+    "f0_config_sha256": "a25cb0c9074623cd6acfbed79d65bdfa508572f8bd74ee1721aa6ade046a566e",
+    "f0_acceptance": "11/11 PASS",
+    "f1_1_acceptance": "4/4 PASS",
+    "f1_1_contract_sha256": "b0cf9e8ed7ab0134ccdea446913df5bdb327a2c81c986c24cd72d69daba478b5",
+    "f1_2_acceptance": "12/12 PASS",
+    "f1_2_effective_config_sha256": "13a505e0e237e3d0be82590dffd1e5efec68cf4bf9900d7ebe2dd5e41bdf6e61",
+    "f1_2_additional_seeds_authorized": true,
+    "f1_3_engineering_acceptance": "12/12 PASS",
+    "f1_3_stability_candidates_passing_all_gates": 0,
+    "f1_3_config_sha256": "f75b4bed6af0a6565fd67379eb2467074165427e757a8e1abca3d45df81952c1",
+    "f1_4_acceptance": "15/15 PASS",
+    "f1_4_eligible_candidate_count": 0,
+    "f1_4_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+    "f1_4_effective_config_sha256": "833f087e78e3833ed870b95c07ce652839efcdd32caee3b0b43fd74f0dcc4ca8",
+    "f2_0_gan_addendum_acceptance": "12/12 PASS",
+    "f2_0_gan_addendum_config_sha256": "52927541e34f905065a0552c7288c5205803067a97ea3c373aff0ba1d9d475ba",
+    "f2_0_unique_gan_candidate": "stock_node_gwnet_bounded_cwgan_gp_l8",
+    "f2_0_gan_training_executed": false,
+    "f2_1_minimal_health_acceptance": "10/10 PASS",
+    "f2_1_health_config_sha256": "444814e59a9e9fbe5e890b1f619782df9c3a19e31dbaa9fee896fd75d464755a",
+    "f2_1_synthetic_optimizer_steps_executed": true,
+    "f2_1_formal_fold_training_executed": false,
+    "f2_2_single_seed_acceptance": "10/10 PASS",
+    "f2_2_effective_config_sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312",
+    "f2_2_completed_fold_runs": 3,
+    "f2_2_seed": 20260725,
+    "f2_2_failed_attempts_retained": ["v1_empty_augmentation_batch", "v2_fold_cost_limit"],
+    "f2_2_additional_seeds_authorized": false,
+    "f2_3_engineering_acceptance": "11/11 PASS",
+    "f2_3_status": "ENGINEERING_PASS_STABILITY_HARD_GATE_FAIL",
+    "f2_3_config_sha256": "a1828c2be67a9ee581467ddcfdba74f4082b17bc7275a2707888e830c62db8c8",
+    "f2_3_all_run_count": 9,
+    "f2_3_stability_gates_passed": 1,
+    "f2_3_stability_gates_required": 5,
+    "f2_3_minimum_pearson": 0.3211707708579821,
+    "f2_3_minimum_spearman": 0.18395516782067126,
+    "f2_4_acceptance": "11/11 PASS",
+    "f2_4_config_sha256": "b3949000d2b5d38065b7d8a992cdf7a16c1ad407b50d157f4c9f83965336423b",
+    "f2_4_normal_prediction_rows": 31500,
+    "f2_4_stress_prediction_rows": 133812,
+    "f2_4_candidate_gate_counts": {
+      "stock_node_gwnet_tail_weighted_l8": "12/20",
+      "stock_node_gwnet_noise_aug_l8": "13/20",
+      "stock_node_gwnet_feature_mask_l8": "13/20",
+      "stock_node_gwnet_bounded_cwgan_gp_l8": "11/20"
+    },
+    "f2_4_eligible_candidate_count": 0,
+    "f2_4_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+    "f2_4_gan_stability_failure_non_compensable": true,
+    "f3_status": "STAGE_F_CLOSED",
+    "f3_version": "v0.6.0-stage-f",
+    "f3_formal_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+    "f3_release_path": "releases/stage_f_closure_v1",
+    "gan_authorized": false,
+    "screening_authorized": false,
+    "final_authorized": false
+  },
+  "authoritative_document": "plans/PROJECT_MASTER_PLAN_V3.md",
+  "future_stages": [
+    {
+      "stage": "F",
+      "name": "extreme_regime_and_robustness",
+      "start": "2026-07-27",
+      "end": "2026-09-20",
+      "target_tag": "v0.6.0-stage-f",
+      "exit": "unique robust candidate or formal no-GAN-increment conclusion"
+    },
+    {
+      "stage": "G",
+      "name": "evidence_grounded_llm_explanation",
+      "start": "2026-09-21",
+      "end": "2026-11-22",
+      "target_tag": "v0.7.0-stage-g",
+      "exit": "evidence-traceable explanation system with frozen automatic and human evaluation"
+    },
+    {
+      "stage": "H",
+      "name": "production_engineering_and_cost_aware_business_validation",
+      "start": "2026-11-23",
+      "end": "2027-04-30",
+      "target_tag": "v0.8.0-stage-h",
+      "exit": "API, SLA, security, monitoring, rollback and cost-aware evidence accepted"
+    },
+    {
+      "stage": "I",
+      "name": "independent_final_and_project_delivery",
+      "start": "2027-05-01",
+      "end": "2027-06-15",
+      "target_tag": "v1.0.0-project-final",
+      "exit": "one-shot FINAL, paper, IP evaluation, user manual and closeout package completed"
+    }
+  ],
+  "governance": {
+    "default_data_scope": "TRAIN_VALIDATION_ONLY",
+    "screening_requires_frozen_candidate_rules_and_explicit_authorization": true,
+    "final_is_separately_custodied_and_one_shot": true,
+    "negative_results_must_be_retained": true,
+    "threshold_relaxation_after_result_exposure_allowed": false,
+    "same_sample_keys_folds_seeds_and_evaluator_required": true
+  },
+  "next_action": {
+    "node": "G-0",
+    "name": "evidence-grounded explanation protocol freeze",
+    "prerequisites": [
+      "Stage F closure acceptance remains PASS",
+      "Stage E incumbent and three-seed aggregation remain frozen",
+      "all explanation evidence fields have point-in-time provenance",
+      "automatic and human evaluation gates are frozen before candidate comparison",
+      "refusal and risk-warning rules are frozen before LLM training"
+    ],
+    "forbidden_before_completion": [
+      "LLM fine-tuning before evidence and evaluation contracts are frozen",
+      "using post-prediction news or future returns in explanations",
+      "unsupported causal or return-guarantee statements",
+      "future SCREENING access",
+      "FINAL access"
+    ]
+  }
+}

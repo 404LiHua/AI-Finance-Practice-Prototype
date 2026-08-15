@@ -1,0 +1,197 @@
+[
+  {
+    "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "98c7ff9d57e14bd465d035396c8b1e9985ffe3f45ebc8650bc3a88429baf2f75",
+    "independent_load_max_abs_difference": 6.646483363681455e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "artifact_sha256": "6ae3c40aaa7cb288a32ef3cf4a04f098e13596eb150ae3b654f0c1986cee5ad9"
+    },
+    "duration_seconds": 2.4224104000004445,
+    "training_seconds": 2.3958889000005,
+    "inference_seconds": 0.0018638999990798766,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.35381391644477844,
+    "first_train_loss": 0.4886719286441803,
+    "last_train_loss": 0.47227652984506946,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": 0.09411111474037172
+  },
+  {
+    "candidate_id": "stock_node_gwnet_noise_aug_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "675ff3ca986f3f94792d6050b62ba83745602557f29032c4976b3a8e94815c5a",
+    "independent_load_max_abs_difference": 9.236693632175275e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "artifact_sha256": "15362c8c8a5317754cae2b1f9d803da7af2b49332ef80598984c39b7a1fcaba3"
+    },
+    "duration_seconds": 2.506568900000275,
+    "training_seconds": 2.4803248999996867,
+    "inference_seconds": 0.0018488000005163485,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.25577953457832336,
+    "first_train_loss": 0.35265811576562767,
+    "last_train_loss": 0.34056005057166605,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  },
+  {
+    "candidate_id": "stock_node_gwnet_feature_mask_l8",
+    "fold_id": "E_RO_03",
+    "seed": 20260725,
+    "status": "PASS",
+    "validation_rows": 500,
+    "validation_sample_key_sha256": "6703fe1eec904f1c6a8c038de5a34d6b10e0aa57b1a9e05b0742279e13ee2045",
+    "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+    "adjacency_sha256": "24b646482db8a3db2fa4cde47c6f0a61bf2c83d6ade1f1836db7043c50672f6d",
+    "industry_count": 13,
+    "checkpoint_sha256": "294dc3bc13e76cd391019763d2478b7adcc417272d8b7344b1d7d834d547ecb7",
+    "independent_load_max_abs_difference": 9.543690282498574e-10,
+    "stress_inference": {
+      "status": "PASS",
+      "scenario_count": 9,
+      "scenario_valid_sample_counts": {
+        "normal_unperturbed": 500,
+        "negative_return_tail_q10": 35,
+        "positive_return_tail_q90": 33,
+        "high_volatility_q90": 29,
+        "low_liquidity_q10": 48,
+        "four_week_drawdown_q10": 67,
+        "feature_noise_sigma_005": 500,
+        "node_mask_10pct": 500,
+        "latest_week_feature_mask": 500
+      },
+      "train_only_observed_thresholds": {
+        "negative_return_tail_q10": -0.06305937469005585,
+        "positive_return_tail_q90": 0.06928563117980957,
+        "high_volatility_q90": 0.9563705325126648,
+        "low_liquidity_q10": -1.232041597366333,
+        "four_week_drawdown_q10": -2.0190954208374023
+      },
+      "synthetic_prediction_shapes": {
+        "normal": [
+          5,
+          100
+        ],
+        "feature_noise_sigma_005": [
+          5,
+          100
+        ],
+        "node_mask_10pct": [
+          5,
+          100
+        ],
+        "latest_week_feature_mask": [
+          5,
+          100
+        ]
+      },
+      "masked_node_count": 10,
+      "artifact_sha256": "ea7b58cab561e08c2e31ba3fb08dc2a975511bd256d87ea6e68c35ec6fbec02d"
+    },
+    "duration_seconds": 2.5315989999999147,
+    "training_seconds": 2.5045496999991883,
+    "inference_seconds": 0.001891300000352203,
+    "epochs_completed": 11,
+    "best_validation_loss": 0.25607794523239136,
+    "first_train_loss": 0.35274233362253976,
+    "last_train_loss": 0.34122518932118134,
+    "all_losses_finite": true,
+    "parameter_count": 15777,
+    "tail_threshold_raw": null
+  }
+]

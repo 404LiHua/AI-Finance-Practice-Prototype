@@ -1,0 +1,9 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_LOOPBACK_OPERATIONAL_AUDIT_V1",
+  "status": "PASS_LOCAL_LOOPBACK_OPERATIONAL_ACCEPTANCE",
+  "decision_sha256": "269386ac484e172dc8d20fab39cd771ae6e584fc6161f3e017df869ea5d1057c",
+  "target_labels_read": false,
+  "gpu_used": false
+}
+
+

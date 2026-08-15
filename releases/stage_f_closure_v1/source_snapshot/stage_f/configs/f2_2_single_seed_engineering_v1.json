@@ -1,0 +1,128 @@
+{
+  "experiment_id": "stage_f_f2_2_single_seed_gan_engineering_v1",
+  "status": "FROZEN_BEFORE_REAL_TRAIN_FOLD_GAN_EXECUTION",
+  "authorized_at": "2026-07-28",
+  "authorization_source": "explicit user instruction for F-2.2 seed 20260725 three-fold engineering receipts",
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "feature_order": [
+    "return_1w",
+    "log_return_1w",
+    "return_vol_4",
+    "return_vol_12",
+    "model_close",
+    "model_volume_hands"
+  ],
+  "gan_parameters": {
+    "sequence_length": 8,
+    "batch_size": 16,
+    "critic_warmup_epochs": 5,
+    "joint_epochs": 20,
+    "critic_steps_per_generator_step": 3,
+    "learning_rate": 0.0001,
+    "betas": [0.0, 0.9],
+    "gradient_penalty_weight": 10.0,
+    "critic_drift_weight": 0.001,
+    "hardness_weight": 0.5,
+    "energy_weight": 2.0,
+    "target_mean_absolute_delta": 0.02,
+    "maximum_hardness_gain": 0.05,
+    "gradient_clip": 100.0
+  },
+  "forecaster_parameters": {
+    "sequence_length": 8,
+    "hidden_channels": 32,
+    "kernel_size": 3,
+    "dilations": [1, 2],
+    "graph_order": 2,
+    "dropout": 0.1,
+    "batch_size": 8,
+    "epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "train_augmentation_ratio": 0.5
+  },
+  "collapse_thresholds": {
+    "maximum_gradient_penalty": 100.0,
+    "minimum_absolute_critic_gap": 0.0001,
+    "maximum_absolute_critic_gap": 20.0,
+    "critic_gap_patience_epochs": 3,
+    "minimum_mean_absolute_delta": 0.001,
+    "maximum_mean_absolute_delta": 0.045,
+    "delta_collapse_patience_epochs": 3,
+    "minimum_per_feature_delta_std": 0.0001,
+    "maximum_collapsed_feature_count": 2,
+    "maximum_pairwise_cosine_similarity": 0.995,
+    "maximum_high_similarity_pair_fraction": 0.95,
+    "minimum_gradient_norm": 1e-8,
+    "maximum_gradient_norm": 100.0,
+    "gradient_patience_epochs": 3
+  },
+  "engineering_gates": {
+    "required_fold_runs": 3,
+    "required_validation_rows_per_fold": 500,
+    "independent_loading_max_abs_difference": 1e-7,
+    "maximum_fold_duration_seconds": 40.0,
+    "maximum_total_three_fold_duration_seconds": 120.0,
+    "required_stress_scenarios": 9,
+    "all_collapse_conditions_must_pass": true
+  },
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "frozen_validation_keys": "outputs/stage_e/e5_interface_acceptance_v1/frozen_validation_keys.csv.gz",
+    "custody_config": "stage_f/configs/f0_data_custody_v1.json",
+    "frozen_addendum": "stage_f/configs/f2_gan_addendum_v1.json",
+    "f2_1_acceptance": "outputs/stage_f/f2_1_minimal_training_health_acceptance_v1.json",
+    "frozen_forecaster_root": "releases/e_stage_best_model_v1/checkpoints",
+    "output_root": "outputs/stage_f/f2_2_single_seed_engineering_v1",
+    "acceptance": "outputs/stage_f/f2_2_single_seed_engineering_acceptance_v1.json"
+  },
+  "frozen_forecaster_checkpoints": {
+    "E_RO_01": {
+      "path": "releases/e_stage_best_model_v1/checkpoints/E_RO_01/seed_20260725.pt",
+      "sha256": "cd9eb217403a43e7abb1df98fb0d5cd53378bc5de84495b5d58e31d411b96780"
+    },
+    "E_RO_02": {
+      "path": "releases/e_stage_best_model_v1/checkpoints/E_RO_02/seed_20260725.pt",
+      "sha256": "2ad303b049bb1ebbd2e3a05bc75259f0e83203e07a202a0b6b8c8faf1e85de4d"
+    },
+    "E_RO_03": {
+      "path": "releases/e_stage_best_model_v1/checkpoints/E_RO_03/seed_20260725.pt",
+      "sha256": "5b1f34da2729716eed0a98bc12800106fd1e52aa8ee8a28b7542ffb76bda0dc9"
+    }
+  },
+  "source_registry": {
+    "runner": {"path": "stage_f/run_f2_single_seed.py", "sha256": "f790baf4236948624892c019f4d0af94d50163b3c0a72fa3499c0371da719090"},
+    "independent_acceptance": {"path": "stage_f/accept_f2_single_seed.py", "sha256": "e2c78519f1641f2b0962795c7a3d6beb72857b687e3a3ca77cbd4e47b438d6e6"},
+    "contract_test": {"path": "stage_f/tests/test_f2_2_single_seed.py", "sha256": "33e124db12d4bf3d4e412bbb1f8866760a40dd00dc8910c0bcded366d4697001"},
+    "gan": {"path": "stage_f/gan.py", "sha256": "8f1f3741340185542a23190c1851b92361587b8f1f944a5ab209769abb967165"},
+    "fold_interface": {"path": "stage_e/e5/interface.py", "sha256": "10bf9a1dd0a0f6c67106458b63c770caac6ea7028b7ed66a523f19b55675f560"},
+    "base_model": {"path": "stage_e/e5/neural_graph.py", "sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc"},
+    "custody": {"path": "stage_f/custody.py", "sha256": "997937c4e43286b428a0d47eeb244a17d81f8fb6210b5856fe4be55a1a3972c9"},
+    "custody_config": {"path": "stage_f/configs/f0_data_custody_v1.json", "sha256": "5f4878f20474877a2becb74dfe16c23bf3089c797bd9a10834656ed810040a76"},
+    "stress_contract": {"path": "stage_f/configs/f0_stress_scenarios_v1.json", "sha256": "35ef95898d5faf4acddb8378d12d1e397362eb82dc026dbcf06d506ece762b6c"},
+    "frozen_addendum": {"path": "stage_f/configs/f2_gan_addendum_v1.json", "sha256": "52927541e34f905065a0552c7288c5205803067a97ea3c373aff0ba1d9d475ba"},
+    "f2_1_acceptance": {"path": "outputs/stage_f/f2_1_minimal_training_health_acceptance_v1.json", "sha256": "7aee67d8fa2e1be1e623a8b41b9b6c8a39e9cbd45ab5992f25c50133a9ed11b4"},
+    "adapter_metadata": {"path": "data/processed/e4_adapter_100stocks_v1/metadata.json", "sha256": "7a29ea18384516e7677ca8242f4aea23c16ef4dd15756dd65341f6556de140c4"},
+    "universe": {"path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv", "sha256": "b5b5ed3864a5a4889233acb49da9d328879d4a7c42cdcdc8755451d2447ce90d"},
+    "frozen_validation_keys": {"path": "outputs/stage_e/e5_interface_acceptance_v1/frozen_validation_keys.csv.gz", "sha256": "8803c7691f3d41b58c54795dfbe56d6ffd3260edb6caad4a82372cc31bf4b315"}
+  },
+  "restrictions": {
+    "allowed_seed": [20260725],
+    "additional_seed_execution_allowed": false,
+    "candidate_ranking_allowed": false,
+    "candidate_deletion_allowed": false,
+    "promotion_recommendation_allowed": false,
+    "architecture_or_loss_change_allowed": false,
+    "validation_fit_or_augmentation_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false
+  },
+  "next_action_if_pass": "request separate authorization before F-2.3 seeds 20260723 and 20260724",
+  "next_action_if_fail": "retain all failure receipts and do not add or tune a GAN architecture"
+}

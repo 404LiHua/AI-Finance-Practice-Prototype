@@ -1,0 +1,19 @@
+{
+  "node_id": "T7_PRODUCTION_ISOMORPHISM_METADATA_PREFLIGHT_V1",
+  "status": "FAIL_CLOSED_AUTHORIZATION_SCOPE_MISMATCH",
+  "candidate_id": "T7_PRODUCTION_ISOMORPHIC_MOMENTUM_SIGNED_LOG1P_V1",
+  "production_kernel": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+  "target_id": "T2_MARKET_RELATIVE_FIXED",
+  "feature_count": 14,
+  "transform": "sign(x) * log1p(abs(x)) on momentum_20d, momentum_60d, momentum_120d",
+  "forecast_horizon": "origin_index + 4",
+  "thresholds": [-0.01, 0.01],
+  "stock_mapping_rows": 5513,
+  "labels_read": false,
+  "fresh_labels_read": false,
+  "training_executed": false,
+  "production_kernel_modified": false,
+  "blocking_errors": ["authorization_scope_not_production_t2"],
+  "blocking_warning": "train_only_source_or_manifest_not_delivered",
+  "next_node": "independent one-time T7 authorization plus bound train-only source manifest"
+}

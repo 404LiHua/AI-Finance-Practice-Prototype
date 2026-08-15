@@ -1,0 +1,20 @@
+{
+  "stage": "F-3 closure freeze",
+  "generated_at_utc": "2026-07-28T07:29:25.259781+00:00",
+  "status": "PASS",
+  "version": "v0.6.0-stage-f",
+  "source_file_count": 69,
+  "compact_evidence_file_count": 189,
+  "manifest_artifact_count": 260,
+  "manifest_root_sha256": "cf3f9defa98ab2c192febf7fdcce8e86c8fb8396714058b999f6b6e399109eb7",
+  "manifest_sha256": "e226de9a4995f5d1b8edee7e48cd4d8ace9b73242fb54bf9d15d970238853597",
+  "config_sha256": "f044d566a3a878ee7c248e05e2ed46245a9ce98be1c8b6c95aca8ff48876d303",
+  "formal_conclusion": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+  "retained_model": "stock_node_gwnet_fixed_industry_l8",
+  "large_artifacts_intentionally_excluded": true,
+  "new_training_performed": false,
+  "new_inference_performed": false,
+  "screening_accessed": false,
+  "final_accessed": false,
+  "freeze_receipt_sha256": "933a03f3d4a42dc7bdbb632fe2fe1313bfa37e2d6585a5842a4038985bf3ac75"
+}

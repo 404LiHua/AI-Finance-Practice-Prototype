@@ -1,0 +1,87 @@
+{
+  "scenario_contract_id": "f0_stress_scenarios_v1",
+  "status": "FROZEN_BEFORE_STAGE_F_TRAINING",
+  "feature_order": ["return_1w", "log_return_1w", "return_vol_4", "return_vol_12", "model_close", "model_volume_hands"],
+  "scenarios": [
+    {
+      "id": "normal_unperturbed",
+      "kind": "reference",
+      "definition": "all frozen validation samples without perturbation"
+    },
+    {
+      "id": "negative_return_tail_q10",
+      "kind": "observed_group",
+      "field": "target_return",
+      "operator": "less_equal",
+      "train_quantile": 0.10,
+      "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD"
+    },
+    {
+      "id": "positive_return_tail_q90",
+      "kind": "observed_group",
+      "field": "target_return",
+      "operator": "greater_equal",
+      "train_quantile": 0.90,
+      "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD"
+    },
+    {
+      "id": "high_volatility_q90",
+      "kind": "observed_group",
+      "field": "return_vol_12",
+      "time_position": "latest_observation",
+      "operator": "greater_equal",
+      "train_quantile": 0.90,
+      "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD"
+    },
+    {
+      "id": "low_liquidity_q10",
+      "kind": "observed_group",
+      "field": "model_volume_hands",
+      "time_position": "latest_observation",
+      "operator": "less_equal",
+      "train_quantile": 0.10,
+      "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD"
+    },
+    {
+      "id": "four_week_drawdown_q10",
+      "kind": "observed_group",
+      "field": "return_1w",
+      "aggregation": "sum_latest_4_weeks",
+      "operator": "less_equal",
+      "train_quantile": 0.10,
+      "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD"
+    },
+    {
+      "id": "feature_noise_sigma_005",
+      "kind": "synthetic_perturbation",
+      "operation": "add_gaussian_noise_to_numeric_features",
+      "sigma": 0.05,
+      "deterministic": true,
+      "seed_policy": "fold_seed_plus_1101",
+      "target_unchanged": true
+    },
+    {
+      "id": "node_mask_10pct",
+      "kind": "synthetic_perturbation",
+      "operation": "mask_ten_percent_stock_nodes_across_full_window",
+      "mask_fraction": 0.10,
+      "deterministic": true,
+      "seed_policy": "fold_seed_plus_2201",
+      "target_unchanged": true
+    },
+    {
+      "id": "latest_week_feature_mask",
+      "kind": "synthetic_perturbation",
+      "operation": "mask_latest_week_all_numeric_features",
+      "deterministic": true,
+      "seed_policy": "no_randomness",
+      "target_unchanged": true
+    }
+  ],
+  "aggregation": {
+    "stress_composite": "equal_weight_mean_mae_across_eight_non_reference_scenarios",
+    "missing_or_empty_scenario": "HARD_FAILURE",
+    "observed_group_threshold_reuse_on_validation": true,
+    "validation_or_screening_refit_allowed": false
+  }
+}

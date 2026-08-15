@@ -1,0 +1,45 @@
+{
+  "stage": "F-2.2 single-seed three-fold GAN engineering independent acceptance",
+  "generated_at_utc": "2026-07-28T06:43:42.258349+00:00",
+  "status": "PASS",
+  "checks": {
+    "metadata_pass": true,
+    "three_fold_receipts": true,
+    "no_failure_receipts": true,
+    "losses_and_collapse_pass": true,
+    "independent_loading_pass": true,
+    "frozen_keys_pass": true,
+    "normal_and_stress_pass": true,
+    "cost_pass": true,
+    "artifact_hashes_match": true,
+    "scope_closed": true
+  },
+  "passed_checks": 10,
+  "required_checks": 10,
+  "candidate_id": "stock_node_gwnet_bounded_cwgan_gp_l8",
+  "seed": 20260725,
+  "config_sha256": "4607a5243ec449f2787aff108525d680a49c9dd0f4bb6a66609f71c6cc846312",
+  "metadata_sha256": "28d7161be638b5e7b51bc63aaad7bb85c682fd51e5af997a21c889a4318b5edf",
+  "additional_seed_training_authorized": false,
+  "screening_authorized": false,
+  "final_authorized": false,
+  "adapter_correction": {
+    "correction_applied": true,
+    "correction_id": "f2_2_single_checkpoint_load_for_stress_inference_v1",
+    "correction_scope": "load the independently reconstructed forecaster once and reuse it for four unchanged normal/stress inference tensors",
+    "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v2",
+    "base_config_sha256": "40d4cadfda265684583bd048527771b3682908e1115ca3041a58ea34741ad3eb",
+    "prior_correction": {
+      "correction_applied": true,
+      "correction_id": "f2_2_zero_augmentation_batch_guard_v1",
+      "correction_scope": "when floor(batch_size*0.5) equals zero, skip generator call and append zero augmented samples",
+      "failed_attempt": "outputs/stage_f/f2_2_single_seed_engineering_v1",
+      "base_config_sha256": "47dd99d8adfff794e8c851bc7cb2f99f3e9a0dec7e42533a7a141d56fb8ad867",
+      "prior_correction": {
+        "correction_applied": false
+      }
+    }
+  },
+  "next_action": "request separate authorization before F-2.3 seeds 20260723 and 20260724",
+  "acceptance_sha256": "5bfa294a742d5db411d629588fdcd5e9bd8d48c54620fa56a9888f6bffffe468"
+}

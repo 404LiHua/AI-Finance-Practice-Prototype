@@ -1,0 +1,30 @@
+{
+  "template_only": true,
+  "do_not_use_before_2026-09-11": true,
+  "status": "REPLACE_WITH_PASS_V4_DATA_DELIVERY_FROZEN_FOR_SEALED_MATERIALIZATION_ONLY_AFTER_INDEPENDENT_COVERAGE_REVIEW",
+  "delivery_id": "REPLACE_WITH_IMMUTABLE_DELIVERY_IDENTIFIER",
+  "data_freeze_completed_at_utc": "REPLACE_WITH_UTC_TIMESTAMP",
+  "origin_dates": [
+    "2026-07-20",
+    "2026-07-27",
+    "2026-08-03",
+    "2026-08-10",
+    "2026-08-17",
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-07"
+  ],
+  "daily_manifest_sha256": "REPLACE_WITH_64_LOWERCASE_HEX",
+  "fundamental_events_sha256": "REPLACE_WITH_64_LOWERCASE_HEX",
+  "universe_sha256": "REPLACE_WITH_64_LOWERCASE_HEX",
+  "labels_custody_state": "REPLACE_WITH_SEALED_NOT_READ_BY_MATERIALIZER",
+  "effective_stock_count": "REPLACE_WITH_299_OR_300",
+  "universe_change_explanation": "REQUIRED_IF_NOT_300; all V4 panels and predictions must share the same keys",
+  "daily_source_range": {
+    "minimum_required_for_features": "sufficient history before 2026-07-20",
+    "minimum_required_for_h4_settlement": "2026-09-11"
+  },
+  "attested_by": "REPLACE_WITH_DATA_CUSTODIAN",
+  "attestation_notes": "No labels, returns, or scores may be disclosed in this record."
+}
+

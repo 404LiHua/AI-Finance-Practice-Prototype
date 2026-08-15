@@ -1,0 +1,41 @@
+{
+  "node_id": "WP23_FUTURE_T2_INPUT_PRECONSUMPTION_CONTRACT_FREEZE_V1",
+  "status": "FROZEN_BEFORE_FUTURE_T2_DATA_DELIVERY",
+  "purpose": "CPU-only, label-free gate that makes a future C0/C1 evaluation immediately executable when a valid data delivery arrives.",
+  "target": "T2_MARKET_RELATIVE_FIXED",
+  "development_cutoff_date": "2026-06-26",
+  "minimum_qualified_origins": 12,
+  "origin_contract": {
+    "trade_date_weekday": "Friday",
+    "cutoff_timezone": "Asia/Shanghai",
+    "cutoff_local_date_must_equal_trade_date": true,
+    "origin_dates_must_be_strictly_later_than_development_cutoff": true,
+    "unique_trade_date": true
+  },
+  "required_inputs": {
+    "origins": ["trade_date", "cutoff_at_utc", "cutoff_rule_id"],
+    "universe": ["trade_date", "stock_code", "eligible", "membership_effective_at"],
+    "rg3": ["trade_date", "stock_code", "source_trade_date", "14 frozen RG3 feature columns"],
+    "rg2": ["trade_date", "stock_code", "18 frozen RG2 feature columns", "capital_effective_date_asof", "membership_state_date", "graph_state_date"],
+    "scale": ["trade_date", "stock_code", "market_volatility_4w"]
+  },
+  "coverage": {
+    "minimum_eligible_stocks_per_origin": 300,
+    "same_key_coverage_required_for": ["universe", "rg3", "rg2", "scale"],
+    "current_survivor_backfill_forbidden": true,
+    "universe_membership_effective_at_must_not_be_after_cutoff": true
+  },
+  "forbidden_columns_regex": "(?i)(target|label|ordinal|return|fresh|screening|final|holdout)",
+  "pit_rules": {
+    "rg3_source_trade_date_not_later_than_trade_date": true,
+    "rg2_pit_dates_not_later_than_trade_date": true,
+    "finite_feature_values_required": true,
+    "infinite_values_forbidden": true
+  },
+  "failure_action": "FAIL_CLOSED_FUTURE_T2_INPUT_PRECONSUMPTION; do not read labels, train, use GPU, or create predictions",
+  "success_action": "PASS_READY_FOR_PREDICTION_SEAL_AND_NEW_ONE_TIME_LABEL_AUTHORIZATION",
+  "production_replacement_allowed": false,
+  "automatic_trading": false
+}
+
+

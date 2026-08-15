@@ -1,0 +1,52 @@
+{
+  "node_id": "AA_GFMNET_V4_PRODUCTION_T2_TARGET_SEMANTICS_CONFLICT_FREEZE_V1",
+  "status": "FAIL_CLOSED_V4_PRODUCTION_PROMOTION_REVOKED_TARGET_SEMANTICS_MISMATCH",
+  "as_of_date": "2026-08-15",
+  "scope": "The V4 label-free builders, prediction binding, and synthetic runtime tests remain implementation assets only; this receipt revokes their use for production T2 scoring or promotion.",
+  "candidate": {
+    "candidate_id": "AA_GFMNET_CROSS_SECTIONAL_NEUTRALIZED_RESIDUAL_TCN_V1",
+    "model_specification_sha256": "49b4e6d6c441bb44e94949da35a86d4bc2fb2324c8952394b99bb4c5a6786741",
+    "target_semantics": "TEXTCU_V2_H4_MONDAY_0930_V1: adjusted-close absolute return from the last visible pre-origin close to the fourth available trading day after origin",
+    "horizon_unit": "4_trading_days",
+    "relative_to_cross_section": false
+  },
+  "production_anchor": {
+    "model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "target_id": "T2_MARKET_RELATIVE_FIXED",
+    "target_semantics": "four weekly calendar steps with raw return minus the target-week tradable cross-sectional median",
+    "horizon_unit": "4_weeks",
+    "relative_to_cross_section": true,
+    "thresholds": [-0.01, 0.01]
+  },
+  "mismatch_reasons": [
+    "candidate and production anchor use different forecast horizon units",
+    "candidate label is absolute while production target is cross-sectional relative",
+    "candidate H4 protocol cannot be converted into production T2 by relabeling its existing outputs",
+    "MCC, Brier, IC, paper trading, and promotion comparisons would be semantically invalid"
+  ],
+  "authoritative_evidence": {
+    "production_semantics_recovery_audit": {
+      "path": "research_tracks/pit_information_incremental_v1/governance/PRODUCTION_T2_SEMANTICS_RECOVERY_AUDIT_V1.md",
+      "sha256": "bec0f605641cc977ea9cb1d5d33abee5568c755787880d805763799f5d8a9b5c"
+    },
+    "production_reconstruction_requirements": {
+      "path": "research_tracks/pit_information_incremental_v1/governance/PRODUCTION_T2_RECONSTRUCTION_REQUIREMENTS_V1.md",
+      "sha256": "8d5185ac34d01cb17da5b8269189e0a07df93c36cc1ce921ef84a0ecfed23a1f"
+    },
+    "candidate_h4_protocol": {
+      "path": "research_tracks/pit_information_incremental_v1/governance/TEXTCU_V2_H4_MONDAY_0930_TARGET_PROTOCOL_FREEZE.md",
+      "sha256": "9287c1965c102a598fd318ed1025c5852d6ace2888130396869a47330ed4295a"
+    }
+  },
+  "prohibited_until_recovery": [
+    "V4 real label materialization for production comparison",
+    "one-time scoring authorization under the current V4 candidate/anchor pair",
+    "paper-trading receipt claiming production comparability",
+    "atomic candidate promotion or production registry modification"
+  ],
+  "allowed_next_step": "Recover the original T2 raw artifacts and exact construction contract, or build a new four-week market-relative T2 candidate on an equivalent PIT universe; then register a new independent validation window.",
+  "real_labels_read": false,
+  "candidate_trained": false,
+  "production_kernel_modified": false
+}

@@ -1,0 +1,14 @@
+{
+  "node_id": "AA_GFMNET_PRODUCTION_T2_SOURCE_BINDING_V1",
+  "status": "FAIL_CLOSED_INCOMPLETE_RUNTIME_AND_RAW_SOURCE_BINDING",
+  "source_files_read": 33,
+  "fresh_payloads_opened": false,
+  "fresh_labels_read": false,
+  "materializers_executed": false,
+  "model_trained": false,
+  "production_assets_modified": false,
+  "controlled_source_copy_created": false,
+  "created_at_utc": "2026-08-14T04:23:18.323662+00:00"
+}
+
+

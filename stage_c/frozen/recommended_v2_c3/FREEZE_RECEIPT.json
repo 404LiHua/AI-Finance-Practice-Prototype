@@ -1,0 +1,9 @@
+{
+  "freeze_id": "stage_c_recommended_v2_c3_20260724",
+  "status": "LOCKED_BEFORE_SCREENING",
+  "frozen_on": "2026-07-24",
+  "manifest_root_sha256": "4e0af90936d06f0a16999e86d5c7ff1e70466502175b6c0d52f789a028041c47",
+  "artifact_count": 174,
+  "screening_data_status": "NOT_ACQUIRED_NOT_READ_NOT_USED",
+  "verification_command": "python -m stage_c.freeze_stage_c_candidate --verify"
+}

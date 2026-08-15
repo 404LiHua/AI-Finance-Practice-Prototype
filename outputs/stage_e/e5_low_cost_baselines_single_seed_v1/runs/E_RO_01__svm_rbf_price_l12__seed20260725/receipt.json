@@ -1,0 +1,14 @@
+{
+  "model_id": "svm_rbf_price_l12",
+  "family": "svm_rbf",
+  "fold_id": "E_RO_01",
+  "seed": 20260725,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "independent_load_max_abs_difference": 0.0,
+  "checkpoint_sha256": "45076fff2a1e80fdb15c5ac1b49b09eabc4d32faf60456806566336687343d0d",
+  "resolved_config_sha256": "2557cad58f05862594bbd528648ccd885f8e1a4d889ada5fe5d63b36ab19a118",
+  "duration_seconds": 15.85051089999979,
+  "training_seconds": 15.599637499999517,
+  "parameter_count": 10047
+}

@@ -1,0 +1,8 @@
+{
+  "node_id": "WP22_LABEL_FREE_THREE_MODEL_PREDICTION_SEAL_V1",
+  "status": "SEALED_LABEL_FREE_SHADOW_PENDING_INDEPENDENT_T2_LABEL_AUTHORIZATION",
+  "manifest_sha256": "1a7fa4b7bd466f8108866adba871cb35989fca7490a8cb9cb7ec31c5f3d53f22",
+  "target_labels_read": false,
+  "metrics_read": false,
+  "gpu_used": false
+}

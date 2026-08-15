@@ -1,0 +1,22 @@
+{
+  "diagnostic_id": "stage_f_f1_4_unified_robustness_diagnostics_v2",
+  "status": "FROZEN_ADAPTER_CORRECTION_BEFORE_RERUN",
+  "extends_config": {
+    "path": "stage_f/configs/f1_4_unified_robustness_diagnostics_v1.json",
+    "sha256": "f95c51c98489ba0eb0e5e122f76e2876f7d5ba11e56f27478ed00436b0535338"
+  },
+  "diagnostic_runner": {
+    "path": "stage_f/run_f1_unified_diagnostics.py",
+    "sha256": "52c67801974374eb8e06d143248d06b33b6fc19f53360e0a9bc4a8fabedc26c1"
+  },
+  "output_root": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v2",
+  "correction_receipt": {
+    "failed_attempt": "outputs/stage_f/f1_4_unified_robustness_diagnostics_v1/failure_receipt.json",
+    "scope": "rename model_id to candidate_id only for the frozen stability diagnostic function",
+    "predictions_changed": false,
+    "thresholds_changed": false,
+    "models_changed": false,
+    "diagnostic_formulas_changed": false,
+    "gate_application_occurred_before_failure": false
+  }
+}

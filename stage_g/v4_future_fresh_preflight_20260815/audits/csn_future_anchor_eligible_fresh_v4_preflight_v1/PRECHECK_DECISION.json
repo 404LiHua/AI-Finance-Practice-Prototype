@@ -1,0 +1,49 @@
+{
+  "node_id": "AA_GFMNET_CSN_FUTURE_ANCHOR_ELIGIBLE_FRESH_V4_PREFLIGHT_V1",
+  "status": "PASS_IMPLEMENTATION_AND_SYNTHETIC_CONTRACT_TEST__NOT_YET_MATERIALIZABLE",
+  "as_of_date": "2026-08-15",
+  "pre_registered_origin_dates": [
+    "2026-07-20",
+    "2026-07-27",
+    "2026-08-03",
+    "2026-08-10",
+    "2026-08-17",
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-07"
+  ],
+  "last_h4_settlement_date": "2026-09-11",
+  "implementation_checks": {
+    "dedicated_v4_builder_exists": true,
+    "builder_rejects_pre_settlement_materialization": true,
+    "monday_to_friday_h4_protocol_synthetically_verified": true,
+    "label_free_contract_exact_origins_verified": true,
+    "full_synthetic_materialization_and_label_free_audit_verified": true,
+    "candidate_manifest_identity_verified": true,
+    "anchor_training_cutoff_verified_before_v4_start": true,
+    "real_fresh_labels_read": false,
+    "candidate_training_run": false,
+    "candidate_inference_run": false,
+    "anchor_inference_run": false,
+    "production_kernel_modified": false
+  },
+  "artifact_sha256": {
+    "builder": "69f6489777abcf44e7d1e227ed874a2a1353e792dab10f9010a9a8a5aeb33437",
+    "label_free_audit": "9b273f72bb7b0d97b26d1257188dda3aa052ce9e1156140700034ae6cadfec65",
+    "synthetic_test": "cde185bd9030396cad292bf534a60a4d59d77a53c1c4d7d4d7a275f9e9f7de35",
+    "synthetic_test_receipt": "9a6b883c978a5822b97e1b4cb202780e4c8ff5648fa3f58a553e534e1e98860e",
+    "synthetic_materializer_test": "3ee7841525302e5d8ba70bf58bded933935242b88ac910ea767ee9748e79344f",
+    "synthetic_materializer_test_receipt": "d91ff5f22a11b4d7db358994d2ff66be248ea486891ea11462247df28b17c866"
+  },
+  "remaining_fail_closed_conditions": [
+    "2026-09-11_or_later_materialization_date",
+    "frozen_v4_daily_manifest_and_per_file_sha256",
+    "frozen_pit_fundamental_event_export",
+    "signed_299_or_300_stock_universe_with_identical_key_domain",
+    "delivery_attestation_status_PASS_V4_DATA_DELIVERY_FROZEN_FOR_SEALED_MATERIALIZATION",
+    "new_prediction_binding_and_one_time_scoring_authorization"
+  ],
+  "cpu_thread_cap": 1,
+  "gpu_jobs_concurrent": 0,
+  "created_at_utc": "2026-08-15T05:32:29.537625+00:00"
+}

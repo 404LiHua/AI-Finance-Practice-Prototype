@@ -1,0 +1,67 @@
+{
+  "experiment_name": "stage_b_30stocks_baselines",
+  "data_root": "data/processed/weekly_30stocks_stage_a_v1",
+  "output_root": "outputs/experiments",
+  "target": "target_return",
+  "seeds": [20260723, 20260724, 20260725],
+  "models": ["naive", "moving_average", "arima", "lstm", "minimalist_transformer"],
+  "moving_average": {
+    "window": 4
+  },
+  "arima": {
+    "order": [1, 0, 0],
+    "minimum_history": 12,
+    "maximum_history": 52,
+    "fallback_window": 4
+  },
+  "lstm": {
+    "sequence_length": 8,
+    "hidden_size": 32,
+    "num_layers": 1,
+    "dropout": 0.0,
+    "batch_size": 64,
+    "epochs": 80,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "minimalist_transformer": {
+    "sequence_length": 8,
+    "d_model": 32,
+    "nhead": 4,
+    "num_layers": 1,
+    "dim_feedforward": 64,
+    "dropout": 0.1,
+    "batch_size": 64,
+    "epochs": 80,
+    "patience": 12,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "loss": "huber",
+    "device": "auto"
+  },
+  "external_baselines": {
+    "frets": {
+      "root": "D:/项目/源文件/deploy/FreTS-main",
+      "python": "D:/项目/源文件/deploy/.venv-frets/Scripts/python.exe",
+      "entrypoint": "run_longExp.py",
+      "status": "deployed_adapter_pending"
+    },
+    "sep": {
+      "root": "D:/项目/源文件/deploy/sep-main",
+      "python": "D:/项目/源文件/deploy/.venv-sep/Scripts/python.exe",
+      "entrypoint": "main.py",
+      "status": "deployed_not_a_transformer_numeric_baseline"
+    },
+    "timegnn": {
+      "root": "D:/项目/源文件/deploy/Time-GNN-main",
+      "python": "D:/项目/源文件/deploy/.venv-timegnn/Scripts/python.exe",
+      "entrypoint": "TimeGNN_train.py",
+      "status": "deployed_adapter_pending"
+    }
+  }
+}

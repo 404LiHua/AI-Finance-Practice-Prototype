@@ -1,0 +1,18 @@
+{
+  "contract_id": "AA_GFMNET_DATA_CONTRACT_V1",
+  "status": "FROZEN_RESEARCH_CONTRACT",
+  "scope": "TRAIN_ONLY_INPUT_ACCEPTANCE",
+  "research_target": {"primary": "H4_continuous_relative_return", "auxiliary": "T2_ordered_classification"},
+  "expected_formal_panel": {"origins": 337, "stocks": 300, "keys": 101100},
+  "expected_splits": {"fold_starts": [180,198,216,234,252,270], "purge_weeks": 11, "embargo_weeks": 11},
+  "feature_order_origin_snapshot": ["return_1w","log_return_1w","return_vol_4","return_vol_12","model_close","model_volume_hands"],
+  "accepted_train_only_assets": [
+    {"id":"sequence_cube", "relative_path":"research_tracks/rev7_proposal_guarded_graph_frequency_multimodal_v1/data/train_only_sequence_cube_v1/TRAIN_ONLY_SEQUENCE_CUBE.npz", "expected_keys":["dense_history_source","target","relative_return","observed","history_days","exchange","origin_index","origin_date","lookback"], "expected_shape":"(299,5796,14)"},
+    {"id":"multiview_cube", "relative_path":"research_tracks/rev7_proposal_guarded_graph_frequency_multimodal_v1/data/train_only_multiview_cube_v1/TRAIN_ONLY_MULTIVIEW_CUBE.npz", "expected_keys":["dense","target","relative_return","observed","origin_index","origin_date","lookback"], "expected_shape":"(299,5796,49)"}
+  ],
+  "pit_rules": ["source_trade_date < origin_date", "announcement first_public_time < cutoff", "retain missingness mask", "do_not_use_crawl_time_as_public_time"],
+  "fail_closed": true,
+  "notes": "The currently materialized cubes are architecture/train-only assets and do not satisfy the formal 337x300 panel until an explicit projection and key registry are supplied. They must not be presented as the formal panel or original incumbent."
+}
+
+

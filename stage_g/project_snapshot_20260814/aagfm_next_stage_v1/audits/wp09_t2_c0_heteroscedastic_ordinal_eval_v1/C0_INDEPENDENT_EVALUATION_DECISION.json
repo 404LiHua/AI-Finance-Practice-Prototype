@@ -1,0 +1,105 @@
+{
+  "node_id": "WP09_C0_INDEPENDENT_EVALUATION_V1",
+  "status": "PASS_C0_DEVELOPMENT_GATE_ELIGIBLE_FOR_SEPARATE_FRESH_AUTHORIZATION",
+  "protocol_sha256": "4556c4aa3c400f3dd725736c9a52a31897e66db000c44253810db8513446ed31",
+  "baseline_seal_manifest_sha256": "8e5beadf6421509bcc68b943849edf8f3772abbfd1d5109d9a054bb8927f6878",
+  "candidate_seal_manifest_sha256": "d560ab59e5e0ef3a2465da2af796cd8f2b6f9a6072776d13c0e27cea4ea28032",
+  "seal_hashes_verified": true,
+  "global_metrics": [
+    {
+      "scored_rows": 33282,
+      "mcc": 0.07356440832166648,
+      "brier": 0.5896104508199045,
+      "mean_weekly_spearman_ic": 0.14350846394014083,
+      "weekly_ic_count": 108,
+      "model_id": "INCUMBENT_ORDINAL_T2_DEV"
+    },
+    {
+      "scored_rows": 33282,
+      "mcc": 0.0,
+      "brier": 1.77297037437654,
+      "mean_weekly_spearman_ic": NaN,
+      "weekly_ic_count": 0,
+      "model_id": "NAIVE_NEUTRAL"
+    },
+    {
+      "scored_rows": 33282,
+      "mcc": 0.0,
+      "brier": 0.5946211488956133,
+      "mean_weekly_spearman_ic": NaN,
+      "weekly_ic_count": 0,
+      "model_id": "NAIVE_PRIOR"
+    },
+    {
+      "scored_rows": 33282,
+      "mcc": 0.07402176658078063,
+      "brier": 0.5909088744280663,
+      "mean_weekly_spearman_ic": 0.13858760457318595,
+      "weekly_ic_count": 108,
+      "model_id": "REV8_C0_TARGET_ADAPTED_HETEROSKEDASTIC_ORDINAL"
+    }
+  ],
+  "gates": {
+    "positive_mcc_vs_NAIVE_PRIOR": {
+      "positive_blocks": 6,
+      "required": 5,
+      "worst_delta": 0.05557342091785779,
+      "pass": true
+    },
+    "positive_mcc_vs_NAIVE_NEUTRAL": {
+      "positive_blocks": 6,
+      "required": 5,
+      "worst_delta": 0.05557342091785779,
+      "pass": true
+    },
+    "positive_ic_blocks": {
+      "positive_blocks": 6,
+      "required": 5,
+      "pass": true
+    },
+    "worst_mcc_vs_incumbent": {
+      "worst_delta": -0.007378264811174762,
+      "floor": -0.02,
+      "pass": true
+    },
+    "brier_vs_best_baseline": {
+      "worst_increase": 0.006484539613402229,
+      "max": 0.01,
+      "pass": true
+    },
+    "statistics": {
+      "p_value": 0.0004997501249375312,
+      "bh_q": 0.0004997501249375312,
+      "bh_max": 0.05,
+      "bootstrap_ci": [
+        0.10842843045067145,
+        0.1672382694830861
+      ],
+      "ci_lower_positive": true,
+      "pass": true
+    }
+  },
+  "statistics": {
+    "status": "PASS",
+    "observed_mean_ic": 0.13858760457318595,
+    "p_value_two_sided": 0.0004997501249375312,
+    "bootstrap_ci": [
+      0.10842843045067145,
+      0.1672382694830861
+    ],
+    "null_threshold_abs": 0.011322907673491223,
+    "qualified_weeks": 108,
+    "block_length_weeks": 8,
+    "replications": 2000
+  },
+  "fresh_payloads_opened": false,
+  "screening_read": false,
+  "final_read": false,
+  "model_trained": false,
+  "gpu_used": false,
+  "candidate_training_authorized": false,
+  "production_replacement_allowed": false,
+  "created_at_utc": "2026-08-14T04:56:47.351752+00:00"
+}
+
+

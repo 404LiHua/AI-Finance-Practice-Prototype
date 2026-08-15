@@ -1,0 +1,24 @@
+{
+  "experiment_id": "e3_scalability_300stocks_v1",
+  "development_date_ceiling": "2023-06-02",
+  "seed": 20260725,
+  "paths": {
+    "panel": "data/processed/panel_v2_300stocks_5y_20180608_20230602_v1/panel_v2.csv.gz",
+    "stock_order": "data/processed/e3_graphs_300stocks_v1/stock_order.csv",
+    "output_root": "outputs/stage_e/e3_scalability_300stocks_v1"
+  },
+  "data": {
+    "stock_count": 300,
+    "cross_section_count": 2,
+    "lookback_weeks": 12,
+    "minimum_target_coverage": 0.90,
+    "feature_columns": ["return_1w", "log_return_1w", "return_vol_4", "return_vol_12", "model_close", "model_volume_hands"],
+    "target_column": "target_return"
+  },
+  "model": {
+    "hidden_dim": 64,
+    "top_k": 8,
+    "dropout": 0.0,
+    "sampling_mode": "deterministic"
+  }
+}

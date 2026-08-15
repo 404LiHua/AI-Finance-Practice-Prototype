@@ -1,0 +1,20 @@
+{
+  "node_id": "WP22_CSMAR_CAPITAL_ACTIONS_OVERLAP_AUDIT_V1",
+  "status": "PASS_HISTORICAL_EXACT_RAW_EXTENDED",
+  "historical_path": "C:\\Users\\27793\\Documents\\project1\\AI_Finance_Prototype\\data\\processed\\panel_v2_300stocks_5y_20180608_20230602_v1\\corporate_actions.csv.gz",
+  "csmar_zip": "D:\\项目\\data\\csmar\\股本结构变动文件142903022(仅供嘉兴大学使用).zip",
+  "historical_sha256": "ea29c06cbecaa27e759756fabb96bbeddbc73b0e50db1b01098ca1519e9f85f6",
+  "csmar_zip_sha256": "5f1939dcc5eafca854baffe17c6e7f7d8489b2af2b25c4b30968fb1114da3837",
+  "selected_universe_sha256": "7522a6053cd143f0046895713b0f66f76a30b15d9ff8ebb8410dc27b0da67f5c",
+  "historical_selected_rows": 9528,
+  "raw_selected_rows": 10793,
+  "exact_overlap_rows": 9528,
+  "archived_only_rows": 0,
+  "raw_only_rows": 1265,
+  "historical_end_date": "2023-06-01",
+  "raw_only_after_historical_end": true,
+  "provenance_rows": 9528,
+  "provenance_row_number_matches": 9528,
+  "provenance_row_number_mismatches": 0,
+  "created_at_utc": "2026-08-15T11:33:30.910931+00:00"
+}

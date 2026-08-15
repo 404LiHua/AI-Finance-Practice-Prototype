@@ -1,0 +1,127 @@
+{
+  "protocol_id": "stage_f_robustness_protocol_v1",
+  "status": "FROZEN_BEFORE_ANY_STAGE_F_TRAINING_OR_CANDIDATE_METRIC_READ",
+  "frozen_at": "2026-07-28",
+  "development_date_ceiling": "2023-06-02",
+  "folds": ["E_RO_01", "E_RO_02", "E_RO_03"],
+  "seeds": [20260723, 20260724, 20260725],
+  "source_registry": {
+    "e5_interface": {"path": "stage_e/configs/e5_interface_v1.json", "sha256": "f8ba7f21d8820d784eba36985f764130baf6074de52d67ac85ebe4086e8555d4"},
+    "e5_neural_graph_protocol": {"path": "stage_e/configs/e5_neural_graph_baselines_v1.json", "sha256": "6ee08295cd508f97218390b2e2564ae638bb5b58ecbd86047e0565a0393a6a43"},
+    "e6_gate_config": {"path": "stage_e/configs/e6_candidate_gate_v1.json", "sha256": "7769f13af45110cb7f83f575193e352037150f4d3b48ec3beaab3d22c0f51f68"},
+    "e6_acceptance": {"path": "outputs/stage_e/e6_candidate_gate_application_acceptance_v1.json", "sha256": "b1abf359b6e1ff6aa20ad85b150cbc2a66485933c5ae6b3627d5bcc9e0e2197e"},
+    "e6_metadata": {"path": "outputs/stage_e/e6_candidate_gate_application_v1/metadata.json", "sha256": "85ad0016d867cb197d7702b6a0569e5c8647e15bca9c7abc093975ee2a421828"},
+    "best_model_release_manifest": {"path": "releases/e_stage_best_model_v1/manifest.json", "sha256": "5686bc403cc88dee4e2e4cf4fa1a118732f053409b2880f5c731f78d7c105565"},
+    "stage_d_frets_manifest": {"path": "stage_d/frozen/frets_l4_shrink_a075_d4/SHA256_MANIFEST.json", "sha256": "b9ede02cc4c2e92ee874033865a762f834edd7bba88873690f3ed832bceef0a1"},
+    "adapter_metadata": {"path": "data/processed/e4_adapter_100stocks_v1/metadata.json", "sha256": "7a29ea18384516e7677ca8242f4aea23c16ef4dd15756dd65341f6556de140c4"},
+    "frozen_validation_keys": {"path": "outputs/stage_e/e5_interface_acceptance_v1/frozen_validation_keys.csv.gz", "sha256": "8803c7691f3d41b58c54795dfbe56d6ffd3260edb6caad4a82372cc31bf4b315"},
+    "custody_config": {"path": "stage_f/configs/f0_data_custody_v1.json", "sha256": "5f4878f20474877a2becb74dfe16c23bf3089c797bd9a10834656ed810040a76"},
+    "stress_contract": {"path": "stage_f/configs/f0_stress_scenarios_v1.json", "sha256": "35ef95898d5faf4acddb8378d12d1e397362eb82dc026dbcf06d506ece762b6c"},
+    "custody_implementation": {"path": "stage_f/custody.py", "sha256": "997937c4e43286b428a0d47eeb244a17d81f8fb6210b5856fe4be55a1a3972c9"},
+    "protocol_implementation": {"path": "stage_f/protocol.py", "sha256": "31e59d66d8fded55bec5f4a841e2d19408b895149675421237ed89d12f57f2c8"},
+    "low_cost_implementation": {"path": "stage_e/e5/low_cost.py", "sha256": "12c0ec3abcc24b7adf9fa1934e11939ea3f79eb1a17466ba843c6c00a292eda3"},
+    "graph_implementation": {"path": "stage_e/e5/neural_graph.py", "sha256": "b6d5999303d4fb3615e61d15827ea3ea6a818c7eef519475564512a540cd51bc"}
+  },
+  "paths": {
+    "adapter_root": "data/processed/e4_adapter_100stocks_v1",
+    "universe_path": "data/processed/panel_v2_100stocks_3y_20200605_20230602_v1/selected_universe.csv",
+    "freeze_receipt": "outputs/stage_f/f0_protocol_freeze_receipt_v1.json",
+    "acceptance_receipt": "outputs/stage_f/f0_protocol_acceptance_v1.json"
+  },
+  "control_models": [
+    {"id": "naive", "role": "minimum_baseline", "new_training": false},
+    {"id": "frets_return_l4__fixed_shrink_a075", "role": "stage_d_stable_control", "new_training": false},
+    {"id": "stock_node_gwnet_fixed_industry_l8", "role": "stage_e_incumbent_and_robustness_anchor", "new_training": false}
+  ],
+  "f1_bounded_candidate_models": [
+    {
+      "id": "stock_node_gwnet_tail_weighted_l8",
+      "base_model": "stock_node_gwnet_fixed_industry_l8",
+      "only_change": {"training_loss": "huber_with_train_q90_absolute_target_tail_weight_2"}
+    },
+    {
+      "id": "stock_node_gwnet_noise_aug_l8",
+      "base_model": "stock_node_gwnet_fixed_industry_l8",
+      "only_change": {"train_numeric_gaussian_noise_sigma": 0.03, "deterministic_by_seed": true}
+    },
+    {
+      "id": "stock_node_gwnet_feature_mask_l8",
+      "base_model": "stock_node_gwnet_fixed_industry_l8",
+      "only_change": {"train_numeric_feature_mask_probability": 0.05, "deterministic_by_seed": true}
+    }
+  ],
+  "stress_evaluation": {
+    "contract": "stage_f/configs/f0_stress_scenarios_v1.json",
+    "threshold_fit_scope": "TRAIN_ONLY_PER_FOLD",
+    "same_validation_sample_keys_required": true,
+    "missing_stress_group_is_hard_failure": true,
+    "candidate_specific_threshold_refit_allowed": false
+  },
+  "hard_gates": {
+    "contract": {
+      "required_folds": 3,
+      "required_seeds": 3,
+      "required_validation_samples_per_fold_seed": 500,
+      "missing_or_extra_sample_key_is_failure": true
+    },
+    "normal_performance": {
+      "overall_mae_max": 0.031937841354478844,
+      "worst_fold_mae_max": 0.03601410985076558,
+      "minimum_stocks_below_naive_mae": 70,
+      "maximum_stock_mae": 0.08416327493963761
+    },
+    "stress_performance": {
+      "stress_composite_mae_max_ratio_vs_stage_e_incumbent": 0.99,
+      "minimum_scenarios_with_mae_improvement_at_least_1pct": 3,
+      "minimum_scenarios_with_mae_not_above_incumbent": 5,
+      "maximum_any_scenario_mae_ratio_vs_incumbent": 1.02,
+      "negative_tail_mae_max_ratio_vs_incumbent": 0.99,
+      "high_volatility_mae_max_ratio_vs_incumbent": 0.99
+    },
+    "seed_stability": {
+      "seed_mae_cv_max": 0.005,
+      "minimum_all_pairwise_prediction_pearson": 0.80,
+      "minimum_all_pairwise_prediction_spearman": 0.80,
+      "prediction_seed_std_mean_max": 0.002,
+      "prediction_seed_std_p95_max": 0.005
+    },
+    "engineering": {
+      "total_training_seconds_max": 360.0,
+      "total_duration_seconds_max": 370.0,
+      "maximum_parameter_count": 250000,
+      "independent_load_max_abs_difference": 1e-7,
+      "all_nine_run_receipts_required": true
+    }
+  },
+  "eligibility_logic": {
+    "rule": "all_hard_gates_must_pass",
+    "zero_eligible": "FORMAL_NO_ROBUST_PROMOTABLE_CANDIDATE_RETAIN_STAGE_E_INCUMBENT",
+    "one_eligible": "UNIQUE_ROBUST_CANDIDATE_RECOMMENDATION",
+    "multiple_eligible_tie_break": [
+      "lowest_stress_composite_mae",
+      "lowest_negative_tail_mae",
+      "lowest_worst_fold_mae",
+      "lowest_prediction_seed_std_mean",
+      "lowest_total_training_seconds",
+      "lexicographically_smallest_model_id"
+    ],
+    "threshold_relaxation_allowed": false,
+    "new_candidate_after_freeze_allowed": false
+  },
+  "f2_gan_boundary": {
+    "gan_training_authorized_by_this_protocol": false,
+    "separate_f2_addendum_required": true,
+    "f1_non_gan_review_must_finish_first": true
+  },
+  "restrictions": {
+    "training_before_f0_acceptance_allowed": false,
+    "candidate_metric_read_before_f0_acceptance_allowed": false,
+    "screening_allowed": false,
+    "final_allowed": false,
+    "fold_change_allowed": false,
+    "seed_change_allowed": false,
+    "stress_threshold_refit_on_validation_allowed": false,
+    "silent_failure_or_seed_deletion_allowed": false
+  },
+  "next_action_after_acceptance": "run F-1 bounded non-GAN controls under this unchanged protocol"
+}

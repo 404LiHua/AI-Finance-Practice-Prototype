@@ -1,0 +1,49 @@
+{
+  "stage": "E-5.3 neural and real-stock-node graph three-seed acceptance",
+  "generated_at_utc": "2026-07-25T08:18:50.743638+00:00",
+  "passed": true,
+  "checks": {
+    "review_locked_before_remaining_runs": true,
+    "base_protocol_hash_unchanged": true,
+    "model_set_unchanged": true,
+    "folds_and_seeds_unchanged": true,
+    "only_two_remaining_seeds_newly_trained": true,
+    "engineering_seed_reused": true,
+    "thirty_six_run_receipts": true,
+    "no_failures": true,
+    "prediction_contract_complete": true,
+    "independent_loading_within_tolerance": true,
+    "timegnn_remains_deterministic": true,
+    "real_stock_graph_receipts_complete": true,
+    "real_stock_graph_registry_complete": true,
+    "stock_order_and_adjacency_unchanged": true,
+    "metrics_finite": true,
+    "three_seed_pairwise_stability_present": true,
+    "independent_metric_recalculation_matches": true,
+    "artifact_hashes_valid": true,
+    "batch_hash_valid": true,
+    "review_pass_declared": true,
+    "no_selection_deletion_or_promotion": true,
+    "future_and_screening_not_accessed": true
+  },
+  "models": [
+    "lstm_price_l8",
+    "tcn_price_l8",
+    "timegnn_deterministic_topk_l8",
+    "stock_node_gwnet_fixed_industry_l8"
+  ],
+  "folds": [
+    "E_RO_01",
+    "E_RO_02",
+    "E_RO_03"
+  ],
+  "seeds": [
+    20260723,
+    20260724,
+    20260725
+  ],
+  "selection_exposure": "E-5.3 three-seed TRAIN/VALIDATION stability review only; no ranking, deletion, candidate promotion, or SCREENING",
+  "review_config_sha256": "1c499328cacec1828e90e8a043115ee087fa0d729096db7e00adf6bcea573294",
+  "base_protocol_config_sha256": "6ee08295cd508f97218390b2e2564ae638bb5b58ecbd86047e0565a0393a6a43",
+  "metadata_sha256": "7cb867e3b3f338d5808c231c896cbfac47c849c3de6811912c6667b4ff43e2fe"
+}

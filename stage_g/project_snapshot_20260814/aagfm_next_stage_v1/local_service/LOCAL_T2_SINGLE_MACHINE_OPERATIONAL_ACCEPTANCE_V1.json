@@ -1,0 +1,38 @@
+{
+  "node_id": "AA_GFMNET_LOCAL_T2_SINGLE_MACHINE_OPERATIONAL_ACCEPTANCE_V1",
+  "status": "FROZEN_BEFORE_LOCAL_LOOPBACK_OPERATIONAL_AUDIT",
+  "scope": "Loopback-only personal single-machine HTTP service for the active production T2 anchor. No public listener, production replacement, automatic trading, label read, or candidate selection is authorized.",
+  "identity": {
+    "registry_sha256": "12d4ec2e7bcb933e316e5d6b8e20d685f94ab2f585f1516a335a062047e6ea13",
+    "active_model_id": "RG_OBGNET_CONFIRMED_SAFE_V1_1",
+    "active_model_sha256": "d8e4316d0fab70d3785b775c695a1f3a31225edf441a3603e3830f7351c4e2e8",
+    "server_source_sha256": "32d59679a7919d0883dc5bc20524561186c8b6aab18ee076b52212ffa84700df",
+    "stock_service_source_sha256": "d3d953c281a6fc7b1f192708af9169c149dae29f758f06c3d48883df558ff566",
+    "confirmed_model_source_sha256": "c38c8f8ae82f76ed3ad3352bdd71c10f9662da96e2fe425051c08fd441204b32"
+  },
+  "runtime_policy": {
+    "host": "127.0.0.1",
+    "ephemeral_test_port": true,
+    "gpu_policy": "disabled",
+    "cpu_threads": 2,
+    "public_network_listener_allowed": false,
+    "automatic_trading_allowed": false
+  },
+  "checks": {
+    "health_endpoint": true,
+    "model_endpoint": true,
+    "valid_prediction": "000001.SZ at the latest locally available date",
+    "repeat_prediction_must_be_bitwise_equal": true,
+    "cache_miss_then_hit_required": true,
+    "invalid_stock_must_return_400": true,
+    "future_date_must_return_400": true,
+    "graph_weight_must_equal_zero": true,
+    "event_weight_must_equal_zero": true,
+    "probability_sum_tolerance": 1e-12,
+    "prediction_latency_max_seconds": 10.0,
+    "server_shutdown_required": true
+  },
+  "forbidden": ["target labels", "returns", "FRESH payloads", "WP10 outputs", "candidate inference", "model training", "GPU inference", "automatic trading"]
+}
+
+

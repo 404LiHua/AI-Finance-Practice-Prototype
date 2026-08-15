@@ -1,0 +1,65 @@
+{
+  "protocol_id": "stage_d_rolling_origin_v1",
+  "status": "ACTIVE_DEVELOPMENT_PROTOCOL",
+  "evidence_class": "STAGE_D_SELECTION_EXPOSED_ROLLING_DEVELOPMENT",
+  "custody_policy_id": "stage_d_c4_seal_v1",
+  "development_date_ceiling": "2023-06-02",
+  "source_panel_sha256": "743a34bc38b26090ee3f5d9084e40ff24b49940dbf1364a82dad6bfb3eb69b34",
+  "stock_count": 30,
+  "development_week_count": 50,
+  "fold_count": 3,
+  "folds": [
+    {
+      "fold_id": "D_RO_01",
+      "train_start": "2022-06-10",
+      "train_end": "2023-01-13",
+      "purge_start": "2023-01-20",
+      "purge_end": "2023-01-20",
+      "validation_start": "2023-02-03",
+      "validation_end": "2023-03-10",
+      "train_samples": 568,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "0f9bac407ee4ce7cf1cdb3e7e31494ef467165102286cfaa9c66d69ff67bc150",
+      "validation_row_set_sha256": "5c51ea7ce5ecbf8f0c0fffe8c72052afb415da794033aa4f2443d541d78c3cdb"
+    },
+    {
+      "fold_id": "D_RO_02",
+      "train_start": "2022-06-10",
+      "train_end": "2023-03-03",
+      "purge_start": "2023-03-10",
+      "purge_end": "2023-03-10",
+      "validation_start": "2023-03-17",
+      "validation_end": "2023-04-21",
+      "train_samples": 748,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "8c65725095ff045acba296cb8e6fec899e45e9b3b2f517bd87421a4a42ce5089",
+      "validation_row_set_sha256": "f0c745b8d0c878f78bba476a4a346f51d25dbc6f9ddcd1a7db39043a81cb8a60"
+    },
+    {
+      "fold_id": "D_RO_03",
+      "train_start": "2022-06-10",
+      "train_end": "2023-04-14",
+      "purge_start": "2023-04-21",
+      "purge_end": "2023-04-21",
+      "validation_start": "2023-04-28",
+      "validation_end": "2023-06-02",
+      "train_samples": 928,
+      "validation_samples": 150,
+      "train_stock_count": 30,
+      "validation_stock_count": 30,
+      "train_row_set_sha256": "83cce0461a83525de1fed571a4af196748ae9da2784a571595c4f9c7de148409",
+      "validation_row_set_sha256": "737289d56d14acb330dd6b89f065fc87c7d9f773b9576d9f1f38694e7430248d"
+    }
+  ],
+  "protocol_sha256": "5dcd3c7e28b5577472743c171bd98ba17a514920e8088c405c4ecca68f102cb6",
+  "generated_artifacts": {
+    "fold_assignments_sha256": "c4873449616af593934f247d59ae96eb91fabb7fe802be9b51cc352a7f4dc1c4",
+    "fold_summary_sha256": "b3f1b1d4b7eeec2171db8cd9a1c55d37316e1b30846bce9d289122e13bb001f6"
+  },
+  "c4_row_level_data_read": false,
+  "future_d_screening_read": false
+}

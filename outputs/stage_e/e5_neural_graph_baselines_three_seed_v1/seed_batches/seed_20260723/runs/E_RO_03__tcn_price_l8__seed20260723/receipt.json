@@ -1,0 +1,22 @@
+{
+  "model_id": "tcn_price_l8",
+  "family": "tcn",
+  "fold_id": "E_RO_03",
+  "seed": 20260723,
+  "status": "PASS",
+  "prediction_rows": 500,
+  "node_semantics": "independent_stock_sequence",
+  "deterministic_graph_sampling": true,
+  "real_stock_node_graph": false,
+  "stock_order_sha256": "c815049174ae151ca9f9acad87375f1c69db4df9802b954ebb324da2d50ab601",
+  "adjacency_sha256": null,
+  "independent_load_max_abs_difference": 3.301206419337177e-09,
+  "checkpoint_sha256": "9705988bcdb829365a721d6e1f4d3b5170ee5d215e9e5013333f84ab2ee2312b",
+  "resolved_config_sha256": "19ccd8940eb2d051815ce4a9bd2e1895dbcd5654935214dba88abe4d67ff10bd",
+  "duration_seconds": 30.842717499999708,
+  "training_seconds": 30.829493099998217,
+  "inference_seconds": 0.0019255000006523915,
+  "epochs_completed": 19,
+  "best_validation_loss": 0.2577594816684723,
+  "parameter_count": 9761
+}

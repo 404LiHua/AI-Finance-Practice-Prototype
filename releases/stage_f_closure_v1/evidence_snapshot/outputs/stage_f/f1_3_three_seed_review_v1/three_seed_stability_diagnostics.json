@@ -1,0 +1,272 @@
+{
+  "status": "COMPUTED_WITHOUT_RANKING",
+  "thresholds": {
+    "seed_mae_cv_max": 0.005,
+    "minimum_all_pairwise_prediction_pearson": 0.8,
+    "minimum_all_pairwise_prediction_spearman": 0.8,
+    "prediction_seed_std_mean_max": 0.002,
+    "prediction_seed_std_p95_max": 0.005
+  },
+  "models_in_frozen_order": [
+    {
+      "candidate_id": "stock_node_gwnet_tail_weighted_l8",
+      "seed_mae": {
+        "20260723": 0.03180946348103074,
+        "20260724": 0.0318030874695008,
+        "20260725": 0.0319386679261612
+      },
+      "seed_mae_cv": 0.001961188759365479,
+      "minimum_pairwise_prediction_pearson": 0.7080612616159309,
+      "minimum_pairwise_prediction_spearman": 0.4734680378721515,
+      "prediction_seed_std_mean": 0.0018396348542731515,
+      "prediction_seed_std_p95": 0.004323803038285875,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.9383590147509149,
+          "spearman": 0.926250201000804
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.895362589265039,
+          "spearman": 0.9006219384877541
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8842966760471304,
+          "spearman": 0.8718309433237733
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8805370089159006,
+          "spearman": 0.7955279181116723
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7080612616159309,
+          "spearman": 0.4734680378721515
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7269597466084327,
+          "spearman": 0.5530381481525926
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7946163951572139,
+          "spearman": 0.7362079368317473
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7539669464734133,
+          "spearman": 0.6824387937551749
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.7938683394432184,
+          "spearman": 0.7628326833307333
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_noise_aug_l8",
+      "seed_mae": {
+        "20260723": 0.03159386179774689,
+        "20260724": 0.03158075966352286,
+        "20260725": 0.03168422438980387
+      },
+      "seed_mae_cv": 0.001454717283217812,
+      "minimum_pairwise_prediction_pearson": 0.7498751768236139,
+      "minimum_pairwise_prediction_spearman": 0.6157305269221077,
+      "prediction_seed_std_mean": 0.0014629017926394484,
+      "prediction_seed_std_p95": 0.003363860424123838,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8693205968776723,
+          "spearman": 0.8569478117912471
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8520148354869992,
+          "spearman": 0.8619167916671667
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8969316608399293,
+          "spearman": 0.8909721718886875
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7498751768236139,
+          "spearman": 0.6157305269221077
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8332938461247933,
+          "spearman": 0.7155914703658814
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8946167201945121,
+          "spearman": 0.8507796911187645
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7778884017408421,
+          "spearman": 0.7338917355669423
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8062120150227531,
+          "spearman": 0.7693658934635739
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8075354100320032,
+          "spearman": 0.7724741938967756
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    },
+    {
+      "candidate_id": "stock_node_gwnet_feature_mask_l8",
+      "seed_mae": {
+        "20260723": 0.031584428941520554,
+        "20260724": 0.031592121505877,
+        "20260725": 0.03170476118886529
+      },
+      "seed_mae_cv": 0.001739069788789985,
+      "minimum_pairwise_prediction_pearson": 0.7452669885717033,
+      "minimum_pairwise_prediction_spearman": 0.6085830103320413,
+      "prediction_seed_std_mean": 0.0015095897712926736,
+      "prediction_seed_std_p95": 0.0034308420851723717,
+      "fold_seed_pairs": [
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.870235002966332,
+          "spearman": 0.8660798483193932
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8594311341899354,
+          "spearman": 0.8674167496669987
+        },
+        {
+          "fold_id": "E_RO_01",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8956573149620558,
+          "spearman": 0.8980811923247692
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.7452669885717033,
+          "spearman": 0.6085830103320413
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.8408637974765322,
+          "spearman": 0.7309110196440786
+        },
+        {
+          "fold_id": "E_RO_02",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8973188226784397,
+          "spearman": 0.8661149844599378
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260724,
+          "pearson": 0.8113937939336181,
+          "spearman": 0.7475745742982971
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260723,
+          "right_seed": 20260725,
+          "pearson": 0.7577101821900569,
+          "spearman": 0.7031635486541946
+        },
+        {
+          "fold_id": "E_RO_03",
+          "left_seed": 20260724,
+          "right_seed": 20260725,
+          "pearson": 0.8065053247094706,
+          "spearman": 0.7780803283213132
+        }
+      ],
+      "stability_gates": {
+        "seed_mae_cv": true,
+        "pairwise_pearson": false,
+        "pairwise_spearman": false,
+        "prediction_std_mean": true,
+        "prediction_std_p95": true
+      },
+      "all_stability_gates_pass": false
+    }
+  ],
+  "ranking_performed": false,
+  "promotion_recommendation_formed": false
+}
