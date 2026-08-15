@@ -1,0 +1,32 @@
+{
+  "node_id": "WP23_MARKET_SCALE_COLUMN_BINDING_REPAIR_AUDIT_V1",
+  "status": "PASS_FIXED_POSITIONAL_SOURCE_COLUMN_BINDING_AND_RESEALED_LABEL_FREE_SHADOWS",
+  "root_cause": "pandas.read_csv positional usecols are returned in source-column order; the prior [1,2,15,11] request was named in request order and swapped qfq_close with adjust_factor.",
+  "fixed_binding": "usecols=[1,2,11,15] -> trade_date, raw_close, adjust_factor, qfq_close",
+  "development_replay": {
+    "weekly_panel_sha256": "4633c51055154309a9af766ea51c75f545783c82f4046261cc211f6a8449815f",
+    "dates_total": 261,
+    "post_warmup_dates": 256,
+    "warmup_exception": "2018-07-06",
+    "post_warmup_max_absolute_error": 9.71445146547012e-17,
+    "acceptance_tolerance": "rtol=0, atol=1e-14",
+    "exact_after_warmup": true
+  },
+  "corrected_future_origins": {
+    "2026-07-17": {"rows": 300, "rg2_sha256": "cbeea9ea9213a617d9d02437a0043636b691f732508ec6f3cc186a753d1e7bbf", "scale_sha256": "d4ce5e0173b66cd3bc1e7fd86dd531f1f65d172498ecc5a6c6a9730d156de838", "c1_prediction_sha256": "8fae5de6759d628697673d99b5cb3f11a8525b13fc7763ad44c939b7020300ed"},
+    "2026-07-24": {"rows": 300, "rg2_sha256": "89b4411500fab78c78e1a662f5363e45225bab424f1a0888258dacbcba678722", "scale_sha256": "67be78de94c5ba7b2aee635a76df0d3136dbe416852641a9b0f5d9c7ac00a969", "c1_prediction_sha256": "0d233dc40bfc9017319fd71d7a70728cc78f1c683a4c8d9831cdbce622fdee66"},
+    "2026-07-31": {"rows": 300, "rg2_sha256": "26db94a91e52e5f713a35e2ec55147bf3ca2a019029901e5899377bbdf3c5660", "scale_sha256": "33c45288eb603c42761c2781803805d3f402b71e868948c7710953eaf31c8179", "c1_prediction_sha256": "7f0cebe4310eaa64fa027b39646830a84b9024b1f34b7c4ad4801dabc8eb7926"},
+    "2026-08-07": {"rows": 300, "rg2_sha256": "1e5fc1209c63f4e2963fee12fb4cb667d03739e4ec7b420a274c77269a7f69b7", "scale_sha256": "3314883c1033cda8b5f95509c11b86bbabb713f6b82c52636d4fdcd5a1992fac", "c1_prediction_sha256": "fda88eb0e9b207481dea7920ffabb80c6637ba70b4152711d56182b04706ec8f"},
+    "2026-08-14": {"rows": 300, "rg2_sha256": "61eaaf509c0ab03cd74afb33b5bf6109b9c884b0ccbe0e1d408def6748882901", "scale_sha256": "ed91a6ad9a7e078a2119cada8f0c9d1b5e5fe2fe03aa5493a2b942d69ac484f7", "c1_prediction_sha256": "6cccdb8e1b6ebf81c3d51c29bf07cad63f785a9dc0b039a4c7c69551d9717501"}
+  },
+  "label_and_production_boundary": {
+    "target_labels_read": false,
+    "fresh_labels_read": false,
+    "screening_read": false,
+    "final_read": false,
+    "production_registry_modified": false,
+    "production_replacement_allowed": false,
+    "gpu_used": false,
+    "status": "SEALED_LABEL_FREE_SHADOW_PENDING_INDEPENDENT_T2_LABEL_AUTHORIZATION"
+  }
+}

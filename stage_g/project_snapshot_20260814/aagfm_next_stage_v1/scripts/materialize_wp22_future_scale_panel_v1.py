@@ -40,14 +40,26 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def read_daily(path: Path, code: str, calendar: pd.DatetimeIndex) -> tuple[pd.DataFrame, str]:
+def read_daily(path: Path, code: str, calendar: pd.DatetimeIndex, staging_daily: pd.DataFrame | None = None) -> tuple[pd.DataFrame, str]:
     # Column 15 is the archived RG model_close binding: close price before
     # adjustment.  Column 1 is the source trade date.
-    raw = pd.read_csv(path, usecols=[1, 15])
-    raw.columns = ["trade_date", "close"]
+    # pandas normalizes positional ``usecols`` into source-column order before
+    # returning the frame.  Request the four fields in ascending source order
+    # and assign the matching names explicitly; requesting [1, 2, 15, 11] and
+    # assigning by request order silently swapped qfq_close and adjust_factor,
+    # flattening every historical return to zero.
+    raw = pd.read_csv(path, usecols=[1, 2, 11, 15])
+    raw.columns = ["trade_date", "raw_close", "adjust_factor", "qfq_close"]
     raw["trade_date"] = pd.to_datetime(raw["trade_date"], errors="coerce").dt.normalize()
-    raw["close"] = pd.to_numeric(raw["close"], errors="coerce")
+    raw["close"] = pd.to_numeric(raw["qfq_close"], errors="coerce")
     raw = raw[raw["trade_date"].notna() & raw["close"].notna()]
+    if staging_daily is not None:
+        extra = staging_daily[staging_daily["ts_code"].eq(code)][["trade_date", "close", "adj_factor"]].copy()
+        if not extra.empty:
+            anchor = pd.to_numeric(raw["close"].iloc[-1], errors="coerce") / max(pd.to_numeric(raw["raw_close"].iloc[-1], errors="coerce") * pd.to_numeric(raw["adjust_factor"].iloc[-1], errors="coerce"), 1e-12)
+            extra["close"] = pd.to_numeric(extra["close"], errors="coerce") * pd.to_numeric(extra["adj_factor"], errors="coerce") * anchor
+            extra = extra[["trade_date", "close"]]
+            raw = pd.concat([raw, extra], ignore_index=True)
     raw = raw[raw["trade_date"] <= calendar.max()]
     raw = raw.sort_values("trade_date", kind="mergesort").drop_duplicates("trade_date", keep="last")
     weekly = (
@@ -107,6 +119,7 @@ def main() -> None:
     parser.add_argument("--development-weekly-panel", required=True, type=Path)
     parser.add_argument("--output-root", required=True, type=Path)
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--tushare-staging", type=Path, default=None, help="Optional raw Tushare staging directory")
     args = parser.parse_args()
 
     shadow_path = args.shadow_input.resolve()
@@ -115,11 +128,13 @@ def main() -> None:
     delisted_path = args.delisted_audit.resolve()
     development_path = args.development_weekly_panel.resolve()
     output_root = args.output_root.resolve()
+    staging_path = args.tushare_staging.resolve() if args.tushare_staging else None
     paths = (shadow_path, daily_root, selected_path, delisted_path, development_path, output_root)
     if output_root.exists():
         raise RuntimeError(f"refusing to overwrite output: {output_root}")
     if any(token in str(path).lower() for path in paths for token in BAN):
         raise RuntimeError("prohibited holdout/fresh path token")
+    if staging_path is not None and any(token in str(staging_path).lower() for token in BAN): raise RuntimeError("prohibited staging path token")
     if not shadow_path.is_file() or not daily_root.is_dir() or not selected_path.is_file() or not delisted_path.is_file() or not development_path.is_file():
         raise RuntimeError("one or more required inputs are missing")
     if sha256(selected_path) != EXPECTED_SELECTED_SHA256:
@@ -128,6 +143,17 @@ def main() -> None:
         raise RuntimeError("delisted-audit SHA256 mismatch")
     if sha256(development_path) != EXPECTED_DEVELOPMENT_WEEKLY_SHA256:
         raise RuntimeError("development weekly-panel SHA256 mismatch")
+    staging_daily = None
+    staging_hashes = None
+    if staging_path is not None:
+        staging_file = staging_path / "TUSHARE_DAILY_RAW.parquet"; factor_file = staging_path / "TUSHARE_ADJ_FACTOR_RAW.parquet"
+        if not staging_file.is_file() or not factor_file.is_file(): raise RuntimeError("Tushare staging requires daily and adjustment-factor parquet files")
+        staging_daily = pd.read_parquet(staging_file)[["ts_code", "trade_date", "close"]].copy()
+        factors = pd.read_parquet(factor_file)[["ts_code", "trade_date", "adj_factor"]].copy()
+        staging_daily = staging_daily.merge(factors, on=["ts_code", "trade_date"], how="left", validate="one_to_one")
+        staging_daily["trade_date"] = pd.to_datetime(staging_daily["trade_date"], errors="raise").dt.normalize()
+        if staging_daily[["close", "adj_factor"]].isna().any().any(): raise RuntimeError("Tushare staging has missing close/adjustment factor")
+        staging_hashes = {"daily": sha256(staging_file), "adj_factor": sha256(factor_file)}
     if not (1 <= args.workers <= 8):
         raise RuntimeError("workers must be between 1 and 8")
 
@@ -172,7 +198,7 @@ def main() -> None:
     panels: list[pd.DataFrame] = []
     raw_hashes: dict[str, str] = {}
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(read_daily, daily_root / f"{code}.csv", code, calendar): code for code in replay_codes}
+        futures = {pool.submit(read_daily, daily_root / f"{code}.csv", code, calendar, staging_daily): code for code in replay_codes}
         for future in as_completed(futures):
             code = futures[future]
             panel, raw_hash = future.result()
@@ -228,6 +254,7 @@ def main() -> None:
             "delisted_audit": sha256(delisted_path),
             "development_weekly_panel": sha256(development_path),
             "daily_sources": raw_hashes,
+            "tushare_staging": staging_hashes,
         },
         "output_sha256": sha256(panel_path),
         "development_replay": {

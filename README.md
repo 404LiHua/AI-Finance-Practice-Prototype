@@ -9,19 +9,22 @@
 - 生产内核仍为 `RG_OBGNET_CONFIRMED_SAFE_V1_1`，目标为 `T2_MARKET_RELATIVE_FIXED`。
 - T2 单机 loopback 服务已经完成本地验收；生产边界、标签保管和输入质量合同仍然有效。
 - WP12 已提供 6 个历史滚动 OOS 折、分类/概率/校准/排序指标和逐周审计。C0 候选只保留为研究或 shadow：MCC 略有改善，但 IC、Brier、宏 F1、校准和 top-bottom spread 未全面优于 incumbent，不能替换生产内核。
+- 2026-08-15 增量快照已补充 WP22/WP23 治理、单机复验和候选交接材料；WP23 修复了市场尺度物化器的 positional `usecols` 绑定错误，并重新封存五个未来窗口的 label-free shadow 输入/预测。修复版脚本已同步到 Stage G 规范快照。
 - V4 独立 FRESH 窗口已预注册，但在最后一个 H4 标签于 2026-09-11 结算并完成数据冻结前，不得物化、评分或晋级。
 
 ## 从哪里开始
 
 ### Stage G 当前交付
 
-从 [stage_g/README.md](stage_g/README.md) 开始。完整的公开快照位于
-`stage_g/project_snapshot_20260814/aagfm_next_stage_v1/`，其中包含：
+从 [stage_g/README.md](stage_g/README.md) 开始。公开快照由稳定基线和增量交接包组成：
+`stage_g/project_snapshot_20260814/aagfm_next_stage_v1/` 与
+`stage_g/project_snapshot_20260815/aagfm_next_stage_v1/`。其中包含：
 
 - 工作包、数据与 PIT 合同、治理收据；
 - WP12 快速历史指标脚本与审计结果；
 - T2 单机推理服务、loopback/soak 验收脚本；
-- 经过筛选的证据和哈希清单。
+- 经过筛选的证据和哈希清单；
+- WP23 列绑定修复审计及其对应的五窗口 label-free shadow 封存记录。
 
 ### 本地单机运行
 
